@@ -17,10 +17,17 @@
     <h1>Italian Art</h1>
     <p class="intro">Notes for my upcoming travels through Italy, following Frederick Hartt's "History of Italian Art".</p>
 
-    <section class="index-section">
-      <h2>Artists</h2>
-      <ul class="artist-list">
-        <li><a href="artists/AgnoloGaddi.html">Agnolo Gaddi</a></li>
+    <div class="tab-navigation">
+      <button class="tab-btn active" data-tab="artists">Artists</button>
+      <button class="tab-btn" data-tab="locations">Locations</button>
+      <button class="tab-btn" data-tab="biblestories">Bible Stories</button>
+      <button class="tab-btn" data-tab="timeline">Timeline</button>
+    </div>
+
+    <div class="tab-content">
+      <section class="tab-panel active" data-tab="artists">
+        <ul class="artist-list">
+          <li><a href="artists/AgnoloGaddi.html">Agnolo Gaddi</a></li>
         <li><a href="artists/AndreaDaFirenze.html">Andrea da Firenze</a></li>
         <li><a href="artists/AndreaDelCastagno.html">Andrea del Castagno</a></li>
         <li><a href="artists/AndreaDelVerrocchio.html">Andrea del Verrocchio</a></li>
@@ -57,6 +64,7 @@
         <li><a href="artists/JacopoBellini.html">Jacopo Bellini</a></li>
         <li><a href="artists/JacopoTorriti.html">Jacopo Torriti</a></li>
         <li><a href="artists/LeonBattistaAlberti.html">Leon Battista Alberti</a></li>
+        <li><a href="artists/LeonardoDaVinci.html">Leonardo da Vinci</a></li>
         <li><a href="artists/LorenzoGhiberti.html">Lorenzo Ghiberti</a></li>
         <li><a href="artists/LorenzoMonaco.html">Lorenzo Monaco</a></li>
         <li><a href="artists/LucaDellaRobbia.html">Luca della Robbia</a></li>
@@ -73,14 +81,30 @@
         <li><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></li>
         <li><a href="artists/TaddeoGaddi.html">Taddeo Gaddi</a></li>
         <li><a href="artists/VittoreCarpaccio.html">Vittore Carpaccio</a></li>
-      </ul>
-    </section>
+        </ul>
+      </section>
 
-    <section class="index-section">
-      <h2>Locations by City</h2>
-      
-      <h3>Florence, Italy</h3>
-      <ul>
+      <section class="tab-panel" data-tab="locations">
+        
+      <h3>Milan</h3>
+      <ul class="location-list">
+        <li><a href="locations/CastelloSforzesco.html">Castello Sforzesco</a></li>
+        <li><a href="locations/MilanCathedral.html">Milan Cathedral</a></li>
+        <li><a href="locations/Brera.html">Pinacoteca di Brera</a></li>
+        <li><a href="locations/SantaMariaDelleGrazie.html">Santa Maria delle Grazie</a></li>
+      </ul>
+
+      <h3>Venice</h3>
+      <ul class="location-list">
+        <li><a href="locations/SantiGiovanniEPaolo.html">Basilica dei Santi Giovanni e Paolo</a></li>
+        <li><a href="locations/BasilicaDeiFrari.html">Basilica di Santa Maria Gloriosa dei Frari</a></li>
+        <li><a href="locations/CaDOro.html">Ca&#039; d&#039;Oro</a></li>
+        <li><a href="locations/Accademia.html">Gallerie dell&#039;Accademia</a></li>
+        <li><a href="locations/MuseoCorrer.html">Museo Correr</a></li>
+      </ul>
+
+      <h3>Florence</h3>
+      <ul class="location-list">
         <li><a href="locations/BaptisteryOfFlorence.html">Baptistery of Florence</a></li>
         <li><a href="locations/Bargello.html">Bargello</a></li>
         <li><a href="locations/BasilicaDiSantaTrinita.html">Basilica di Santa Trinita</a></li>
@@ -104,47 +128,30 @@
         <li><a href="locations/UffiziGallery.html">Uffizi Gallery</a></li>
       </ul>
 
-      <h3>Milan, Italy</h3>
-      <ul>
-        <li><a href="locations/CastelloSforzesco.html">Castello Sforzesco</a></li>
-        <li><a href="locations/MilanCathedral.html">Milan Cathedral</a></li>
-        <li><a href="locations/Brera.html">Pinacoteca di Brera</a></li>
-      </ul>
-
-      <h3>Pompeii, Italy</h3>
-      <ul>
-        <li><a href="locations/Pompeii.html">Pompeii Archaeological Park</a></li>
-        <li><a href="locations/SuburbanBathsPompeii.html">Suburban Baths (Terme Suburbane)</a></li>
-      </ul>
-
-      <h3>Rome, Italy</h3>
-      <ul>
-        <li><a href="locations/NationalGalleryOfAncientArt.html">National Gallery of Ancient Art</a></li>
-        <li><a href="locations/SantaCeciliaInTrastevere.html">Santa Cecilia in Trastevere</a></li>
-        <li><a href="locations/SantaMariaMaggiore.html">Santa Maria Maggiore</a></li>
-      </ul>
-
       <h3>Vatican City</h3>
-      <ul>
+      <ul class="location-list">
         <li><a href="locations/PinacotecaVaticana.html">Pinacoteca Vaticana</a></li>
         <li><a href="locations/SistineChapel.html">Sistine Chapel</a></li>
         <li><a href="locations/StPetersBasilica.html">St. Peter&#039;s Basilica</a></li>
       </ul>
 
-      <h3>Venice, Italy</h3>
-      <ul>
-        <li><a href="locations/SantiGiovanniEPaolo.html">Basilica dei Santi Giovanni e Paolo</a></li>
-        <li><a href="locations/BasilicaDeiFrari.html">Basilica di Santa Maria Gloriosa dei Frari</a></li>
-        <li><a href="locations/CaDOro.html">Ca&#039; d&#039;Oro</a></li>
-        <li><a href="locations/Accademia.html">Gallerie dell&#039;Accademia</a></li>
-        <li><a href="locations/MuseoCorrer.html">Museo Correr</a></li>
+      <h3>Rome</h3>
+      <ul class="location-list">
+        <li><a href="locations/NationalGalleryOfAncientArt.html">National Gallery of Ancient Art</a></li>
+        <li><a href="locations/SantaCeciliaInTrastevere.html">Santa Cecilia in Trastevere</a></li>
+        <li><a href="locations/SantaMariaMaggiore.html">Santa Maria Maggiore</a></li>
       </ul>
-    </section>
 
-    
-    <section class="index-section">
-      <h2>Bible Stories</h2>
-      <ul class="bible-stories-list">
+      <h3>Pompeii</h3>
+      <ul class="location-list">
+        <li><a href="locations/Pompeii.html">Pompeii Archaeological Park</a></li>
+        <li><a href="locations/SuburbanBathsPompeii.html">Suburban Baths (Terme Suburbane)</a></li>
+      </ul>
+      </section>
+
+      <section class="tab-panel" data-tab="biblestories">
+        <ul class="bible-stories-list">
+          
         <li><a href="biblestories/AdorationOfTheMagi.html">Adoration of the Magi</a></li>
         <li><a href="biblestories/AdorationOfTheShepherds.html">Adoration of the Shepherds</a></li>
         <li><a href="biblestories/Annunciation.html">Annunciation</a></li>
@@ -166,14 +173,1201 @@
         <li><a href="biblestories/PresentationInTheTemple.html">Presentation in the Temple</a></li>
         <li><a href="biblestories/PunishmentOfKorah.html">Punishment of Korah</a></li>
         <li><a href="biblestories/StoryOfNoah.html">Story of Noah</a></li>
-      </ul>
-    </section>
   
+        </ul>
+      </section>
+
+      <section class="tab-panel" data-tab="timeline">
+        <div class="timeline-container">
+          
+      <div class="timeline-century">
+        <div class="timeline-century-header">
+          <div class="timeline-marker"></div>
+          <h3>2nd Century BCE</h3>
+          <span class="timeline-count">1 artwork</span>
+        </div>
+        <div class="timeline-artworks">
+          
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/S03_06_01_024_image_3137.jpg" alt="Cave Canem Mosaic" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">2nd century BCE</span>
+        <h4><a href="artworks/CaveCanemMosaic.html">Cave Canem Mosaic</a></h4>
+        
+      </div>
+    </article>
+  
+        </div>
+      </div>
+
+      <div class="timeline-century">
+        <div class="timeline-century-header">
+          <div class="timeline-marker"></div>
+          <h3>1st Century BCE</h3>
+          <span class="timeline-count">2 artworks</span>
+        </div>
+        <div class="timeline-artworks">
+          
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Battle_of_Issus_mosaic_-_Museo_Archeologico_Nazionale_-_Naples_2013-05-16_16-25-06_BW.jpg" alt="Alexander Mosaic" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 100 BCE (Roman copy of c. 310 BCE Greek original)</span>
+        <h4><a href="artworks/AlexanderMosaic.html">Alexander Mosaic</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Villa_of_the_Mysteries_in_Pompeii.jpg" alt="Dionysiac Frieze (Villa of the Mysteries)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 60-50 BCE</span>
+        <h4><a href="artworks/DionysiacFrieze.html">Dionysiac Frieze (Villa of the Mysteries)</a></h4>
+        
+      </div>
+    </article>
+  
+        </div>
+      </div>
+
+      <div class="timeline-century">
+        <div class="timeline-century-header">
+          <div class="timeline-marker"></div>
+          <h3>1st Century</h3>
+          <span class="timeline-count">8 artworks</span>
+        </div>
+        <div class="timeline-artworks">
+          
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Affresco_romano_giardino_pompei_17.JPG" alt="Garden Fresco (House of the Golden Bracelet)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 14-37 CE (Tiberian period, Third Style)</span>
+        <h4><a href="artworks/GardenFrescoGoldenBracelet.html">Garden Fresco (House of the Golden Bracelet)</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Fresco_Iphigeneia_MAN_Naples.jpg" alt="Sacrifice of Iphigenia" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 30-79 CE (Fourth Style)</span>
+        <h4><a href="artworks/SacrificeOfIphigenia.html">Sacrifice of Iphigenia</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Portrait_d%27une_jeune_femme%2C_dite_Sappho.jpg" alt="&quot;Sappho&quot; Fresco (Portrait of Young Woman with Stylus)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 50-79 CE (Fourth Style)</span>
+        <h4><a href="artworks/SapphoFresco.html">&quot;Sappho&quot; Fresco (Portrait of Young Woman with Stylus)</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Pompeii-couple.jpg" alt="Portrait of Terentius Neo" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 50-79 CE</span>
+        <h4><a href="artworks/PortraitOfTerentiusNeo.html">Portrait of Terentius Neo</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Pompei_5234.jpg" alt="Lupanar Frescoes" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1st century CE</span>
+        <h4><a href="artworks/LupanarFrescoes.html">Lupanar Frescoes</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Antigua_ciudad_de_Pompeya%2C_Italia%2C_2023-03-27%2C_DD_210.jpg" alt="House of the Vettii Frescoes" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 62-79 CE (Fourth Style)</span>
+        <h4><a href="artworks/HouseOfTheVettiiFrescoes.html">House of the Vettii Frescoes</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Terme_Suburbane_-_affreschi_01.jpg/800px-Terme_Suburbane_-_affreschi_01.jpg" alt="Erotic Frescoes of the Suburban Baths" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">62-79 AD</span>
+        <h4><a href="artworks/EroticFrescoesSuburbanBaths.html">Erotic Frescoes of the Suburban Baths</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Pompeii_-_Casa_dei_Vettii_-_Pentheus.jpg" alt="Death of Pentheus" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 62-70 CE (Fourth Style)</span>
+        <h4><a href="artworks/DeathOfPentheus.html">Death of Pentheus</a></h4>
+        
+      </div>
+    </article>
+  
+        </div>
+      </div>
+
+      <div class="timeline-century">
+        <div class="timeline-century-header">
+          <div class="timeline-marker"></div>
+          <h3>13th Century (Duecento)</h3>
+          <span class="timeline-count">6 artworks</span>
+        </div>
+        <div class="timeline-artworks">
+          
+    <article class="timeline-card">
+      <img src="img/Florence_baptistery_ceiling_mosaic_14493px_ce2fe5ab.jpg" alt="Baptistery Ceiling Mosaic" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1270–1300</span>
+        <h4><a href="artworks/BaptisteryCeilingMosaic.html">Baptistery Ceiling Mosaic</a></h4>
+        <span class="timeline-artist"><a href="artists/CoppoDiMarcovaldo.html">Coppo di Marcovaldo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Cimabue_Trinita_Madonna_2723046c.jpg" alt="Enthroned Madonna and Child with Angels and Prophets" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1280–1290</span>
+        <h4><a href="artworks/EnthronedMadonnaAndChildWithAngelsAndProphets.html">Enthroned Madonna and Child with Angels and Prophets</a></h4>
+        <span class="timeline-artist"><a href="artists/GiovanniCimabue.html">Cimabue</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Duccio_-_Rucellai_Madonna_5bf07380.jpg" alt="Madonna and Child (Rucellai Madonna)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1285</span>
+        <h4><a href="artworks/RucellaiMadonna.html">Madonna and Child (Rucellai Madonna)</a></h4>
+        <span class="timeline-artist"><a href="artists/DuccioDiBuoninsegna.html">Duccio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Pietro_cavallini__apostoli_da_un_giudizio_universa_5e416501.jpg" alt="Last Judgement" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1289–1293</span>
+        <h4><a href="artworks/LastJudgementCavallini.html">Last Judgement</a></h4>
+        <span class="timeline-artist"><a href="artists/PietroCavallini.html">Pietro Cavallini</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Giotto__the-crucifix-1290-1300_Florence__Santa_Mar_27d78c30.jpg" alt="Crucifix" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1290–1300</span>
+        <h4><a href="artworks/CrucifixGiotto.html">Crucifix</a></h4>
+        <span class="timeline-artist"><a href="artists/GiottoDiBondone.html">Giotto di Bondone</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Basilica_di_Santa_Maria_Maggiore_abside_a_Roma_5adef886.jpg" alt="Mosaic in Santa Maria Maggiore" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1295</span>
+        <h4><a href="artworks/MosaicSantaMariaMaggiore.html">Mosaic in Santa Maria Maggiore</a></h4>
+        <span class="timeline-artist"><a href="artists/JacopoTorriti.html">Jacopo Torriti</a></span>
+      </div>
+    </article>
+  
+        </div>
+      </div>
+
+      <div class="timeline-century">
+        <div class="timeline-century-header">
+          <div class="timeline-marker"></div>
+          <h3>14th Century (Trecento)</h3>
+          <span class="timeline-count">15 artworks</span>
+        </div>
+        <div class="timeline-artworks">
+          
+    <article class="timeline-card">
+      <img src="img/Giotto__1267_Around-1337_-_Maest__-_Google_Art_Pro_e6763ed5.jpg" alt="Madonna Enthroned (Ognissanti Madonna)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1306–1310</span>
+        <h4><a href="artworks/OgnissantiMadonna.html">Madonna Enthroned (Ognissanti Madonna)</a></h4>
+        <span class="timeline-artist"><a href="artists/GiottoDiBondone.html">Giotto</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/StFrancisUndergoingTheTestByFire.png" alt="St. Francis Undergoing the Test by Fire" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1325–1328</span>
+        <h4><a href="artworks/StFrancisUndergoingTheTestByFire.html">St. Francis Undergoing the Test by Fire</a></h4>
+        <span class="timeline-artist"><a href="artists/GiottoDiBondone.html">Giotto</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/FuneralOfStFrancis.png" alt="Funeral of St. Francis" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1325–1328</span>
+        <h4><a href="artworks/FuneralOfStFrancis.html">Funeral of St. Francis</a></h4>
+        <span class="timeline-artist"><a href="artists/GiottoDiBondone.html">Giotto</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1328–1330</span>
+        <h4><a href="artworks/BaroncelliChapelFrescoes.html">Baroncelli Chapel Frescoes</a></h4>
+        <span class="timeline-artist"><a href="artists/TaddeoGaddi.html">Taddeo Gaddi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/PisanoDoors_01c9e0c7.jpg" alt="South Door of Florence Baptistery" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1330–1336</span>
+        <h4><a href="artworks/SouthDoorFlorenceBaptistery.html">South Door of Florence Baptistery</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaPisano.html">Andrea Pisano</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Andrea_Pisano__The_Creation_of_Adam_and_Eve__1334-_ce0dbb10.jpg" alt="Creation of Adam" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1334–1343</span>
+        <h4><a href="artworks/CreationOfAdam.html">Creation of Adam</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaPisano.html">Andrea Pisano</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/SylveserSealingTheDragonMouth.png" alt="St. Sylvester Sealing the Dragon&#039;s Mouth" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1340</span>
+        <h4><a href="artworks/StSylvesterSealingTheDragonsMouth.html">St. Sylvester Sealing the Dragon&#039;s Mouth</a></h4>
+        <span class="timeline-artist"><a href="artists/MasoDiBanco.html">Maso di Banco</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/FrescoesOfTheLastSupperWithTheTreeOfLife.png" alt="Last Supper with the Tree of Life" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1355–1360</span>
+        <h4><a href="artworks/LastSupperWithTheTreeOfLife.html">Last Supper with the Tree of Life</a></h4>
+        <span class="timeline-artist"><a href="artists/TaddeoGaddi.html">Taddeo Gaddi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/EnthronedChriswithMadonnaandSaints.png" alt="Enthroned Christ with Madonna and Saints" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1357</span>
+        <h4><a href="artworks/EnthronedChristWithMadonnaAndSaints.html">Enthroned Christ with Madonna and Saints</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaOrcagna.html">Andrea Orcagna</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Tabernakel__Andrea_di_Cione__1359__Orsanmichele_Fl_bc6af238.jpg" alt="Tabernacle of Orsanmichele" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1359</span>
+        <h4><a href="artworks/TabernacleOfOrsanmichele.html">Tabernacle of Orsanmichele</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaOrcagna.html">Andrea Orcagna</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Milano_-_Castello_sforzesco_-_Bonino_da_Campione___472165d1.jpg" alt="Equestrian Statue of Bernabò Visconti" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1363</span>
+        <h4><a href="artworks/EquestrianStatueOfBernaboVisconti.html">Equestrian Statue of Bernabò Visconti</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/RoseWindowAtSantaMariaNovella.png" alt="Rose Window" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1365</span>
+        <h4><a href="artworks/RoseWindow.html">Rose Window</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaDaFirenze.html">Andrea da Firenze</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/ChapterHouseAtSantaMariaNovella.png" alt="Chapter House Fresco" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1365–1367</span>
+        <h4><a href="artworks/ChapterHouseFresco.html">Chapter House Fresco</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaDaFirenze.html">Andrea da Firenze</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/46v_ff9d7405.jpg" alt="Hours of Gian Galeazzo Visconti" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1370–1395</span>
+        <h4><a href="artworks/HoursOfGianGaleazzoVisconti.html">Hours of Gian Galeazzo Visconti</a></h4>
+        <span class="timeline-artist"><a href="artists/GiovanninoDeiGrassi.html">Giovannino dei Grassi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Florence__Santa_Croce__apse__Legend_of_the_True_Cr_43378d0f.jpg" alt="Legend of the True Cross" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1385–1387</span>
+        <h4><a href="artworks/LegendOfTheTrueCross.html">Legend of the True Cross</a></h4>
+        <span class="timeline-artist"><a href="artists/AgnoloGaddi.html">Agnolo Gaddi</a></span>
+      </div>
+    </article>
+  
+        </div>
+      </div>
+
+      <div class="timeline-century">
+        <div class="timeline-century-header">
+          <div class="timeline-marker"></div>
+          <h3>15th Century (Quattrocento)</h3>
+          <span class="timeline-count">78 artworks</span>
+        </div>
+        <div class="timeline-artworks">
+          
+    <article class="timeline-card">
+      <img src="img/BrunelleschiVersusGhiberti.png" alt="Competition Panel (Ghiberti)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1401</span>
+        <h4><a href="artworks/CompetitionPanelGhiberti.html">Competition Panel (Ghiberti)</a></h4>
+        <span class="timeline-artist"><a href="artists/LorenzoGhiberti.html">Lorenzo Ghiberti</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/BrunelleschiVersusGhiberti.png" alt="Competition Panel (Brunelleschi)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1401</span>
+        <h4><a href="artworks/CompetitionPanelBrunelleschi.html">Competition Panel (Brunelleschi)</a></h4>
+        <span class="timeline-artist"><a href="artists/FilippoBrunelleschi.html">Filippo Brunelleschi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Lorenzo_ghiberti_e_aiuti__porta_nord_del_battister_60d81554.JPG" alt="North Door of Florence Baptistery" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1403–1424</span>
+        <h4><a href="artworks/NorthDoor.html">North Door of Florence Baptistery</a></h4>
+        <span class="timeline-artist"><a href="artists/LorenzoGhiberti.html">Lorenzo Ghiberti</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Donatello__David__1408-9__1416__Florence__Bargello_bdf9cb59.jpg" alt="Marble David" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1408-1416</span>
+        <h4><a href="artworks/MarbleDavid.html">Marble David</a></h4>
+        <span class="timeline-artist"><a href="artists/Donatello.html">Donatello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/FirenzeOrsanmichele03_1e8f7255.jpg" alt="Four Crowned Martyrs" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1409–1417</span>
+        <h4><a href="artworks/FourCrownedMartyrs.html">Four Crowned Martyrs</a></h4>
+        <span class="timeline-artist"><a href="artists/NanniDiBanco.html">Nanni di Banco</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/StMarkStatue.png" alt="St. Mark" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1411–1413</span>
+        <h4><a href="artworks/StMark.html">St. Mark</a></h4>
+        <span class="timeline-artist"><a href="artists/Donatello.html">Donatello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/StJohnTheBaptistStatue.png" alt="St. John the Baptist" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1412–1416</span>
+        <h4><a href="artworks/StJohnTheBaptist.html">St. John the Baptist</a></h4>
+        <span class="timeline-artist"><a href="artists/LorenzoGhiberti.html">Lorenzo Ghiberti</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Monaco_coronation_44ee5cb1.jpg" alt="Coronation of the Virgin" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1414</span>
+        <h4><a href="artworks/CoronationOfTheVirgin.html">Coronation of the Virgin</a></h4>
+        <span class="timeline-artist"><a href="artists/LorenzoMonaco.html">Lorenzo Monaco</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/St__Georg__Predella___Donatello__1416-17__Bargello_0252af05.jpg" alt="St. George and the Dragon" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1416–1417</span>
+        <h4><a href="artworks/StGeorgeAndTheDragon.html">St. George and the Dragon</a></h4>
+        <span class="timeline-artist"><a href="artists/Donatello.html">Donatello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/St__Georg__Donatello__1416-17__Bargello_Florenz-03_74e3723a.jpg" alt="St. George" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1416–1417</span>
+        <h4><a href="artworks/StGeorge.html">St. George</a></h4>
+        <span class="timeline-artist"><a href="artists/Donatello.html">Donatello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Florence__Piazza_SS_Annunziata_with_Ospedale_degli_9dcff98a.jpg" alt="Ospedale degli Innocenti" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1419–1445</span>
+        <h4><a href="artworks/OspedaleDegliInnocenti.html">Ospedale degli Innocenti</a></h4>
+        <span class="timeline-artist"><a href="artists/FilippoBrunelleschi.html">Brunelleschi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/CutAwayReconstructionOfTheDuomo.png" alt="Dome of Florence Cathedral" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1420–1436</span>
+        <h4><a href="artworks/DomeOfFlorenceCathedral.html">Dome of Florence Cathedral</a></h4>
+        <span class="timeline-artist"><a href="artists/FilippoBrunelleschi.html">Filippo Brunelleschi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Sagrestia_vecchia__veduta_00_e7dcf90e.jpg" alt="Old Sacristy (Sagrestia Vecchia)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1421–1428</span>
+        <h4><a href="artworks/OldSacristy.html">Old Sacristy (Sagrestia Vecchia)</a></h4>
+        <span class="timeline-artist"><a href="artists/FilippoBrunelleschi.html">Filippo Brunelleschi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Jacobello_Del_Fiore_-_Justice_between_the_Archangels_Michael_and_Gabriel_-_WGA11888.jpg" alt="Justice Between the Archangels Michael and Gabriel" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1421</span>
+        <h4><a href="artworks/JusticeBetweenTheArchangels.html">Justice Between the Archangels Michael and Gabriel</a></h4>
+        <span class="timeline-artist"><a href="artists/JacobelloDelFiore.html">Jacobello del Fiore</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Gentile_da_Fabriano_-_Adorazione_dei_Magi_-_Google_ca0dc218.jpg" alt="Adoration of the Magi" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1423</span>
+        <h4><a href="artworks/AdorationOfTheMagi.html">Adoration of the Magi</a></h4>
+        <span class="timeline-artist"><a href="artists/GentileDaFabriano.html">Gentile da Fabriano</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/GatesOfParadise.png" alt="Gates of Paradise" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1425–1452</span>
+        <h4><a href="artworks/GatesOfParadise.html">Gates of Paradise</a></h4>
+        <span class="timeline-artist"><a href="artists/LorenzoGhiberti.html">Lorenzo Ghiberti</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Masaccio_trinity_d6f543ca.jpg" alt="Trinity" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1427</span>
+        <h4><a href="artworks/Trinity.html">Trinity</a></h4>
+        <span class="timeline-artist"><a href="artists/Masaccio.html">Masaccio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Cantoria_of_Luca_della_Robbia_2009_5120ce77.JPG" alt="Cantoria (Luca della Robbia)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1431–1438</span>
+        <h4><a href="artworks/CantoriaLucaDellaRobbia.html">Cantoria (Luca della Robbia)</a></h4>
+        <span class="timeline-artist"><a href="artists/LucaDellaRobbia.html">Luca della Robbia</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/_0eb3e03f.jpg" alt="Descent from the Cross" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1432–1434</span>
+        <h4><a href="artworks/DescentFromTheCross.html">Descent from the Cross</a></h4>
+        <span class="timeline-artist"><a href="artists/FraAngelico.html">Fra Angelico</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Cantoria_Donatello.png" alt="Cantoria (Donatello)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1433–1439</span>
+        <h4><a href="artworks/CantoriaDonatello.html">Cantoria (Donatello)</a></h4>
+        <span class="timeline-artist"><a href="artists/Donatello.html">Donatello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Uccello___the_Battle_of_San_Romano_d1ea3177.jpg" alt="Battle of San Romano" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1435–1460</span>
+        <h4><a href="artworks/BattleOfSanRomano.html">Battle of San Romano</a></h4>
+        <span class="timeline-artist"><a href="artists/PaoloUccello.html">Paolo Uccello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Paolo_uccello__Monumento_equestre_di_John_Hawkwood_d38725e3.JPG" alt="Funerary Monument of John Hawkwood" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1436</span>
+        <h4><a href="artworks/FuneraryMonumentJohnHawkwood.html">Funerary Monument of John Hawkwood</a></h4>
+        <span class="timeline-artist"><a href="artists/PaoloUccello.html">Paolo Uccello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Lippi_Madonna_Tarquinia_248289d7.jpg" alt="Enthroned Madonna and Child (Tarquinia Madonna)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1437</span>
+        <h4><a href="artworks/TarquiniaMadonna.html">Enthroned Madonna and Child (Tarquinia Madonna)</a></h4>
+        <span class="timeline-artist"><a href="artists/FilippoLippi.html">Filippo Lippi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Fra_Angelico___San_Marco_Altarpiece_36b58db5.jpg" alt="San Marco Altarpiece" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1438–1443</span>
+        <h4><a href="artworks/SanMarcoAltarpiece.html">San Marco Altarpiece</a></h4>
+        <span class="timeline-artist"><a href="artists/FraAngelico.html">Fra Angelico</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Lippi__annunciazione_Martelli_e8619d6c.jpg" alt="Martelli Annunciation" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1440</span>
+        <h4><a href="artworks/MartelliAnnunciation.html">Martelli Annunciation</a></h4>
+        <span class="timeline-artist"><a href="artists/FilippoLippi.html">Filippo Lippi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Florence_-_David_by_Donatello_1c8b0da3.jpg" alt="Bronze David" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1440s</span>
+        <h4><a href="artworks/BronzeDavid.html">Bronze David</a></h4>
+        <span class="timeline-artist"><a href="artists/Donatello.html">Donatello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Amor-Attys_Donatello_P1151420_e4cec112.jpg" alt="Atys-Amorino" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1440</span>
+        <h4><a href="artworks/AtysAmorino.html">Atys-Amorino</a></h4>
+        <span class="timeline-artist"><a href="artists/Donatello.html">Donatello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Fra_Angelico_-_Annunciation_c8f3585b.jpg" alt="Annunciation" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1440–1445</span>
+        <h4><a href="artworks/AnnunciationFraAngelico.html">Annunciation</a></h4>
+        <span class="timeline-artist"><a href="artists/FraAngelico.html">Fra Angelico</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Domenico_Veneziano_-_The_Madonna_and_Child_with_Sa_805d777c.jpg" alt="The Madonna and Child with Saints" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1445–1447</span>
+        <h4><a href="artworks/MadonnaAndChildWithSaints.html">The Madonna and Child with Saints</a></h4>
+        <span class="timeline-artist"><a href="artists/DomenicoVeneziano.html">Domenico Veneziano</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Andrea_del_Castagno_001_04c67387.jpg" alt="Last Supper" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1445–1450</span>
+        <h4><a href="artworks/LastSupperCastagno.html">Last Supper</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaDelCastagno.html">Andrea del Castagno</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Via_della_Vigna_Nuova_18__palazzo_rucellai__02_0_37424cc8.jpg" alt="Palazzo Rucellai" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1446–1451</span>
+        <h4><a href="artworks/PalazzoRucellai.html">Palazzo Rucellai</a></h4>
+        <span class="timeline-artist"><a href="artists/LeonBattistaAlberti.html">Alberti</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Paolo_Uccello___Flood_and_Waters_Subsiding_b93dca2a.jpg" alt="Story of Noah" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1447</span>
+        <h4><a href="artworks/StoryOfNoah.html">Story of Noah</a></h4>
+        <span class="timeline-artist"><a href="artists/PaoloUccello.html">Paolo Uccello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Andrea_del_Castagno_-_Pippo_Spano__Niccol__Acciaiu_65ac0371.jpg" alt="Pippo Spano" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1450</span>
+        <h4><a href="artworks/PippoSpano.html">Pippo Spano</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaDelCastagno.html">Andrea del Castagno</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Fra_Filippo_Lippi_-_Madonna_with_the_Child_and_Sce_77e8e712.jpg" alt="Madonna with Child with Scenes of the Life of Saint Anne (Pitti Tondo)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1452</span>
+        <h4><a href="artworks/PittiTondo.html">Madonna with Child with Scenes of the Life of Saint Anne (Pitti Tondo)</a></h4>
+        <span class="timeline-artist"><a href="artists/FilippoLippi.html">Filippo Lippi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Desiderio_da_Settignano__Memorial_Tomb_for_Carlo_M_bd0a8b28.jpg" alt="Tomb of Carlo Marsuppini" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1453–1455</span>
+        <h4><a href="artworks/TombOfCarloMarsuppini.html">Tomb of Carlo Marsuppini</a></h4>
+        <span class="timeline-artist"><a href="artists/DesiderioDaSettignano.html">Desiderio da Settignano</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Donatello__maria_maddalena_02_081bacfd.JPG" alt="Penitent Magdalene" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1453–1455</span>
+        <h4><a href="artworks/PenitentMagdalene.html">Penitent Magdalene</a></h4>
+        <span class="timeline-artist"><a href="artists/Donatello.html">Donatello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Florence__Santa_Maria_Novella__facade_09a0bbe0.jpg" alt="Santa Maria Novella Facade" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1456–1470</span>
+        <h4><a href="artworks/SantaMariaNovellFacade.html">Santa Maria Novella Facade</a></h4>
+        <span class="timeline-artist"><a href="artists/LeonBattistaAlberti.html">Alberti</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Andrea_del_castagno__Monumento_equestre_di_Niccol__e10c5257.JPG" alt="Niccolò da Tolentino" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1456</span>
+        <h4><a href="artworks/NiccoloDaTolentino.html">Niccolò da Tolentino</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaDelCastagno.html">Andrea del Castagno</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Giuditta_di_donatello_04_a34dbccc.JPG" alt="Judith and Holofernes" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1457–1464</span>
+        <h4><a href="artworks/JudithAndHolofernes.html">Judith and Holofernes</a></h4>
+        <span class="timeline-artist"><a href="artists/Donatello.html">Donatello</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Gozzoli_magi_84498cdd.jpg" alt="Procession of the Magi" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1459</span>
+        <h4><a href="artworks/ProcessionOfTheMagi.html">Procession of the Magi</a></h4>
+        <span class="timeline-artist"><a href="artists/BenozzoGozzoli.html">Benozzo Gozzoli</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/NorthSacristyofFlorenceCathedral.png" alt="North Sacristy Intarsia" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1463–1465</span>
+        <h4><a href="artworks/NorthSacristyIntarsia.html">North Sacristy Intarsia</a></h4>
+        <span class="timeline-artist"><a href="artists/GiulianoDaMaiano.html">Giuliano da Maiano</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/PietaGiovanniBellini.png" alt="Pietà" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1465–1470</span>
+        <h4><a href="artworks/PietaGiovanniBellini.html">Pietà</a></h4>
+        <span class="timeline-artist"><a href="artists/GiovanniBellini.html">Giovanni Bellini</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Museo_di_orsanmichele__verrocchio__incredulit__di__4f74b3c6.JPG" alt="Christ and Saint Thomas" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1467–1483</span>
+        <h4><a href="artworks/ChristAndSaintThomas.html">Christ and Saint Thomas</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaDelVerrocchio.html">Andrea del Verrocchio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Antonio_del_Pollaiolo__Ercole_e_Anteo__1470-75_ca__6e9a5deb.jpg" alt="Hercules Slaying Antaeus" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1470–1475</span>
+        <h4><a href="artworks/HerculesSlayingAntaeus.html">Hercules Slaying Antaeus</a></h4>
+        <span class="timeline-artist"><a href="artists/AntonioDelPollaiuolo.html">Antonio del Pollaiuolo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Antonio_del_Pollaiolo__Ercole_e_l_Idra__1470-75_ca_d8c5d985.jpg" alt="Hercules and the Hydra" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1470–1475</span>
+        <h4><a href="artworks/HerculesAndTheHydra.html">Hercules and the Hydra</a></h4>
+        <span class="timeline-artist"><a href="artists/AntonioDelPollaiuolo.html">Antonio del Pollaiuolo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/The_Baptism_of_Christ__Verrocchio_and_Leonardo__5d268526.jpg" alt="The Baptism of Christ" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1472–1475</span>
+        <h4><a href="artworks/BaptismOfChrist.html">The Baptism of Christ</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaDelVerrocchio.html">Andrea del Verrocchio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Annunciation__Leonardo_c__1472_1476__5752c796.jpg" alt="Annunciation" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1472–1476</span>
+        <h4><a href="artworks/AnnunciationLeonardo.html">Annunciation</a></h4>
+        <span class="timeline-artist"><a href="artists/LeonardoDaVinci.html">Leonardo da Vinci</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Paisagem_do_Arno_-_Leonardo_da_Vinci_abc44f38.jpg" alt="Landscape of the Arno Valley" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">August 5, 1473</span>
+        <h4><a href="artworks/LandscapeOfTheArnoValley.html">Landscape of the Arno Valley</a></h4>
+        <span class="timeline-artist"><a href="artists/LeonardoDaVinci.html">Leonardo da Vinci</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/David__Andrea_del_Verrocchio__ca__1466-69__Bargell_9b73ae8c.jpg" alt="David" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1473–1475</span>
+        <h4><a href="artworks/DavidVerrocchio.html">David</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaDelVerrocchio.html">Andrea del Verrocchio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Portrait_of_a_Man_with_a_Medal_of_Cosimo_the_Elder_a6ca36c2.jpg" alt="Portrait of a Man with a Medal of Cosimo de Medici" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1475</span>
+        <h4><a href="artworks/PortraitOfAManWithAMedal.html">Portrait of a Man with a Medal of Cosimo de Medici</a></h4>
+        <span class="timeline-artist"><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/PortraitOfALadyWithFlowers.png" alt="Portrait of a Lady with Flowers" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1475–1480</span>
+        <h4><a href="artworks/PortraitOfALadyWithFlowers.html">Portrait of a Lady with Flowers</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaDelVerrocchio.html">Andrea del Verrocchio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Antonio_del_pollaiolo__ercole_e_anteo__01_ba3a75a5.JPG" alt="Hercules and Antaeus (Bronze)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1475</span>
+        <h4><a href="artworks/HerculesAndAntaeusBronze.html">Hercules and Antaeus (Bronze)</a></h4>
+        <span class="timeline-artist"><a href="artists/AntonioDelPollaiuolo.html">Antonio del Pollaiuolo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Botticelli_-_Adoration_of_the_Magi__Zanobi_Altar___f67614af.jpg" alt="Adoration of the Magi" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1475–1476</span>
+        <h4><a href="artworks/AdorationOfTheMagiBotticelli.html">Adoration of the Magi</a></h4>
+        <span class="timeline-artist"><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Melozzo_da_Forl__001_42a3a237.jpg" alt="Sixtus IV Appointing Platina as Prefect of the Vatican Library" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1477</span>
+        <h4><a href="artworks/SixtusIVAppointingPlatina.html">Sixtus IV Appointing Platina as Prefect of the Vatican Library</a></h4>
+        <span class="timeline-artist"><a href="artists/MelozzoDaForli.html">Melozzo da Forlì</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/MediciBall.png" alt="Primavera" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1477–1482</span>
+        <h4><a href="artworks/Primavera.html">Primavera</a></h4>
+        <span class="timeline-artist"><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/_Venice__Doge_Giovanni_Mocenigo_by_Gentile_Bellini_ec8ed6be.jpg" alt="Doge Giovanni Mocenigo" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1478–1485</span>
+        <h4><a href="artworks/DogeGiovanniMocenigo.html">Doge Giovanni Mocenigo</a></h4>
+        <span class="timeline-artist"><a href="artists/GentileBellini.html">Gentile Bellini</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/The_dead_Christ_and_three_mourners%2C_by_Andrea_Mantegna.jpg" alt="The Foreshortened Christ (Lamentation of Christ)" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1480</span>
+        <h4><a href="artworks/LamentationOfChristMantegna.html">The Foreshortened Christ (Lamentation of Christ)</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaMantegna.html">Andrea Mantegna</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1480–1488</span>
+        <h4><a href="artworks/EquestrianStatueOfBartolomeoColleoni.html">Equestrian Statue of Bartolomeo Colleoni</a></h4>
+        <span class="timeline-artist"><a href="artists/AndreaDelVerrocchio.html">Andrea del Verrocchio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google__530afc12.jpg" alt="Birth of Venus" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. mid-1480s</span>
+        <h4><a href="artworks/BirthOfVenus.html">Birth of Venus</a></h4>
+        <span class="timeline-artist"><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/AdorationOfTheShephers.png" alt="Adoration of the Shepherds" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1480</span>
+        <h4><a href="artworks/AdorationOfTheShepherdsFilippinoLippi.html">Adoration of the Shepherds</a></h4>
+        <span class="timeline-artist"><a href="artists/FilippinoLippi.html">Filippino Lippi</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Eventos_de_la_vida_de_Mois_s__Sandro_Botticelli__42730504.jpg" alt="Youth of Moses" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1481–1482</span>
+        <h4><a href="artworks/YouthOfMoses.html">Youth of Moses</a></h4>
+        <span class="timeline-artist"><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Botticcelli__Sandro_-_The_Punishment_of_Korah_and__48673591.jpg" alt="Punishment of the Korah, Dathan and Abiram" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1481–1482</span>
+        <h4><a href="artworks/PunishmentOfKorah.html">Punishment of the Korah, Dathan and Abiram</a></h4>
+        <span class="timeline-artist"><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Magnificat_Madonna_-_Botticelli__uffici__b_35edb145.jpg" alt="Madonna of the Magnificat" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1481</span>
+        <h4><a href="artworks/MadonnaOfTheMagnificat.html">Madonna of the Magnificat</a></h4>
+        <span class="timeline-artist"><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Entrega_de_las_llaves_a_San_Pedro__Perugino__d223cddc.jpg" alt="Delivery of the Keys" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1481–1482</span>
+        <h4><a href="artworks/DeliveryOfTheKeys.html">Delivery of the Keys</a></h4>
+        <span class="timeline-artist"><a href="artists/PietroPerugino.html">Pietro Perugino</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Adoration_of_the_Magi__Leonardo__a66a1e9b.jpg" alt="Adoration of the Magi" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1481–1482</span>
+        <h4><a href="artworks/AdorationOfTheMagiLeonardo.html">Adoration of the Magi</a></h4>
+        <span class="timeline-artist"><a href="artists/LeonardoDaVinci.html">Leonardo da Vinci</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Cappella_Sassetti_Confirmation_of_the_Franciscan_R_69a2d8db.jpg" alt="The Confirmation of the Franciscan Rule by Pope Honorius III" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1482–1485</span>
+        <h4><a href="artworks/ConfirmationOfTheFranciscanRule.html">The Confirmation of the Franciscan Rule by Pope Honorius III</a></h4>
+        <span class="timeline-artist"><a href="artists/DomenicoGhirlandaio.html">Domenico Ghirlandaio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Tesoro_di_San_Pietro__tomba_di_Sisto_IV_di_Antonio_55d24eaf.jpg" alt="Tomb of Pope Sixtus IV" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1484–1493</span>
+        <h4><a href="artworks/TombOfPopeSixtusIV.html">Tomb of Pope Sixtus IV</a></h4>
+        <span class="timeline-artist"><a href="artists/AntonioDelPollaiuolo.html">Antonio del Pollaiuolo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Domenico_Ghirlandaio_und_Werkstatt__Tornabuoni-Kap_d2f9d3fe.jpg" alt="Tornabuoni Chapel Frescoes" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1485–1490</span>
+        <h4><a href="artworks/TornabuoniChapelFrescoes.html">Tornabuoni Chapel Frescoes</a></h4>
+        <span class="timeline-artist"><a href="artists/DomenicoGhirlandaio.html">Domenico Ghirlandaio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Frari__Venice__-_Sacristy_-_triptych_by_Giovanni_B_4512a5d5.jpg" alt="Frari Triptych" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1485–1488</span>
+        <h4><a href="artworks/FrariTriptych.html">Frari Triptych</a></h4>
+        <span class="timeline-artist"><a href="artists/GiovanniBellini.html">Giovanni Bellini</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Anbetung_der_Hirten_63974e9c.jpg" alt="Adoration of the Shepherds" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1485</span>
+        <h4><a href="artworks/AdorationOfTheShepherdsGhirlandaio.html">Adoration of the Shepherds</a></h4>
+        <span class="timeline-artist"><a href="artists/DomenicoGhirlandaio.html">Domenico Ghirlandaio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Ghirlandaio__ultima_cena_di_san_marco_a704deaa.jpg" alt="The Last Supper" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1486</span>
+        <h4><a href="artworks/LastSupperGhirlandaio.html">The Last Supper</a></h4>
+        <span class="timeline-artist"><a href="artists/DomenicoGhirlandaio.html">Domenico Ghirlandaio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Accademia_-_Pala_di_San_Giobbe_by_Giovanni_Bellini_f61dfdd3.jpg" alt="San Giobbe Altarpiece" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1487</span>
+        <h4><a href="artworks/SanGiobbeAltarpiece.html">San Giobbe Altarpiece</a></h4>
+        <span class="timeline-artist"><a href="artists/GiovanniBellini.html">Giovanni Bellini</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Botticelli__annunciazione_di_cestello_02_6f233779.jpg" alt="Cestello Annunciation" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1489–1490</span>
+        <h4><a href="artworks/CestelloAnnunciation.html">Cestello Annunciation</a></h4>
+        <span class="timeline-artist"><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Accademia_-_Arrivo_degli_ambasciatori_inglesi_pres_eb29a3fd.jpg" alt="Legend of Saint Ursula" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1490–1495</span>
+        <h4><a href="artworks/LegendOfSaintUrsula.html">Legend of Saint Ursula</a></h4>
+        <span class="timeline-artist"><a href="artists/VittoreCarpaccio.html">Vittore Carpaccio</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Pietro_Perugino_cat37_2270c7d2.jpg" alt="Portrait of Francesco delle Opere" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1494</span>
+        <h4><a href="artworks/PortraitOfFrancescoDelleOpere.html">Portrait of Francesco delle Opere</a></h4>
+        <span class="timeline-artist"><a href="artists/PietroPerugino.html">Pietro Perugino</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Sandro_Botticelli_La_calumnia_de_Apeles_b3ebe3ac.jpg" alt="Calumny of Apelles" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1494–1495</span>
+        <h4><a href="artworks/CalumnyOfApelles.html">Calumny of Apelles</a></h4>
+        <span class="timeline-artist"><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Stiudium_do_Ostatniej_Wieczerzy_5b53c890.jpg" alt="The Last Supper" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1495–1498</span>
+        <h4><a href="artworks/LastSupperLeonardo.html">The Last Supper</a></h4>
+        <span class="timeline-artist"><a href="artists/LeonardoDaVinci.html">Leonardo da Vinci</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="img/Accademia_-_Procession_in_piazza_San_Marco_by_Gent_273496e2.jpg" alt="Procession of the True Cross in Piazza San Marco" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1496</span>
+        <h4><a href="artworks/ProcessionOfTheTrueCross.html">Procession of the True Cross in Piazza San Marco</a></h4>
+        <span class="timeline-artist"><a href="artists/GentileBellini.html">Gentile Bellini</a></span>
+      </div>
+    </article>
+  
+        </div>
+      </div>
+
+      <div class="timeline-century">
+        <div class="timeline-century-header">
+          <div class="timeline-marker"></div>
+          <h3>16th Century (Cinquecento)</h3>
+          <span class="timeline-count">1 artwork</span>
+        </div>
+        <div class="timeline-artworks">
+          
+    <article class="timeline-card">
+      <img src="img/Gentile_and_Giovanni_Bellini___Saint_Mark_Preachin_a46c29bb.jpg" alt="St. Mark Preaching in Alexandria" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1504–1507</span>
+        <h4><a href="artworks/StMarkPreachingInAlexandria.html">St. Mark Preaching in Alexandria</a></h4>
+        <span class="timeline-artist"><a href="artists/GentileBellini.html">Gentile Bellini</a></span>
+      </div>
+    </article>
+  
+        </div>
+      </div>
+        </div>
+      </section>
+    </div>
   
   </main>
   <footer>
     <p>Travel notes on Italian Art</p>
   </footer>
   <script src="./sort.js"></script>
+  <script src="./tabs.js"></script>
 </body>
 </html>
