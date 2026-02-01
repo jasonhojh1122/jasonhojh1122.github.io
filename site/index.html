@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Italian Art</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
   <header>
@@ -17,70 +18,85 @@
     <h1>Italian Art</h1>
     <p class="intro">Notes for my upcoming travels through Italy, following Frederick Hartt's "History of Italian Art".</p>
 
+    <div class="search-container">
+      <input type="search" id="index-search" class="search-input"
+             placeholder="Search artists, locations, stories..."
+             autocomplete="off" aria-label="Search index">
+      <span class="search-icon" aria-hidden="true"></span>
+      <button class="search-clear" type="button" aria-label="Clear search" hidden>&times;</button>
+    </div>
+    <p class="search-results-count" hidden></p>
+
     <div class="tab-navigation">
       <button class="tab-btn active" data-tab="artists">Artists</button>
       <button class="tab-btn" data-tab="locations">Locations</button>
       <button class="tab-btn" data-tab="biblestories">Bible Stories</button>
       <button class="tab-btn" data-tab="timeline">Timeline</button>
+      <button class="tab-btn" data-tab="map">Map</button>
     </div>
 
     <div class="tab-content">
       <section class="tab-panel active" data-tab="artists">
         <ul class="artist-list">
-          <li><a href="artists/AgnoloGaddi.html">Agnolo Gaddi</a></li>
-        <li><a href="artists/AndreaDaFirenze.html">Andrea da Firenze</a></li>
-        <li><a href="artists/AndreaDelCastagno.html">Andrea del Castagno</a></li>
-        <li><a href="artists/AndreaDelVerrocchio.html">Andrea del Verrocchio</a></li>
-        <li><a href="artists/AndreaMantegna.html">Andrea Mantegna</a></li>
-        <li><a href="artists/AndreaOrcagna.html">Andrea Orcagna</a></li>
-        <li><a href="artists/AndreaPisano.html">Andrea Pisano</a></li>
-        <li><a href="artists/AntonioDelPollaiuolo.html">Antonio del Pollaiuolo</a></li>
+          <li><a href="artists/AgesanderOfRhodes.html">Agesander of Rhodes</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/AgnoloGaddi.html">Agnolo Gaddi</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/AndreaDaFirenze.html">Andrea da Firenze</a><span class="artwork-count">2</span></li>
+        <li><a href="artists/AndreaDelCastagno.html">Andrea del Castagno</a><span class="artwork-count">3</span></li>
+        <li><a href="artists/AndreaDelVerrocchio.html">Andrea del Verrocchio</a><span class="artwork-count">5</span></li>
+        <li><a href="artists/AndreaMantegna.html">Andrea Mantegna</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/AndreaOrcagna.html">Andrea Orcagna</a><span class="artwork-count">2</span></li>
+        <li><a href="artists/AndreaPisano.html">Andrea Pisano</a><span class="artwork-count">2</span></li>
+        <li><a href="artists/AntonioDelPollaiuolo.html">Antonio del Pollaiuolo</a><span class="artwork-count">4</span></li>
+        <li><a href="artists/ApolloniosSonOfNestor.html">Apollonios, son of Nestor</a><span class="artwork-count">1</span></li>
         <li><a href="artists/ArnolfoDiCambio.html">Arnolfo di Cambio</a></li>
         <li><a href="artists/BenedettoDaMaiano.html">Benedetto da Maiano</a></li>
-        <li><a href="artists/BenozzoGozzoli.html">Benozzo Gozzoli</a></li>
+        <li><a href="artists/BenozzoGozzoli.html">Benozzo Gozzoli</a><span class="artwork-count">1</span></li>
         <li><a href="artists/BernaboVisconti.html">Bernabò Visconti</a></li>
         <li><a href="artists/BernardoDaddi.html">Bernardo Daddi</a></li>
-        <li><a href="artists/CoppoDiMarcovaldo.html">Coppo di Marcovaldo</a></li>
+        <li><a href="artists/CoppoDiMarcovaldo.html">Coppo di Marcovaldo</a><span class="artwork-count">1</span></li>
         <li><a href="artists/CosimoDeMedici.html">Cosimo de&#039; Medici</a></li>
-        <li><a href="artists/DesiderioDaSettignano.html">Desiderio da Settignano</a></li>
-        <li><a href="artists/DomenicoGhirlandaio.html">Domenico Ghirlandaio</a></li>
-        <li><a href="artists/DomenicoVeneziano.html">Domenico Veneziano</a></li>
-        <li><a href="artists/Donatello.html">Donatello</a></li>
-        <li><a href="artists/DuccioDiBuoninsegna.html">Duccio di Buoninsegna</a></li>
-        <li><a href="artists/FilippinoLippi.html">Filippino Lippi</a></li>
-        <li><a href="artists/FilippoBrunelleschi.html">Filippo Brunelleschi</a></li>
-        <li><a href="artists/FilippoLippi.html">Filippo Lippi</a></li>
-        <li><a href="artists/FraAngelico.html">Fra Angelico</a></li>
-        <li><a href="artists/GentileBellini.html">Gentile Bellini</a></li>
-        <li><a href="artists/GentileDaFabriano.html">Gentile da Fabriano</a></li>
+        <li><a href="artists/DesiderioDaSettignano.html">Desiderio da Settignano</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/DomenicoGhirlandaio.html">Domenico Ghirlandaio</a><span class="artwork-count">4</span></li>
+        <li><a href="artists/DomenicoVeneziano.html">Domenico Veneziano</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/Donatello.html">Donatello</a><span class="artwork-count">9</span></li>
+        <li><a href="artists/DonatoBramante.html">Donato Bramante</a></li>
+        <li><a href="artists/DuccioDiBuoninsegna.html">Duccio di Buoninsegna</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/FilippinoLippi.html">Filippino Lippi</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/FilippoBrunelleschi.html">Filippo Brunelleschi</a><span class="artwork-count">4</span></li>
+        <li><a href="artists/FilippoLippi.html">Filippo Lippi</a><span class="artwork-count">3</span></li>
+        <li><a href="artists/FraAngelico.html">Fra Angelico</a><span class="artwork-count">3</span></li>
+        <li><a href="artists/GentileBellini.html">Gentile Bellini</a><span class="artwork-count">3</span></li>
+        <li><a href="artists/GentileDaFabriano.html">Gentile da Fabriano</a><span class="artwork-count">1</span></li>
         <li><a href="artists/GianGaleazzoVisconti.html">Gian Galeazzo Visconti</a></li>
-        <li><a href="artists/GiottoDiBondone.html">Giotto di Bondone</a></li>
-        <li><a href="artists/GiovanniBellini.html">Giovanni Bellini</a></li>
-        <li><a href="artists/GiovanniCimabue.html">Giovanni Cimabue</a></li>
+        <li><a href="artists/GiottoDiBondone.html">Giotto di Bondone</a><span class="artwork-count">4</span></li>
+        <li><a href="artists/GiovanniBellini.html">Giovanni Bellini</a><span class="artwork-count">3</span></li>
+        <li><a href="artists/GiovanniCimabue.html">Giovanni Cimabue</a><span class="artwork-count">1</span></li>
         <li><a href="artists/GiovanniDiBicciDeMedici.html">Giovanni di Bicci de&#039; Medici</a></li>
-        <li><a href="artists/GiovanninoDeiGrassi.html">Giovannino dei Grassi</a></li>
-        <li><a href="artists/GiulianoDaMaiano.html">Giuliano da Maiano</a></li>
-        <li><a href="artists/JacobelloDelFiore.html">Jacobello del Fiore</a></li>
+        <li><a href="artists/GiovanninoDeiGrassi.html">Giovannino dei Grassi</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/GiulianoDaMaiano.html">Giuliano da Maiano</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/JacobelloDelFiore.html">Jacobello del Fiore</a><span class="artwork-count">1</span></li>
         <li><a href="artists/JacopoBellini.html">Jacopo Bellini</a></li>
-        <li><a href="artists/JacopoTorriti.html">Jacopo Torriti</a></li>
-        <li><a href="artists/LeonBattistaAlberti.html">Leon Battista Alberti</a></li>
-        <li><a href="artists/LeonardoDaVinci.html">Leonardo da Vinci</a></li>
-        <li><a href="artists/LorenzoGhiberti.html">Lorenzo Ghiberti</a></li>
-        <li><a href="artists/LorenzoMonaco.html">Lorenzo Monaco</a></li>
-        <li><a href="artists/LucaDellaRobbia.html">Luca della Robbia</a></li>
-        <li><a href="artists/Masaccio.html">Masaccio</a></li>
-        <li><a href="artists/MasoDiBanco.html">Maso di Banco</a></li>
+        <li><a href="artists/JacopoTorriti.html">Jacopo Torriti</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/LeonBattistaAlberti.html">Leon Battista Alberti</a><span class="artwork-count">2</span></li>
+        <li><a href="artists/LeonardoDaVinci.html">Leonardo da Vinci</a><span class="artwork-count">4</span></li>
+        <li><a href="artists/LorenzoGhiberti.html">Lorenzo Ghiberti</a><span class="artwork-count">4</span></li>
+        <li><a href="artists/LorenzoMonaco.html">Lorenzo Monaco</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/LucaDellaRobbia.html">Luca della Robbia</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/Masaccio.html">Masaccio</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/MasoDiBanco.html">Maso di Banco</a><span class="artwork-count">1</span></li>
         <li><a href="artists/Masolino.html">Masolino</a></li>
-        <li><a href="artists/MelozzoDaForli.html">Melozzo da Forlì</a></li>
+        <li><a href="artists/MelozzoDaForli.html">Melozzo da Forlì</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/Michelangelo.html">Michelangelo Buonarroti</a><span class="artwork-count">10</span></li>
         <li><a href="artists/MichelozzoDiBartolommeo.html">Michelozzo di Bartolommeo</a></li>
-        <li><a href="artists/NanniDiBanco.html">Nanni di Banco</a></li>
-        <li><a href="artists/PaoloUccello.html">Paolo Uccello</a></li>
+        <li><a href="artists/NanniDiBanco.html">Nanni di Banco</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/PaoloUccello.html">Paolo Uccello</a><span class="artwork-count">3</span></li>
         <li><a href="artists/PaoloVeneziano.html">Paolo Veneziano</a></li>
-        <li><a href="artists/PietroCavallini.html">Pietro Cavallini</a></li>
-        <li><a href="artists/PietroPerugino.html">Pietro Perugino</a></li>
-        <li><a href="artists/SandroBotticelli.html">Sandro Botticelli</a></li>
-        <li><a href="artists/TaddeoGaddi.html">Taddeo Gaddi</a></li>
-        <li><a href="artists/VittoreCarpaccio.html">Vittore Carpaccio</a></li>
+        <li><a href="artists/PietroCavallini.html">Pietro Cavallini</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/PietroPerugino.html">Pietro Perugino</a><span class="artwork-count">2</span></li>
+        <li><a href="artists/PopeJuliusII.html">Pope Julius II</a></li>
+        <li><a href="artists/SandroBotticelli.html">Sandro Botticelli</a><span class="artwork-count">9</span></li>
+        <li><a href="artists/TaddeoGaddi.html">Taddeo Gaddi</a><span class="artwork-count">2</span></li>
+        <li><a href="artists/VittoreCarpaccio.html">Vittore Carpaccio</a><span class="artwork-count">1</span></li>
         </ul>
       </section>
 
@@ -88,64 +104,60 @@
         
       <h3>Milan</h3>
       <ul class="location-list">
-        <li><a href="locations/CastelloSforzesco.html">Castello Sforzesco</a></li>
+        <li><a href="locations/CastelloSforzesco.html">Castello Sforzesco</a><span class="artwork-count">1</span></li>
         <li><a href="locations/MilanCathedral.html">Milan Cathedral</a></li>
-        <li><a href="locations/Brera.html">Pinacoteca di Brera</a></li>
-        <li><a href="locations/SantaMariaDelleGrazie.html">Santa Maria delle Grazie</a></li>
+        <li><a href="locations/Brera.html">Pinacoteca di Brera</a><span class="artwork-count">3</span></li>
+        <li><a href="locations/SantaMariaDelleGrazie.html">Santa Maria delle Grazie</a><span class="artwork-count">1</span></li>
       </ul>
 
       <h3>Venice</h3>
       <ul class="location-list">
-        <li><a href="locations/SantiGiovanniEPaolo.html">Basilica dei Santi Giovanni e Paolo</a></li>
-        <li><a href="locations/BasilicaDeiFrari.html">Basilica di Santa Maria Gloriosa dei Frari</a></li>
+        <li><a href="locations/SantiGiovanniEPaolo.html">Basilica dei Santi Giovanni e Paolo</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/BasilicaDeiFrari.html">Basilica di Santa Maria Gloriosa dei Frari</a><span class="artwork-count">1</span></li>
         <li><a href="locations/CaDOro.html">Ca&#039; d&#039;Oro</a></li>
-        <li><a href="locations/Accademia.html">Gallerie dell&#039;Accademia</a></li>
-        <li><a href="locations/MuseoCorrer.html">Museo Correr</a></li>
+        <li><a href="locations/Accademia.html">Gallerie dell&#039;Accademia</a><span class="artwork-count">4</span></li>
+        <li><a href="locations/MuseoCorrer.html">Museo Correr</a><span class="artwork-count">1</span></li>
       </ul>
 
       <h3>Florence</h3>
       <ul class="location-list">
-        <li><a href="locations/BaptisteryOfFlorence.html">Baptistery of Florence</a></li>
-        <li><a href="locations/Bargello.html">Bargello</a></li>
-        <li><a href="locations/BasilicaDiSantaTrinita.html">Basilica di Santa Trinita</a></li>
-        <li><a href="locations/BasilicaOfSanLorenzo.html">Basilica of San Lorenzo</a></li>
-        <li><a href="locations/BibliotecaNazionale.html">Biblioteca Nazionale</a></li>
-        <li><a href="locations/FlorenceCathedral.html">Florence Cathedral</a></li>
+        <li><a href="locations/BaptisteryOfFlorence.html">Baptistery of Florence</a><span class="artwork-count">4</span></li>
+        <li><a href="locations/Bargello.html">Bargello</a><span class="artwork-count">10</span></li>
+        <li><a href="locations/BasilicaDiSantaTrinita.html">Basilica di Santa Trinita</a><span class="artwork-count">2</span></li>
+        <li><a href="locations/BasilicaOfSanLorenzo.html">Basilica of San Lorenzo</a><span class="artwork-count">2</span></li>
+        <li><a href="locations/BibliotecaNazionale.html">Biblioteca Nazionale</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/FlorenceCathedral.html">Florence Cathedral</a><span class="artwork-count">4</span></li>
         <li><a href="locations/LoggiaDeiLanzi.html">Loggia dei Lanzi</a></li>
-        <li><a href="locations/MuseoDiSanMarco.html">Museo di San Marco</a></li>
-        <li><a href="locations/OperaDelDuomoMuseum.html">Opera del Duomo Museum</a></li>
-        <li><a href="locations/Orsanmichele.html">Orsanmichele</a></li>
-        <li><a href="locations/OspedaleDegliInnocenti.html">Ospedale degli Innocenti</a></li>
-        <li><a href="locations/PalazzoMediciRiccardi.html">Palazzo Medici Riccardi</a></li>
-        <li><a href="locations/PalazzoRucellai.html">Palazzo Rucellai</a></li>
+        <li><a href="locations/MuseoDiSanMarco.html">Museo di San Marco</a><span class="artwork-count">3</span></li>
+        <li><a href="locations/OperaDelDuomoMuseum.html">Opera del Duomo Museum</a><span class="artwork-count">4</span></li>
+        <li><a href="locations/Orsanmichele.html">Orsanmichele</a><span class="artwork-count">5</span></li>
+        <li><a href="locations/OspedaleDegliInnocenti.html">Ospedale degli Innocenti</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/PalazzoMediciRiccardi.html">Palazzo Medici Riccardi</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/PalazzoRucellai.html">Palazzo Rucellai</a><span class="artwork-count">1</span></li>
         <li><a href="locations/PalazzoStrozzi.html">Palazzo Strozzi</a></li>
-        <li><a href="locations/PalazzoVecchio.html">Palazzo Vecchio</a></li>
-        <li><a href="locations/PittiGallery.html">Pitti Gallery</a></li>
-        <li><a href="locations/SanMarco.html">San Marco</a></li>
-        <li><a href="locations/SantApollonia.html">Sant&#039;Apollonia</a></li>
-        <li><a href="locations/SantaCroce.html">Santa Croce</a></li>
-        <li><a href="locations/SantaMariaNovella.html">Santa Maria Novella</a></li>
-        <li><a href="locations/UffiziGallery.html">Uffizi Gallery</a></li>
+        <li><a href="locations/PalazzoVecchio.html">Palazzo Vecchio</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/PittiGallery.html">Pitti Gallery</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/SanMarco.html">San Marco</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/SantApollonia.html">Sant&#039;Apollonia</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/SantaCroce.html">Santa Croce</a><span class="artwork-count">7</span></li>
+        <li><a href="locations/SantaMariaNovella.html">Santa Maria Novella</a><span class="artwork-count">7</span></li>
+        <li><a href="locations/UffiziGallery.html">Uffizi Gallery</a><span class="artwork-count">24</span></li>
       </ul>
 
       <h3>Vatican City</h3>
       <ul class="location-list">
-        <li><a href="locations/PinacotecaVaticana.html">Pinacoteca Vaticana</a></li>
-        <li><a href="locations/SistineChapel.html">Sistine Chapel</a></li>
-        <li><a href="locations/StPetersBasilica.html">St. Peter&#039;s Basilica</a></li>
+        <li><a href="locations/PinacotecaVaticana.html">Pinacoteca Vaticana</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/SistineChapel.html">Sistine Chapel</a><span class="artwork-count">12</span></li>
+        <li><a href="locations/StPetersBasilica.html">St. Peter&#039;s Basilica</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/VaticanMuseums.html">Vatican Museums</a><span class="artwork-count">2</span></li>
       </ul>
 
       <h3>Rome</h3>
       <ul class="location-list">
-        <li><a href="locations/NationalGalleryOfAncientArt.html">National Gallery of Ancient Art</a></li>
-        <li><a href="locations/SantaCeciliaInTrastevere.html">Santa Cecilia in Trastevere</a></li>
-        <li><a href="locations/SantaMariaMaggiore.html">Santa Maria Maggiore</a></li>
-      </ul>
-
-      <h3>Pompeii</h3>
-      <ul class="location-list">
-        <li><a href="locations/Pompeii.html">Pompeii Archaeological Park</a></li>
-        <li><a href="locations/SuburbanBathsPompeii.html">Suburban Baths (Terme Suburbane)</a></li>
+        <li><a href="locations/SanPietroInVincoli.html">Basilica of San Pietro in Vincoli</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/NationalGalleryOfAncientArt.html">National Gallery of Ancient Art</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/SantaCeciliaInTrastevere.html">Santa Cecilia in Trastevere</a><span class="artwork-count">1</span></li>
+        <li><a href="locations/SantaMariaMaggiore.html">Santa Maria Maggiore</a><span class="artwork-count">1</span></li>
       </ul>
       </section>
 
@@ -159,8 +171,10 @@
         <li><a href="biblestories/CoronationOfTheVirgin.html">Coronation of the Virgin</a></li>
         <li><a href="biblestories/CreationOfAdam.html">Creation of Adam</a></li>
         <li><a href="biblestories/Crucifixion.html">Crucifixion</a></li>
+        <li><a href="biblestories/DavidAndGoliath.html">David and Goliath</a></li>
         <li><a href="biblestories/DeliveryOfTheKeys.html">Delivery of the Keys</a></li>
         <li><a href="biblestories/DepositionFromTheCross.html">Deposition from the Cross</a></li>
+        <li><a href="biblestories/ExpulsionFromParadise.html">Expulsion from Paradise</a></li>
         <li><a href="biblestories/FlightIntoEgypt.html">Flight into Egypt</a></li>
         <li><a href="biblestories/HolyTrinity.html">Holy Trinity</a></li>
         <li><a href="biblestories/JudithAndHolofernes.html">Judith and Holofernes</a></li>
@@ -173,6 +187,7 @@
         <li><a href="biblestories/PresentationInTheTemple.html">Presentation in the Temple</a></li>
         <li><a href="biblestories/PunishmentOfKorah.html">Punishment of Korah</a></li>
         <li><a href="biblestories/StoryOfNoah.html">Story of Noah</a></li>
+        <li><a href="biblestories/BrazenSerpent.html">The Brazen Serpent</a></li>
   
         </ul>
       </section>
@@ -183,137 +198,27 @@
       <div class="timeline-century">
         <div class="timeline-century-header">
           <div class="timeline-marker"></div>
-          <h3>2nd Century BCE</h3>
-          <span class="timeline-count">1 artwork</span>
-        </div>
-        <div class="timeline-artworks">
-          
-    <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/S03_06_01_024_image_3137.jpg" alt="Cave Canem Mosaic" loading="lazy">
-      <div class="timeline-card-content">
-        <span class="timeline-date-badge">2nd century BCE</span>
-        <h4><a href="artworks/CaveCanemMosaic.html">Cave Canem Mosaic</a></h4>
-        
-      </div>
-    </article>
-  
-        </div>
-      </div>
-
-      <div class="timeline-century">
-        <div class="timeline-century-header">
-          <div class="timeline-marker"></div>
           <h3>1st Century BCE</h3>
           <span class="timeline-count">2 artworks</span>
         </div>
         <div class="timeline-artworks">
           
     <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Battle_of_Issus_mosaic_-_Museo_Archeologico_Nazionale_-_Naples_2013-05-16_16-25-06_BW.jpg" alt="Alexander Mosaic" loading="lazy">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Torso_del_belvedere%2C_forse_aiace_telamonio_che_medita_suicidio%2C_I_sec._ac._di_apollonios%2C_forse_da_bronzo_greco_del_200-150_ac._ca_01.JPG" alt="Belvedere Torso" loading="lazy">
       <div class="timeline-card-content">
-        <span class="timeline-date-badge">c. 100 BCE (Roman copy of c. 310 BCE Greek original)</span>
-        <h4><a href="artworks/AlexanderMosaic.html">Alexander Mosaic</a></h4>
-        
+        <span class="timeline-date-badge">1st century BC (likely a copy of an earlier 2nd century BC Greek bronze)</span>
+        <h4><a href="artworks/BelvedereTorso.html">Belvedere Torso</a></h4>
+        <span class="timeline-artist"><a href="artists/ApolloniosSonOfNestor.html">Apollonios</a></span>
       </div>
     </article>
   
 
     <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Villa_of_the_Mysteries_in_Pompeii.jpg" alt="Dionysiac Frieze (Villa of the Mysteries)" loading="lazy">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Laoco%C3%B6n_and_his_sons_group.jpg" alt="Laocoön and His Sons" loading="lazy">
       <div class="timeline-card-content">
-        <span class="timeline-date-badge">c. 60-50 BCE</span>
-        <h4><a href="artworks/DionysiacFrieze.html">Dionysiac Frieze (Villa of the Mysteries)</a></h4>
-        
-      </div>
-    </article>
-  
-        </div>
-      </div>
-
-      <div class="timeline-century">
-        <div class="timeline-century-header">
-          <div class="timeline-marker"></div>
-          <h3>1st Century</h3>
-          <span class="timeline-count">8 artworks</span>
-        </div>
-        <div class="timeline-artworks">
-          
-    <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Affresco_romano_giardino_pompei_17.JPG" alt="Garden Fresco (House of the Golden Bracelet)" loading="lazy">
-      <div class="timeline-card-content">
-        <span class="timeline-date-badge">c. 14-37 CE (Tiberian period, Third Style)</span>
-        <h4><a href="artworks/GardenFrescoGoldenBracelet.html">Garden Fresco (House of the Golden Bracelet)</a></h4>
-        
-      </div>
-    </article>
-  
-
-    <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Fresco_Iphigeneia_MAN_Naples.jpg" alt="Sacrifice of Iphigenia" loading="lazy">
-      <div class="timeline-card-content">
-        <span class="timeline-date-badge">c. 30-79 CE (Fourth Style)</span>
-        <h4><a href="artworks/SacrificeOfIphigenia.html">Sacrifice of Iphigenia</a></h4>
-        
-      </div>
-    </article>
-  
-
-    <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Portrait_d%27une_jeune_femme%2C_dite_Sappho.jpg" alt="&quot;Sappho&quot; Fresco (Portrait of Young Woman with Stylus)" loading="lazy">
-      <div class="timeline-card-content">
-        <span class="timeline-date-badge">c. 50-79 CE (Fourth Style)</span>
-        <h4><a href="artworks/SapphoFresco.html">&quot;Sappho&quot; Fresco (Portrait of Young Woman with Stylus)</a></h4>
-        
-      </div>
-    </article>
-  
-
-    <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Pompeii-couple.jpg" alt="Portrait of Terentius Neo" loading="lazy">
-      <div class="timeline-card-content">
-        <span class="timeline-date-badge">c. 50-79 CE</span>
-        <h4><a href="artworks/PortraitOfTerentiusNeo.html">Portrait of Terentius Neo</a></h4>
-        
-      </div>
-    </article>
-  
-
-    <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Pompei_5234.jpg" alt="Lupanar Frescoes" loading="lazy">
-      <div class="timeline-card-content">
-        <span class="timeline-date-badge">1st century CE</span>
-        <h4><a href="artworks/LupanarFrescoes.html">Lupanar Frescoes</a></h4>
-        
-      </div>
-    </article>
-  
-
-    <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Antigua_ciudad_de_Pompeya%2C_Italia%2C_2023-03-27%2C_DD_210.jpg" alt="House of the Vettii Frescoes" loading="lazy">
-      <div class="timeline-card-content">
-        <span class="timeline-date-badge">c. 62-79 CE (Fourth Style)</span>
-        <h4><a href="artworks/HouseOfTheVettiiFrescoes.html">House of the Vettii Frescoes</a></h4>
-        
-      </div>
-    </article>
-  
-
-    <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Terme_Suburbane_-_affreschi_01.jpg/800px-Terme_Suburbane_-_affreschi_01.jpg" alt="Erotic Frescoes of the Suburban Baths" loading="lazy">
-      <div class="timeline-card-content">
-        <span class="timeline-date-badge">62-79 AD</span>
-        <h4><a href="artworks/EroticFrescoesSuburbanBaths.html">Erotic Frescoes of the Suburban Baths</a></h4>
-        
-      </div>
-    </article>
-  
-
-    <article class="timeline-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Pompeii_-_Casa_dei_Vettii_-_Pentheus.jpg" alt="Death of Pentheus" loading="lazy">
-      <div class="timeline-card-content">
-        <span class="timeline-date-badge">c. 62-70 CE (Fourth Style)</span>
-        <h4><a href="artworks/DeathOfPentheus.html">Death of Pentheus</a></h4>
-        
+        <span class="timeline-date-badge">c. 40-30 BC (or possibly later Roman copy of earlier Greek bronze)</span>
+        <h4><a href="artworks/LaocoonAndHisSons.html">Laocoön and His Sons</a></h4>
+        <span class="timeline-artist"><a href="artists/AgesanderOfRhodes.html">Agesander of Rhodes</a></span>
       </div>
     </article>
   
@@ -554,7 +459,7 @@
         <div class="timeline-century-header">
           <div class="timeline-marker"></div>
           <h3>15th Century (Quattrocento)</h3>
-          <span class="timeline-count">78 artworks</span>
+          <span class="timeline-count">79 artworks</span>
         </div>
         <div class="timeline-artworks">
           
@@ -1219,6 +1124,16 @@
   
 
     <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/SanSatiroInteriors.jpg" alt="Chiesa di Santa Maria presso San Satiro" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1482-1486</span>
+        <h4><a href="artworks/ChiesaDiSantaMariaPressioSanSatiro.html">Chiesa di Santa Maria presso San Satiro</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
       <img src="img/Tesoro_di_San_Pietro__tomba_di_Sisto_IV_di_Antonio_55d24eaf.jpg" alt="Tomb of Pope Sixtus IV" loading="lazy">
       <div class="timeline-card-content">
         <span class="timeline-date-badge">1484–1493</span>
@@ -1344,10 +1259,20 @@
         <div class="timeline-century-header">
           <div class="timeline-marker"></div>
           <h3>16th Century (Cinquecento)</h3>
-          <span class="timeline-count">1 artwork</span>
+          <span class="timeline-count">12 artworks</span>
         </div>
         <div class="timeline-artworks">
           
+    <article class="timeline-card">
+      
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1502</span>
+        <h4><a href="artworks/Tempietto.html">Tempietto</a></h4>
+        
+      </div>
+    </article>
+  
+
     <article class="timeline-card">
       <img src="img/Gentile_and_Giovanni_Bellini___Saint_Mark_Preachin_a46c29bb.jpg" alt="St. Mark Preaching in Alexandria" loading="lazy">
       <div class="timeline-card-content">
@@ -1357,17 +1282,126 @@
       </div>
     </article>
   
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/%27Isaiah_Sistine_Chapel_ceiling%27_by_Michelangelo_JBU36FXD.jpg" alt="Isaiah" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1508-1509</span>
+        <h4><a href="artworks/IsaiahMichelangelo.html">Isaiah</a></h4>
+        <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Deluge%2C_Michelangelo.png" alt="The Flood" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1508-1509</span>
+        <h4><a href="artworks/FloodMichelangelo.html">The Flood</a></h4>
+        <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg" alt="Creation of Adam" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1508-1512</span>
+        <h4><a href="artworks/CreationOfAdamMichelangelo.html">Creation of Adam</a></h4>
+        <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Expulsion_del_para%C3%ADso.jpg" alt="Fall of Adam and Eve and Expulsion" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1509-1510</span>
+        <h4><a href="artworks/FallAndExpulsion.html">Fall of Adam and Eve and Expulsion</a></h4>
+        <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/David_and_Goliath_%281%29.png" alt="David and Goliath" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1509</span>
+        <h4><a href="artworks/DavidAndGoliathMichelangelo.html">David and Goliath</a></h4>
+        <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Michelangelo_the_libyan.jpg" alt="Libyan Sibyl" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1511</span>
+        <h4><a href="artworks/LibyanSibyl.html">Libyan Sibyl</a></h4>
+        <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/The_Creation_of_the_Sun_and_the_Moon%2C_Michelangelo_%281508-1512%29.jpg" alt="Creation of Sun, Moon and Plants" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1511</span>
+        <h4><a href="artworks/CreationOfSunMoonAndPlants.html">Creation of Sun, Moon and Plants</a></h4>
+        <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/The_Brazen_Serpent_%281%29.png" alt="The Brazen Serpent" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1511-1512</span>
+        <h4><a href="artworks/BrazenSerpent.html">The Brazen Serpent</a></h4>
+        <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Vaticano_2011_%2852%29.JPG" alt="Separation of Light from Darkness" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1512</span>
+        <h4><a href="artworks/SeparationOfLightFromDarkness.html">Separation of Light from Darkness</a></h4>
+        <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Michelangelo%27s_Moses_%28Rome%29.jpg" alt="Moses" loading="lazy">
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1513-1515</span>
+        <h4><a href="artworks/MosesMichelangelo.html">Moses</a></h4>
+        <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
         </div>
       </div>
         </div>
+      </section>
+
+      <section class="tab-panel" data-tab="map">
+        <div id="map-container" class="map-container"></div>
+        <script type="application/json" id="map-locations-data">[{"id":"UffiziGallery","title":"Uffizi Gallery","city":"Florence, Italy","artworkCount":24,"lat":43.7687,"lng":11.2551},{"id":"StPetersBasilica","title":"St. Peter's Basilica","city":"Vatican City","artworkCount":1,"lat":41.9022,"lng":12.4539},{"id":"SistineChapel","title":"Sistine Chapel","city":"Vatican City","artworkCount":12,"lat":41.9029,"lng":12.4545},{"id":"SantiGiovanniEPaolo","title":"Basilica dei Santi Giovanni e Paolo","city":"Venice, Italy","artworkCount":1,"lat":45.4402,"lng":12.3428},{"id":"SantaMariaNovella","title":"Santa Maria Novella","city":"Florence, Italy","artworkCount":7,"lat":43.7746,"lng":11.2494},{"id":"SantaMariaMaggiore","title":"Santa Maria Maggiore","city":"Rome, Italy","artworkCount":1,"lat":41.8976,"lng":12.4984},{"id":"SantaMariaDelleGrazie","title":"Santa Maria delle Grazie","city":"Milan, Italy","artworkCount":1,"lat":45.4659,"lng":9.1711},{"id":"SantaCroce","title":"Santa Croce","city":"Florence, Italy","artworkCount":7,"lat":43.7685,"lng":11.2625},{"id":"SantaCeciliaInTrastevere","title":"Santa Cecilia in Trastevere","city":"Rome, Italy","artworkCount":1,"lat":41.8889,"lng":12.476},{"id":"SantApollonia","title":"Sant'Apollonia","city":"Florence, Italy","artworkCount":1,"lat":43.7783,"lng":11.2565},{"id":"SanMarco","title":"San Marco","city":"Florence, Italy","artworkCount":1,"lat":45.4345,"lng":12.3396},{"id":"PittiGallery","title":"Pitti Gallery","city":"Florence, Italy","artworkCount":1,"lat":43.7653,"lng":11.25},{"id":"PinacotecaVaticana","title":"Pinacoteca Vaticana","city":"Vatican City","artworkCount":1,"lat":41.9057,"lng":12.4531},{"id":"PalazzoVecchio","title":"Palazzo Vecchio","city":"Florence, Italy","artworkCount":1,"lat":43.7693,"lng":11.2562},{"id":"PalazzoStrozzi","title":"Palazzo Strozzi","city":"Florence, Italy","artworkCount":0,"lat":43.771,"lng":11.2509},{"id":"PalazzoRucellai","title":"Palazzo Rucellai","city":"Florence, Italy","artworkCount":1,"lat":43.7714,"lng":11.2484},{"id":"PalazzoMediciRiccardi","title":"Palazzo Medici Riccardi","city":"Florence, Italy","artworkCount":1,"lat":43.7754,"lng":11.2554},{"id":"OspedaleDegliInnocenti","title":"Ospedale degli Innocenti","city":"Florence, Italy","artworkCount":1,"lat":43.7773,"lng":11.2622},{"id":"Orsanmichele","title":"Orsanmichele","city":"Florence, Italy","artworkCount":5,"lat":43.771,"lng":11.2551},{"id":"OperaDelDuomoMuseum","title":"Opera del Duomo Museum","city":"Florence, Italy","artworkCount":4,"lat":43.7732,"lng":11.2578},{"id":"NationalGalleryOfAncientArt","title":"National Gallery of Ancient Art","city":"Rome, Italy","artworkCount":1,"lat":41.9038,"lng":12.4897},{"id":"MuseoDiSanMarco","title":"Museo di San Marco","city":"Florence, Italy","artworkCount":3,"lat":43.7782,"lng":11.2589},{"id":"MuseoCorrer","title":"Museo Correr","city":"Venice, Italy","artworkCount":1,"lat":45.4339,"lng":12.3379},{"id":"MilanCathedral","title":"Milan Cathedral","city":"Milan, Italy","artworkCount":0,"lat":45.4641,"lng":9.1919},{"id":"LoggiaDeiLanzi","title":"Loggia dei Lanzi","city":"Florence, Italy","artworkCount":0,"lat":43.7693,"lng":11.2555},{"id":"FlorenceCathedral","title":"Florence Cathedral","city":"Florence, Italy","artworkCount":4,"lat":43.7731,"lng":11.256},{"id":"CastelloSforzesco","title":"Castello Sforzesco","city":"Milan, Italy","artworkCount":1,"lat":45.4705,"lng":9.1793},{"id":"CaDOro","title":"Ca' d'Oro","city":"Venice, Italy","artworkCount":0,"lat":45.4409,"lng":12.3345},{"id":"Brera","title":"Pinacoteca di Brera","city":"Milan, Italy","artworkCount":3,"lat":45.4719,"lng":9.188},{"id":"BibliotecaNazionale","title":"Biblioteca Nazionale","city":"Florence, Italy","artworkCount":1,"lat":45.4644,"lng":9.1879},{"id":"BasilicaOfSanLorenzo","title":"Basilica of San Lorenzo","city":"Florence, Italy","artworkCount":2,"lat":43.775,"lng":11.2537},{"id":"BasilicaDiSantaTrinita","title":"Basilica di Santa Trinita","city":"Florence, Italy","artworkCount":2,"lat":43.7697,"lng":11.2498},{"id":"BasilicaDeiFrari","title":"Basilica di Santa Maria Gloriosa dei Frari","city":"Venice, Italy","artworkCount":1,"lat":45.4369,"lng":12.3264},{"id":"Bargello","title":"Bargello","city":"Florence, Italy","artworkCount":10,"lat":43.7702,"lng":11.258},{"id":"BaptisteryOfFlorence","title":"Baptistery of Florence","city":"Florence, Italy","artworkCount":4,"lat":43.7732,"lng":11.2541},{"id":"Accademia","title":"Gallerie dell'Accademia","city":"Venice, Italy","artworkCount":4,"lat":45.4314,"lng":12.3286}]</script>
       </section>
     </div>
   
   </main>
   <footer>
-    <p>Travel notes on Italian Art</p>
+    <p>Travel notes on Italian Art · <a href="./credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 1, 2026</p>
   </footer>
   <script src="./sort.js"></script>
   <script src="./tabs.js"></script>
+  <script src="./search.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="./map.js"></script>
 </body>
 </html>

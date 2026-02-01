@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetPanel = document.querySelector(`.tab-panel[data-tab="${btn.dataset.tab}"]`);
       if (targetPanel) {
         targetPanel.classList.add('active');
+
+        // Dispatch event for map tab to enable lazy initialization
+        if (btn.dataset.tab === 'map') {
+          document.dispatchEvent(new CustomEvent('map-tab-shown'));
+        }
       }
     });
   });

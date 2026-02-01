@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creation of Adam - Italian Art</title>
   <link rel="stylesheet" href="../styles.css">
+
 </head>
 <body>
   <header>
@@ -38,17 +39,62 @@
       <section class="artworks-section">
         <h2>Artworks Depicting This Story</h2>
         
+    <div class="sort-controls">
+      <span>Sort by:</span>
+      <button class="sort-btn active" data-sort="date">Date</button>
+      <button class="sort-btn" data-sort="title">Title</button>
+      <button class="sort-btn" data-sort="artist">Artist</button>
+    </div>
+  
         <div class="artwork-grid">
           
-    <article class="artwork-card" data-title="Creation of Adam" data-date="1334–1343">
+    <article class="artwork-card" data-title="Creation of Adam" data-date="1334–1343" data-artist="Andrea Pisano">
       <h3><a href="../artworks/CreationOfAdam.html">Creation of Adam</a> </h3>
       <div class="artwork-meta">
-        
+        <span class="artist"><a href="../artists/AndreaPisano.html">Andrea Pisano</a></span>
         <span class="medium">Marble relief</span>
         <span class="date">1334–1343</span>
       </div>
       <p class="description">Relief sculpture depicting the Creation of Adam.</p>
       <img src="../img/Andrea_Pisano__The_Creation_of_Adam_and_Eve__1334-_ce0dbb10.jpg" alt="Creation of Adam" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="Creation of Adam" data-date="1508-1512" data-artist="Michelangelo">
+      <h3><a href="../artworks/CreationOfAdamMichelangelo.html">Creation of Adam</a> </h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/Michelangelo.html">Michelangelo</a></span>
+        <span class="medium">Fresco</span>
+        <span class="date">1508-1512</span>
+      </div>
+      <p class="description">Completed in 17 days. Painted after the successes of Julius II&#039;s army, with an increase in figure size compared to earlier scenes. God, absent from the first four scenes and standing on earth in the Creation of Eve, now moves through heaven in the last four scenes.
+
+The near-touching fingers of God and Adam has become one of the most replicated religious images in history. The composition shows the reclining Adam receiving the spark of life from God, who floats in a billowing cloak surrounded by angels.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg" alt="Creation of Adam" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="Creation of Sun, Moon and Plants" data-date="1511" data-artist="Michelangelo">
+      <h3><a href="../artworks/CreationOfSunMoonAndPlants.html">Creation of Sun, Moon and Plants</a> </h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/Michelangelo.html">Michelangelo</a></span>
+        <span class="medium">Fresco</span>
+        <span class="date">1511</span>
+      </div>
+      <p class="description">Completed in 7 days. Shows God creating the sun and moon with outstretched arms, commanding the celestial bodies into existence. In the same panel, God is shown a second time from behind, creating the plants. This dual depiction of God in one scene is a compositional innovation.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/The_Creation_of_the_Sun_and_the_Moon%2C_Michelangelo_%281508-1512%29.jpg" alt="Creation of Sun, Moon and Plants" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="Separation of Light from Darkness" data-date="1512" data-artist="Michelangelo">
+      <h3><a href="../artworks/SeparationOfLightFromDarkness.html">Separation of Light from Darkness</a> </h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/Michelangelo.html">Michelangelo</a></span>
+        <span class="medium">Fresco</span>
+        <span class="date">1512</span>
+      </div>
+      <p class="description">Completed in 1 day—the fastest execution of any panel on the ceiling. The only scene that is presented as if viewed from below, with dramatic foreshortening of God&#039;s figure. This is the first act of creation, showing God&#039;s hands separating the primordial light from darkness.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Vaticano_2011_%2852%29.JPG" alt="Separation of Light from Darkness" loading="lazy">
     </article>
   
         </div>
@@ -57,9 +103,12 @@
   
   </main>
   <footer>
-    <p>Travel notes on Italian Art</p>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 1, 2026</p>
   </footer>
   <script src="../sort.js"></script>
   <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
 </body>
 </html>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story of Noah - Italian Art</title>
   <link rel="stylesheet" href="../styles.css">
+
 </head>
 <body>
   <header>
@@ -38,17 +39,36 @@
       <section class="artworks-section">
         <h2>Artworks Depicting This Story</h2>
         
+    <div class="sort-controls">
+      <span>Sort by:</span>
+      <button class="sort-btn active" data-sort="date">Date</button>
+      <button class="sort-btn" data-sort="title">Title</button>
+      <button class="sort-btn" data-sort="artist">Artist</button>
+    </div>
+  
         <div class="artwork-grid">
           
-    <article class="artwork-card" data-title="Story of Noah" data-date="c. 1447">
+    <article class="artwork-card" data-title="Story of Noah" data-date="c. 1447" data-artist="Paolo Uccello">
       <h3><a href="../artworks/StoryOfNoah.html">Story of Noah</a> </h3>
       <div class="artwork-meta">
-        
+        <span class="artist"><a href="../artists/PaoloUccello.html">Paolo Uccello</a></span>
         <span class="medium">Fresco</span>
         <span class="date">c. 1447</span>
       </div>
       <p class="description">Fresco depicting scenes from the Story of Noah in the Chiostro Verde (Green Cloister), demonstrating Uccello&#039;s fascination with perspective.</p>
       <img src="../img/Paolo_Uccello___Flood_and_Waters_Subsiding_b93dca2a.jpg" alt="Story of Noah" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="The Flood" data-date="1508-1509" data-artist="Michelangelo">
+      <h3><a href="../artworks/FloodMichelangelo.html">The Flood</a> </h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/Michelangelo.html">Michelangelo</a></span>
+        <span class="medium">Fresco</span>
+        <span class="date">1508-1509</span>
+      </div>
+      <p class="description">Completed in 29 days. The scene shows the devastating flood waters rising as people desperately seek safety. The father carries the body of his drowned son—a powerful image of loss and divine judgment. One of the central narrative panels on the Sistine Chapel ceiling.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Deluge%2C_Michelangelo.png" alt="The Flood" loading="lazy">
     </article>
   
         </div>
@@ -57,9 +77,12 @@
   
   </main>
   <footer>
-    <p>Travel notes on Italian Art</p>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 1, 2026</p>
   </footer>
   <script src="../sort.js"></script>
   <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
 </body>
 </html>
