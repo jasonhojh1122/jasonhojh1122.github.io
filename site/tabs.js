@@ -1,5 +1,6 @@
 /**
  * Tab navigation for index page
+ * Supports URL parameter ?tab=<tabname> to remember/share active tab
  */
 document.addEventListener('DOMContentLoaded', () => {
   const tabBtns = document.querySelectorAll('.tab-btn');
@@ -8,23 +9,47 @@ document.addEventListener('DOMContentLoaded', () => {
   // Only initialize if we have tabs
   if (tabBtns.length === 0) return;
 
+  function activateTab(tabName) {
+    const btn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+    const panel = document.querySelector(`.tab-panel[data-tab="${tabName}"]`);
+
+    if (!btn || !panel) return false;
+
+    // Remove active from all
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabPanels.forEach(p => p.classList.remove('active'));
+
+    // Add active to target
+    btn.classList.add('active');
+    panel.classList.add('active');
+
+    // Dispatch event for map tab to enable lazy initialization
+    if (tabName === 'map') {
+      document.dispatchEvent(new CustomEvent('map-tab-shown'));
+    }
+
+    return true;
+  }
+
+  function updateUrlParam(tabName) {
+    const url = new URL(window.location);
+    url.searchParams.set('tab', tabName);
+    history.replaceState(null, '', url);
+  }
+
+  // Check URL parameter on load
+  const urlParams = new URLSearchParams(window.location.search);
+  const tabParam = urlParams.get('tab');
+  if (tabParam) {
+    activateTab(tabParam);
+  }
+
+  // Handle tab clicks
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Remove active from all
-      tabBtns.forEach(b => b.classList.remove('active'));
-      tabPanels.forEach(p => p.classList.remove('active'));
-
-      // Add active to clicked
-      btn.classList.add('active');
-      const targetPanel = document.querySelector(`.tab-panel[data-tab="${btn.dataset.tab}"]`);
-      if (targetPanel) {
-        targetPanel.classList.add('active');
-
-        // Dispatch event for map tab to enable lazy initialization
-        if (btn.dataset.tab === 'map') {
-          document.dispatchEvent(new CustomEvent('map-tab-shown'));
-        }
-      }
+      const tabName = btn.dataset.tab;
+      activateTab(tabName);
+      updateUrlParam(tabName);
     });
   });
 });
