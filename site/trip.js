@@ -62,9 +62,20 @@
   }
 
   /**
-   * Get location info by ID
+   * Get location info by ID or from custom entry
    */
-  function getLocation(id) {
+  function getLocation(id, entry = null) {
+    // Check if this is a custom location
+    if (entry && entry.custom) {
+      return {
+        id: entry.id,
+        title: entry.title || 'Custom Location',
+        city: entry.city || '',
+        lat: entry.lat || null,
+        lng: entry.lng || null,
+        isCustom: true
+      };
+    }
     return allLocations[id] || { id, title: id, city: '', lat: null, lng: null };
   }
 
@@ -147,7 +158,7 @@
     listEl.dataset.dayId = day.id;
 
     day.locations.forEach((entry, locIndex) => {
-      const loc = getLocation(entry.id);
+      const loc = getLocation(entry.id, entry);
       const li = renderLocationItem(loc, entry, day.id, locIndex);
       listEl.appendChild(li);
     });
@@ -234,11 +245,19 @@
     const topRow = document.createElement('div');
     topRow.className = 'trip-location-top';
 
-    const link = document.createElement('a');
-    link.href = `locations/${loc.id}.html`;
-    link.className = 'trip-location-link';
-    link.textContent = loc.title;
-    topRow.appendChild(link);
+    if (loc.isCustom) {
+      // Custom locations don't have a page to link to
+      const span = document.createElement('span');
+      span.className = 'trip-location-link trip-location-custom';
+      span.textContent = loc.title;
+      topRow.appendChild(span);
+    } else {
+      const link = document.createElement('a');
+      link.href = `locations/${loc.id}.html`;
+      link.className = 'trip-location-link';
+      link.textContent = loc.title;
+      topRow.appendChild(link);
+    }
 
     contentCol.appendChild(topRow);
 
@@ -372,7 +391,8 @@
    * Show modal to edit a location entry
    */
   function showEditLocationModal(dayId, entry) {
-    const loc = getLocation(entry.id);
+    const loc = getLocation(entry.id, entry);
+    const isCustom = entry.custom;
 
     const overlay = document.createElement('div');
     overlay.className = 'trip-modal-overlay';
@@ -380,12 +400,38 @@
     const modal = document.createElement('div');
     modal.className = 'trip-modal trip-modal-edit';
 
+    // Build custom fields HTML if this is a custom location
+    const customFieldsHtml = isCustom ? `
+        <label class="trip-edit-label">
+          <span>Name *</span>
+          <input type="text" class="trip-edit-title" value="${escapeHtml(entry.title || '')}" required>
+        </label>
+        <label class="trip-edit-label">
+          <span>City</span>
+          <input type="text" class="trip-edit-city" value="${escapeHtml(entry.city || '')}">
+        </label>
+    ` : '';
+
+    const coordsFieldsHtml = isCustom ? `
+        <div class="trip-custom-coords">
+          <label class="trip-edit-label trip-edit-label-half">
+            <span>Latitude</span>
+            <input type="number" step="any" class="trip-edit-lat" value="${entry.lat || ''}" placeholder="e.g., 43.7696">
+          </label>
+          <label class="trip-edit-label trip-edit-label-half">
+            <span>Longitude</span>
+            <input type="number" step="any" class="trip-edit-lng" value="${entry.lng || ''}" placeholder="e.g., 11.2558">
+          </label>
+        </div>
+    ` : '';
+
     modal.innerHTML = `
       <div class="trip-modal-header">
-        <h3>${escapeHtml(loc.title)}</h3>
+        <h3>${escapeHtml(loc.title)}${isCustom ? ' <span class="trip-custom-badge">Custom</span>' : ''}</h3>
         <button class="trip-modal-close">&times;</button>
       </div>
       <div class="trip-edit-form">
+        ${customFieldsHtml}
         <label class="trip-edit-label">
           <span>Time (24hr)</span>
           <input type="time" class="trip-edit-time" value="${entry.time || ''}">
@@ -398,6 +444,7 @@
           <span>Google Maps Link</span>
           <input type="url" class="trip-edit-maplink" value="${escapeHtml(entry.mapLink || '')}" placeholder="https://maps.google.com/...">
         </label>
+        ${coordsFieldsHtml}
         <div class="trip-edit-actions">
           <button class="trip-edit-save">Save</button>
           <button class="trip-edit-cancel">Cancel</button>
@@ -410,6 +457,17 @@
     }
 
     function save() {
+      if (isCustom) {
+        const title = modal.querySelector('.trip-edit-title').value.trim();
+        if (!title) {
+          modal.querySelector('.trip-edit-title').focus();
+          return;
+        }
+        entry.title = title;
+        entry.city = modal.querySelector('.trip-edit-city').value.trim();
+        entry.lat = parseFloat(modal.querySelector('.trip-edit-lat').value) || null;
+        entry.lng = parseFloat(modal.querySelector('.trip-edit-lng').value) || null;
+      }
       entry.time = modal.querySelector('.trip-edit-time').value;
       entry.comment = modal.querySelector('.trip-edit-comment').value;
       entry.mapLink = modal.querySelector('.trip-edit-maplink').value;
@@ -435,7 +493,9 @@
     overlay.appendChild(modal);
     document.body.appendChild(overlay);
 
-    modal.querySelector('.trip-edit-time').focus();
+    // Focus the first input
+    const firstInput = isCustom ? modal.querySelector('.trip-edit-title') : modal.querySelector('.trip-edit-time');
+    firstInput.focus();
   }
 
   /**
@@ -568,7 +628,7 @@
     // Get locations with coordinates (entries are objects with id property)
     // We need to track original indices for hover highlighting
     const locsWithIndex = day.locations.map((entry, idx) => ({
-      loc: getLocation(entry.id),
+      loc: getLocation(entry.id, entry),
       originalIndex: idx
     })).filter(item => item.loc.lat && item.loc.lng);
 
@@ -808,13 +868,136 @@
       if (e.target === overlay) closeModal();
     });
 
+    // Add custom location button
+    const customBtn = document.createElement('button');
+    customBtn.className = 'trip-add-custom-btn';
+    customBtn.textContent = '+ Add Custom Location';
+    customBtn.addEventListener('click', () => {
+      closeModal();
+      showAddCustomLocationModal(dayId);
+    });
+
     modal.appendChild(header);
+    modal.appendChild(customBtn);
     modal.appendChild(searchInput);
     modal.appendChild(listContainer);
     overlay.appendChild(modal);
     document.body.appendChild(overlay);
 
     searchInput.focus();
+  }
+
+  /**
+   * Show modal to add a custom location
+   */
+  function showAddCustomLocationModal(dayId) {
+    const overlay = document.createElement('div');
+    overlay.className = 'trip-modal-overlay';
+
+    const modal = document.createElement('div');
+    modal.className = 'trip-modal trip-modal-custom';
+
+    modal.innerHTML = `
+      <div class="trip-modal-header">
+        <h3>Add Custom Location</h3>
+        <button class="trip-modal-close">&times;</button>
+      </div>
+      <div class="trip-edit-form">
+        <label class="trip-edit-label">
+          <span>Name *</span>
+          <input type="text" class="trip-custom-title" placeholder="Restaurant, hotel, landmark..." required>
+        </label>
+        <label class="trip-edit-label">
+          <span>City</span>
+          <input type="text" class="trip-custom-city" placeholder="e.g., Florence">
+        </label>
+        <label class="trip-edit-label">
+          <span>Time (24hr)</span>
+          <input type="time" class="trip-custom-time">
+        </label>
+        <label class="trip-edit-label">
+          <span>Note</span>
+          <input type="text" class="trip-custom-comment" placeholder="Add a note...">
+        </label>
+        <label class="trip-edit-label">
+          <span>Google Maps Link</span>
+          <input type="url" class="trip-custom-maplink" placeholder="https://maps.google.com/...">
+        </label>
+        <div class="trip-custom-coords">
+          <label class="trip-edit-label trip-edit-label-half">
+            <span>Latitude</span>
+            <input type="number" step="any" class="trip-custom-lat" placeholder="e.g., 43.7696">
+          </label>
+          <label class="trip-edit-label trip-edit-label-half">
+            <span>Longitude</span>
+            <input type="number" step="any" class="trip-custom-lng" placeholder="e.g., 11.2558">
+          </label>
+        </div>
+        <p class="trip-custom-hint">Tip: Get coordinates from Google Maps by right-clicking a location</p>
+        <div class="trip-edit-actions">
+          <button class="trip-edit-save">Add Location</button>
+          <button class="trip-edit-cancel">Cancel</button>
+        </div>
+      </div>
+    `;
+
+    function closeModal() {
+      overlay.remove();
+    }
+
+    function save() {
+      const title = modal.querySelector('.trip-custom-title').value.trim();
+      if (!title) {
+        modal.querySelector('.trip-custom-title').focus();
+        return;
+      }
+
+      const entry = {
+        id: 'custom-' + Date.now(),
+        custom: true,
+        title: title,
+        city: modal.querySelector('.trip-custom-city').value.trim(),
+        time: modal.querySelector('.trip-custom-time').value,
+        comment: modal.querySelector('.trip-custom-comment').value.trim(),
+        mapLink: modal.querySelector('.trip-custom-maplink').value.trim(),
+        lat: parseFloat(modal.querySelector('.trip-custom-lat').value) || null,
+        lng: parseFloat(modal.querySelector('.trip-custom-lng').value) || null
+      };
+
+      addCustomLocation(dayId, entry);
+      closeModal();
+    }
+
+    modal.querySelector('.trip-modal-close').addEventListener('click', closeModal);
+    modal.querySelector('.trip-edit-cancel').addEventListener('click', closeModal);
+    modal.querySelector('.trip-edit-save').addEventListener('click', save);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeModal();
+    });
+
+    // Enter to save (on text inputs, not time)
+    modal.querySelectorAll('input[type="text"], input[type="url"], input[type="number"]').forEach(input => {
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') save();
+      });
+    });
+
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+
+    modal.querySelector('.trip-custom-title').focus();
+  }
+
+  /**
+   * Add a custom location to a day
+   */
+  function addCustomLocation(dayId, entry) {
+    const day = tripData.days.find(d => d.id === dayId);
+    if (!day) return;
+
+    day.locations.push(entry);
+    saveTripData();
+    render();
   }
 
   /**
