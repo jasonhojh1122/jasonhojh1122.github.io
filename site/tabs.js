@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.dispatchEvent(new CustomEvent('map-tab-shown'));
     }
 
+    // Dispatch event for trip tab to enable lazy initialization
+    if (tabName === 'trip') {
+      document.dispatchEvent(new CustomEvent('trip-tab-shown'));
+    }
+
     return true;
   }
 
