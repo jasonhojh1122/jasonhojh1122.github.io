@@ -184,6 +184,9 @@
     mapContainer.id = `trip-map-${day.id}`;
     dayEl.appendChild(mapContainer);
 
+    // Setup swipe gestures for mobile (swipe right to delete day)
+    setupDaySwipeGestures(dayEl, day);
+
     return dayEl;
   }
 
@@ -358,7 +361,188 @@
       highlightMapMarker(dayId, index, false);
     });
 
+    // Setup swipe gestures for mobile
+    setupSwipeGestures(li, dayId, entry, loc);
+
     return li;
+  }
+
+  /**
+   * Setup swipe gestures for a location item
+   */
+  function setupSwipeGestures(li, dayId, entry, loc) {
+    let startX = 0;
+    let startY = 0;
+    let currentX = 0;
+    let isDragging = false;
+    let isHorizontalSwipe = null;
+    const threshold = 80; // pixels to trigger action
+    const deleteThreshold = 120; // higher threshold for delete
+
+    function handleTouchStart(e) {
+      // Don't interfere with contenteditable elements
+      if (e.target.contentEditable === 'true' || e.target.tagName === 'INPUT') return;
+
+      const touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+      currentX = 0;
+      isDragging = true;
+      isHorizontalSwipe = null;
+      li.classList.add('swiping');
+    }
+
+    function handleTouchMove(e) {
+      if (!isDragging) return;
+
+      const touch = e.touches[0];
+      const deltaX = touch.clientX - startX;
+      const deltaY = touch.clientY - startY;
+
+      // Determine swipe direction on first significant movement
+      if (isHorizontalSwipe === null && (Math.abs(deltaX) > 10 || Math.abs(deltaY) > 10)) {
+        isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY);
+      }
+
+      // Only handle horizontal swipes
+      if (!isHorizontalSwipe) {
+        isDragging = false;
+        li.classList.remove('swiping');
+        return;
+      }
+
+      e.preventDefault();
+      currentX = deltaX;
+
+      // Limit swipe distance with elastic effect
+      const maxSwipe = 150;
+      const clampedX = Math.sign(deltaX) * Math.min(Math.abs(deltaX), maxSwipe + Math.abs(deltaX - maxSwipe) * 0.2);
+
+      li.style.setProperty('--swipe-x', `${clampedX}px`);
+
+      // Update action indicators
+      if (deltaX > threshold) {
+        li.classList.add('swipe-delete-ready');
+        li.classList.remove('swipe-edit-ready');
+      } else if (deltaX < -threshold) {
+        li.classList.add('swipe-edit-ready');
+        li.classList.remove('swipe-delete-ready');
+      } else {
+        li.classList.remove('swipe-delete-ready', 'swipe-edit-ready');
+      }
+    }
+
+    function handleTouchEnd() {
+      if (!isDragging) return;
+      isDragging = false;
+
+      li.classList.remove('swiping', 'swipe-delete-ready', 'swipe-edit-ready');
+      li.style.setProperty('--swipe-x', '0px');
+
+      // Execute action based on swipe distance
+      if (currentX > deleteThreshold) {
+        // Swipe right - delete
+        li.classList.add('swipe-deleting');
+        setTimeout(() => {
+          removeLocation(dayId, loc.id);
+        }, 200);
+      } else if (currentX < -threshold) {
+        // Swipe left - edit
+        showEditLocationModal(dayId, entry);
+      }
+    }
+
+    li.addEventListener('touchstart', handleTouchStart, { passive: true });
+    li.addEventListener('touchmove', handleTouchMove, { passive: false });
+    li.addEventListener('touchend', handleTouchEnd);
+    li.addEventListener('touchcancel', handleTouchEnd);
+  }
+
+  /**
+   * Setup swipe gestures for a day card
+   */
+  function setupDaySwipeGestures(dayEl, day) {
+    const header = dayEl.querySelector('.trip-day-header');
+    if (!header) return;
+
+    let startX = 0;
+    let startY = 0;
+    let currentX = 0;
+    let isDragging = false;
+    let isHorizontalSwipe = null;
+    const deleteThreshold = 150;
+
+    function handleTouchStart(e) {
+      // Only trigger on header, not on input
+      if (e.target.tagName === 'INPUT') return;
+
+      const touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+      currentX = 0;
+      isDragging = true;
+      isHorizontalSwipe = null;
+      dayEl.classList.add('swiping');
+    }
+
+    function handleTouchMove(e) {
+      if (!isDragging) return;
+
+      const touch = e.touches[0];
+      const deltaX = touch.clientX - startX;
+      const deltaY = touch.clientY - startY;
+
+      if (isHorizontalSwipe === null && (Math.abs(deltaX) > 10 || Math.abs(deltaY) > 10)) {
+        isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY);
+      }
+
+      if (!isHorizontalSwipe) {
+        isDragging = false;
+        dayEl.classList.remove('swiping');
+        return;
+      }
+
+      // Only allow right swipe for delete
+      if (deltaX < 0) {
+        currentX = 0;
+        dayEl.style.setProperty('--swipe-x', '0px');
+        return;
+      }
+
+      e.preventDefault();
+      currentX = deltaX;
+
+      const maxSwipe = 200;
+      const clampedX = Math.min(deltaX, maxSwipe + (deltaX - maxSwipe) * 0.15);
+
+      dayEl.style.setProperty('--swipe-x', `${clampedX}px`);
+
+      if (deltaX > deleteThreshold) {
+        dayEl.classList.add('swipe-delete-ready');
+      } else {
+        dayEl.classList.remove('swipe-delete-ready');
+      }
+    }
+
+    function handleTouchEnd() {
+      if (!isDragging) return;
+      isDragging = false;
+
+      dayEl.classList.remove('swiping', 'swipe-delete-ready');
+      dayEl.style.setProperty('--swipe-x', '0px');
+
+      if (currentX > deleteThreshold) {
+        dayEl.classList.add('swipe-deleting');
+        setTimeout(() => {
+          deleteDay(day.id);
+        }, 200);
+      }
+    }
+
+    header.addEventListener('touchstart', handleTouchStart, { passive: true });
+    header.addEventListener('touchmove', handleTouchMove, { passive: false });
+    header.addEventListener('touchend', handleTouchEnd);
+    header.addEventListener('touchcancel', handleTouchEnd);
   }
 
   /**

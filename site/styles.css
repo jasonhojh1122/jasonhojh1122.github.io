@@ -2651,6 +2651,132 @@ img {
   color: var(--color-terracotta);
 }
 
+/* ===== Swipe Gestures (Mobile) ===== */
+
+/* Location item swipe container */
+.trip-location-item {
+  --swipe-x: 0px;
+  position: relative;
+  transform: translateX(var(--swipe-x));
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.trip-location-item.swiping {
+  transition: none;
+}
+
+.trip-location-item.swipe-deleting {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+/* Swipe action backgrounds - revealed behind swiped item */
+.trip-location-item::before,
+.trip-location-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+/* Delete indicator (right swipe) */
+.trip-location-item::before {
+  right: 100%;
+  background: linear-gradient(90deg, var(--color-terracotta-deep), var(--color-terracotta));
+  color: var(--color-warm-white);
+  content: '✕ DELETE';
+  padding-left: var(--space-lg);
+  justify-content: flex-start;
+}
+
+/* Edit indicator (left swipe) */
+.trip-location-item::after {
+  left: 100%;
+  background: linear-gradient(270deg, var(--color-gold), var(--color-gold-muted));
+  color: var(--color-warm-white);
+  content: 'EDIT ✎';
+  padding-right: var(--space-lg);
+  justify-content: flex-end;
+}
+
+.trip-location-item.swiping::before,
+.trip-location-item.swiping::after {
+  opacity: 0.7;
+}
+
+.trip-location-item.swipe-delete-ready::before {
+  opacity: 1;
+}
+
+.trip-location-item.swipe-edit-ready::after {
+  opacity: 1;
+}
+
+/* Day card swipe */
+.trip-day {
+  --swipe-x: 0px;
+  position: relative;
+}
+
+.trip-day-header {
+  transform: translateX(var(--swipe-x));
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.trip-day.swiping .trip-day-header {
+  transition: none;
+}
+
+.trip-day.swipe-deleting {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* Day delete indicator */
+.trip-day::before {
+  content: '✕ DELETE DAY';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: var(--space-lg);
+  background: linear-gradient(90deg, var(--color-terracotta-deep), var(--color-terracotta));
+  color: var(--color-warm-white);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+  border-radius: var(--radius-md) 0 0 0;
+}
+
+.trip-day.swiping::before {
+  opacity: 0.7;
+}
+
+.trip-day.swipe-delete-ready::before {
+  opacity: 1;
+}
+
 /* Trip Responsive */
 @media (max-width: 768px) {
   .trip-header {
@@ -2676,7 +2802,8 @@ img {
   }
 
   .trip-day-delete {
-    align-self: flex-end;
+    /* Hide delete button on mobile - use swipe gesture instead */
+    display: none;
   }
 
   .trip-location-list::before {
@@ -2700,8 +2827,8 @@ img {
   }
 
   .trip-location-col-action {
-    width: 28px;
-    opacity: 1;
+    /* Hide edit/delete buttons on mobile - use swipe gestures instead */
+    display: none;
   }
 
   .trip-location-number {
@@ -2767,6 +2894,23 @@ img {
   .trip-edit-label-half {
     flex: none;
     width: 100%;
+  }
+
+  /* Swipe hint - subtle visual cue */
+  .trip-location-item::after,
+  .trip-location-item::before {
+    opacity: 0;
+  }
+
+  /* First location item gets a subtle hint animation on first load */
+  .trip-day:first-child .trip-location-item:first-child {
+    animation: swipeHint 0.6s ease-out 1s 1;
+  }
+
+  @keyframes swipeHint {
+    0%, 100% { transform: translateX(0); }
+    30% { transform: translateX(-15px); }
+    60% { transform: translateX(10px); }
   }
 }
 
