@@ -2642,6 +2642,15 @@ img {
   vertical-align: middle;
 }
 
+/* Trip Search Filtering (uses unified search from search.js) */
+.trip-location-highlight {
+  background: rgba(199, 166, 107, 0.15) !important;
+}
+
+.trip-location-highlight .trip-location-link {
+  color: var(--color-terracotta);
+}
+
 /* Trip Responsive */
 @media (max-width: 768px) {
   .trip-header {
@@ -2735,6 +2744,29 @@ img {
     width: 100%;
     justify-content: center;
     margin-right: 0;
+  }
+
+  /* Custom location modal mobile */
+  .trip-modal {
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trip-modal-custom .trip-edit-form {
+    overflow-y: auto;
+    max-height: calc(90vh - 60px);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .trip-custom-coords {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .trip-edit-label-half {
+    flex: none;
+    width: 100%;
   }
 }
 

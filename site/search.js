@@ -1,6 +1,6 @@
 /**
  * Index page search functionality
- * Filters Artists, Locations, and Bible Stories tabs in real-time
+ * Filters Artists, Locations, Bible Stories, and Trip tabs in real-time
  */
 (function() {
   'use strict';
@@ -32,7 +32,9 @@
       artists: document.querySelectorAll('.artist-list li'),
       locationHeaders: document.querySelectorAll('[data-tab="locations"] h3'),
       locations: document.querySelectorAll('.location-list li'),
-      bibleStories: document.querySelectorAll('.bible-stories-list li')
+      bibleStories: document.querySelectorAll('.bible-stories-list li'),
+      tripDays: document.querySelectorAll('.trip-day'),
+      tripLocations: document.querySelectorAll('.trip-location-item')
     };
   }
 
@@ -113,6 +115,52 @@
       if (visible) totalVisible++;
     });
 
+    // Filter trip days and locations
+    items.tripDays.forEach(dayEl => {
+      const dayLabel = dayEl.querySelector('.trip-day-label');
+      const dayLabelText = dayLabel ? dayLabel.value || dayLabel.textContent : '';
+      const dayMatches = matches(dayLabelText, trimmedQuery);
+
+      const locationItems = dayEl.querySelectorAll('.trip-location-item');
+      let hasVisibleLocation = false;
+
+      locationItems.forEach(locEl => {
+        // Get searchable text from location item
+        const locLink = locEl.querySelector('.trip-location-link');
+        const locComment = locEl.querySelector('.trip-location-comment');
+        const locTime = locEl.querySelector('.trip-location-time');
+
+        const searchText = [
+          locLink ? locLink.textContent : '',
+          locComment ? locComment.textContent : '',
+          locTime ? locTime.textContent : ''
+        ].join(' ');
+
+        const locMatches = matches(searchText, trimmedQuery);
+
+        if (locMatches) {
+          hasVisibleLocation = true;
+          locEl.classList.remove('search-hidden');
+          locEl.classList.add('trip-location-highlight');
+          totalVisible++;
+        } else if (dayMatches) {
+          // Day matches, show location but don't highlight
+          locEl.classList.remove('search-hidden', 'trip-location-highlight');
+          totalVisible++;
+        } else {
+          locEl.classList.add('search-hidden');
+          locEl.classList.remove('trip-location-highlight');
+        }
+      });
+
+      // Show day if day label matches or has visible locations
+      if (dayMatches || hasVisibleLocation) {
+        dayEl.classList.remove('search-hidden');
+      } else {
+        dayEl.classList.add('search-hidden');
+      }
+    });
+
     updateResultsCount(totalVisible);
   }
 
@@ -125,6 +173,10 @@
     items.locations.forEach(li => li.classList.remove('search-hidden'));
     document.querySelectorAll('.location-list').forEach(ul => ul.classList.remove('search-hidden'));
     items.bibleStories.forEach(li => li.classList.remove('search-hidden'));
+    items.tripDays.forEach(el => el.classList.remove('search-hidden'));
+    items.tripLocations.forEach(el => {
+      el.classList.remove('search-hidden', 'trip-location-highlight');
+    });
   }
 
   /**
@@ -179,4 +231,12 @@
   });
 
   clearButton.addEventListener('click', clearSearch);
+
+  // Re-apply filter when trip tab content changes (after render)
+  // Listen for custom event from trip.js
+  document.addEventListener('trip-rendered', function() {
+    if (searchInput.value.trim()) {
+      filterContent(searchInput.value);
+    }
+  });
 })();

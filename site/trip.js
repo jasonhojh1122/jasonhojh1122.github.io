@@ -119,6 +119,9 @@
       tripData.days.forEach(day => {
         initDayMap(day);
       });
+
+      // Notify search.js that trip content has been rendered
+      document.dispatchEvent(new CustomEvent('trip-rendered'));
     });
   }
 
