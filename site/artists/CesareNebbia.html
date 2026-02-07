@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cesare Nebbia - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artist-page">
+      <h1>Cesare Nebbia <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Cesare_Nebbia" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <div class="bio"><p><strong>Born</strong>: c. 1536, Orvieto
+<strong>Died</strong>: c. 1614, Orvieto
+<strong>Source</strong>: self-research</p>
+<p>Italian Mannerist painter from Orvieto. He co-directed the large team of artists that decorated the Sistine Chapel of Santa Maria Maggiore (1587–1589) under Pope Sixtus V, alongside Giovanni Guerra.</p>
+</div>
+      
+      <section class="artworks-section">
+        <h2>Artworks</h2>
+        
+        <div class="artwork-grid">
+          
+    <article class="artwork-card" data-title="Sistine Chapel Frescoes (Santa Maria Maggiore)" data-date="1587–1589">
+      <h3><a href="../artworks/SistineChapelFrescoesSantaMariaMaggiore.html">Sistine Chapel Frescoes (Santa Maria Maggiore)</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Fresco</span>
+        <span class="date">1587–1589</span>
+      </div>
+      <p class="description">The Sistine Chapel of Santa Maria Maggiore (not to be confused with the Vatican Sistine Chapel) was commissioned by Pope Sixtus V and designed by Domenico Fontana. The interior frescoes were directed by Cesare Nebbia and Giovanni Guerra, depicting scenes from the life of the Virgin and Christ&#039;s childhood. The dome fresco shows the Assumption of the Virgin. The chapel also houses the tomb of Pope Sixtus V and an ancient relic believed to be pieces of the crib of the Nativity.</p>
+      
+    </article>
+  
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

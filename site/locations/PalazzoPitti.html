@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palazzo Pitti - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="location-page">
+      <h1>Palazzo Pitti <span class="badge badge-researched">Self-researched</span></h1>
+      <p class="city">Florence, Italy</p>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Palazzo_Pitti" target="_blank" rel="noopener noreferrer">Wikipedia</a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Palazzo+Pitti+Florence+Italy" target="_blank" rel="noopener noreferrer">Google Maps</a></div>
+      <p class="architectural-style"><strong>Architectural style:</strong> Renaissance</p>
+      
+
+      <section class="artworks-section">
+        <h2>Artworks</h2>
+        
+    <div class="sort-controls">
+      <span>Sort by:</span>
+      <button class="sort-btn active" data-sort="date">Date</button>
+      <button class="sort-btn" data-sort="title">Title</button>
+      <button class="sort-btn" data-sort="artist">Artist</button>
+    </div>
+  
+        <div class="artwork-grid">
+          
+    <article class="artwork-card" data-title="Lamentation over the Dead Christ" data-date="1495" data-artist="Pietro Perugino">
+      <h3><a href="../artworks/LamentationOverTheDeadChristPerugino.html">Lamentation over the Dead Christ</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/PietroPerugino.html">Pietro Perugino</a></span>
+        <span class="medium">Oil on panel</span>
+        <span class="date">1495</span>
+      </div>
+      <p class="description">A large and emotionally restrained depiction of the lamentation, showing the dead Christ mourned by the Virgin Mary, Saint John the Evangelist, Mary Magdalene, and other figures. Perugino&#039;s characteristic grace and soft, luminous coloring are evident, with a serene Umbrian landscape visible in the background. Displayed in the Sala di Apollo.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Pietro_Perugino_cat40.jpg" alt="Lamentation over the Dead Christ" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="La donna gravida" data-date="c. 1505–1506" data-artist="Raphael">
+      <h3><a href="../artworks/LaDonnaGravida.html">La donna gravida</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/Raphael.html">Raphael</a></span>
+        <span class="medium">Oil on panel</span>
+        <span class="date">c. 1505–1506</span>
+      </div>
+      <p class="description">A portrait of a pregnant woman, painted during Raphael&#039;s Florentine period. The sitter gazes directly at the viewer with a calm, dignified expression, one hand resting on her belly. The identity of the woman is unknown. The painting shows the influence of Leonardo da Vinci in its soft modeling and atmospheric quality, and is notable for its rare subject of pregnancy in Renaissance portraiture.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Raphael-LaDonnaGravida%281505-1506%29.jpg" alt="La donna gravida" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="Ezekiel&#039;s Vision" data-date="c. 1518" data-artist="Raphael">
+      <h3><a href="../artworks/EzekielsVision.html">Ezekiel&#039;s Vision</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/Raphael.html">Raphael</a></span>
+        <span class="medium">Oil on panel</span>
+        <span class="date">c. 1518</span>
+      </div>
+      <p class="description">A small but powerfully composed painting depicting the prophet Ezekiel&#039;s vision of God in majesty, borne aloft by angels and the four symbols of the Evangelists. Despite its diminutive size (about 40 x 30 cm), the painting achieves monumental grandeur. It reflects the influence of Michelangelo&#039;s Sistine ceiling in its muscular figures and dynamic composition.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Raphael_-_Ezekiel%27s_Vision.jpg" alt="Ezekiel&#039;s Vision" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="Panciatichi Assumption" data-date="c. 1522–1523" data-artist="Andrea del Sarto">
+      <h3><a href="../artworks/PanciatchiAssumption.html">Panciatichi Assumption</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/AndreaDelSarto.html">Andrea del Sarto</a></span>
+        <span class="medium">Oil on panel</span>
+        <span class="date">c. 1522–1523</span>
+      </div>
+      <p class="description">A majestic Assumption of the Virgin painted for the Panciatichi family, showing the Virgin Mary ascending to heaven surrounded by angels, with apostles gathered around the empty tomb below. The work demonstrates Andrea del Sarto&#039;s refined spatial composition and experimental use of color that influenced the next generation of Mannerist painters.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Andrea_del_Sarto_-_Assumption_of_the_Virgin_-_WGA0402.jpg" alt="Panciatichi Assumption" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="La Bella" data-date="c. 1536" data-artist="Titian">
+      <h3><a href="../artworks/LaBella.html">La Bella</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/Titian.html">Titian</a></span>
+        <span class="medium">Oil on canvas</span>
+        <span class="date">c. 1536</span>
+      </div>
+      <p class="description">A portrait of an unknown woman in a sumptuous blue dress, exemplifying the Renaissance ideal of female beauty. The sitter&#039;s identity is debated, though she may be the same model as Titian&#039;s Venus of Urbino. The work is documented in a 1536 letter from the Duke of Urbino describing &quot;that portrait of that woman in a blue dress.&quot; It hangs in the Sala di Venere.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Tiziano_Vecellio_%28Pieve_di_Cadore_1488-90_-_Venezia_1576%29_-_Ritratto_di_gentildonna_%28La_Bella%29_-_18_-_Galleria_Palatina.jpg" alt="La Bella" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="Portrait of a Young Englishman" data-date="c. 1540–1545" data-artist="Titian">
+      <h3><a href="../artworks/PortraitOfAYoungEnglishman.html">Portrait of a Young Englishman</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/Titian.html">Titian</a></span>
+        <span class="medium">Oil on canvas</span>
+        <span class="date">c. 1540–1545</span>
+      </div>
+      <p class="description">A striking portrait of an unidentified young man with intense grey-blue eyes, traditionally but uncertainly identified as an Englishman. The sitter may be Henry Howard, Ottavio Farnese, or the Italian Ippolito Riminaldi. The painting is admired for its penetrating psychological insight and Titian&#039;s virtuosic handling of the rich dark costume against the grey background.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Portrait_of_a_Young_Englishman_%28by_Titian%29.jpg" alt="Portrait of a Young Englishman" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="Portrait of Pietro Aretino" data-date="c. 1545" data-artist="Titian">
+      <h3><a href="../artworks/PortraitOfPietroAretino.html">Portrait of Pietro Aretino</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/Titian.html">Titian</a></span>
+        <span class="medium">Oil on canvas</span>
+        <span class="date">c. 1545</span>
+      </div>
+      <p class="description">A commanding portrait of the Renaissance poet and satirist Pietro Aretino, painted possibly for Cosimo I de&#039; Medici. Titian renders his friend in richly textured robes with bold, almost impressionistic brushwork. Aretino famously complained that the finish was too sketchy, yet the vigorous technique is now admired as proto-modern. Displayed in the Sala di Venere.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Portrait_of_Pietro_Aretino_%28by_Titian%29_-_Pitti_Palace.jpg" alt="Portrait of Pietro Aretino" loading="lazy">
+    </article>
+  
+
+    <article class="artwork-card" data-title="Judith with the Head of Holofernes" data-date="1613" data-artist="Cristofano Allori">
+      <h3><a href="../artworks/JudithWithTheHeadOfHolofernes.html">Judith with the Head of Holofernes</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        <span class="artist"><a href="../artists/CristofanoAllori.html">Cristofano Allori</a></span>
+        <span class="medium">Oil on canvas</span>
+        <span class="date">1613</span>
+      </div>
+      <p class="description">One of the most celebrated paintings of the Florentine Seicento, depicting Judith holding the severed head of Holofernes while her maidservant waits with a bag. Allori reportedly used his own face as the model for Holofernes, his mistress for Judith, and her mother for the maidservant, lending the painting an intensely personal subtext. Multiple versions exist, with this being the finest.</p>
+      
+    </article>
+  
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

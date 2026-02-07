@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nave Mosaics - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artwork-page">
+      <h1>Nave Mosaics <span class="badge badge-researched">Self-researched</span></h1>
+      
+      <ul class="artwork-metadata"><li><strong>Location:</strong> <a href="../locations/SantaMariaMaggiore.html">Santa Maria Maggiore</a>, Rome</li>
+<li><strong>Medium:</strong> Mosaic</li>
+<li><strong>Date:</strong> c. 432–440</li></ul>
+      
+      <div class="description"><p>A cycle of Old Testament narrative mosaics lining the nave, depicting scenes from the lives of Abraham, Isaac, Jacob, Moses, and Joshua. Only 27 of the original 42 panels survive. They are the most important Early Christian narrative mosaic series extant, executed in a late Roman illusionistic style with rich gold backgrounds.</p>
+</div>
+      <div class="artwork-images">
+        
+      </div>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

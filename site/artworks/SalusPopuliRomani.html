@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salus Populi Romani - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artwork-page">
+      <h1>Salus Populi Romani <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Salus_Populi_Romani" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <ul class="artwork-metadata"><li><strong>Location:</strong> <a href="../locations/SantaMariaMaggiore.html">Santa Maria Maggiore</a>, Rome</li>
+<li><strong>Medium:</strong> Tempera on panel (Byzantine icon)</li>
+<li><strong>Date:</strong> Uncertain, possibly 5th–9th century</li></ul>
+      
+    <div class="biblical-context">
+      <h3>Biblical Context</h3>
+      <p><a href="../biblestories/MadonnaAndChild.html">Madonna and Child</a> - The Virgin Mary with the infant Jesus.</p>
+    </div>
+  
+      <div class="description"><p>A venerated Byzantine icon of the Madonna and Child kept in the Borghese (Pauline) Chapel. The image shows the Virgin holding the Christ Child, who holds a Gospel book. Tradition attributes it to Saint Luke the Evangelist. It is one of the most revered Marian icons in Rome and has been a particular devotion of Pope Francis. The icon was restored in 2018.</p>
+</div>
+      <div class="artwork-images">
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Salus_Populi_Romani_after_restoration.jpg" alt="img"></figure>
+      </div>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

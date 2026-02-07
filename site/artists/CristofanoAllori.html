@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristofano Allori - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artist-page">
+      <h1>Cristofano Allori <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Cristofano_Allori" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <div class="bio"><p><strong>Born</strong>: 1577, Florence
+<strong>Died</strong>: 1621, Florence
+<strong>Source</strong>: self-research</p>
+<p>An Italian painter of the late Florentine Mannerist school, son of painter Alessandro Allori and great-nephew of Bronzino. He initially trained under his father but later turned to the naturalistic style of Cigoli and Santi di Tito. He painted mostly portraits and religious subjects, and is best known for his Judith with the Head of Holofernes in the Palazzo Pitti.</p>
+</div>
+      
+      <section class="artworks-section">
+        <h2>Artworks</h2>
+        
+        <div class="artwork-grid">
+          
+    <article class="artwork-card" data-title="Judith with the Head of Holofernes" data-date="1613">
+      <h3><a href="../artworks/JudithWithTheHeadOfHolofernes.html">Judith with the Head of Holofernes</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Oil on canvas</span>
+        <span class="date">1613</span>
+      </div>
+      <p class="description">One of the most celebrated paintings of the Florentine Seicento, depicting Judith holding the severed head of Holofernes while her maidservant waits with a bag. Allori reportedly used his own face as the model for Holofernes, his mistress for Judith, and her mother for the maidservant, lending the painting an intensely personal subtext. Multiple versions exist, with this being the finest.</p>
+      
+    </article>
+  
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sforza Chapel - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artwork-page">
+      <h1>Sforza Chapel <span class="badge badge-researched">Self-researched</span></h1>
+      
+      <ul class="artwork-metadata"><li><strong>Artist:</strong> <a href="../artists/Michelangelo.html">Michelangelo</a></li>
+<li><strong>Location:</strong> <a href="../locations/SantaMariaMaggiore.html">Santa Maria Maggiore</a>, Rome</li>
+<li><strong>Medium:</strong> Architecture with travertine and plaster</li>
+<li><strong>Date:</strong> c. 1564–1573</li></ul>
+      
+    <div class="biblical-context">
+      <h3>Biblical Context</h3>
+      <p><a href="../biblestories/AssumptionOfMary.html">Assumption of Mary</a> - The altar painting depicts the Assumption of the Virgin by [Girolamo Siciolante da Sermoneta](../artists/GirolamoSiciolanteDaSermoneta.md).</p>
+    </div>
+  
+      <div class="description"><p>Designed by Michelangelo near the end of his life and completed posthumously by Tiberio Calcagni and Giacomo Della Porta. The chapel features an innovative elliptical plan with a three-part vault and curving side apses, representing one of Michelangelo&#39;s most forward-looking architectural experiments.</p>
+</div>
+      <div class="artwork-images">
+        
+      </div>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>
