@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlo Maratta - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artist-page">
+      <h1>Carlo Maratta <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Carlo_Maratta" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <div class="bio"><p><strong>Born</strong>: 1625, Camerano
+<strong>Died</strong>: 1713, Rome
+<strong>Source</strong>: self-research</p>
+<p>Carlo Maratta (or Maratti) was an Italian Baroque painter and draughtsman, the leading painter in Rome in the second half of the 17th century. He is the foremost representative of the classicizing style in the Italian Late Baroque, working for prominent clients including various popes.</p>
+</div>
+      
+      <section class="artworks-section">
+        <h2>Artworks</h2>
+        
+        <div class="artwork-grid">
+          
+    <article class="artwork-card" data-title="The Baptism of Jesus" data-date="1697">
+      <h3><a href="../artworks/BaptismOfJesusMaratta.html">The Baptism of Jesus</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Oil on canvas</span>
+        <span class="date">1697</span>
+      </div>
+      <p class="description">Painted for St. Peter&#039;s Basilica, this monumental altarpiece depicts the baptism of Christ by John the Baptist. It was among the first large paintings moved from St. Peter&#039;s to Santa Maria degli Angeli, transferred by order of Pope Benedict XIII after Maratta&#039;s death in 1713.</p>
+      
+    </article>
+  
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

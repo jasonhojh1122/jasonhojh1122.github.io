@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saint Bruno - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artwork-page">
+      <h1>Saint Bruno <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Jean-Antoine_Houdon" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <ul class="artwork-metadata"><li><strong>Artist:</strong> <a href="../artists/JeanAntoineHoudon.html">Jean-Antoine Houdon</a></li>
+<li><strong>Location:</strong> <a href="../locations/BathsOfDiocletian.html">Baths of Diocletian</a>, Rome</li>
+<li><strong>Medium:</strong> Marble sculpture</li>
+<li><strong>Date:</strong> 1766-1767</li></ul>
+      
+      <div class="description"><p>A neoclassical marble statue of Saint Bruno, founder of the Carthusian Order, created by the French sculptor Houdon during his time at the French Academy in Rome. The serene, contemplative figure is considered one of Houdon&#39;s masterpieces. Pope Clement XIV reportedly remarked that the statue &quot;would speak, were it not that the rules of his order impose silence.&quot;</p>
+</div>
+      <div class="artwork-images">
+        
+      </div>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

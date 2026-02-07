@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pompeo Batoni - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artist-page">
+      <h1>Pompeo Batoni <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Pompeo_Batoni" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <div class="bio"><p><strong>Born</strong>: 1708, Lucca
+<strong>Died</strong>: 1787, Rome
+<strong>Source</strong>: self-research</p>
+<p>Pompeo Girolamo Batoni was an Italian painter known for his portraits and allegorical and mythological pictures. The influx of foreign visitors on the Grand Tour led him to specialize in portraits, making him one of the most sought-after portraitists in 18th-century Rome.</p>
+</div>
+      
+      <section class="artworks-section">
+        <h2>Artworks</h2>
+        
+        <div class="artwork-grid">
+          
+    <article class="artwork-card" data-title="Fall of Simon Magus" data-date="1746-1755">
+      <h3><a href="../artworks/FallOfSimonMagus.html">Fall of Simon Magus</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Oil on canvas</span>
+        <span class="date">1746-1755</span>
+      </div>
+      <p class="description">A monumental late Baroque painting originally intended as the basis for a mosaic altarpiece in St. Peter&#039;s Basilica. The work depicts the dramatic fall of the magician Simon Magus as he attempts to fly before the Roman Emperor Nero, struck down by the prayers of Saints Peter and Paul. It was removed from St. Peter&#039;s in 1757 and transferred to Santa Maria degli Angeli.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Pompeo_Batoni_-_The_Fall_of_Simon_Magus_-_1983.217_-_Cleveland_Museum_of_Art.tif" alt="Fall of Simon Magus" loading="lazy">
+    </article>
+  
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

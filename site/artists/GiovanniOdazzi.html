@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giovanni Odazzi - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artist-page">
+      <h1>Giovanni Odazzi <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Giovanni_Odazzi" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <div class="bio"><p><strong>Born</strong>: 1663, Rome
+<strong>Died</strong>: 1731, Rome
+<strong>Source</strong>: self-research</p>
+<p>Giovanni Odazzi was an Italian painter and etcher of the Baroque period, active mainly in Rome. He was a pupil of Giovanni Battista Gaulli (Baciccio) and Ciro Ferri, and produced altarpieces and decorative paintings for Roman churches.</p>
+</div>
+      
+      <section class="artworks-section">
+        <h2>Artworks</h2>
+        
+        <div class="artwork-grid">
+          
+    <article class="artwork-card" data-title="The Apparition of the Virgin Mary to Saint Bruno" data-date="c. 1700">
+      <h3><a href="../artworks/ApparitionOfTheVirginMaryToSaintBruno.html">The Apparition of the Virgin Mary to Saint Bruno</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Oil on canvas</span>
+        <span class="date">c. 1700</span>
+      </div>
+      <p class="description">Painted for the 1700 Jubilee, this Baroque altarpiece in the Chapel of St. Bruno depicts the Virgin Mary appearing to St. Bruno, founder of the Carthusian Order. Appropriate for its setting, as the church was part of a Carthusian monastery.</p>
+      
+    </article>
+  
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

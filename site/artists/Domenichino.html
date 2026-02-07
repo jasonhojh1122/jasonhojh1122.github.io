@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domenichino - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artist-page">
+      <h1>Domenichino <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Domenichino" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <div class="bio"><p><strong>Born</strong>: 1581, Bologna
+<strong>Died</strong>: 1641, Naples
+<strong>Source</strong>: self-research</p>
+<p>Domenico Zampieri, known as Domenichino, was an Italian Baroque painter of the Bolognese School. A pupil of the Carracci, he became one of the leading painters in Rome, known for his classicizing approach to Baroque painting and his mastery of fresco and altarpiece composition.</p>
+</div>
+      
+      <section class="artworks-section">
+        <h2>Artworks</h2>
+        
+        <div class="artwork-grid">
+          
+    <article class="artwork-card" data-title="The Martyrdom of Saint Sebastian" data-date="1629">
+      <h3><a href="../artworks/MartyrdomOfSaintSebastianDomenichino.html">The Martyrdom of Saint Sebastian</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Oil on canvas</span>
+        <span class="date">1629</span>
+      </div>
+      <p class="description">One of the most celebrated paintings in the basilica, originally painted for the altar of St. Sebastian in St. Peter&#039;s Basilica. The dramatic composition shows Jesus Christ welcoming the martyr saint while an angel descends bearing the palm and crown of martyrdom. The painting was transferred to Santa Maria degli Angeli in the 18th century.</p>
+      
+    </article>
+  
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

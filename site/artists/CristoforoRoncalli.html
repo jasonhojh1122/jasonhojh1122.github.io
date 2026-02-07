@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristoforo Roncalli - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artist-page">
+      <h1>Cristoforo Roncalli <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Cristoforo_Roncalli" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <div class="bio"><p><strong>Born</strong>: 1552, Pomarance
+<strong>Died</strong>: 1626, Rome
+<strong>Source</strong>: self-research</p>
+<p>Cristoforo Roncalli, known as Pomarancio, was an Italian Mannerist painter. He was a prominent artist in late 16th and early 17th century Rome, working on major commissions including works for St. Peter&#39;s Basilica.</p>
+</div>
+      
+      <section class="artworks-section">
+        <h2>Artworks</h2>
+        
+        <div class="artwork-grid">
+          
+    <article class="artwork-card" data-title="The Death of Ananias and Sapphira" data-date="1604">
+      <h3><a href="../artworks/DeathOfAnaniasAndSapphira.html">The Death of Ananias and Sapphira</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Oil on canvas</span>
+        <span class="date">1604</span>
+      </div>
+      <p class="description">Originally painted for St. Peter&#039;s Basilica, this large canvas depicts the dramatic biblical episode from Acts of the Apostles where Ananias and Sapphira fall dead before the Apostles for lying about their donation to the community. Transferred to Santa Maria degli Angeli in the 18th century.</p>
+      
+    </article>
+  
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>
