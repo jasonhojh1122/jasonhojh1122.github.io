@@ -47,6 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabParam = urlParams.get('tab');
   if (tabParam) {
     activateTab(tabParam);
+    // Scroll to hash fragment after tab is visible
+    if (window.location.hash) {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (target) target.scrollIntoView();
+    }
   }
 
   // Handle tab clicks

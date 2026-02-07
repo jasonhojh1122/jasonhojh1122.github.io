@@ -34,6 +34,8 @@
       locationHeaders: document.querySelectorAll('[data-tab="locations"] h3'),
       locations: document.querySelectorAll('.location-list li'),
       bibleStories: document.querySelectorAll('.bible-stories-list li'),
+      termsCategories: document.querySelectorAll('.terms-category'),
+      termItems: document.querySelectorAll('.term-item'),
       tripDays: document.querySelectorAll('.trip-day'),
       tripLocations: document.querySelectorAll('.trip-location-item')
     };
@@ -124,6 +126,26 @@
       if (visible) totalVisible++;
     });
 
+    // Filter terms (by category name, term name, or definition)
+    items.termsCategories.forEach(catEl => {
+      const catHeader = catEl.querySelector('h3');
+      const catMatches = catHeader ? matches(catHeader.textContent, trimmedQuery) : false;
+      const termItems = catEl.querySelectorAll('.term-item');
+      let catHasVisible = false;
+
+      termItems.forEach(termEl => {
+        const termMatches = matches(termEl.textContent, trimmedQuery);
+        const visible = catMatches || termMatches;
+        setVisible(termEl, visible);
+        if (visible) {
+          catHasVisible = true;
+          totalVisible++;
+        }
+      });
+
+      setVisible(catEl, catHasVisible);
+    });
+
     // Filter trip days and locations
     items.tripDays.forEach(dayEl => {
       const dayLabel = dayEl.querySelector('.trip-day-label');
@@ -183,6 +205,8 @@
     items.locations.forEach(li => li.classList.remove('search-hidden'));
     document.querySelectorAll('.location-list').forEach(ul => ul.classList.remove('search-hidden'));
     items.bibleStories.forEach(li => li.classList.remove('search-hidden'));
+    items.termsCategories.forEach(el => el.classList.remove('search-hidden'));
+    items.termItems.forEach(el => el.classList.remove('search-hidden'));
     items.tripDays.forEach(el => el.classList.remove('search-hidden'));
     items.tripLocations.forEach(el => {
       el.classList.remove('search-hidden', 'trip-location-highlight');
