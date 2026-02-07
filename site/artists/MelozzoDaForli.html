@@ -11,8 +11,10 @@
   <header>
     <nav>
       <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
     </nav>
   </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
   <main>
     
     <article class="artist-page">
@@ -26,8 +28,27 @@
       <section class="artworks-section">
         <h2>Artworks</h2>
         
+    <div class="sort-controls">
+      <span>Sort by:</span>
+      <button class="sort-btn active" data-sort="date">Date</button>
+      <button class="sort-btn" data-sort="title">Title</button>
+      
+    </div>
+  
         <div class="artwork-grid">
           
+    <article class="artwork-card" data-title="Annunciation" data-date="c. 1470s">
+      <h3><a href="../artworks/AnnunciationMelozzo.html">Annunciation</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Fresco</span>
+        <span class="date">c. 1470s</span>
+      </div>
+      <p class="description">Located in the seventh chapel of the Pantheon, this is the best-known painting in the building. The fresco depicts the traditional Annunciation scene with God in Heaven sending the dove of the Holy Spirit down to Earth, while the Archangel Gabriel kneels before Mary. It is an important example of Melozzo&#039;s Roman period.</p>
+      
+    </article>
+  
+
     <article class="artwork-card" data-title="Sixtus IV Appointing Platina as Prefect of the Vatican Library" data-date="1477">
       <h3><a href="../artworks/SixtusIVAppointingPlatina.html">Sixtus IV Appointing Platina as Prefect of the Vatican Library</a> </h3>
       <div class="artwork-meta">
@@ -46,7 +67,7 @@
   </main>
   <footer>
     <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
-    <p class="last-updated">Last updated: February 6, 2026</p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
   </footer>
   <script src="../sort.js"></script>
   <script src="../tabs.js"></script>

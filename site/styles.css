@@ -142,6 +142,47 @@ header nav {
   transform-origin: left;
 }
 
+/* ===== Copy Filename Button ===== */
+.copy-filename-btn {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-stone);
+  background: var(--color-warm-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  letter-spacing: 0.03em;
+}
+
+.copy-filename-btn::before {
+  content: attr(data-filename);
+}
+
+.copy-filename-btn:hover {
+  color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  background: var(--color-parchment);
+}
+
+.copy-filename-btn.copied::after {
+  content: 'Copied!';
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--color-ink);
+  color: var(--color-warm-white);
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  animation: fadeInUp 0.2s ease-out;
+  pointer-events: none;
+}
+
 /* ===== Main Content ===== */
 main {
   max-width: var(--max-width);
@@ -510,6 +551,50 @@ ul li::before {
   font-style: italic;
   color: var(--color-stone);
   font-size: 0.9em;
+}
+
+/* Artworks list - matches artist-list styling */
+.artworks-list {
+  column-count: 2;
+  column-gap: var(--space-xl);
+}
+
+.artworks-list li {
+  break-inside: avoid;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-base);
+}
+
+.artworks-list li:hover {
+  border-bottom-color: var(--color-border);
+  padding-left: var(--space-sm);
+}
+
+.artworks-list a {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.artworks-list a:hover {
+  color: var(--color-terracotta);
+}
+
+.artworks-list .artwork-artist {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-stone);
+  margin-left: var(--space-sm);
+}
+
+.artworks-list .artwork-date {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-stone);
+  margin-left: var(--space-xs);
+  opacity: 0.7;
 }
 
 /* Artwork count badge for artist/location lists */
@@ -1064,7 +1149,8 @@ img {
 /* ===== Responsive Design ===== */
 @media (max-width: 1024px) {
   .artist-list,
-  .location-list {
+  .location-list,
+  .artworks-list {
     column-count: 2;
   }
 }
@@ -1092,7 +1178,8 @@ img {
   }
 
   .artist-list,
-  .location-list {
+  .location-list,
+  .artworks-list {
     column-count: 1;
   }
 
@@ -1773,19 +1860,19 @@ img {
 .trip-location-list::before {
   content: '';
   position: absolute;
-  left: 42px;
-  top: 28px;
-  bottom: 28px;
-  width: 2px;
+  left: 51px;
+  top: 24px;
+  bottom: 24px;
+  width: 1px;
   background: linear-gradient(180deg, var(--color-terracotta), var(--color-gold));
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .trip-location-item {
   display: flex;
   align-items: stretch;
-  gap: var(--space-md);
-  padding: var(--space-md) var(--space-lg);
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-sm) var(--space-md) calc(var(--space-sm) - 3px);
   background: var(--color-warm-white);
   cursor: grab;
   transition: all var(--transition-base);
@@ -1813,72 +1900,111 @@ img {
   height: 3px;
   background: linear-gradient(90deg, var(--color-terracotta), var(--color-gold));
   border-radius: 2px;
-  margin: 0 var(--space-lg);
+  margin: 0 var(--space-sm);
   box-shadow: 0 0 8px rgba(184, 92, 56, 0.4);
 }
 
-/* Column 1: Number */
+/* Column 1: Index + time range */
 .trip-location-col-number {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-shrink: 0;
-  width: 36px;
+  width: 56px;
+  gap: 8px;
 }
 
-/* Numbered marker matching map style */
+/* Index number — compact square marker */
 .trip-location-number {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   background: var(--color-terracotta);
-  border: 2px solid var(--color-warm-white);
-  border-radius: var(--radius-circle);
-  box-shadow: 0 2px 8px rgba(44, 36, 24, 0.25);
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-ui);
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   color: var(--color-warm-white);
   flex-shrink: 0;
   position: relative;
   z-index: 1;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
+  letter-spacing: -0.02em;
 }
 
 .trip-location-item:hover .trip-location-number,
 .trip-location-item.trip-location-highlighted .trip-location-number {
-  transform: scale(1.1);
-  box-shadow: 0 3px 10px rgba(44, 36, 24, 0.35);
+  transform: scale(1.08);
+  background: var(--color-terracotta-deep);
 }
 
-/* Column 2: Time */
-.trip-location-col-time {
+/* Time range wrapper */
+.trip-location-time-wrap {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 60px;
+  gap: 0;
 }
 
-/* Column 3: Name and comment rows */
+/* Vertical separator dot between start/end times */
+.trip-location-time-sep {
+  width: 1px;
+  height: 6px;
+  background: var(--color-border-dark);
+  display: block;
+}
+
+/* Column 2: Name and comment rows */
 .trip-location-col-content {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 4px;
 }
 
-/* Column 4: Map link */
+/* Column 3: Map link + booked badge — top/bottom anchored */
 .trip-location-col-map {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 48px;
+}
+
+/* Invisible placeholders keep layout stable */
+.trip-map-placeholder {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.trip-booked-badge {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  width: 44px;
+  font-family: var(--font-ui);
+  font-size: 0.5rem;
+  font-weight: 600;
+  padding: 2px 0;
+  border-radius: var(--radius-sm);
+  background: #2d6a3a;
+  color: #fff;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
+.trip-booked-placeholder {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* Column 5 & 6: Action buttons */
@@ -1900,6 +2026,8 @@ img {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+  min-height: 22px;
+  line-height: 22px;
 }
 
 .trip-location-bottom {
@@ -1909,56 +2037,16 @@ img {
   min-height: 1.5em;
 }
 
-/* Time Badge */
+/* Time text */
 .trip-location-time {
   font-family: var(--font-ui);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-ink-soft);
-  background: var(--color-parchment);
-  padding: 4px var(--space-sm);
-  border-radius: var(--radius-sm);
-  text-align: center;
-  cursor: text;
-  border: 1px solid var(--color-border);
-  transition: all var(--transition-base);
-  white-space: nowrap;
-}
-
-.trip-location-time:hover {
-  background: var(--color-warm-white);
-  border-color: var(--color-terracotta);
-  color: var(--color-terracotta);
-}
-
-.trip-location-time:focus {
-  outline: none;
-  border-color: var(--color-gold);
-  background: var(--color-warm-white);
-  box-shadow: 0 0 0 2px rgba(199, 166, 107, 0.3);
-}
-
-.trip-location-add-time {
-  font-family: var(--font-ui);
-  font-size: 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 500;
   color: var(--color-stone);
-  background: transparent;
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: 4px var(--space-sm);
-  cursor: pointer;
-  transition: all var(--transition-base);
-  opacity: 0;
+  text-align: center;
   white-space: nowrap;
-}
-
-.trip-location-item:hover .trip-location-add-time {
-  opacity: 1;
-}
-
-.trip-location-add-time:hover {
-  color: var(--color-terracotta);
-  border-color: var(--color-terracotta);
+  line-height: 1;
+  letter-spacing: -0.01em;
 }
 
 .trip-location-link {
@@ -1984,9 +2072,9 @@ img {
   font-style: italic;
   color: var(--color-stone);
   cursor: text;
-  padding: 2px var(--space-xs);
+  padding: 2px 0;
   border-radius: var(--radius-sm);
-  border: 1px solid transparent;
+  border: none;
   transition: all var(--transition-base);
   max-width: 300px;
   white-space: nowrap;
@@ -2031,15 +2119,20 @@ img {
 /* Map Link */
 .trip-location-map-link {
   font-family: var(--font-ui);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: 0.6rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--color-gold-muted);
-  padding: 2px var(--space-sm);
+  padding: 2px 0;
   border: 1px solid var(--color-gold);
   border-radius: var(--radius-sm);
   transition: all var(--transition-base);
+  width: 100%;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .trip-location-map-link:hover {
@@ -2233,11 +2326,11 @@ img {
 }
 
 .trip-marker-circle {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   background: var(--color-terracotta);
   border: 2px solid var(--color-warm-white);
-  border-radius: var(--radius-circle);
+  border-radius: var(--radius-sm);
   box-shadow: 0 2px 8px rgba(44, 36, 24, 0.35);
   display: flex;
   align-items: center;
@@ -2777,8 +2870,108 @@ img {
   opacity: 1;
 }
 
-/* Trip Responsive */
+/* Trip Toolbar */
+.trip-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-sm) 0;
+}
+
+.trip-refresh-btn {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-warm-white);
+  background: linear-gradient(135deg, var(--color-terracotta), var(--color-terracotta-deep));
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.trip-refresh-btn:hover {
+  background: linear-gradient(135deg, var(--color-terracotta-deep), var(--color-terracotta-deep));
+}
+
+.trip-cache-ts {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-stone);
+  font-style: italic;
+}
+
+/* Trip Loading / Error States */
+.trip-loading {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-stone);
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  font-style: italic;
+}
+
+.trip-error {
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  color: var(--color-terracotta-deep);
+  font-family: var(--font-ui);
+}
+
+.trip-error-detail {
+  font-size: 0.85rem;
+  color: var(--color-stone);
+  margin-top: var(--space-sm);
+}
+
+/* Trip English Name */
+.trip-location-english {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-stone);
+  line-height: 1.3;
+}
+
+/* Trip Ticket Badge */
+.trip-location-ticket {
+  margin-top: 2px;
+}
+
+.trip-ticket-badge {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-warm-white);
+  background: var(--color-gold-muted);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+a.trip-ticket-badge:hover {
+  background: var(--color-gold);
+}
+
+.trip-ticket-badge-text {
+  background: var(--color-border);
+  color: var(--color-ink-soft);
+}
+
+/* Trip Responsive — Mobile-optimised card layout */
 @media (max-width: 768px) {
+  .trip-toolbar {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
   .trip-header {
     flex-direction: column;
     gap: var(--space-md);
@@ -2787,6 +2980,10 @@ img {
 
   .trip-actions {
     width: 100%;
+  }
+
+  .trip-day {
+    margin-bottom: var(--space-lg);
   }
 
   .trip-day-header {
@@ -2798,65 +2995,140 @@ img {
 
   .trip-day-label {
     max-width: none;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    padding: var(--space-xs) 0;
   }
 
   .trip-day-delete {
-    /* Hide delete button on mobile - use swipe gesture instead */
     display: none;
   }
 
+  /* Remove the vertical connecting line on mobile */
   .trip-location-list::before {
-    left: 34px;
-  }
-
-  .trip-location-item {
-    padding: var(--space-sm) var(--space-md);
-  }
-
-  .trip-location-col-number {
-    width: 28px;
-  }
-
-  .trip-location-col-time {
-    width: 50px;
-  }
-
-  .trip-location-col-map {
-    width: 40px;
-  }
-
-  .trip-location-col-action {
-    /* Hide edit/delete buttons on mobile - use swipe gestures instead */
     display: none;
+  }
+
+  /* Card-style layout for each location */
+  .trip-location-item {
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    gap: 0 var(--space-sm);
+    padding: var(--space-sm) var(--space-sm) var(--space-sm) calc(var(--space-sm) - 3px);
+    border-left: 3px solid transparent;
+    border-bottom: 1px solid var(--color-border);
+    align-items: start;
+  }
+
+  .trip-location-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Number + times column: stacked left */
+  .trip-location-col-number {
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+    padding-top: 0;
+    align-self: start;
+    gap: 3px;
   }
 
   .trip-location-number {
-    width: 24px;
-    height: 24px;
-    font-size: 0.7rem;
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
   }
 
   .trip-location-time {
-    font-size: 0.7rem;
-    padding: 3px var(--space-xs);
+    font-size: 0.75rem;
   }
 
-  .trip-location-add-time,
+  .trip-location-time-sep {
+    height: 4px;
+  }
+
+  /* Content: spans the middle, allows wrapping */
+  .trip-location-col-content {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 3px;
+    min-width: 0;
+  }
+
+  /* Top row: name */
+  .trip-location-top {
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-xs);
+  }
+
+  /* Allow names to wrap on mobile */
+  .trip-location-link {
+    font-size: 1.05rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    line-height: 1.35;
+  }
+
+  a.trip-location-link {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(184, 92, 56, 0.15);
+  }
+
+  .trip-location-english {
+    font-size: 0.78rem;
+    line-height: 1.3;
+    white-space: normal;
+  }
+
+  /* Allow memo to wrap */
+  .trip-location-comment {
+    max-width: none;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    padding: 0;
+    border: none;
+  }
+
   .trip-location-add-comment {
     opacity: 1;
   }
 
-  .trip-location-col-content {
-    gap: var(--space-xs);
+  /* Map column: stretch full height of grid row */
+  .trip-location-col-map {
+    grid-column: 3;
+    grid-row: 1;
+    width: auto;
+    align-self: stretch;
   }
 
-  .trip-location-link {
-    font-size: 1rem;
+  .trip-location-map-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 30px;
+    font-size: 0.62rem;
+    padding: var(--space-xs) var(--space-sm);
+    -webkit-tap-highlight-color: rgba(199, 166, 107, 0.2);
   }
 
+  .trip-booked-badge {
+    font-size: 0.48rem;
+    padding: 2px 0;
+  }
+
+  .trip-location-col-action {
+    display: none;
+  }
+
+  /* Day map */
   .trip-day-map {
-    height: 325px;
+    height: 280px;
   }
 
   .trip-route-legend {

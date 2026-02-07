@@ -11,8 +11,10 @@
   <header>
     <nav>
       <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
     </nav>
   </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
   <main>
     
     <article class="artwork-page">
@@ -31,15 +33,14 @@
       <div class="description"><p>Leonardo&#39;s masterpiece depicting the moment Jesus announces that one of his disciples will betray him.</p>
 </div>
       <div class="artwork-images">
-        <figure><img src="../img/Stiudium_do_Ostatniej_Wieczerzy_5b53c890.jpg" alt="img"></figure>
-<figure><img src="../img/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolut_c6e37759.jpg" alt="img"></figure>
+        <figure><img src="../img/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolut_c6e37759.jpg" alt="img"></figure>
       </div>
     </article>
   
   </main>
   <footer>
     <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
-    <p class="last-updated">Last updated: February 6, 2026</p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
   </footer>
   <script src="../sort.js"></script>
   <script src="../tabs.js"></script>

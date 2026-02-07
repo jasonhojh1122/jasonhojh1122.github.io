@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Francesco Cozza - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artist-page">
+      <h1>Francesco Cozza <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Francesco_Cozza_(painter" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <div class="bio"><p><strong>Born</strong>: 1605, Stilo, Calabria
+<strong>Died</strong>: 1682, Rome
+<strong>Source</strong>: self-research</p>
+<p>Italian Baroque painter who worked primarily in Rome. He painted the Adoration of the Shepherds and Adoration of the Magi for the Chapel of St. Joseph in the Pantheon in 1661.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Cozza_Francesco_e_l%27angelo.jpg" alt="img"></p>
+</div>
+      
+      <section class="artworks-section">
+        <h2>Artworks</h2>
+        
+    <div class="sort-controls">
+      <span>Sort by:</span>
+      <button class="sort-btn active" data-sort="date">Date</button>
+      <button class="sort-btn" data-sort="title">Title</button>
+      
+    </div>
+  
+        <div class="artwork-grid">
+          
+    <article class="artwork-card" data-title="Adoration of the Shepherds" data-date="1661">
+      <h3><a href="../artworks/AdorationOfTheShepherdsCozza.html">Adoration of the Shepherds</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Oil painting</span>
+        <span class="date">1661</span>
+      </div>
+      <p class="description">One of two paintings by Francesco Cozza in the Chapel of St. Joseph, depicting the shepherds coming to worship the newborn Christ child in Bethlehem.</p>
+      
+    </article>
+  
+
+    <article class="artwork-card" data-title="Adoration of the Magi" data-date="1661">
+      <h3><a href="../artworks/AdorationOfTheMagiCozza.html">Adoration of the Magi</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Oil painting</span>
+        <span class="date">1661</span>
+      </div>
+      <p class="description">Companion piece to the Adoration of the Shepherds in the Chapel of St. Joseph, depicting the three Magi presenting gifts of gold, frankincense, and myrrh to the infant Jesus.</p>
+      
+    </article>
+  
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

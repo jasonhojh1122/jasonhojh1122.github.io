@@ -30,6 +30,7 @@
   function getSearchableItems() {
     return {
       artists: document.querySelectorAll('.artist-list li'),
+      artworks: document.querySelectorAll('.artworks-list li'),
       locationHeaders: document.querySelectorAll('[data-tab="locations"] h3'),
       locations: document.querySelectorAll('.location-list li'),
       bibleStories: document.querySelectorAll('.bible-stories-list li'),
@@ -74,6 +75,14 @@
 
     // Filter artists
     items.artists.forEach(li => {
+      const text = li.textContent;
+      const visible = matches(text, trimmedQuery);
+      setVisible(li, visible);
+      if (visible) totalVisible++;
+    });
+
+    // Filter artworks
+    items.artworks.forEach(li => {
       const text = li.textContent;
       const visible = matches(text, trimmedQuery);
       setVisible(li, visible);
@@ -169,6 +178,7 @@
    */
   function resetAll(items) {
     items.artists.forEach(li => li.classList.remove('search-hidden'));
+    items.artworks.forEach(li => li.classList.remove('search-hidden'));
     items.locationHeaders.forEach(h3 => h3.classList.remove('search-hidden'));
     items.locations.forEach(li => li.classList.remove('search-hidden'));
     document.querySelectorAll('.location-list').forEach(ul => ul.classList.remove('search-hidden'));

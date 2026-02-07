@@ -11,8 +11,10 @@
   <header>
     <nav>
       <a href="./index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
     </nav>
   </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
   <main>
     
     <h1>Italian Art</h1>
@@ -29,6 +31,7 @@
 
     <div class="tab-navigation">
       <button class="tab-btn active" data-tab="artists">Artists</button>
+      <button class="tab-btn" data-tab="artworks">Artworks</button>
       <button class="tab-btn" data-tab="locations">Locations</button>
       <button class="tab-btn" data-tab="biblestories">Bible Stories</button>
       <button class="tab-btn" data-tab="timeline">Timeline</button>
@@ -50,6 +53,7 @@
         <li><a href="artists/AndreaPisano.html">Andrea Pisano</a><span class="artwork-count">2</span></li>
         <li><a href="artists/AndreaPozzo.html">Andrea Pozzo</a><span class="artwork-count">3</span></li>
         <li><a href="artists/AndreaSchiavone.html">Andrea Schiavone</a></li>
+        <li><a href="artists/AnnibaleCarracci.html">Annibale Carracci</a></li>
         <li><a href="artists/AntonelloDaMessina.html">Antonello da Messina</a><span class="artwork-count">1</span></li>
         <li><a href="artists/AntoninusPius.html">Antoninus Pius</a></li>
         <li><a href="artists/AntonioCanova.html">Antonio Canova</a><span class="artwork-count">2</span></li>
@@ -60,6 +64,7 @@
         <li><a href="artists/ArnolfoDiCambio.html">Arnolfo di Cambio</a><span class="artwork-count">1</span></li>
         <li><a href="artists/BaccioBandinelli.html">Baccio Bandinelli</a><span class="artwork-count">1</span></li>
         <li><a href="artists/BaldassareLonghena.html">Baldassare Longhena</a></li>
+        <li><a href="artists/BaldassarePeruzzi.html">Baldassare Peruzzi</a></li>
         <li><a href="artists/BartolomeoVivarini.html">Bartolomeo Vivarini</a><span class="artwork-count">1</span></li>
         <li><a href="artists/BattistaFrancoVeneziano.html">Battista Franco Veneziano</a></li>
         <li><a href="artists/BenedettoDaMaiano.html">Benedetto da Maiano</a></li>
@@ -92,6 +97,7 @@
         <li><a href="artists/FraAngelico.html">Fra Angelico</a><span class="artwork-count">3</span></li>
         <li><a href="artists/FraBartolommeo.html">Fra Bartolommeo</a><span class="artwork-count">1</span></li>
         <li><a href="artists/FraMauro.html">Fra Mauro</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/FrancescoCozza.html">Francesco Cozza</a><span class="artwork-count">2</span></li>
         <li><a href="artists/FrancescoQueirolo.html">Francesco Queirolo</a><span class="artwork-count">1</span></li>
         <li><a href="artists/GentileBellini.html">Gentile Bellini</a><span class="artwork-count">5</span></li>
         <li><a href="artists/GentileDaFabriano.html">Gentile da Fabriano</a><span class="artwork-count">1</span></li>
@@ -118,7 +124,8 @@
         <li><a href="artists/JacopoSansovino.html">Jacopo Sansovino</a><span class="artwork-count">1</span></li>
         <li><a href="artists/JacopoTorriti.html">Jacopo Torriti</a><span class="artwork-count">1</span></li>
         <li><a href="artists/LeonBattistaAlberti.html">Leon Battista Alberti</a><span class="artwork-count">2</span></li>
-        <li><a href="artists/LeonardoDaVinci.html">Leonardo da Vinci</a><span class="artwork-count">6</span></li>
+        <li><a href="artists/LeonardoDaVinci.html">Leonardo da Vinci</a><span class="artwork-count">7</span></li>
+        <li><a href="artists/Lorenzetto.html">Lorenzetto</a><span class="artwork-count">1</span></li>
         <li><a href="artists/LorenzoGhiberti.html">Lorenzo Ghiberti</a><span class="artwork-count">5</span></li>
         <li><a href="artists/LorenzoLotto.html">Lorenzo Lotto</a><span class="artwork-count">1</span></li>
         <li><a href="artists/LorenzoMonaco.html">Lorenzo Monaco</a><span class="artwork-count">1</span></li>
@@ -129,7 +136,7 @@
         <li><a href="artists/Masaccio.html">Masaccio</a><span class="artwork-count">1</span></li>
         <li><a href="artists/MasoDiBanco.html">Maso di Banco</a><span class="artwork-count">1</span></li>
         <li><a href="artists/Masolino.html">Masolino</a></li>
-        <li><a href="artists/MelozzoDaForli.html">Melozzo da Forlì</a><span class="artwork-count">1</span></li>
+        <li><a href="artists/MelozzoDaForli.html">Melozzo da Forlì</a><span class="artwork-count">2</span></li>
         <li><a href="artists/Michelangelo.html">Michelangelo Buonarroti</a><span class="artwork-count">29</span></li>
         <li><a href="artists/MicheleGiambono.html">Michele Giambono</a><span class="artwork-count">1</span></li>
         <li><a href="artists/MichelozzoDiBartolommeo.html">Michelozzo di Bartolommeo</a></li>
@@ -156,6 +163,341 @@
         </ul>
       </section>
 
+      <section class="tab-panel" data-tab="artworks">
+        <ul class="artworks-list">
+          <li><a href="artworks/QuisquisAmatInscription.html">&quot;Quisquis Amat&quot; Inscription</a> <span class="artwork-date">Before 79 AD</span></li>
+        <li><a href="artworks/SapphoFresco.html">&quot;Sappho&quot; Fresco</a> <span class="artwork-date">1st century AD</span></li>
+        <li><a href="artworks/AbrahamAndIsaacTitian.html">Abraham and Isaac</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">1542-1544</span></li>
+        <li><a href="artworks/AbundanceOfFruits.html">Abundance of Fruits</a> <span class="artwork-date">c. 1735-1762</span></li>
+        <li><a href="artworks/AdorationOfTheMagiLeonardo.html">Adoration of the Magi</a> <span class="artwork-artist">Leonardo da Vinci</span> <span class="artwork-date">c. 1481–1482</span></li>
+        <li><a href="artworks/AdorationOfTheMagiCozza.html">Adoration of the Magi</a> <span class="artwork-artist">Francesco Cozza</span> <span class="artwork-date">1661</span></li>
+        <li><a href="artworks/AdorationOfTheMagiBotticelli.html">Adoration of the Magi</a> <span class="artwork-artist">Sandro Botticelli</span> <span class="artwork-date">c. 1475–1476</span></li>
+        <li><a href="artworks/AdorationOfTheMagi.html">Adoration of the Magi</a> <span class="artwork-artist">Gentile da Fabriano</span> <span class="artwork-date">1423</span></li>
+        <li><a href="artworks/AdorationOfTheShepherdsGhirlandaio.html">Adoration of the Shepherds</a> <span class="artwork-artist">Domenico Ghirlandaio</span> <span class="artwork-date">1485</span></li>
+        <li><a href="artworks/AdorationOfTheShepherdsFilippinoLippi.html">Adoration of the Shepherds</a> <span class="artwork-artist">Filippino Lippi</span> <span class="artwork-date">c. 1480</span></li>
+        <li><a href="artworks/AdorationOfTheShepherdsCozza.html">Adoration of the Shepherds</a> <span class="artwork-artist">Francesco Cozza</span> <span class="artwork-date">1661</span></li>
+        <li><a href="artworks/AeneasAnchisesAndAscanius.html">Aeneas, Anchises, and Ascanius</a> <span class="artwork-artist">Gian Lorenzo Bernini</span> <span class="artwork-date">c. 1618–1619</span></li>
+        <li><a href="artworks/AlexamenosGraffito.html">Alexamenos graffito</a> <span class="artwork-date">c. 200 AD</span></li>
+        <li><a href="artworks/AlexanderMosaic.html">Alexander Mosaic</a> <span class="artwork-date">c. 120-100 BC</span></li>
+        <li><a href="artworks/AllegoryOfAbundance.html">Allegory of Abundance</a> <span class="artwork-artist">Filippo della Valle</span> <span class="artwork-date">c. 1751-1762</span></li>
+        <li><a href="artworks/AllegoryOfHealth.html">Allegory of Health (Salubrity)</a> <span class="artwork-artist">Filippo della Valle</span> <span class="artwork-date">c. 1751-1762</span></li>
+        <li><a href="artworks/AmphitheatreOfPompeii.html">Amphitheatre of Pompeii</a> <span class="artwork-date">c. 80 BC</span></li>
+        <li><a href="artworks/AnnunciationMelozzo.html">Annunciation</a> <span class="artwork-artist">Melozzo da Forlì</span> <span class="artwork-date">c. 1470s</span></li>
+        <li><a href="artworks/AnnunciationLeonardo.html">Annunciation</a> <span class="artwork-artist">Leonardo da Vinci</span> <span class="artwork-date">c. 1472–1476</span></li>
+        <li><a href="artworks/AnnunciationFraAngelico.html">Annunciation</a> <span class="artwork-artist">Fra Angelico</span> <span class="artwork-date">c. 1440–1445</span></li>
+        <li><a href="artworks/AnnunciationAltar.html">Annunciation Altar</a> <span class="artwork-artist">Filippo della Valle</span> <span class="artwork-date">18th century</span></li>
+        <li><a href="artworks/ApolloAndDaphneBernini.html">Apollo and Daphne</a> <span class="artwork-artist">Gian Lorenzo Bernini</span> <span class="artwork-date">1622–1625</span></li>
+        <li><a href="artworks/ApolloWithCitharaFresco.html">Apollo with Cithara Fresco</a> <span class="artwork-date">Ancient Roman</span></li>
+        <li><a href="artworks/ApotheosisOfVenice.html">Apotheosis of Venice</a> <span class="artwork-artist">Paolo Veronese</span> <span class="artwork-date">1585</span></li>
+        <li><a href="artworks/ApseAndPresbyteryFrescoes.html">Apse and Presbytery Frescoes</a> <span class="artwork-artist">Andrea Pozzo</span> <span class="artwork-date">1685-1701</span></li>
+        <li><a href="artworks/ArcadeStatues.html">Arcade Statues</a> <span class="artwork-date">c. AD 80</span></li>
+        <li><a href="artworks/ArchOfConstantine.html">Arch of Constantine</a> <span class="artwork-date">AD 315</span></li>
+        <li><a href="artworks/ArchOfSeptimiusSeverus.html">Arch of Septimius Severus</a> <span class="artwork-date">203 AD</span></li>
+        <li><a href="artworks/ArchOfTitus.html">Arch of Titus</a> <span class="artwork-date">c. 81 AD</span></li>
+        <li><a href="artworks/AristotleVeronese.html">Aristotle</a> <span class="artwork-artist">Paolo Veronese</span> <span class="artwork-date">1560s</span></li>
+        <li><a href="artworks/ArithmeticAndGeometryVeronese.html">Arithmetic and Geometry</a> <span class="artwork-artist">Paolo Veronese</span> <span class="artwork-date">1556-1557</span></li>
+        <li><a href="artworks/AscensionCupolaMosaic.html">Ascension Cupola Mosaic</a> <span class="artwork-date">12th-13th century</span></li>
+        <li><a href="artworks/AssumptionOfTheVirginTitian.html">Assumption of the Virgin</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">1515-1518</span></li>
+        <li><a href="artworks/AthletesMosaics.html">Athletes Mosaics</a> <span class="artwork-date">c. 4th century AD (later restoration of original baths)</span></li>
+        <li><a href="artworks/AtlasSlave.html">Atlas Slave</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1525-1530</span></li>
+        <li><a href="artworks/AtysAmorino.html">Atys-Amorino</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">c. 1440</span></li>
+        <li><a href="artworks/AwakeningSlave.html">Awakening Slave</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1525-1530</span></li>
+        <li><a href="artworks/BacchusMichelangelo.html">Bacchus</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1496-1497</span></li>
+        <li><a href="artworks/BacchusVenusAndAriadne.html">Bacchus, Venus and Ariadne</a> <span class="artwork-artist">Tintoretto</span> <span class="artwork-date">1576-1577</span></li>
+        <li><a href="artworks/BaptisteryCeilingMosaic.html">Baptistery Ceiling Mosaic</a> <span class="artwork-artist">Coppo di Marcovaldo</span> <span class="artwork-date">c. 1270–1300</span></li>
+        <li><a href="artworks/BaroncelliChapelFrescoes.html">Baroncelli Chapel Frescoes</a> <span class="artwork-artist">Taddeo Gaddi</span> <span class="artwork-date">c. 1328–1330</span></li>
+        <li><a href="artworks/BasilicaAemilia.html">Basilica Aemilia</a> <span class="artwork-date">179 BC (original); 34 BC (rebuilt by Paullus Aemilius Lepidus)</span></li>
+        <li><a href="artworks/BasilicaGraffiti.html">Basilica Graffiti</a> <span class="artwork-date">Before 79 AD</span></li>
+        <li><a href="artworks/BasilicaJulia.html">Basilica Julia</a> <span class="artwork-date">Begun 46 BC by Julius Caesar; completed by Augustus 12 AD</span></li>
+        <li><a href="artworks/BattleOfCascina.html">Battle of Cascina</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1504-1506</span></li>
+        <li><a href="artworks/BattleOfSanRomano.html">Battle of San Romano</a> <span class="artwork-artist">Paolo Uccello</span> <span class="artwork-date">c. 1435–1460</span></li>
+        <li><a href="artworks/BattleOfTheCentaurs.html">Battle of the Centaurs</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1492</span></li>
+        <li><a href="artworks/BeardedSlave.html">Bearded Slave</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1525-1530</span></li>
+        <li><a href="artworks/BelvedereTorso.html">Belvedere Torso</a> <span class="artwork-artist">Apollonios</span> <span class="artwork-date">1st century BC (likely a copy of an earlier 2nd century BC Greek bronze)</span></li>
+        <li><a href="artworks/BirthOfVenus.html">Birth of Venus</a> <span class="artwork-artist">Sandro Botticelli</span> <span class="artwork-date">c. mid-1480s</span></li>
+        <li><a href="artworks/BoyWithABasketOfFruit.html">Boy with a Basket of Fruit</a> <span class="artwork-artist">Caravaggio</span> <span class="artwork-date">c. 1593</span></li>
+        <li><a href="artworks/BronzeDavid.html">Bronze David</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">c. 1440s</span></li>
+        <li><a href="artworks/BronzePulpits.html">Bronze Pulpits</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">c. 1460-1466</span></li>
+        <li><a href="artworks/BrunelleschiCrucifix.html">Brunelleschi Crucifix</a> <span class="artwork-artist">Filippo Brunelleschi</span> <span class="artwork-date">c. 1410-1415</span></li>
+        <li><a href="artworks/BrutusMichelangelo.html">Brutus</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1539-1540</span></li>
+        <li><a href="artworks/ByzantineMosaicsSanMarco.html">Byzantine Mosaics of San Marco</a> <span class="artwork-date">11th-13th century (and later)</span></li>
+        <li><a href="artworks/CainAndAbelTitian.html">Cain and Abel</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">1542-1544</span></li>
+        <li><a href="artworks/CalumnyOfApelles.html">Calumny of Apelles</a> <span class="artwork-artist">Sandro Botticelli</span> <span class="artwork-date">c. 1494–1495</span></li>
+        <li><a href="artworks/CantoriaDonatello.html">Cantoria (Donatello)</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">1433–1439</span></li>
+        <li><a href="artworks/CantoriaLucaDellaRobbia.html">Cantoria (Luca della Robbia)</a> <span class="artwork-artist">Luca della Robbia</span> <span class="artwork-date">1431–1438</span></li>
+        <li><a href="artworks/CartoonForPhilosophy.html">Cartoon for Philosophy</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">c. 1509-1510</span></li>
+        <li><a href="artworks/CestelloAnnunciation.html">Cestello Annunciation</a> <span class="artwork-artist">Sandro Botticelli</span> <span class="artwork-date">1489–1490</span></li>
+        <li><a href="artworks/ChapterHouseFresco.html">Chapter House Fresco</a> <span class="artwork-artist">Andrea da Firenze</span> <span class="artwork-date">c. 1365–1367</span></li>
+        <li><a href="artworks/ChiesaDiSantaMariaPressioSanSatiro.html">Chiesa di Santa Maria presso San Satiro</a> <span class="artwork-date">1482-1486</span></li>
+        <li><a href="artworks/ChristAndSaintThomas.html">Christ and Saint Thomas</a> <span class="artwork-artist">Andrea del Verrocchio</span> <span class="artwork-date">1467–1483</span></li>
+        <li><a href="artworks/CIL45296.html">CIL 4.5296</a> <span class="artwork-date">Before 79 AD</span></li>
+        <li><a href="artworks/CircusOfMaxentius.html">Circus of Maxentius</a> <span class="artwork-date">AD 306-312</span></li>
+        <li><a href="artworks/ColossusOfNero.html">Colossus of Nero</a> <span class="artwork-date">c. AD 64-68</span></li>
+        <li><a href="artworks/ColumnOfPhocas.html">Column of Phocas</a> <span class="artwork-date">608 AD</span></li>
+        <li><a href="artworks/CompetitionPanelBrunelleschi.html">Competition Panel (Brunelleschi)</a> <span class="artwork-artist">Filippo Brunelleschi</span> <span class="artwork-date">1401</span></li>
+        <li><a href="artworks/CompetitionPanelGhiberti.html">Competition Panel (Ghiberti)</a> <span class="artwork-artist">Lorenzo Ghiberti</span> <span class="artwork-date">1401</span></li>
+        <li><a href="artworks/CoronationOfTheVirginPantheon.html">Coronation of the Virgin</a> <span class="artwork-date">15th century</span></li>
+        <li><a href="artworks/CoronationOfTheVirgin.html">Coronation of the Virgin</a> <span class="artwork-artist">Lorenzo Monaco</span> <span class="artwork-date">1414</span></li>
+        <li><a href="artworks/CreationOfAdamMichelangelo.html">Creation of Adam</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1508-1512</span></li>
+        <li><a href="artworks/CreationOfAdam.html">Creation of Adam</a> <span class="artwork-artist">Andrea Pisano</span> <span class="artwork-date">1334–1343</span></li>
+        <li><a href="artworks/CreationOfSunMoonAndPlants.html">Creation of Sun, Moon and Plants</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1511</span></li>
+        <li><a href="artworks/CrossingOfTheRedSea.html">Crossing of the Red Sea</a> <span class="artwork-artist">Bronzino</span> <span class="artwork-date">1541-1542</span></li>
+        <li><a href="artworks/CrucifixMichelangelo.html">Crucifix</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1492</span></li>
+        <li><a href="artworks/CrucifixGiotto.html">Crucifix</a> <span class="artwork-artist">Giotto di Bondone</span> <span class="artwork-date">c. 1290–1300</span></li>
+        <li><a href="artworks/CrucifixionJacopoBellini.html">Crucifixion</a> <span class="artwork-artist">Jacopo Bellini</span> <span class="artwork-date">c. 1450</span></li>
+        <li><a href="artworks/CrucifixionGiovanniBellini.html">Crucifixion</a> <span class="artwork-artist">Giovanni Bellini</span> <span class="artwork-date">1453-1455</span></li>
+        <li><a href="artworks/CuriaJulia.html">Curia Julia</a> <span class="artwork-date">44 BC (begun by Julius Caesar); completed by Augustus</span></li>
+        <li><a href="artworks/DanaeCorreggio.html">Danaë</a> <span class="artwork-artist">Correggio</span> <span class="artwork-date">c. 1531</span></li>
+        <li><a href="artworks/DanteBeforeTheCityOfFlorence.html">Dante Before the City of Florence</a> <span class="artwork-artist">Domenico di Michelino</span> <span class="artwork-date">1465</span></li>
+        <li><a href="artworks/DavidVerrocchio.html">David</a> <span class="artwork-artist">Andrea del Verrocchio</span> <span class="artwork-date">c. 1473–1475</span></li>
+        <li><a href="artworks/DavidMichelangelo.html">David</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1501-1504</span></li>
+        <li><a href="artworks/DavidBernini.html">David</a> <span class="artwork-artist">Gian Lorenzo Bernini</span> <span class="artwork-date">1623–1624</span></li>
+        <li><a href="artworks/DavidAndGoliathTitian.html">David and Goliath</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">1542-1544</span></li>
+        <li><a href="artworks/DavidAndGoliathMichelangelo.html">David and Goliath</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1509</span></li>
+        <li><a href="artworks/DavidWithTheHeadOfGoliathCaravaggio.html">David with the Head of Goliath</a> <span class="artwork-artist">Caravaggio</span> <span class="artwork-date">c. 1609–1610</span></li>
+        <li><a href="artworks/DeliveryOfTheKeys.html">Delivery of the Keys</a> <span class="artwork-artist">Pietro Perugino</span> <span class="artwork-date">1481–1482</span></li>
+        <li><a href="artworks/DescentFromTheCross.html">Descent from the Cross</a> <span class="artwork-artist">Fra Angelico</span> <span class="artwork-date">1432–1434</span></li>
+        <li><a href="artworks/DescentOfTheHolyGhost.html">Descent of the Holy Ghost</a> <span class="artwork-date">1790</span></li>
+        <li><a href="artworks/Disputa.html">Disputa</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1509-1510</span></li>
+        <li><a href="artworks/DogeGiovanniMocenigo.html">Doge Giovanni Mocenigo</a> <span class="artwork-artist">Gentile Bellini</span> <span class="artwork-date">c. 1478–1485</span></li>
+        <li><a href="artworks/DomeOfFlorenceCathedral.html">Dome of Florence Cathedral</a> <span class="artwork-artist">Filippo Brunelleschi</span> <span class="artwork-date">1420–1436</span></li>
+        <li><a href="artworks/EnthronedChristWithMadonnaAndSaints.html">Enthroned Christ with Madonna and Saints</a> <span class="artwork-artist">Andrea Orcagna</span> <span class="artwork-date">1357</span></li>
+        <li><a href="artworks/TarquiniaMadonna.html">Enthroned Madonna and Child (Tarquinia Madonna)</a> <span class="artwork-artist">Filippo Lippi</span> <span class="artwork-date">1437</span></li>
+        <li><a href="artworks/EnthronedMadonnaAndChildWithAngelsAndProphets.html">Enthroned Madonna and Child with Angels and Prophets</a> <span class="artwork-artist">Cimabue</span> <span class="artwork-date">c. 1280–1290</span></li>
+        <li><a href="artworks/NiccoloDaTolentino.html">Equestrian Monument of Niccolò da Tolentino</a> <span class="artwork-artist">Andrea del Castagno</span> <span class="artwork-date">1456</span></li>
+        <li><a href="artworks/EquestrianStatueOfBartolomeoColleoni.html">Equestrian Statue of Bartolomeo Colleoni</a> <span class="artwork-artist">Andrea del Verrocchio</span> <span class="artwork-date">1480–1488</span></li>
+        <li><a href="artworks/EquestrianStatueOfBernaboVisconti.html">Equestrian Statue of Bernabò Visconti</a> <span class="artwork-date">c. 1363</span></li>
+        <li><a href="artworks/EroticArtInPompeiiAndHerculaneum.html">Erotic Art in Pompeii and Herculaneum</a> <span class="artwork-date">1st century BC - 1st century AD</span></li>
+        <li><a href="artworks/FallAndExpulsion.html">Fall of Adam and Eve and Expulsion</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1509-1510</span></li>
+        <li><a href="artworks/FarneseBull.html">Farnese Bull</a> <span class="artwork-date">Roman copy of 2nd century BC original</span></li>
+        <li><a href="artworks/FarneseHercules.html">Farnese Hercules</a> <span class="artwork-artist">Glykon</span> <span class="artwork-date">Early 3rd century AD (copy of 4th century BC Greek bronze)</span></li>
+        <li><a href="artworks/FertilityOfCrops.html">Fertility of Crops</a> <span class="artwork-date">c. 1735-1762</span></li>
+        <li><a href="artworks/FontaneDiPiazzaFarnese.html">Fontane di Piazza Farnese</a> <span class="artwork-date">Original: 3rd century AD; Fountain conversion: 16th century</span></li>
+        <li><a href="artworks/FourCrownedMartyrs.html">Four Crowned Martyrs</a> <span class="artwork-artist">Nanni di Banco</span> <span class="artwork-date">c. 1409–1417</span></li>
+        <li><a href="artworks/FraMauroMap.html">Fra Mauro Map</a> <span class="artwork-artist">Fra Mauro</span> <span class="artwork-date">c. 1450</span></li>
+        <li><a href="artworks/FrariTriptych.html">Frari Triptych</a> <span class="artwork-artist">Giovanni Bellini</span> <span class="artwork-date">1485–1488</span></li>
+        <li><a href="artworks/FuneralOfStFrancis.html">Funeral of St. Francis</a> <span class="artwork-artist">Giotto</span> <span class="artwork-date">c. 1325–1328</span></li>
+        <li><a href="artworks/FuneraryMonumentJohnHawkwood.html">Funerary Monument of John Hawkwood</a> <span class="artwork-artist">Paolo Uccello</span> <span class="artwork-date">1436</span></li>
+        <li><a href="artworks/GardenOfTheFugitives.html">Garden of the Fugitives</a> <span class="artwork-date">79 AD (eruption) / 19th century (casts)</span></li>
+        <li><a href="artworks/GatesOfParadise.html">Gates of Paradise</a> <span class="artwork-artist">Lorenzo Ghiberti</span> <span class="artwork-date">1425–1452</span></li>
+        <li><a href="artworks/GenealogyOfChristPaoloVeneziano.html">Genealogy of Christ, with the Life of Christ and the Virgin</a> <span class="artwork-artist">Paolo Veneziano</span> <span class="artwork-date">Mid-14th century</span></li>
+        <li><a href="artworks/GenesisCupolaMosaics.html">Genesis Cupola Mosaics</a> <span class="artwork-date">c. 1215-1235</span></li>
+        <li><a href="artworks/GlorificationOfSaintIgnatius.html">Glorification of Saint Ignatius</a> <span class="artwork-artist">Andrea Pozzo</span> <span class="artwork-date">1691-1694</span></li>
+        <li><a href="artworks/GloryOfSaintAloysiusGonzaga.html">Glory of Saint Aloysius Gonzaga</a> <span class="artwork-artist">Pierre Le Gros the Younger</span> <span class="artwork-date">1697-1699</span></li>
+        <li><a href="artworks/HerculesAndAntaeusBronze.html">Hercules and Antaeus (Bronze)</a> <span class="artwork-artist">Antonio del Pollaiuolo</span> <span class="artwork-date">c. 1475</span></li>
+        <li><a href="artworks/HerculesAndCacus.html">Hercules and Cacus</a> <span class="artwork-artist">Baccio Bandinelli</span> <span class="artwork-date">1525-1534</span></li>
+        <li><a href="artworks/HerculesAndTheHydra.html">Hercules and the Hydra</a> <span class="artwork-artist">Antonio del Pollaiuolo</span> <span class="artwork-date">c. 1470–1475</span></li>
+        <li><a href="artworks/HerculesSlayingAntaeus.html">Hercules Slaying Antaeus</a> <span class="artwork-artist">Antonio del Pollaiuolo</span> <span class="artwork-date">c. 1470–1475</span></li>
+        <li><a href="artworks/HonourVeronese.html">Honour (L&#039;Onore)</a> <span class="artwork-artist">Paolo Veronese</span> <span class="artwork-date">1556-1557</span></li>
+        <li><a href="artworks/HorsesOfSaintMark.html">Horses of Saint Mark</a> <span class="artwork-date">Antiquity (possibly 4th century BC or 2nd century AD)</span></li>
+        <li><a href="artworks/HoursOfGianGaleazzoVisconti.html">Hours of Gian Galeazzo Visconti</a> <span class="artwork-artist">Giovannino dei Grassi</span> <span class="artwork-date">c. 1370–1395</span></li>
+        <li><a href="artworks/HouseOfTheFaun.html">House of the Faun</a> <span class="artwork-date">2nd century BC (Samnite period)</span></li>
+        <li><a href="artworks/HouseOfTheTragicPoet.html">House of the Tragic Poet</a> <span class="artwork-date">2nd century BC</span></li>
+        <li><a href="artworks/HouseOfTheVestals.html">House of the Vestals</a> <span class="artwork-date">Roman Republic to Late Empire</span></li>
+        <li><a href="artworks/HouseOfTheVettiiFrescoes.html">House of the Vettii Frescoes</a> <span class="artwork-date">After 62 AD</span></li>
+        <li><a href="artworks/IlParadiso.html">Il Paradiso</a> <span class="artwork-artist">Tintoretto</span> <span class="artwork-date">1588-1592</span></li>
+        <li><a href="artworks/IsaiahMichelangelo.html">Isaiah</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1508-1509</span></li>
+        <li><a href="artworks/JacobsReturnToCanaan.html">Jacob&#039;s Return to Canaan</a> <span class="artwork-artist">Jacopo Bassano</span> <span class="artwork-date">c. 1580</span></li>
+        <li><a href="artworks/JesusGivingKeysToStPeter.html">Jesus giving the Keys to St. Peter</a> <span class="artwork-artist">Lorenzo Veneziano</span> <span class="artwork-date">1370</span></li>
+        <li><a href="artworks/JoyOfPrairiesAndGardens.html">Joy of Prairies and Gardens</a> <span class="artwork-date">c. 1735-1762</span></li>
+        <li><a href="artworks/JudithAndHolofernes.html">Judith and Holofernes</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">c. 1457–1464</span></li>
+        <li><a href="artworks/JunoShoweringGiftsOnVenice.html">Juno Showering Gifts on Venice</a> <span class="artwork-artist">Paolo Veronese</span> <span class="artwork-date">1553-1554</span></li>
+        <li><a href="artworks/JusticeBetweenTheArchangels.html">Justice Between the Archangels Michael and Gabriel</a> <span class="artwork-artist">Jacobello del Fiore</span> <span class="artwork-date">1421</span></li>
+        <li><a href="artworks/LaVelata.html">La velata</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">c. 1515-1516</span></li>
+        <li><a href="artworks/LandscapeOfTheArnoValley.html">Landscape of the Arno Valley</a> <span class="artwork-artist">Leonardo da Vinci</span> <span class="artwork-date">August 5, 1473</span></li>
+        <li><a href="artworks/LaocoonAndHisSons.html">Laocoön and His Sons</a> <span class="artwork-artist">Agesander of Rhodes</span> <span class="artwork-date">c. 40-30 BC (or possibly later Roman copy of earlier Greek bronze)</span></li>
+        <li><a href="artworks/LapisNiger.html">Lapis Niger</a> <span class="artwork-date">7th-6th century BC</span></li>
+        <li><a href="artworks/LastJudgementCavallini.html">Last Judgement</a> <span class="artwork-artist">Pietro Cavallini</span> <span class="artwork-date">c. 1289–1293</span></li>
+        <li><a href="artworks/LastSupperElGreco.html">Last Supper</a> <span class="artwork-artist">El Greco</span> <span class="artwork-date">1568</span></li>
+        <li><a href="artworks/LastSupperCastagno.html">Last Supper</a> <span class="artwork-artist">Andrea del Castagno</span> <span class="artwork-date">1445–1450</span></li>
+        <li><a href="artworks/LastSupperWithTheTreeOfLife.html">Last Supper with the Tree of Life</a> <span class="artwork-artist">Taddeo Gaddi</span> <span class="artwork-date">c. 1355–1360</span></li>
+        <li><a href="artworks/LaurentianLibrary.html">Laurentian Library</a> <span class="artwork-date">1525-1571</span></li>
+        <li><a href="artworks/LegendOfSaintUrsula.html">Legend of Saint Ursula</a> <span class="artwork-artist">Vittore Carpaccio</span> <span class="artwork-date">1490–1495</span></li>
+        <li><a href="artworks/LegendOfSaintUrsulaCycle.html">Legend of Saint Ursula Cycle</a> <span class="artwork-artist">Vittore Carpaccio</span> <span class="artwork-date">1490-1495</span></li>
+        <li><a href="artworks/LegendOfTheTrueCross.html">Legend of the True Cross</a> <span class="artwork-artist">Agnolo Gaddi</span> <span class="artwork-date">1385–1387</span></li>
+        <li><a href="artworks/LiberationOfSaintPeter.html">Liberation of Saint Peter</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1514</span></li>
+        <li><a href="artworks/LibyanSibyl.html">Libyan Sibyl</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1511</span></li>
+        <li><a href="artworks/LionOfSaintMark.html">Lion of Saint Mark</a> <span class="artwork-date">Medieval</span></li>
+        <li><a href="artworks/LupanarFrescoes.html">Lupanar Frescoes</a> <span class="artwork-date">1st century AD</span></li>
+        <li><a href="artworks/LupanarGraffiti.html">Lupanar Graffiti</a> <span class="artwork-date">1st century AD</span></li>
+        <li><a href="artworks/MadonnaAndChildGiambono.html">Madonna and Child</a> <span class="artwork-artist">Michele Giambono</span> <span class="artwork-date">Early 15th century</span></li>
+        <li><a href="artworks/MadonnaAndChildBouts.html">Madonna and Child</a> <span class="artwork-artist">Dieric Bouts</span> <span class="artwork-date">Mid-15th century</span></li>
+        <li><a href="artworks/MadonnaAndChildBartolomeoVivarini.html">Madonna and Child</a> <span class="artwork-artist">Bartolomeo Vivarini</span> <span class="artwork-date">Mid-15th century</span></li>
+        <li><a href="artworks/FrizzoniMadonna.html">Madonna and Child (Frizzoni Madonna)</a> <span class="artwork-artist">Giovanni Bellini</span> <span class="artwork-date">c. 1470-1475</span></li>
+        <li><a href="artworks/RucellaiMadonna.html">Madonna and Child (Rucellai Madonna)</a> <span class="artwork-artist">Duccio</span> <span class="artwork-date">1285</span></li>
+        <li><a href="artworks/MadonnaAndChildWithAngelsLotto.html">Madonna and Child with Angels</a> <span class="artwork-artist">Lorenzo Lotto</span> <span class="artwork-date">c. 1525</span></li>
+        <li><a href="artworks/MadonnaAndChildWithSaintAnne.html">Madonna and Child with Saint Anne (Dei Palafrenieri)</a> <span class="artwork-artist">Caravaggio</span> <span class="artwork-date">1605–1606</span></li>
+        <li><a href="artworks/MadonnaChildStNicholasStLawrence.html">Madonna and Child with St. Nicholas and St. Lawrence</a> <span class="artwork-artist">Cima da Conegliano</span> <span class="artwork-date">Early 16th century</span></li>
+        <li><a href="artworks/MadonnaDelSasso.html">Madonna del Sasso</a> <span class="artwork-artist">Lorenzetto</span> <span class="artwork-date">c. 1524</span></li>
+        <li><a href="artworks/OgnissantiMadonna.html">Madonna Enthroned (Ognissanti Madonna)</a> <span class="artwork-artist">Giotto</span> <span class="artwork-date">c. 1306–1310</span></li>
+        <li><a href="artworks/MadonnaNicopeiaIcon.html">Madonna Nicopeia Icon</a> <span class="artwork-date">10th-11th century (frame 14th century)</span></li>
+        <li><a href="artworks/MadonnaOfMercy.html">Madonna of Mercy between St Francis and St John the Baptist</a> <span class="artwork-date">15th century</span></li>
+        <li><a href="artworks/MadonnaOfTheMagnificat.html">Madonna of the Magnificat</a> <span class="artwork-artist">Sandro Botticelli</span> <span class="artwork-date">c. 1481</span></li>
+        <li><a href="artworks/MadonnaOfTheStairs.html">Madonna of the Stairs</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1491</span></li>
+        <li><a href="artworks/PittiTondo.html">Madonna with Child with Scenes of the Life of Saint Anne (Pitti Tondo)</a> <span class="artwork-artist">Filippo Lippi</span> <span class="artwork-date">c. 1452</span></li>
+        <li><a href="artworks/MadonnaWithGlassEyes.html">Madonna with Glass Eyes (Madonna degli Occhi di Vetro)</a> <span class="artwork-artist">Arnolfo di Cambio</span> <span class="artwork-date">c. 1300-1310</span></li>
+        <li><a href="artworks/MadonnaChildStJohnCarpaccio.html">Madonna, Child and St. John the Baptist</a> <span class="artwork-artist">Vittore Carpaccio</span> <span class="artwork-date">Early period</span></li>
+        <li><a href="artworks/MagiChapel.html">Magi Chapel</a> <span class="artwork-artist">Benozzo Gozzoli</span> <span class="artwork-date">c. 1459</span></li>
+        <li><a href="artworks/MarbleDavid.html">Marble David</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">1408-1416</span></li>
+        <li><a href="artworks/MarriageAtCanaTintoretto.html">Marriage at Cana</a> <span class="artwork-artist">Tintoretto</span> <span class="artwork-date">1561</span></li>
+        <li><a href="artworks/MarsAndNeptune.html">Mars and Neptune</a> <span class="artwork-artist">Jacopo Sansovino</span> <span class="artwork-date">1567</span></li>
+        <li><a href="artworks/MartelliAnnunciation.html">Martelli Annunciation</a> <span class="artwork-artist">Filippo Lippi</span> <span class="artwork-date">c. 1440</span></li>
+        <li><a href="artworks/Marzocco.html">Marzocco</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">1419-1420</span></li>
+        <li><a href="artworks/MausoleumOfMaxentius.html">Mausoleum of Maxentius</a> <span class="artwork-date">Early 4th century AD</span></li>
+        <li><a href="artworks/MediciChapels.html">Medici Chapels</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1520-1534</span></li>
+        <li><a href="artworks/MercuryAndTheThreeGraces.html">Mercury and the Three Graces</a> <span class="artwork-artist">Tintoretto</span> <span class="artwork-date">c. 1578</span></li>
+        <li><a href="artworks/MetaSudans.html">Meta Sudans</a> <span class="artwork-date">c. AD 89-96</span></li>
+        <li><a href="artworks/MinervaProtectingPeaceAndAbundanceFromMars.html">Minerva Protecting Peace and Abundance from Mars</a> <span class="artwork-artist">Tintoretto</span> <span class="artwork-date">c. 1578</span></li>
+        <li><a href="artworks/MiracleOfTheRelicOfTheCross.html">Miracle of the Relic of the Cross at the Ponte di Rialto</a> <span class="artwork-artist">Vittore Carpaccio</span> <span class="artwork-date">c. 1496</span></li>
+        <li><a href="artworks/MonumentToTitian.html">Monument to Titian</a> <span class="artwork-date">1852</span></li>
+        <li><a href="artworks/MosaicSantaMariaMaggiore.html">Mosaic in Santa Maria Maggiore</a> <span class="artwork-artist">Jacopo Torriti</span> <span class="artwork-date">1295</span></li>
+        <li><a href="artworks/MosesMichelangelo.html">Moses</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1513-1515</span></li>
+        <li><a href="artworks/MusicVeronese.html">Music (La Musica)</a> <span class="artwork-artist">Paolo Veronese</span> <span class="artwork-date">1556-1557</span></li>
+        <li><a href="artworks/NorthDoor.html">North Door of Florence Baptistery</a> <span class="artwork-artist">Lorenzo Ghiberti</span> <span class="artwork-date">1403–1424</span></li>
+        <li><a href="artworks/NorthSacristyIntarsia.html">North Sacristy Intarsia</a> <span class="artwork-artist">Giuliano da Maiano</span> <span class="artwork-date">c. 1463–1465</span></li>
+        <li><a href="artworks/OceanusNeptune.html">Oceanus (Neptune)</a> <span class="artwork-artist">Pietro Bracci</span> <span class="artwork-date">1761-1762</span></li>
+        <li><a href="artworks/OldSacristy.html">Old Sacristy (Sagrestia Vecchia)</a> <span class="artwork-artist">Filippo Brunelleschi</span> <span class="artwork-date">1421–1428</span></li>
+        <li><a href="artworks/OspedaleDegliInnocenti.html">Ospedale degli Innocenti</a> <span class="artwork-artist">Brunelleschi</span> <span class="artwork-date">1419–1445</span></li>
+        <li><a href="artworks/OvidHeroiDesReference.html">Ovid&#039;s Heroides Reference</a> <span class="artwork-date">Before 79 AD</span></li>
+        <li><a href="artworks/PalaDOro.html">Pala d&#039;Oro</a> <span class="artwork-date">10th-14th century (created in phases)</span></li>
+        <li><a href="artworks/PalazzoRucellai.html">Palazzo Rucellai</a> <span class="artwork-artist">Alberti</span> <span class="artwork-date">c. 1446–1451</span></li>
+        <li><a href="artworks/PalestrinaPieta.html">Palestrina Pietà</a> <span class="artwork-date">c. 1555</span></li>
+        <li><a href="artworks/PenitentMagdalene.html">Penitent Magdalene</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">c. 1440</span></li>
+        <li><a href="artworks/PentecostCupolaMosaic.html">Pentecost Cupola Mosaic</a> <span class="artwork-date">12th century</span></li>
+        <li><a href="artworks/PesaroMadonna.html">Pesaro Madonna</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">1519-1526</span></li>
+        <li><a href="artworks/SchoolOfAthens.html">Philosophy (The School of Athens)</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1509-1511</span></li>
+        <li><a href="artworks/PietaTitian.html">Pietà</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">1575-1576</span></li>
+        <li><a href="artworks/PietaMichelangelo.html">Pietà</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1498-1499</span></li>
+        <li><a href="artworks/PietaGiovanniBelliniCorrer.html">Pietà</a> <span class="artwork-artist">Giovanni Bellini</span> <span class="artwork-date">c. 1460s</span></li>
+        <li><a href="artworks/PietaGiovanniBellini.html">Pietà</a> <span class="artwork-artist">Giovanni Bellini</span> <span class="artwork-date">c. 1465–1470</span></li>
+        <li><a href="artworks/PietaCosmeTura.html">Pietà</a> <span class="artwork-artist">Cosmè Tura</span> <span class="artwork-date">c. 1460</span></li>
+        <li><a href="artworks/PietaAntonelloDaMessina.html">Pietà</a> <span class="artwork-artist">Antonello da Messina</span> <span class="artwork-date">c. 1474-1476</span></li>
+        <li><a href="artworks/PippoSpano.html">Pippo Spano</a> <span class="artwork-artist">Andrea del Castagno</span> <span class="artwork-date">c. 1450</span></li>
+        <li><a href="artworks/PlatoVeronese.html">Plato</a> <span class="artwork-artist">Paolo Veronese</span> <span class="artwork-date">1560s</span></li>
+        <li><a href="artworks/Parnassus.html">Poetry (The Parnassus)</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1509-1510</span></li>
+        <li><a href="artworks/PortraitOfALadyWithFlowers.html">Portrait of a Lady with Flowers</a> <span class="artwork-artist">Andrea del Verrocchio</span> <span class="artwork-date">c. 1475–1480</span></li>
+        <li><a href="artworks/PortraitOfAManWithAMedal.html">Portrait of a Man with a Medal of Cosimo de Medici</a> <span class="artwork-artist">Sandro Botticelli</span> <span class="artwork-date">c. 1475</span></li>
+        <li><a href="artworks/PortraitOfAgnoloDoni.html">Portrait of Agnolo Doni</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">c. 1506</span></li>
+        <li><a href="artworks/PortraitOfDogeGiovanniMocenigo.html">Portrait of Doge Giovanni Mocenigo</a> <span class="artwork-artist">Gentile Bellini</span> <span class="artwork-date">c. 1478-1485</span></li>
+        <li><a href="artworks/PortraitOfFrancescoDelleOpere.html">Portrait of Francesco delle Opere</a> <span class="artwork-artist">Pietro Perugino</span> <span class="artwork-date">1494</span></li>
+        <li><a href="artworks/PortraitOfLeoX.html">Portrait of Leo X</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">c. 1518-1519</span></li>
+        <li><a href="artworks/PortraitOfMaddalenaDoni.html">Portrait of Maddalena Doni</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">c. 1506</span></li>
+        <li><a href="artworks/PortraitOfTerentiusNeo.html">Portrait of Terentius Neo</a> <span class="artwork-date">c. 50 AD</span></li>
+        <li><a href="artworks/PortraitOfTheFourTetrarchs.html">Portrait of the Four Tetrarchs</a> <span class="artwork-date">c. 300 AD</span></li>
+        <li><a href="artworks/PriapusFresco.html">Priapus Fresco (House of the Vettii)</a> <span class="artwork-date">After 62 AD</span></li>
+        <li><a href="artworks/Primavera.html">Primavera</a> <span class="artwork-artist">Sandro Botticelli</span> <span class="artwork-date">c. 1477–1482</span></li>
+        <li><a href="artworks/ProcessionInStMarksSquare.html">Procession in St. Mark&#039;s Square</a> <span class="artwork-artist">Gentile Bellini</span> <span class="artwork-date">c. 1496</span></li>
+        <li><a href="artworks/ProcessionOfTheMagi.html">Procession of the Magi</a> <span class="artwork-artist">Benozzo Gozzoli</span> <span class="artwork-date">c. 1459</span></li>
+        <li><a href="artworks/ProcessionOfTheTrueCross.html">Procession of the True Cross in Piazza San Marco</a> <span class="artwork-artist">Gentile Bellini</span> <span class="artwork-date">c. 1496</span></li>
+        <li><a href="artworks/ProductsOfAutumn.html">Products of Autumn</a> <span class="artwork-artist">Francesco Queirolo</span> <span class="artwork-date">c. 1735-1762</span></li>
+        <li><a href="artworks/ProvincePersonificationReliefs.html">Province Personification Reliefs</a> <span class="artwork-date">c. 145 CE</span></li>
+        <li><a href="artworks/PunishmentOfKorah.html">Punishment of the Korah, Dathan and Abiram</a> <span class="artwork-artist">Sandro Botticelli</span> <span class="artwork-date">1481–1482</span></li>
+        <li><a href="artworks/Regia.html">Regia</a> <span class="artwork-date">8th century BC (original); multiple rebuildings</span></li>
+        <li><a href="artworks/ReliefOfAgrippaApprovingTheAqueductPlans.html">Relief of Agrippa Approving the Aqueduct Plans</a> <span class="artwork-date">c. 1758</span></li>
+        <li><a href="artworks/ReliefOfTheVirginShowingSoldiersTheSpring.html">Relief of the Virgin Showing Soldiers the Spring</a> <span class="artwork-date">c. 1758</span></li>
+        <li><a href="artworks/RoomOfTheMasksFrescoes.html">Room of the Masks Frescoes</a> <span class="artwork-date">c. 30 BC</span></li>
+        <li><a href="artworks/RoseWindow.html">Rose Window</a> <span class="artwork-artist">Andrea da Firenze</span> <span class="artwork-date">c. 1365</span></li>
+        <li><a href="artworks/Rostra.html">Rostra</a> <span class="artwork-date">Various dates; main platform moved to current location 44 BC by Julius Caesar</span></li>
+        <li><a href="artworks/SacredAndProfaneLove.html">Sacred and Profane Love</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">c. 1514</span></li>
+        <li><a href="artworks/SaintJeromeWritingCaravaggio.html">Saint Jerome Writing</a> <span class="artwork-artist">Caravaggio</span> <span class="artwork-date">c. 1605–1606</span></li>
+        <li><a href="artworks/SaintJohnTheBaptistGhiberti.html">Saint John the Baptist</a> <span class="artwork-artist">Lorenzo Ghiberti</span> <span class="artwork-date">1412-1416</span></li>
+        <li><a href="artworks/SaintJohnTheBaptistDonatello.html">Saint John the Baptist</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">1438</span></li>
+        <li><a href="artworks/SaintMarkDonatello.html">Saint Mark</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">1411-1413</span></li>
+        <li><a href="artworks/SaintMarkEnthroned.html">Saint Mark Enthroned</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">1510-1511</span></li>
+        <li><a href="artworks/SaintMatthewMichelangelo.html">Saint Matthew</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1506</span></li>
+        <li><a href="artworks/SanGiobbeAltarpiece.html">San Giobbe Altarpiece</a> <span class="artwork-artist">Giovanni Bellini</span> <span class="artwork-date">c. 1487</span></li>
+        <li><a href="artworks/SanMarcoAltarpiece.html">San Marco Altarpiece</a> <span class="artwork-artist">Fra Angelico</span> <span class="artwork-date">c. 1438–1443</span></li>
+        <li><a href="artworks/SantaMariaNovellFacade.html">Santa Maria Novella Facade</a> <span class="artwork-artist">Alberti</span> <span class="artwork-date">1456–1470</span></li>
+        <li><a href="artworks/SeparationOfLightFromDarkness.html">Separation of Light from Darkness</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1512</span></li>
+        <li><a href="artworks/SixtusIVAppointingPlatina.html">Sixtus IV Appointing Platina as Prefect of the Vatican Library</a> <span class="artwork-artist">Melozzo da Forlì</span> <span class="artwork-date">1477</span></li>
+        <li><a href="artworks/SouthDoorFlorenceBaptistery.html">South Door of Florence Baptistery</a> <span class="artwork-artist">Andrea Pisano</span> <span class="artwork-date">1330–1336</span></li>
+        <li><a href="artworks/StAnthonyOfPaduaVivarini.html">St. Anthony of Padua</a> <span class="artwork-artist">Alvise Vivarini</span> <span class="artwork-date">Late 15th century</span></li>
+        <li><a href="artworks/StFrancisUndergoingTheTestByFire.html">St. Francis Undergoing the Test by Fire</a> <span class="artwork-artist">Giotto</span> <span class="artwork-date">c. 1325–1328</span></li>
+        <li><a href="artworks/StGeorge.html">St. George</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">1416–1417</span></li>
+        <li><a href="artworks/StGeorgeAndTheDragon.html">St. George and the Dragon</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">1416–1417</span></li>
+        <li><a href="artworks/StJohnTheBaptist.html">St. John the Baptist</a> <span class="artwork-artist">Lorenzo Ghiberti</span> <span class="artwork-date">1412–1416</span></li>
+        <li><a href="artworks/StMark.html">St. Mark</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">1411–1413</span></li>
+        <li><a href="artworks/StMarkPreachingInAlexandria.html">St. Mark Preaching in Alexandria</a> <span class="artwork-artist">Gentile Bellini</span> <span class="artwork-date">1504–1507</span></li>
+        <li><a href="artworks/StPeterMartyrCarpaccio.html">St. Peter Martyr</a> <span class="artwork-artist">Vittore Carpaccio</span> <span class="artwork-date">Late period</span></li>
+        <li><a href="artworks/StSylvesterSealingTheDragonsMouth.html">St. Sylvester Sealing the Dragon&#039;s Mouth</a> <span class="artwork-artist">Maso di Banco</span> <span class="artwork-date">c. 1340</span></li>
+        <li><a href="artworks/StoryOfNoah.html">Story of Noah</a> <span class="artwork-artist">Paolo Uccello</span> <span class="artwork-date">c. 1447</span></li>
+        <li><a href="artworks/StudioloOfFrancescoI.html">Studiolo of Francesco I</a> <span class="artwork-date">1570-1572</span></li>
+        <li><a href="artworks/StudyOfLastSupper.html">Study of Composition of Last Supper</a> <span class="artwork-artist">Leonardo da Vinci</span></li>
+        <li><a href="artworks/SuburbanBathsEroticFrescoes.html">Suburban Baths Erotic Frescoes</a> <span class="artwork-date">62-79 AD</span></li>
+        <li><a href="artworks/TabernacleOfOrsanmichele.html">Tabernacle of Orsanmichele</a> <span class="artwork-artist">Andrea Orcagna</span> <span class="artwork-date">1359</span></li>
+        <li><a href="artworks/Tempietto.html">Tempietto</a> <span class="artwork-date">1502</span></li>
+        <li><a href="artworks/TempleOfAntoninusAndFaustina.html">Temple of Antoninus and Faustina</a> <span class="artwork-date">141 AD</span></li>
+        <li><a href="artworks/TempleOfCaesar.html">Temple of Caesar</a> <span class="artwork-date">29 BC</span></li>
+        <li><a href="artworks/TempleOfCastorAndPollux.html">Temple of Castor and Pollux</a> <span class="artwork-date">Originally 495 BC; current ruins from 6 AD reconstruction</span></li>
+        <li><a href="artworks/TempleOfConcord.html">Temple of Concord</a> <span class="artwork-date">367 BC (traditional); rebuilt 121 BC and again 7 BC-10 AD by Tiberius</span></li>
+        <li><a href="artworks/TempleOfSaturn.html">Temple of Saturn</a> <span class="artwork-date">Originally dedicated 497 BC; current ruins from 42 BC reconstruction</span></li>
+        <li><a href="artworks/TempleOfVespasianAndTitus.html">Temple of Vespasian and Titus</a> <span class="artwork-date">79-87 AD</span></li>
+        <li><a href="artworks/TempleOfVesta.html">Temple of Vesta</a> <span class="artwork-date">7th century BC (rebuilt multiple times; current partial reconstruction from early 20th century)</span></li>
+        <li><a href="artworks/AdorationOfTheMagiBrueghel.html">The Adoration of the Magi</a> <span class="artwork-artist">Pieter Brueghel the Younger</span> <span class="artwork-date">Late 16th century</span></li>
+        <li><a href="artworks/BaptismOfChrist.html">The Baptism of Christ</a> <span class="artwork-artist">Andrea del Verrocchio</span> <span class="artwork-date">c. 1472–1475</span></li>
+        <li><a href="artworks/BattleOfAnghiari.html">The Battle of Anghiari</a> <span class="artwork-artist">Leonardo da Vinci</span> <span class="artwork-date">1505</span></li>
+        <li><a href="artworks/BattleOfMarciano.html">The Battle of Marciano in Val di Chiana</a> <span class="artwork-artist">Giorgio Vasari</span> <span class="artwork-date">1555-1572</span></li>
+        <li><a href="artworks/BrazenSerpent.html">The Brazen Serpent</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1511-1512</span></li>
+        <li><a href="artworks/CardinalVirtues.html">The Cardinal Virtues</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1511</span></li>
+        <li><a href="artworks/ConfirmationOfTheFranciscanRule.html">The Confirmation of the Franciscan Rule by Pope Honorius III</a> <span class="artwork-artist">Domenico Ghirlandaio</span> <span class="artwork-date">1482–1485</span></li>
+        <li><a href="artworks/DepositionRaphael.html">The Deposition</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1507</span></li>
+        <li><a href="artworks/FlorentinePieta.html">The Deposition (Florentine Pietà)</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1547-1555</span></li>
+        <li><a href="artworks/DoniTondo.html">The Doni Tondo</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1506</span></li>
+        <li><a href="artworks/ExpulsionOfHeliodorus.html">The Expulsion of Heliodorus from the Temple</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1511-1512</span></li>
+        <li><a href="artworks/FeastInTheHouseOfLevi.html">The Feast in the House of Levi</a> <span class="artwork-artist">Paolo Veronese</span> <span class="artwork-date">1573</span></li>
+        <li><a href="artworks/FloodMichelangelo.html">The Flood</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1508-1509</span></li>
+        <li><a href="artworks/LamentationOfChristMantegna.html">The Foreshortened Christ (Lamentation of Christ)</a> <span class="artwork-artist">Andrea Mantegna</span> <span class="artwork-date">c. 1480</span></li>
+        <li><a href="artworks/TheForgeOfVulcan.html">The Forge of Vulcan</a> <span class="artwork-artist">Tintoretto</span> <span class="artwork-date">c. 1578</span></li>
+        <li><a href="artworks/GeniusOfVictory.html">The Genius of Victory</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1532-1534</span></li>
+        <li><a href="artworks/LastJudgementVasariZuccari.html">The Last Judgement (Vasari and Zuccari)</a> <span class="artwork-artist">Giorgio Vasari</span> <span class="artwork-date">1572-1579</span></li>
+        <li><a href="artworks/LastSupperLeonardo.html">The Last Supper</a> <span class="artwork-artist">Leonardo da Vinci</span> <span class="artwork-date">c. 1495–1498</span></li>
+        <li><a href="artworks/LastSupperGhirlandaio.html">The Last Supper</a> <span class="artwork-artist">Domenico Ghirlandaio</span> <span class="artwork-date">1486</span></li>
+        <li><a href="artworks/MadonnaAndChildWithSaints.html">The Madonna and Child with Saints</a> <span class="artwork-artist">Domenico Veneziano</span> <span class="artwork-date">c. 1445–1447</span></li>
+        <li><a href="artworks/MarriageOfTheVirgin.html">The Marriage of the Virgin</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1504</span></li>
+        <li><a href="artworks/MassAtBolsena.html">The Mass at Bolsena</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1512</span></li>
+        <li><a href="artworks/MeetingOfLeoAndAttila.html">The Meeting of Leo the Great and Attila</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1514</span></li>
+        <li><a href="artworks/PentecostTitian.html">The Pentecost</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">c. 1545</span></li>
+        <li><a href="artworks/PresentationOfTheVirginTitian.html">The Presentation of the Virgin at the Temple</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">1534-1538</span></li>
+        <li><a href="artworks/RapeOfEuropa.html">The Rape of Europa</a> <span class="artwork-artist">Paolo Veronese</span> <span class="artwork-date">c. 1580</span></li>
+        <li><a href="artworks/RapeOfProserpina.html">The Rape of Proserpina</a> <span class="artwork-artist">Gian Lorenzo Bernini</span> <span class="artwork-date">1621–1622</span></li>
+        <li><a href="artworks/TheTempest.html">The Tempest</a> <span class="artwork-artist">Giorgione</span> <span class="artwork-date">1506-1508</span></li>
+        <li><a href="artworks/VisionOfSaintBernard.html">The Vision of Saint Bernard</a> <span class="artwork-artist">Fra Bartolommeo</span> <span class="artwork-date">1504-1507</span></li>
+        <li><a href="artworks/TombOfAntonioCanova.html">Tomb of Antonio Canova</a> <span class="artwork-artist">Antonio Canova</span> <span class="artwork-date">1827</span></li>
+        <li><a href="artworks/TombOfCaeciliaMetella.html">Tomb of Caecilia Metella</a> <span class="artwork-date">c. 30-10 BC</span></li>
+        <li><a href="artworks/TombOfCarloMarsuppini.html">Tomb of Carlo Marsuppini</a> <span class="artwork-artist">Desiderio da Settignano</span> <span class="artwork-date">1453–1455</span></li>
+        <li><a href="artworks/TombOfGiulianoDeMedici.html">Tomb of Giuliano de&#039; Medici, Duke of Nemours</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1526-1534</span></li>
+        <li><a href="artworks/TombOfLorenzoDeMedici.html">Tomb of Lorenzo de&#039; Medici, Duke of Urbino</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">1524-1534</span></li>
+        <li><a href="artworks/TombOfPopeSixtusIV.html">Tomb of Pope Sixtus IV</a> <span class="artwork-artist">Antonio del Pollaiuolo</span> <span class="artwork-date">1484–1493</span></li>
+        <li><a href="artworks/TombOfTheHaterii.html">Tomb of the Haterii</a> <span class="artwork-date">c. AD 100-120</span></li>
+        <li><a href="artworks/TombOfTheScipios.html">Tomb of the Scipios</a> <span class="artwork-date">Early 3rd century BC - 1st century AD</span></li>
+        <li><a href="artworks/TornabuoniChapelFrescoes.html">Tornabuoni Chapel Frescoes</a> <span class="artwork-artist">Domenico Ghirlandaio</span> <span class="artwork-date">1485–1490</span></li>
+        <li><a href="artworks/TransfigurationRaphael.html">Transfiguration</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">1516-1520</span></li>
+        <li><a href="artworks/TransfigurationOfChristGiovanniBellini.html">Transfiguration of Christ</a> <span class="artwork-artist">Giovanni Bellini</span> <span class="artwork-date">c. 1480</span></li>
+        <li><a href="artworks/TreasuryOfSaintMarksBasilica.html">Treasury of St Mark&#039;s Basilica</a> <span class="artwork-date">Various (6th-14th century)</span></li>
+        <li><a href="artworks/Trinity.html">Trinity</a> <span class="artwork-artist">Masaccio</span> <span class="artwork-date">c. 1427</span></li>
+        <li><a href="artworks/TritonsWithHippocamps.html">Tritons with Hippocamps</a> <span class="artwork-artist">Pietro Bracci</span> <span class="artwork-date">1761-1762</span></li>
+        <li><a href="artworks/TriumphOfVenice.html">Triumph of Venice</a> <span class="artwork-artist">Palma il Giovane</span> <span class="artwork-date">1582</span></li>
+        <li><a href="artworks/TrompeLOeilDome.html">Trompe-l&#039;œil Dome</a> <span class="artwork-artist">Andrea Pozzo</span> <span class="artwork-date">1685 (original, destroyed; reproduced 1823 by Francesco Manno)</span></li>
+        <li><a href="artworks/TrophyReliefs.html">Trophy Reliefs</a> <span class="artwork-date">c. 145 CE</span></li>
+        <li><a href="artworks/TwoVenetianLadies.html">Two Venetian Ladies</a> <span class="artwork-artist">Vittore Carpaccio</span> <span class="artwork-date">c. 1490-1495</span></li>
+        <li><a href="artworks/VallombrosaAltarpiece.html">Vallombrosa Altarpiece</a> <span class="artwork-artist">Pietro Perugino</span> <span class="artwork-date">1500-1501</span></li>
+        <li><a href="artworks/Velarium.html">Velarium</a> <span class="artwork-date">c. AD 80</span></li>
+        <li><a href="artworks/VenusVictrixCanova.html">Venus Victrix</a> <span class="artwork-artist">Antonio Canova</span> <span class="artwork-date">1805–1808</span></li>
+        <li><a href="artworks/ViaSacra.html">Via Sacra</a> <span class="artwork-date">Roman Kingdom through Empire</span></li>
+        <li><a href="artworks/ViewOfVenice.html">View of Venice</a> <span class="artwork-artist">Jacopo de&#039; Barbari</span> <span class="artwork-date">1498-1500</span></li>
+        <li><a href="artworks/VillaOfTheMysteriesFrescoes.html">Villa of the Mysteries Frescoes</a> <span class="artwork-date">c. 70-60 BC</span></li>
+        <li><a href="artworks/VillaOfTheQuintilii.html">Villa of the Quintilii</a> <span class="artwork-date">2nd century AD</span></li>
+        <li><a href="artworks/VirgilQuotations.html">Virgil Quotations</a> <span class="artwork-date">Before 79 AD</span></li>
+        <li><a href="artworks/VitruvianMan.html">Vitruvian Man</a> <span class="artwork-artist">Leonardo da Vinci</span> <span class="artwork-date">c. 1490</span></li>
+        <li><a href="artworks/WisdomTitian.html">Wisdom (La Sapienza)</a> <span class="artwork-artist">Titian</span> <span class="artwork-date">c. 1560</span></li>
+        <li><a href="artworks/YoungSickBacchus.html">Young Sick Bacchus</a> <span class="artwork-artist">Caravaggio</span> <span class="artwork-date">c. 1593–1594</span></li>
+        <li><a href="artworks/YoungSlave.html">Young Slave</a> <span class="artwork-artist">Michelangelo</span> <span class="artwork-date">c. 1525-1530</span></li>
+        <li><a href="artworks/YoungWomanWithUnicorn.html">Young Woman with Unicorn</a> <span class="artwork-artist">Raphael</span> <span class="artwork-date">c. 1505–1506</span></li>
+        <li><a href="artworks/YouthOfMoses.html">Youth of Moses</a> <span class="artwork-artist">Sandro Botticelli</span> <span class="artwork-date">1481–1482</span></li>
+        <li><a href="artworks/Zuccone.html">Zuccone (Prophet Habakkuk)</a> <span class="artwork-artist">Donatello</span> <span class="artwork-date">1423-1425</span></li>
+        </ul>
+      </section>
+
       <section class="tab-panel" data-tab="locations">
         
       <h3>Milan</h3>
@@ -179,7 +521,7 @@
         <li><a href="locations/CaDOro.html">Ca&#039; d&#039;Oro</a></li>
         <li><a href="locations/DogesPalace.html">Doge&#039;s Palace</a><span class="artwork-count">11</span></li>
         <li><a href="locations/GallerieDellAccademia.html">Gallerie dell&#039;Accademia</a><span class="artwork-count">8</span></li>
-        <li><a href="locations/Accademia.html">Gallerie dell&#039;Accademia</a><span class="artwork-count">4</span></li>
+        <li><a href="locations/Accademia.html">Gallerie dell&#039;Accademia</a><span class="artwork-count">5</span></li>
         <li><a href="locations/MuseoCorrer.html">Museo Correr</a><span class="artwork-count">23</span></li>
         <li><a href="locations/PalazzoContariniDelBovolo.html">Palazzo Contarini del Bovolo</a></li>
         <li><a href="locations/PiazzaSanMarco.html">Piazza San Marco</a></li>
@@ -242,6 +584,7 @@
         <li><a href="locations/GalleriaBorghese.html">Galleria Borghese</a><span class="artwork-count">14</span></li>
         <li><a href="locations/NationalGalleryOfAncientArt.html">National Gallery of Ancient Art</a><span class="artwork-count">1</span></li>
         <li><a href="locations/PalatineHill.html">Palatine Hill</a><span class="artwork-count">3</span></li>
+        <li><a href="locations/Pantheon.html">Pantheon</a><span class="artwork-count">7</span></li>
         <li><a href="locations/RomanForum.html">Roman Forum</a><span class="artwork-count">18</span></li>
         <li><a href="locations/SanSebastianoFuoriLeMura.html">San Sebastiano fuori le mura</a></li>
         <li><a href="locations/SantIgnazio.html">Sant&#039;Ignazio</a><span class="artwork-count">5</span></li>
@@ -1366,7 +1709,7 @@
         <div class="timeline-century-header">
           <div class="timeline-marker"></div>
           <h3>15th Century (Quattrocento)</h3>
-          <span class="timeline-count">112 artworks</span>
+          <span class="timeline-count">115 artworks</span>
         </div>
         <div class="timeline-artworks">
           
@@ -1783,6 +2126,16 @@
     <article class="timeline-card">
       
       <div class="timeline-card-content">
+        <span class="timeline-date-badge">15th century</span>
+        <h4><a href="artworks/MadonnaOfMercy.html">Madonna of Mercy between St Francis and St John the Baptist</a></h4>
+        
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      
+      <div class="timeline-card-content">
         <span class="timeline-date-badge">Early 15th century</span>
         <h4><a href="artworks/MadonnaAndChildGiambono.html">Madonna and Child</a></h4>
         <span class="timeline-artist"><a href="artists/MicheleGiambono.html">Michele Giambono</a></span>
@@ -1826,6 +2179,16 @@
         <span class="timeline-date-badge">c. 1450</span>
         <h4><a href="artworks/CrucifixionJacopoBellini.html">Crucifixion</a></h4>
         <span class="timeline-artist"><a href="artists/JacopoBellini.html">Jacopo Bellini</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">15th century</span>
+        <h4><a href="artworks/CoronationOfTheVirginPantheon.html">Coronation of the Virgin</a></h4>
+        
       </div>
     </article>
   
@@ -2006,6 +2369,16 @@
         <span class="timeline-date-badge">c. 1470-1475</span>
         <h4><a href="artworks/FrizzoniMadonna.html">Madonna and Child (Frizzoni Madonna)</a></h4>
         <span class="timeline-artist"><a href="artists/GiovanniBellini.html">Giovanni Bellini</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1470s</span>
+        <h4><a href="artworks/AnnunciationMelozzo.html">Annunciation</a></h4>
+        <span class="timeline-artist"><a href="artists/MelozzoDaForli.html">Melozzo da Forlì</a></span>
       </div>
     </article>
   
@@ -2421,7 +2794,7 @@
   
 
     <article class="timeline-card">
-      <img src="img/Stiudium_do_Ostatniej_Wieczerzy_5b53c890.jpg" alt="The Last Supper" loading="lazy">
+      <img src="img/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolut_c6e37759.jpg" alt="The Last Supper" loading="lazy">
       <div class="timeline-card-content">
         <span class="timeline-date-badge">c. 1495–1498</span>
         <h4><a href="artworks/LastSupperLeonardo.html">The Last Supper</a></h4>
@@ -2496,7 +2869,7 @@
         <div class="timeline-century-header">
           <div class="timeline-marker"></div>
           <h3>16th Century (Cinquecento)</h3>
-          <span class="timeline-count">90 artworks</span>
+          <span class="timeline-count">91 artworks</span>
         </div>
         <div class="timeline-artworks">
           
@@ -2926,6 +3299,16 @@
         <span class="timeline-date-badge">1524-1534</span>
         <h4><a href="artworks/TombOfLorenzoDeMedici.html">Tomb of Lorenzo de&#039; Medici, Duke of Urbino</a></h4>
         <span class="timeline-artist"><a href="artists/Michelangelo.html">Michelangelo</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">c. 1524</span>
+        <h4><a href="artworks/MadonnaDelSasso.html">Madonna del Sasso</a></h4>
+        <span class="timeline-artist"><a href="artists/Lorenzetto.html">Lorenzetto</a></span>
       </div>
     </article>
   
@@ -3406,7 +3789,7 @@
         <div class="timeline-century-header">
           <div class="timeline-marker"></div>
           <h3>17th Century</h3>
-          <span class="timeline-count">11 artworks</span>
+          <span class="timeline-count">13 artworks</span>
         </div>
         <div class="timeline-artworks">
           
@@ -3483,6 +3866,26 @@
     <article class="timeline-card">
       
       <div class="timeline-card-content">
+        <span class="timeline-date-badge">1661</span>
+        <h4><a href="artworks/AdorationOfTheShepherdsCozza.html">Adoration of the Shepherds</a></h4>
+        <span class="timeline-artist"><a href="artists/FrancescoCozza.html">Francesco Cozza</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1661</span>
+        <h4><a href="artworks/AdorationOfTheMagiCozza.html">Adoration of the Magi</a></h4>
+        <span class="timeline-artist"><a href="artists/FrancescoCozza.html">Francesco Cozza</a></span>
+      </div>
+    </article>
+  
+
+    <article class="timeline-card">
+      
+      <div class="timeline-card-content">
         <span class="timeline-date-badge">1685 (original, destroyed; reproduced 1823 by Francesco Manno)</span>
         <h4><a href="artworks/TrompeLOeilDome.html">Trompe-l&#039;œil Dome</a></h4>
         <span class="timeline-artist"><a href="artists/AndreaPozzo.html">Andrea Pozzo</a></span>
@@ -3526,7 +3929,7 @@
         <div class="timeline-century-header">
           <div class="timeline-marker"></div>
           <h3>18th Century</h3>
-          <span class="timeline-count">11 artworks</span>
+          <span class="timeline-count">12 artworks</span>
         </div>
         <div class="timeline-artworks">
           
@@ -3639,6 +4042,16 @@
       </div>
     </article>
   
+
+    <article class="timeline-card">
+      
+      <div class="timeline-card-content">
+        <span class="timeline-date-badge">1790</span>
+        <h4><a href="artworks/DescentOfTheHolyGhost.html">Descent of the Holy Ghost</a></h4>
+        
+      </div>
+    </article>
+  
         </div>
       </div>
 
@@ -3696,20 +4109,18 @@
 
       <section class="tab-panel" data-tab="map">
         <div id="map-container" class="map-container"></div>
-        <script type="application/json" id="map-locations-data">[{"id":"ViaAppiaAntica","title":"Via Appia Antica","city":"Rome, Italy","artworkCount":5,"lat":41.8493768,"lng":12.5236851},{"id":"VaticanMuseums","title":"Vatican Museums","city":"Vatican City","artworkCount":3,"lat":41.9065,"lng":12.4536},{"id":"UffiziGallery","title":"Uffizi Gallery","city":"Florence, Italy","artworkCount":29,"lat":43.7687,"lng":11.2551},{"id":"TreviFountain","title":"Trevi Fountain","city":"Rome, Italy","artworkCount":10,"lat":41.9009778,"lng":12.4832848},{"id":"TempleOfHadrian","title":"Temple of Hadrian","city":"Rome, Italy","artworkCount":2,"lat":41.8997563,"lng":12.479657},{"id":"Tempietto","title":"Tempietto","city":"Rome, Italy","artworkCount":0,"lat":41.8887379,"lng":12.4663934},{"id":"StPetersBasilica","title":"St. Peter's Basilica","city":"Vatican City","artworkCount":2,"lat":41.9022,"lng":12.4539},{"id":"StMarksCampanile","title":"St Mark's Campanile","city":"Venice, Italy","artworkCount":0,"lat":45.4341,"lng":12.3389},{"id":"SistineChapel","title":"Sistine Chapel","city":"Vatican City","artworkCount":12,"lat":41.9029,"lng":12.4545},{"id":"SantoSpirito","title":"Santo Spirito","city":"Florence, Italy","artworkCount":1,"lat":43.7654235,"lng":11.2475861},{"id":"SantiGiovanniEPaolo","title":"Basilica dei Santi Giovanni e Paolo","city":"Venice, Italy","artworkCount":1,"lat":45.4402,"lng":12.3428},{"id":"SantaMariaNovella","title":"Santa Maria Novella","city":"Florence, Italy","artworkCount":8,"lat":43.7746,"lng":11.2494},{"id":"SantaMariaMaggiore","title":"Santa Maria Maggiore","city":"Rome, Italy","artworkCount":1,"lat":41.8976,"lng":12.4984},{"id":"SantaMariaInPalmis","title":"Santa Maria in Palmis (Domine Quo Vadis)","city":"Rome, Italy","artworkCount":0,"lat":41.8664884,"lng":12.5037248},{"id":"SantaMariaDelleGrazie","title":"Santa Maria delle Grazie","city":"Milan, Italy","artworkCount":1,"lat":45.4659,"lng":9.1711},{"id":"SantaMariaDellaSalute","title":"Santa Maria della Salute","city":"Venice, Italy","artworkCount":6,"lat":45.4305726,"lng":12.3347318},{"id":"SantaCroce","title":"Santa Croce","city":"Florence, Italy","artworkCount":7,"lat":43.7685,"lng":11.2625},{"id":"SantaCeciliaInTrastevere","title":"Santa Cecilia in Trastevere","city":"Rome, Italy","artworkCount":1,"lat":41.8889,"lng":12.476},{"id":"SantIgnazio","title":"Sant'Ignazio","city":"Rome, Italy","artworkCount":5,"lat":41.8987497,"lng":12.4798081},{"id":"SantApollonia","title":"Sant'Apollonia","city":"Florence, Italy","artworkCount":1,"lat":43.7783,"lng":11.2565},{"id":"SanSebastianoFuoriLeMura","title":"San Sebastiano fuori le mura","city":"Rome, Italy","artworkCount":0,"lat":41.8558005,"lng":12.5159104},{"id":"SanPietroInVincoli","title":"Basilica of San Pietro in Vincoli","city":"Rome, Italy","artworkCount":1,"lat":41.893851,"lng":12.4931577},{"id":"SanMarco","title":"San Marco","city":"Florence, Italy","artworkCount":1,"lat":45.4345,"lng":12.3396},{"id":"SaintMarksBasilica","title":"Saint Mark's Basilica","city":"Venice, Italy","artworkCount":10,"lat":45.4345,"lng":12.3396},{"id":"RomanForum","title":"Roman Forum","city":"Rome, Italy","artworkCount":18,"lat":41.8916414,"lng":12.4867296},{"id":"PompeiiArchaeologicalPark","title":"Pompeii Archaeological Park","city":"Campania, Italy","artworkCount":19,"lat":40.7508,"lng":14.4867},{"id":"PittiGallery","title":"Pitti Gallery","city":"Florence, Italy","artworkCount":2,"lat":43.7653,"lng":11.25},{"id":"PinacotecaVaticana","title":"Pinacoteca Vaticana","city":"Vatican City","artworkCount":1,"lat":41.9057,"lng":12.4531},{"id":"PinacotecaAmbrosiana","title":"Pinacoteca Ambrosiana","city":"Milan, Italy","artworkCount":1,"lat":45.4636401,"lng":9.1860073},{"id":"PiazzaleMichelangelo","title":"Piazzale Michelangelo","city":"Florence, Italy","artworkCount":0,"lat":43.7628279,"lng":11.2649932},{"id":"PiazzaSanMarco","title":"Piazza San Marco","city":"Venice, Italy","artworkCount":0,"lat":45.4342571,"lng":12.3386717},{"id":"PalazzoVecchio","title":"Palazzo Vecchio","city":"Florence, Italy","artworkCount":8,"lat":43.7693,"lng":11.2562},{"id":"PalazzoStrozzi","title":"Palazzo Strozzi","city":"Florence, Italy","artworkCount":0,"lat":43.771,"lng":11.2509},{"id":"PalazzoRucellai","title":"Palazzo Rucellai","city":"Florence, Italy","artworkCount":1,"lat":43.7714,"lng":11.2484},{"id":"PalazzoMediciRiccardi","title":"Palazzo Medici Riccardi","city":"Florence, Italy","artworkCount":2,"lat":43.7754,"lng":11.2554},{"id":"PalazzoContariniDelBovolo","title":"Palazzo Contarini del Bovolo","city":"Venice, Italy","artworkCount":0,"lat":45.4348475,"lng":12.334215},{"id":"PalatineHill","title":"Palatine Hill","city":"Rome, Italy","artworkCount":3,"lat":41.8893064,"lng":12.4871093},{"id":"OspedaleDegliInnocenti","title":"Ospedale degli Innocenti","city":"Florence, Italy","artworkCount":1,"lat":43.7773,"lng":11.2622},{"id":"Orsanmichele","title":"Orsanmichele","city":"Florence, Italy","artworkCount":7,"lat":43.771,"lng":11.2551},{"id":"OperaDelDuomoMuseum","title":"Opera del Duomo Museum","city":"Florence, Italy","artworkCount":7,"lat":43.7732,"lng":11.2578},{"id":"OfficinaProfumoFarmaceutica","title":"Officina Profumo-Farmaceutica di Santa Maria Novella","city":"Florence, Italy","artworkCount":0,"lat":43.7741387,"lng":11.2477788},{"id":"NationalGalleryOfAncientArt","title":"National Gallery of Ancient Art","city":"Rome, Italy","artworkCount":1,"lat":41.9038,"lng":12.4897},{"id":"MuseoDiSanMarco","title":"Museo di San Marco","city":"Florence, Italy","artworkCount":3,"lat":43.7782,"lng":11.2589},{"id":"MuseoCorrer","title":"Museo Correr","city":"Venice, Italy","artworkCount":23,"lat":45.4339,"lng":12.3379},{"id":"MilanCathedral","title":"Milan Cathedral","city":"Milan, Italy","artworkCount":0,"lat":45.4641,"lng":9.1919},{"id":"MercatoCentrale","title":"Mercato Centrale","city":"Florence, Italy","artworkCount":0,"lat":43.7765847,"lng":11.2532087},{"id":"LoggiaDeiLanzi","title":"Loggia dei Lanzi","city":"Florence, Italy","artworkCount":0,"lat":43.7693,"lng":11.2555},{"id":"LeonardoInteractiveMuseum","title":"Leonardo Interactive Museum","city":"Florence, Italy","artworkCount":0,"lat":43.7749655,"lng":11.2590086},{"id":"LaRinascente","title":"La Rinascente","city":"Milan, Italy","artworkCount":0,"lat":45.4649632,"lng":9.1919118},{"id":"GiottosCampanile","title":"Giotto's Campanile","city":"Florence, Italy","artworkCount":0,"lat":43.7729,"lng":11.2554},{"id":"GallerieDellAccademia","title":"Gallerie dell'Accademia","city":"Venice, Italy","artworkCount":8,"lat":45.4313662,"lng":12.3280919},{"id":"GalleriaVittorioEmanueleII","title":"Galleria Vittorio Emanuele II","city":"Milan, Italy","artworkCount":0,"lat":45.4656113,"lng":9.1900062},{"id":"GalleriaDellAccademia","title":"Galleria dell'Accademia","city":"Florence, Italy","artworkCount":8,"lat":43.7769174,"lng":11.2587579},{"id":"GalleriaBorghese","title":"Galleria Borghese","city":"Rome, Italy","artworkCount":14,"lat":41.9141133,"lng":12.4921053},{"id":"FlorenceCathedral","title":"Florence Cathedral","city":"Florence, Italy","artworkCount":6,"lat":43.7731,"lng":11.256},{"id":"DogesPalace","title":"Doge's Palace","city":"Venice, Italy","artworkCount":11,"lat":45.4342108,"lng":12.340592},{"id":"Colosseum","title":"Colosseum","city":"Rome, Italy","artworkCount":5,"lat":41.8909421,"lng":12.491903},{"id":"ChiesaDiSantaMaria","title":"Chiesa di Santa Maria presso San Satiro","city":"Milan, Italy","artworkCount":0,"lat":45.5586634,"lng":9.1386316},{"id":"CatacombsOfDomitilla","title":"Catacombs of Domitilla","city":"Rome, Italy","artworkCount":0,"lat":41.8556,"lng":12.5108},{"id":"CastelloSforzesco","title":"Castello Sforzesco","city":"Milan, Italy","artworkCount":1,"lat":45.4705,"lng":9.1793},{"id":"CasaBuonarroti","title":"Casa Buonarroti","city":"Florence, Italy","artworkCount":2,"lat":43.7698959,"lng":11.2636201},{"id":"CaDOro","title":"Ca' d'Oro","city":"Venice, Italy","artworkCount":0,"lat":45.4409,"lng":12.3345},{"id":"BridgeOfSighs","title":"Bridge of Sighs","city":"Venice, Italy","artworkCount":0,"lat":45.4340597,"lng":12.3408609},{"id":"Brera","title":"Pinacoteca di Brera","city":"Milan, Italy","artworkCount":4,"lat":45.4719,"lng":9.188},{"id":"BibliotecaNazionale","title":"Biblioteca Nazionale","city":"Florence, Italy","artworkCount":1,"lat":45.4644,"lng":9.1879},{"id":"BibliotecaMarciana","title":"Biblioteca Nazionale Marciana","city":"Venice, Italy","artworkCount":7,"lat":45.433424,"lng":12.3392023},{"id":"BathsOfCaracalla","title":"Baths of Caracalla","city":"Rome, Italy","artworkCount":0,"lat":41.8788285,"lng":12.4924737},{"id":"BasilicaOfSanLorenzo","title":"Basilica of San Lorenzo","city":"Florence, Italy","artworkCount":7,"lat":43.775,"lng":11.2537},{"id":"BasilicaDiSantaTrinita","title":"Basilica di Santa Trinita","city":"Florence, Italy","artworkCount":2,"lat":43.7697,"lng":11.2498},{"id":"BasilicaDeiFrari","title":"Basilica di Santa Maria Gloriosa dei Frari","city":"Venice, Italy","artworkCount":6,"lat":45.4369,"lng":12.3264},{"id":"Bargello","title":"Bargello","city":"Florence, Italy","artworkCount":13,"lat":43.7702,"lng":11.258},{"id":"BaptisteryOfFlorence","title":"Baptistery of Florence","city":"Florence, Italy","artworkCount":4,"lat":43.7732,"lng":11.2541},{"id":"AquaVirgo","title":"Aqua Virgo","city":"Rome, Italy","artworkCount":0,"lat":41.9039223,"lng":12.5752761},{"id":"ApostolicPalace","title":"Apostolic Palace","city":"Vatican City","artworkCount":8,"lat":41.9033,"lng":12.4568},{"id":"Accademia","title":"Gallerie dell'Accademia","city":"Venice, Italy","artworkCount":4,"lat":45.4314,"lng":12.3286}]</script>
+        <script type="application/json" id="map-locations-data">[{"id":"ViaAppiaAntica","title":"Via Appia Antica","city":"Rome, Italy","artworkCount":5,"lat":41.8493768,"lng":12.5236851},{"id":"VaticanMuseums","title":"Vatican Museums","city":"Vatican City","artworkCount":3,"lat":41.9065,"lng":12.4536},{"id":"UffiziGallery","title":"Uffizi Gallery","city":"Florence, Italy","artworkCount":29,"lat":43.7687,"lng":11.2551},{"id":"TreviFountain","title":"Trevi Fountain","city":"Rome, Italy","artworkCount":10,"lat":41.9009778,"lng":12.4832848},{"id":"TempleOfHadrian","title":"Temple of Hadrian","city":"Rome, Italy","artworkCount":2,"lat":41.8997563,"lng":12.479657},{"id":"Tempietto","title":"Tempietto","city":"Rome, Italy","artworkCount":0,"lat":41.8887379,"lng":12.4663934},{"id":"StPetersBasilica","title":"St. Peter's Basilica","city":"Vatican City","artworkCount":2,"lat":41.9022,"lng":12.4539},{"id":"StMarksCampanile","title":"St Mark's Campanile","city":"Venice, Italy","artworkCount":0,"lat":45.4341,"lng":12.3389},{"id":"SistineChapel","title":"Sistine Chapel","city":"Vatican City","artworkCount":12,"lat":41.9029,"lng":12.4545},{"id":"SantoSpirito","title":"Santo Spirito","city":"Florence, Italy","artworkCount":1,"lat":43.7654235,"lng":11.2475861},{"id":"SantiGiovanniEPaolo","title":"Basilica dei Santi Giovanni e Paolo","city":"Venice, Italy","artworkCount":1,"lat":45.4402,"lng":12.3428},{"id":"SantaMariaNovella","title":"Santa Maria Novella","city":"Florence, Italy","artworkCount":8,"lat":43.7746,"lng":11.2494},{"id":"SantaMariaMaggiore","title":"Santa Maria Maggiore","city":"Rome, Italy","artworkCount":1,"lat":41.8976,"lng":12.4984},{"id":"SantaMariaInPalmis","title":"Santa Maria in Palmis (Domine Quo Vadis)","city":"Rome, Italy","artworkCount":0,"lat":41.8664884,"lng":12.5037248},{"id":"SantaMariaDelleGrazie","title":"Santa Maria delle Grazie","city":"Milan, Italy","artworkCount":1,"lat":45.4659,"lng":9.1711},{"id":"SantaMariaDellaSalute","title":"Santa Maria della Salute","city":"Venice, Italy","artworkCount":6,"lat":45.4305726,"lng":12.3347318},{"id":"SantaCroce","title":"Santa Croce","city":"Florence, Italy","artworkCount":7,"lat":43.7685,"lng":11.2625},{"id":"SantaCeciliaInTrastevere","title":"Santa Cecilia in Trastevere","city":"Rome, Italy","artworkCount":1,"lat":41.8889,"lng":12.476},{"id":"SantIgnazio","title":"Sant'Ignazio","city":"Rome, Italy","artworkCount":5,"lat":41.8987497,"lng":12.4798081},{"id":"SantApollonia","title":"Sant'Apollonia","city":"Florence, Italy","artworkCount":1,"lat":43.7783,"lng":11.2565},{"id":"SanSebastianoFuoriLeMura","title":"San Sebastiano fuori le mura","city":"Rome, Italy","artworkCount":0,"lat":41.8558005,"lng":12.5159104},{"id":"SanPietroInVincoli","title":"Basilica of San Pietro in Vincoli","city":"Rome, Italy","artworkCount":1,"lat":41.893851,"lng":12.4931577},{"id":"SanMarco","title":"San Marco","city":"Florence, Italy","artworkCount":1,"lat":45.4345,"lng":12.3396},{"id":"SaintMarksBasilica","title":"Saint Mark's Basilica","city":"Venice, Italy","artworkCount":10,"lat":45.4345,"lng":12.3396},{"id":"RomanForum","title":"Roman Forum","city":"Rome, Italy","artworkCount":18,"lat":41.8916414,"lng":12.4867296},{"id":"PompeiiArchaeologicalPark","title":"Pompeii Archaeological Park","city":"Campania, Italy","artworkCount":19,"lat":40.7508,"lng":14.4867},{"id":"PittiGallery","title":"Pitti Gallery","city":"Florence, Italy","artworkCount":2,"lat":43.7653,"lng":11.25},{"id":"PinacotecaVaticana","title":"Pinacoteca Vaticana","city":"Vatican City","artworkCount":1,"lat":41.9057,"lng":12.4531},{"id":"PinacotecaAmbrosiana","title":"Pinacoteca Ambrosiana","city":"Milan, Italy","artworkCount":1,"lat":45.4636401,"lng":9.1860073},{"id":"PiazzaleMichelangelo","title":"Piazzale Michelangelo","city":"Florence, Italy","artworkCount":0,"lat":43.7628279,"lng":11.2649932},{"id":"PiazzaSanMarco","title":"Piazza San Marco","city":"Venice, Italy","artworkCount":0,"lat":45.4342571,"lng":12.3386717},{"id":"Pantheon","title":"Pantheon","city":"Rome, Italy","artworkCount":7,"lat":41.898616,"lng":12.4768334},{"id":"PalazzoVecchio","title":"Palazzo Vecchio","city":"Florence, Italy","artworkCount":8,"lat":43.7693,"lng":11.2562},{"id":"PalazzoStrozzi","title":"Palazzo Strozzi","city":"Florence, Italy","artworkCount":0,"lat":43.771,"lng":11.2509},{"id":"PalazzoRucellai","title":"Palazzo Rucellai","city":"Florence, Italy","artworkCount":1,"lat":43.7714,"lng":11.2484},{"id":"PalazzoMediciRiccardi","title":"Palazzo Medici Riccardi","city":"Florence, Italy","artworkCount":2,"lat":43.7754,"lng":11.2554},{"id":"PalazzoContariniDelBovolo","title":"Palazzo Contarini del Bovolo","city":"Venice, Italy","artworkCount":0,"lat":45.4348475,"lng":12.334215},{"id":"PalatineHill","title":"Palatine Hill","city":"Rome, Italy","artworkCount":3,"lat":41.8893064,"lng":12.4871093},{"id":"OspedaleDegliInnocenti","title":"Ospedale degli Innocenti","city":"Florence, Italy","artworkCount":1,"lat":43.7773,"lng":11.2622},{"id":"Orsanmichele","title":"Orsanmichele","city":"Florence, Italy","artworkCount":7,"lat":43.771,"lng":11.2551},{"id":"OperaDelDuomoMuseum","title":"Opera del Duomo Museum","city":"Florence, Italy","artworkCount":7,"lat":43.7732,"lng":11.2578},{"id":"OfficinaProfumoFarmaceutica","title":"Officina Profumo-Farmaceutica di Santa Maria Novella","city":"Florence, Italy","artworkCount":0,"lat":43.7741387,"lng":11.2477788},{"id":"NationalGalleryOfAncientArt","title":"National Gallery of Ancient Art","city":"Rome, Italy","artworkCount":1,"lat":41.9038,"lng":12.4897},{"id":"MuseoDiSanMarco","title":"Museo di San Marco","city":"Florence, Italy","artworkCount":3,"lat":43.7782,"lng":11.2589},{"id":"MuseoCorrer","title":"Museo Correr","city":"Venice, Italy","artworkCount":23,"lat":45.4339,"lng":12.3379},{"id":"MilanCathedral","title":"Milan Cathedral","city":"Milan, Italy","artworkCount":0,"lat":45.4641,"lng":9.1919},{"id":"MercatoCentrale","title":"Mercato Centrale","city":"Florence, Italy","artworkCount":0,"lat":43.7765847,"lng":11.2532087},{"id":"LoggiaDeiLanzi","title":"Loggia dei Lanzi","city":"Florence, Italy","artworkCount":0,"lat":43.7693,"lng":11.2555},{"id":"LeonardoInteractiveMuseum","title":"Leonardo Interactive Museum","city":"Florence, Italy","artworkCount":0,"lat":43.7749655,"lng":11.2590086},{"id":"LaRinascente","title":"La Rinascente","city":"Milan, Italy","artworkCount":0,"lat":45.4649632,"lng":9.1919118},{"id":"GiottosCampanile","title":"Giotto's Campanile","city":"Florence, Italy","artworkCount":0,"lat":43.7729,"lng":11.2554},{"id":"GallerieDellAccademia","title":"Gallerie dell'Accademia","city":"Venice, Italy","artworkCount":8,"lat":45.4313662,"lng":12.3280919},{"id":"GalleriaVittorioEmanueleII","title":"Galleria Vittorio Emanuele II","city":"Milan, Italy","artworkCount":0,"lat":45.4656113,"lng":9.1900062},{"id":"GalleriaDellAccademia","title":"Galleria dell'Accademia","city":"Florence, Italy","artworkCount":8,"lat":43.7769174,"lng":11.2587579},{"id":"GalleriaBorghese","title":"Galleria Borghese","city":"Rome, Italy","artworkCount":14,"lat":41.9141133,"lng":12.4921053},{"id":"FlorenceCathedral","title":"Florence Cathedral","city":"Florence, Italy","artworkCount":6,"lat":43.7731,"lng":11.256},{"id":"DogesPalace","title":"Doge's Palace","city":"Venice, Italy","artworkCount":11,"lat":45.4342108,"lng":12.340592},{"id":"Colosseum","title":"Colosseum","city":"Rome, Italy","artworkCount":5,"lat":41.8909421,"lng":12.491903},{"id":"ChiesaDiSantaMaria","title":"Chiesa di Santa Maria presso San Satiro","city":"Milan, Italy","artworkCount":0,"lat":45.5586634,"lng":9.1386316},{"id":"CatacombsOfDomitilla","title":"Catacombs of Domitilla","city":"Rome, Italy","artworkCount":0,"lat":41.8556,"lng":12.5108},{"id":"CastelloSforzesco","title":"Castello Sforzesco","city":"Milan, Italy","artworkCount":1,"lat":45.4705,"lng":9.1793},{"id":"CasaBuonarroti","title":"Casa Buonarroti","city":"Florence, Italy","artworkCount":2,"lat":43.7698959,"lng":11.2636201},{"id":"CaDOro","title":"Ca' d'Oro","city":"Venice, Italy","artworkCount":0,"lat":45.4409,"lng":12.3345},{"id":"BridgeOfSighs","title":"Bridge of Sighs","city":"Venice, Italy","artworkCount":0,"lat":45.4340597,"lng":12.3408609},{"id":"Brera","title":"Pinacoteca di Brera","city":"Milan, Italy","artworkCount":4,"lat":45.4719,"lng":9.188},{"id":"BibliotecaNazionale","title":"Biblioteca Nazionale","city":"Florence, Italy","artworkCount":1,"lat":45.4644,"lng":9.1879},{"id":"BibliotecaMarciana","title":"Biblioteca Nazionale Marciana","city":"Venice, Italy","artworkCount":7,"lat":45.433424,"lng":12.3392023},{"id":"BathsOfCaracalla","title":"Baths of Caracalla","city":"Rome, Italy","artworkCount":0,"lat":41.8788285,"lng":12.4924737},{"id":"BasilicaOfSanLorenzo","title":"Basilica of San Lorenzo","city":"Florence, Italy","artworkCount":7,"lat":43.775,"lng":11.2537},{"id":"BasilicaDiSantaTrinita","title":"Basilica di Santa Trinita","city":"Florence, Italy","artworkCount":2,"lat":43.7697,"lng":11.2498},{"id":"BasilicaDeiFrari","title":"Basilica di Santa Maria Gloriosa dei Frari","city":"Venice, Italy","artworkCount":6,"lat":45.4369,"lng":12.3264},{"id":"Bargello","title":"Bargello","city":"Florence, Italy","artworkCount":13,"lat":43.7702,"lng":11.258},{"id":"BaptisteryOfFlorence","title":"Baptistery of Florence","city":"Florence, Italy","artworkCount":4,"lat":43.7732,"lng":11.2541},{"id":"AquaVirgo","title":"Aqua Virgo","city":"Rome, Italy","artworkCount":0,"lat":41.9039223,"lng":12.5752761},{"id":"ApostolicPalace","title":"Apostolic Palace","city":"Vatican City","artworkCount":8,"lat":41.9033,"lng":12.4568},{"id":"Accademia","title":"Gallerie dell'Accademia","city":"Venice, Italy","artworkCount":5,"lat":45.4314,"lng":12.3286}]</script>
       </section>
 
       <section class="tab-panel" data-tab="trip">
         <div id="trip-container"></div>
-        <script type="application/json" id="trip-data">{"version":2,"days":[{"id":"day-1","label":"D1 | 2/11 | Wed - Milan","locations":[{"id":"FlightTPEtoMXP","time":"7:15","comment":"去程 BR95 | 從台北 2026/2/10 23:05 → 米蘭 2026/2/11 7:15","mapLink":""},{"id":"MXPtoMilano","time":"","comment":"MXP → Milano Porta Garibaldi","mapLink":""},{"id":"GalleriaVittorioEmanueleII","time":"","comment":"艾曼紐迴廊 - 精品街、公牛蛋蛋轉三圈, Prada/Gucci opens 10-10:30","mapLink":"https://maps.app.goo.gl/14DwreXkdx68CmUy6"},{"id":"LaRinascente","time":"10:00","comment":"老百貨公司 - 七樓有廁所和露天咖啡廳","mapLink":"https://www.google.com/maps/place/Rinascente+Milano/@45.4649405,9.1892425"},{"id":"SantaMariaDelleGrazie","time":"15:30","comment":"最後的晚餐博物館 - Tickets must be activated 30 min before, 只能看15分鐘","mapLink":"https://maps.app.goo.gl/DvuFUCGjzJkkhrgi7"}]},{"id":"day-2","label":"D2 | 2/12 | Thu - Venice","locations":[{"id":"TrainMilanToVenice","time":"9:35","comment":"Italo 9:35-12:03, 記得先查入城費避免被罰","mapLink":""},{"id":"DogesPalace","time":"14:00","comment":"總督宮 ~1.5hr","mapLink":"https://maps.app.goo.gl/FLPRR6JzA6oJoGCs9"},{"id":"SaintMarksBasilica","time":"15:00","comment":"聖馬爾谷聖殿宗主教座堂 - 地標大教堂和室內博物館","mapLink":"https://maps.app.goo.gl/n8H8wzRkRjq1QY4e6"},{"id":"StMarksCampanile","time":"","comment":"聖馬可鐘樓","mapLink":"https://maps.app.goo.gl/TMAzgk37bk9VR2yj7"},{"id":"PiazzaSanMarco","time":"","comment":"聖馬可廣場","mapLink":"https://maps.app.goo.gl/DKYWGHET4KZbPr2A8"},{"id":"BibliotecaMarciana","time":"","comment":"聖馬可圖書館 - 有很多手抄本","mapLink":"https://maps.app.goo.gl/JuRy5HdnHXBAK3vz7"},{"id":"Gondola","time":"16:30","comment":"貢多拉 - 集合地點很靠近聖馬可","mapLink":""},{"id":"CaffeFlorian","time":"","comment":"弗洛里安花神咖啡館 - 1720年開業的古老咖啡廳, 很貴路過就好","mapLink":"https://maps.app.goo.gl/WCzXrotzkg24XYP99"},{"id":"BridgeOfSighs","time":"","comment":"嘆息橋","mapLink":"https://maps.app.goo.gl/81pgAEc6pykVgPoQ7"}]},{"id":"day-3","label":"D3 | 2/13 | Fri - Venice","locations":[{"id":"PalazzoContariniDelBovolo","time":"","comment":"蝸牛府","mapLink":"https://maps.app.goo.gl/NRV9Zd39AvJNtp1N9"},{"id":"BasilicaDeiFrari","time":"","comment":"聖方濟會榮耀聖母聖殿 - 哥德式教堂，內部安葬著提香，並藏有他的2幅作品","mapLink":"https://maps.app.goo.gl/tKJDWXiCEY3ua7o46"},{"id":"SantaMariaDellaSalute","time":"","comment":"安康聖母聖殿 - 17:30關門","mapLink":"https://maps.app.goo.gl/W8W9w4sbnhUG5xGH6"},{"id":"GallerieDellAccademia","time":"","comment":"學院美術館 - 13至18世紀威尼斯藝術品, closes 19:00","mapLink":"https://maps.app.goo.gl/QcxjLURf5RwLRScR7"},{"id":"LibreriaAcquaAlta","time":"","comment":"沉船書店 (optional)","mapLink":""}]},{"id":"day-4","label":"D4 | 2/14 | Sat - Florence","locations":[{"id":"TrainVeniceToFlorence","time":"11:05","comment":"Italo 11:05-13:20","mapLink":""},{"id":"BasilicaOfSanLorenzo","time":"","comment":"Medici第一個資助的教堂, 10-17:30","mapLink":"https://maps.app.goo.gl/mp1GFbiCN5FUEZEt5"},{"id":"Bargello","time":"","comment":"巴傑羅美術館 - 很多雕像的博物館，有最早的David像, 8:15-18:50","mapLink":"https://maps.app.goo.gl/scimUYpg3mFK89ur9"},{"id":"Orsanmichele","time":"","comment":"聖彌額爾教堂 - 教堂外牆四周有很多雕像可以看","mapLink":"https://maps.app.goo.gl/ApEdrjhnZWyA6Ghi7"},{"id":"CasaBuonarroti","time":"","comment":"米開朗基羅故居 - 有一些雕塑跟手稿","mapLink":"https://maps.app.goo.gl/TEWgS73R4zWiwF9i8"},{"id":"SantApollonia","time":"","comment":"有Castagno的最後的晚餐, 08:30-14:00","mapLink":"https://maps.app.goo.gl/5QKqXeVBLhAprNZSA"},{"id":"OpificioDellePietreDure","time":"","comment":"考古修復博物館 (optional) - 週日沒開, 8:15-14:00","mapLink":"https://maps.app.goo.gl/ZqCLPR5xyitAZZD46"},{"id":"BoboliGardens","time":"","comment":"波波里花園 (optional) - 16:30關門, 禮拜一有開","mapLink":"https://maps.app.goo.gl/ALerCEfr9sM5TD6p7"},{"id":"PiazzaleMichelangelo","time":"","comment":"米開朗基羅廣場 - 走過去看夕陽","mapLink":"https://maps.app.goo.gl/bZuMS8Eqz7mci9y57"}]},{"id":"day-5","label":"D5 | 2/15 | Sun - Florence (Churches closed)","locations":[{"id":"PalazzoMediciRiccardi","time":"","comment":"美第奇里卡迪宮 - 9am-7pm (週三公休), 中庭跟花園不用付錢","mapLink":"https://maps.app.goo.gl/YjAF34Ta1ShHmU436"},{"id":"OfficinaProfumoFarmaceutica","time":"","comment":"聖塔瑪莉亞諾維拉香水製藥坊, 9:30AM-8PM","mapLink":"https://maps.app.goo.gl/SuyJzsXPCw21gyvK7"},{"id":"SantaMariaNovella","time":"13:00","comment":"新聖母大殿 - 星期日只營業13-17","mapLink":"https://maps.app.goo.gl/ZNLeX45NZyJpHYd39"},{"id":"MercatoCentrale","time":"","comment":"中央市場午餐 - 牛肉包","mapLink":"https://maps.app.goo.gl/AzGbmmtUzvkgjE7H7"},{"id":"LeonardoInteractiveMuseum","time":"","comment":"達文西博物館 (optional)","mapLink":"https://maps.app.goo.gl/EP6aJHnrsa2vqsSH9"},{"id":"GalleriaDellAccademia","time":"15:30","comment":"學院美術館 - 逛1-2小時, 買導覽票不用排隊","mapLink":"https://maps.app.goo.gl/BNEQdsSd3B65XsZLA"}]},{"id":"day-6","label":"D6 | 2/16 | Mon - Florence (Uffizi/Accademia/Pitti closed)","locations":[{"id":"FlorenceCathedral","time":"10:30","comment":"聖母百花大教堂登頂 - 週日因禮拜關閉, 不能穿短裙/涼鞋/帽子","mapLink":"https://maps.app.goo.gl/1e2dk2YBNJFToJWZA"},{"id":"OperaDelDuomoMuseum","time":"","comment":"大教堂博物館 - 很多雕像真品藏於此, ~1hr","mapLink":"https://maps.app.goo.gl/sS82QditYy4fmRDY9"},{"id":"PiazzaDellaSignoria","time":"","comment":"領主廣場","mapLink":"https://maps.app.goo.gl/NtLFRqq4mhzdAUwP6"},{"id":"GiottosCampanile","time":"","comment":"喬托鐘樓 - 下午爬鐘樓看順光百花, ~1hr","mapLink":"https://maps.app.goo.gl/U7giApM7Q3Lo6W9aA"},{"id":"PalazzoVecchio","time":"","comment":"舊宮 - 買全套含高塔票逛3-4hr, 9am-7pm","mapLink":"https://maps.app.goo.gl/4dry4AVyKhXLQvQf9"},{"id":"BaptisteryOfFlorence","time":"","comment":"聖若望洗禮堂 - 8:30-19:30, 不一定要進去","mapLink":"https://maps.app.goo.gl/rvQNgqoipPRHqo179"},{"id":"CasaDiDante","time":"","comment":"但丁故居 (optional) - 離舊宮蠻近的4分鐘","mapLink":"https://maps.app.goo.gl/4iDYzgMjpWcjqCEe6"},{"id":"LibreriaCinema","time":"","comment":"戲院改建的書店 - 有位子可以休息","mapLink":"https://maps.app.goo.gl/jW5rVPejKS7GDiEv9"}]},{"id":"day-7","label":"D7 | 2/17 | Tue - Florence","locations":[{"id":"UffiziGallery","time":"09:30","comment":"烏菲茲美術館 - ~3-4hr, 建議買一般票自己看","mapLink":"https://maps.app.goo.gl/CBf3FYWAzJdqUxHd9"},{"id":"VasariCorridor","time":"","comment":"瓦薩利走廊 (optional) - 從美術館走到新宮","mapLink":"https://maps.app.goo.gl/NujuCtxE2dvPy2Sm8"},{"id":"PonteVecchio","time":"","comment":"老橋","mapLink":""},{"id":"PittiPalace","time":"","comment":"新宮/比提宮 - 皇宮2-3hr/花園3-4hr, 8:15am-6:30pm (週一公休)","mapLink":"https://maps.app.goo.gl/uuFvE78XBMNEnG1P7"},{"id":"LibreriaCinema","time":"","comment":"戲院改建的書店 - 太累就搬去別的地方","mapLink":"https://maps.app.goo.gl/jW5rVPejKS7GDiEv9"}]},{"id":"day-8","label":"D8 | 2/18 | Wed - Rome","locations":[{"id":"TrainFlorenceToRome","time":"10:28","comment":"Italo 10:28-12:10","mapLink":""},{"id":"SantaMariaMaggiore","time":"","comment":"聖母大殿","mapLink":"https://maps.app.goo.gl/JrGjqQyq8eR4gYoKA"},{"id":"BathsOfDiocletian","time":"","comment":"戴克里先浴場","mapLink":"https://maps.app.goo.gl/uMzkGUzVykQB6XLE9"},{"id":"MuseoNazionaleRomano","time":"","comment":"羅馬國家博物館 (optional)","mapLink":""},{"id":"TeatroDellOperaDiRoma","time":"","comment":"羅馬歌劇院 (optional)","mapLink":""},{"id":"TreviFountain","time":"","comment":"特雷維噴泉","mapLink":""}]},{"id":"day-9","label":"D9 | 2/19 | Thu - Rome Ancient","locations":[{"id":"Colosseum","time":"09:00","comment":"羅馬競技場 - 記得不能帶包包, ~3hr","mapLink":"https://maps.app.goo.gl/LzcgUVYsW25kB1P9A"},{"id":"ArchOfConstantine","time":"","comment":"君士坦丁凱旋門","mapLink":"https://maps.app.goo.gl/6VFQ8TQLvqq8UKqm9"},{"id":"PalatineHill","time":"","comment":"帕拉丁山丘 (套票內含)","mapLink":"https://maps.app.goo.gl/ZKkMp4FqiYbPsAr36"},{"id":"RomanForum","time":"","comment":"古羅馬廣場 (套票內含)","mapLink":"https://maps.app.goo.gl/kj4r4Seaha7ZsdoN9"},{"id":"BoccaDellaVerita","time":"","comment":"真理之口","mapLink":"https://maps.app.goo.gl/9YLtp78aBUQdUPdN7"},{"id":"GiardinoDegliAranci","time":"","comment":"橘園","mapLink":"https://maps.app.goo.gl/hXdMHHzhv1Vc3prV6"}]},{"id":"day-10","label":"D10 | 2/20 | Fri - Rome Caracalla","locations":[{"id":"BathsOfCaracalla","time":"","comment":"卡拉卡拉浴場 - 09:00-16:30, 禮拜一沒開","mapLink":"https://maps.app.goo.gl/V7R5QhqyjUtZ68xX6"},{"id":"CatacombsOfDomitilla","time":"","comment":"Domitilla地下墓穴 - 羅馬最大, 9-12/14-17, 禮拜二沒開","mapLink":"https://maps.app.goo.gl/ftvrNL3GqoSPD27v8"},{"id":"CatacombsOfCallixtus","time":"","comment":"Callisto地下墓穴 - 導覽大概四十五分鐘, 9:30-17:00","mapLink":"https://maps.app.goo.gl/1rPpj7HES6A78h19A"},{"id":"ViaAppiaAntica","time":"","comment":"Appian Way - 可以租腳踏車騎羅馬大道","mapLink":"https://maps.app.goo.gl/K4RoSArnvoc4M6at9"}]},{"id":"day-11","label":"D11 | 2/21 | Sat - Rome Sights","locations":[{"id":"TreviFountain","time":"","comment":"特雷維噴泉 (考慮和2/23對調)","mapLink":"https://maps.app.goo.gl/BkMJN8dHVJcGyL6S8"},{"id":"TempleOfHadrian","time":"","comment":"哈德良神廟","mapLink":"https://maps.app.goo.gl/wtUG5tFEgUN4in6q9"},{"id":"SantIgnazio","time":"","comment":"聖依納爵堂 - 天花板是手繪但看起來很立體, 天天營業","mapLink":"https://maps.app.goo.gl/2mq3fSkeSizjaUH89"},{"id":"Pantheon","time":"","comment":"萬神殿 - 天天營業","mapLink":"https://maps.app.goo.gl/3FsVTNPpAARpunRF9"},{"id":"SantaMariaSopraMinerva","time":"","comment":"神廟遺址聖母堂 - 天天營業","mapLink":"https://maps.app.goo.gl/qgk5jaUjS1F9vRCn9"},{"id":"PiazzaNavona","time":"","comment":"納沃納廣場","mapLink":"https://maps.app.goo.gl/h3dLpx1kNTcSzTgG9"},{"id":"SantAgneseInAgone","time":"","comment":"聖依搦斯蒙難堂 - 週一公休, 和2/23對調的話就不能去","mapLink":"https://maps.app.goo.gl/z8DdD1y5a6FiF5pp9"},{"id":"QuattroFontane","time":"","comment":"四合噴泉","mapLink":"https://maps.app.goo.gl/bWdoUEoH1YwXBSeU9"}]},{"id":"day-12","label":"D12 | 2/22 | Sun - Pompeii Day Trip","locations":[{"id":"TrainRomeToNaples","time":"7:40","comment":"Italo 7:40-8:58","mapLink":""},{"id":"TrainNaplesToPompeii","time":"9:20","comment":"區間車 9:20-9:50","mapLink":"https://maps.app.goo.gl/iMDihk9ty3LQbebh9"},{"id":"PompeiiArchaeologicalPark","time":"09:00","comment":"龐貝一日遊","mapLink":""},{"id":"TrainPompeiiToNaples","time":"15:29","comment":"區間車 15:29/16:05/16:42/17:01","mapLink":""},{"id":"TrainNaplesToRome","time":"17:55","comment":"Italo 17:55-19:10","mapLink":""}]},{"id":"day-13","label":"D13 | 2/23 | Mon - Rome","locations":[{"id":"MuseoNazionaleArteAntica","time":"","comment":"羅馬古代藝術美術博物館 (optional, 考慮和2/21對調)","mapLink":"https://maps.app.goo.gl/DWTKAQhwnnmNcQnJ6"},{"id":"CapuchinCrypt","time":"","comment":"修道會人骨博物館","mapLink":"https://maps.app.goo.gl/sT48Pd3ethuLf2Ea9"},{"id":"SpanishSteps","time":"","comment":"西班牙階梯","mapLink":"https://maps.app.goo.gl/M1zVSFP3r6MuAYfq7"},{"id":"VillaMedici","time":"","comment":"美第奇別墅","mapLink":""},{"id":"CampoDeFiori","time":"","comment":"鮮花市場","mapLink":""},{"id":"MercatoTrionfale","time":"","comment":"傳統市場","mapLink":"https://maps.app.goo.gl/o7vepsRft7KXw98J9"},{"id":"GalleriaBorghese","time":"","comment":"鮑格才別墅/博爾蓋賽美術館 (optional) - 限時兩個小時，要預約, 週一公休","mapLink":"https://maps.app.goo.gl/hKBTtkh4dDxWvosd8"},{"id":"PincianHill","time":"","comment":"蘋丘","mapLink":""}]},{"id":"day-14","label":"D14 | 2/24 | Tue - Vatican","locations":[{"id":"StPetersBasilica","time":"07:30","comment":"聖彼得大教堂 - 一早去不太需要排隊, 7:30-19:00","mapLink":"https://maps.app.goo.gl/rUfJw2Kd57t6zkk2A"},{"id":"StPetersDome","time":"","comment":"聖彼得大教堂穹頂 - 一早去登頂, 7:30-17:00","mapLink":""},{"id":"StPetersSquare","time":"","comment":"聖彼得廣場 - 聽說早上拍比較漂亮","mapLink":""},{"id":"VaticanMuseums","time":"14:00","comment":"梵諦岡博物館 - 加拉蒙蒂館、古地圖陳列館、拉斐爾畫室","mapLink":"https://maps.app.goo.gl/PCdXYcQtQt9ExLxr6"},{"id":"SistineChapel","time":"","comment":"西斯汀教堂","mapLink":"https://maps.app.goo.gl/AnvWac7i8vLdF1KAA"},{"id":"EmbassyToHolySee","time":"","comment":"駐教廷大使館","mapLink":"https://maps.app.goo.gl/yFjBQoWodmNvhVeD9"},{"id":"PonteSantAngelo","time":"","comment":"聖天使橋","mapLink":"https://maps.app.goo.gl/TaryHfhyQkzMKNn18"}]},{"id":"day-15","label":"D15 | 2/25 | Wed - Milan","locations":[{"id":"TrainRomeToMilan","time":"10:05","comment":"Italo 10:05-13:15","mapLink":""},{"id":"TeatroAllaScala","time":"14:30","comment":"史卡拉歌劇院 - 世界三大歌劇院、外表樸素裡面很讚，有博物館。對面有達文西的雕像, 預留1-2小時","mapLink":"https://maps.app.goo.gl/R8RJMRnQMJi656e78"},{"id":"ParcoSempione","time":"","comment":"森皮奧內公園 - 下午傍晚去和平之門看夕陽很漂亮, 6:30-21:00","mapLink":"https://maps.app.goo.gl/L8A8QiPJ1s1Xn55K8"},{"id":"CastelloSforzesco","time":"","comment":"斯福爾札古堡 - 五個博物館, 10-17:30, 隨便看約2hr","mapLink":"https://www.google.com/maps/place/Sforzesco+Castle/@45.4704799,9.1767522"},{"id":"ArcoDelaPace","time":"","comment":"和平之門","mapLink":"https://www.google.com/maps/place/Arco+della+Pace/@45.4756964,9.1698711"}]},{"id":"day-16","label":"D16 | 2/26 | Thu - Milan","locations":[{"id":"MilanCathedral","time":"10:00","comment":"米蘭大教堂登頂 - 開門前半小時去, 電梯上樓梯下, ~2hr","mapLink":"https://maps.app.goo.gl/qg7vJTGN1iyeC7s59"},{"id":"MuseoDelDuomoDiMilano","time":"","comment":"大教堂博物館 - 不大、走馬看花大概半小時, 10:00-19:00, 星期三公休","mapLink":"https://www.google.com/maps/place/Museo+del+Duomo+di+Milano/@45.4631036,9.1890108"},{"id":"Brera","time":"","comment":"布雷拉美術館 (optional) - 預留三小時","mapLink":"https://maps.app.goo.gl/Sm5PoaMohBxDiTWc8"}]},{"id":"day-17","label":"D17 | 2/27 | Fri - Departure","locations":[{"id":"MilanoToMXP","time":"6:55","comment":"Milano Centrale → MXP, 車次 6:55-7:56 / 7:25-8:26","mapLink":""},{"id":"FlightMXPtoTPE","time":"11:00","comment":"回程 BR96 | 從米蘭 2026/2/27 11:00 → 台北 2026/2/28 5:55","mapLink":""}]}]}</script>
-        <script type="application/json" id="trip-locations-data">[{"id":"ViaAppiaAntica","title":"Via Appia Antica","city":"Rome, Italy","lat":41.8493768,"lng":12.5236851},{"id":"VaticanMuseums","title":"Vatican Museums","city":"Vatican City","lat":41.9065,"lng":12.4536},{"id":"UffiziGallery","title":"Uffizi Gallery","city":"Florence, Italy","lat":43.7687,"lng":11.2551},{"id":"TreviFountain","title":"Trevi Fountain","city":"Rome, Italy","lat":41.9009778,"lng":12.4832848},{"id":"TempleOfHadrian","title":"Temple of Hadrian","city":"Rome, Italy","lat":41.8997563,"lng":12.479657},{"id":"Tempietto","title":"Tempietto","city":"Rome, Italy","lat":41.8887379,"lng":12.4663934},{"id":"StPetersBasilica","title":"St. Peter's Basilica","city":"Vatican City","lat":41.9022,"lng":12.4539},{"id":"StMarksCampanile","title":"St Mark's Campanile","city":"Venice, Italy","lat":45.4341,"lng":12.3389},{"id":"SistineChapel","title":"Sistine Chapel","city":"Vatican City","lat":41.9029,"lng":12.4545},{"id":"SantoSpirito","title":"Santo Spirito","city":"Florence, Italy","lat":43.7654235,"lng":11.2475861},{"id":"SantiGiovanniEPaolo","title":"Basilica dei Santi Giovanni e Paolo","city":"Venice, Italy","lat":45.4402,"lng":12.3428},{"id":"SantaMariaNovella","title":"Santa Maria Novella","city":"Florence, Italy","lat":43.7746,"lng":11.2494},{"id":"SantaMariaMaggiore","title":"Santa Maria Maggiore","city":"Rome, Italy","lat":41.8976,"lng":12.4984},{"id":"SantaMariaInPalmis","title":"Santa Maria in Palmis (Domine Quo Vadis)","city":"Rome, Italy","lat":41.8664884,"lng":12.5037248},{"id":"SantaMariaDelleGrazie","title":"Santa Maria delle Grazie","city":"Milan, Italy","lat":45.4659,"lng":9.1711},{"id":"SantaMariaDellaSalute","title":"Santa Maria della Salute","city":"Venice, Italy","lat":45.4305726,"lng":12.3347318},{"id":"SantaCroce","title":"Santa Croce","city":"Florence, Italy","lat":43.7685,"lng":11.2625},{"id":"SantaCeciliaInTrastevere","title":"Santa Cecilia in Trastevere","city":"Rome, Italy","lat":41.8889,"lng":12.476},{"id":"SantIgnazio","title":"Sant'Ignazio","city":"Rome, Italy","lat":41.8987497,"lng":12.4798081},{"id":"SantApollonia","title":"Sant'Apollonia","city":"Florence, Italy","lat":43.7783,"lng":11.2565},{"id":"SanSebastianoFuoriLeMura","title":"San Sebastiano fuori le mura","city":"Rome, Italy","lat":41.8558005,"lng":12.5159104},{"id":"SanPietroInVincoli","title":"Basilica of San Pietro in Vincoli","city":"Rome, Italy","lat":41.893851,"lng":12.4931577},{"id":"SanMarco","title":"San Marco","city":"Florence, Italy","lat":45.4345,"lng":12.3396},{"id":"SaintMarksBasilica","title":"Saint Mark's Basilica","city":"Venice, Italy","lat":45.4345,"lng":12.3396},{"id":"RomanForum","title":"Roman Forum","city":"Rome, Italy","lat":41.8916414,"lng":12.4867296},{"id":"PompeiiArchaeologicalPark","title":"Pompeii Archaeological Park","city":"Campania, Italy","lat":40.7508,"lng":14.4867},{"id":"PittiGallery","title":"Pitti Gallery","city":"Florence, Italy","lat":43.7653,"lng":11.25},{"id":"PinacotecaVaticana","title":"Pinacoteca Vaticana","city":"Vatican City","lat":41.9057,"lng":12.4531},{"id":"PinacotecaAmbrosiana","title":"Pinacoteca Ambrosiana","city":"Milan, Italy","lat":45.4636401,"lng":9.1860073},{"id":"PiazzaleMichelangelo","title":"Piazzale Michelangelo","city":"Florence, Italy","lat":43.7628279,"lng":11.2649932},{"id":"PiazzaSanMarco","title":"Piazza San Marco","city":"Venice, Italy","lat":45.4342571,"lng":12.3386717},{"id":"PalazzoVecchio","title":"Palazzo Vecchio","city":"Florence, Italy","lat":43.7693,"lng":11.2562},{"id":"PalazzoStrozzi","title":"Palazzo Strozzi","city":"Florence, Italy","lat":43.771,"lng":11.2509},{"id":"PalazzoRucellai","title":"Palazzo Rucellai","city":"Florence, Italy","lat":43.7714,"lng":11.2484},{"id":"PalazzoMediciRiccardi","title":"Palazzo Medici Riccardi","city":"Florence, Italy","lat":43.7754,"lng":11.2554},{"id":"PalazzoContariniDelBovolo","title":"Palazzo Contarini del Bovolo","city":"Venice, Italy","lat":45.4348475,"lng":12.334215},{"id":"PalatineHill","title":"Palatine Hill","city":"Rome, Italy","lat":41.8893064,"lng":12.4871093},{"id":"OspedaleDegliInnocenti","title":"Ospedale degli Innocenti","city":"Florence, Italy","lat":43.7773,"lng":11.2622},{"id":"Orsanmichele","title":"Orsanmichele","city":"Florence, Italy","lat":43.771,"lng":11.2551},{"id":"OperaDelDuomoMuseum","title":"Opera del Duomo Museum","city":"Florence, Italy","lat":43.7732,"lng":11.2578},{"id":"OfficinaProfumoFarmaceutica","title":"Officina Profumo-Farmaceutica di Santa Maria Novella","city":"Florence, Italy","lat":43.7741387,"lng":11.2477788},{"id":"NationalGalleryOfAncientArt","title":"National Gallery of Ancient Art","city":"Rome, Italy","lat":41.9038,"lng":12.4897},{"id":"MuseoDiSanMarco","title":"Museo di San Marco","city":"Florence, Italy","lat":43.7782,"lng":11.2589},{"id":"MuseoCorrer","title":"Museo Correr","city":"Venice, Italy","lat":45.4339,"lng":12.3379},{"id":"MilanCathedral","title":"Milan Cathedral","city":"Milan, Italy","lat":45.4641,"lng":9.1919},{"id":"MercatoCentrale","title":"Mercato Centrale","city":"Florence, Italy","lat":43.7765847,"lng":11.2532087},{"id":"LoggiaDeiLanzi","title":"Loggia dei Lanzi","city":"Florence, Italy","lat":43.7693,"lng":11.2555},{"id":"LeonardoInteractiveMuseum","title":"Leonardo Interactive Museum","city":"Florence, Italy","lat":43.7749655,"lng":11.2590086},{"id":"LaRinascente","title":"La Rinascente","city":"Milan, Italy","lat":45.4649632,"lng":9.1919118},{"id":"GiottosCampanile","title":"Giotto's Campanile","city":"Florence, Italy","lat":43.7729,"lng":11.2554},{"id":"GallerieDellAccademia","title":"Gallerie dell'Accademia","city":"Venice, Italy","lat":45.4313662,"lng":12.3280919},{"id":"GalleriaVittorioEmanueleII","title":"Galleria Vittorio Emanuele II","city":"Milan, Italy","lat":45.4656113,"lng":9.1900062},{"id":"GalleriaDellAccademia","title":"Galleria dell'Accademia","city":"Florence, Italy","lat":43.7769174,"lng":11.2587579},{"id":"GalleriaBorghese","title":"Galleria Borghese","city":"Rome, Italy","lat":41.9141133,"lng":12.4921053},{"id":"FlorenceCathedral","title":"Florence Cathedral","city":"Florence, Italy","lat":43.7731,"lng":11.256},{"id":"DogesPalace","title":"Doge's Palace","city":"Venice, Italy","lat":45.4342108,"lng":12.340592},{"id":"Colosseum","title":"Colosseum","city":"Rome, Italy","lat":41.8909421,"lng":12.491903},{"id":"ChiesaDiSantaMaria","title":"Chiesa di Santa Maria presso San Satiro","city":"Milan, Italy","lat":45.5586634,"lng":9.1386316},{"id":"CatacombsOfDomitilla","title":"Catacombs of Domitilla","city":"Rome, Italy","lat":41.8556,"lng":12.5108},{"id":"CastelloSforzesco","title":"Castello Sforzesco","city":"Milan, Italy","lat":45.4705,"lng":9.1793},{"id":"CasaBuonarroti","title":"Casa Buonarroti","city":"Florence, Italy","lat":43.7698959,"lng":11.2636201},{"id":"CaDOro","title":"Ca' d'Oro","city":"Venice, Italy","lat":45.4409,"lng":12.3345},{"id":"BridgeOfSighs","title":"Bridge of Sighs","city":"Venice, Italy","lat":45.4340597,"lng":12.3408609},{"id":"Brera","title":"Pinacoteca di Brera","city":"Milan, Italy","lat":45.4719,"lng":9.188},{"id":"BibliotecaNazionale","title":"Biblioteca Nazionale","city":"Florence, Italy","lat":45.4644,"lng":9.1879},{"id":"BibliotecaMarciana","title":"Biblioteca Nazionale Marciana","city":"Venice, Italy","lat":45.433424,"lng":12.3392023},{"id":"BathsOfCaracalla","title":"Baths of Caracalla","city":"Rome, Italy","lat":41.8788285,"lng":12.4924737},{"id":"BasilicaOfSanLorenzo","title":"Basilica of San Lorenzo","city":"Florence, Italy","lat":43.775,"lng":11.2537},{"id":"BasilicaDiSantaTrinita","title":"Basilica di Santa Trinita","city":"Florence, Italy","lat":43.7697,"lng":11.2498},{"id":"BasilicaDeiFrari","title":"Basilica di Santa Maria Gloriosa dei Frari","city":"Venice, Italy","lat":45.4369,"lng":12.3264},{"id":"Bargello","title":"Bargello","city":"Florence, Italy","lat":43.7702,"lng":11.258},{"id":"BaptisteryOfFlorence","title":"Baptistery of Florence","city":"Florence, Italy","lat":43.7732,"lng":11.2541},{"id":"AquaVirgo","title":"Aqua Virgo","city":"Rome, Italy","lat":41.9039223,"lng":12.5752761},{"id":"ApostolicPalace","title":"Apostolic Palace","city":"Vatican City","lat":41.9033,"lng":12.4568},{"id":"Accademia","title":"Gallerie dell'Accademia","city":"Venice, Italy","lat":45.4314,"lng":12.3286}]</script>
       </section>
     </div>
   
   </main>
   <footer>
     <p>Travel notes on Italian Art · <a href="./credits.html">Image Credits</a></p>
-    <p class="last-updated">Last updated: February 6, 2026</p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
   </footer>
   <script src="./sort.js"></script>
   <script src="./tabs.js"></script>

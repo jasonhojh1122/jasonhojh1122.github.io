@@ -11,8 +11,10 @@
   <header>
     <nav>
       <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
     </nav>
   </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
   <main>
     
     <article class="artist-page">
@@ -94,7 +96,7 @@
         <span class="date">c. 1495–1498</span>
       </div>
       <p class="description">Leonardo&#039;s masterpiece depicting the moment Jesus announces that one of his disciples will betray him.</p>
-      <img src="../img/Stiudium_do_Ostatniej_Wieczerzy_5b53c890.jpg" alt="The Last Supper" loading="lazy">
+      <img src="../img/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolut_c6e37759.jpg" alt="The Last Supper" loading="lazy">
     </article>
   
 
@@ -109,6 +111,18 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Peter_Paul_Ruben%27s_copy_of_the_lost_Battle_of_Anghiari.jpg" alt="The Battle of Anghiari" loading="lazy">
     </article>
   
+
+    <article class="artwork-card" data-title="Study of Composition of Last Supper" data-date="">
+      <h3><a href="../artworks/StudyOfLastSupper.html">Study of Composition of Last Supper</a> </h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Drawing</span>
+        
+      </div>
+      <p class="description">Preparatory study for [The Last Supper](LastSupperLeonardo.md) showing that Judas was originally placed at our side of the table, which is not the case in the final artwork.</p>
+      <img src="../img/Stiudium_do_Ostatniej_Wieczerzy_5b53c890.jpg" alt="Study of Composition of Last Supper" loading="lazy">
+    </article>
+  
         </div>
       </section>
     </article>
@@ -116,7 +130,7 @@
   </main>
   <footer>
     <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
-    <p class="last-updated">Last updated: February 6, 2026</p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
   </footer>
   <script src="../sort.js"></script>
   <script src="../tabs.js"></script>

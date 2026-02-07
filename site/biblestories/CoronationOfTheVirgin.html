@@ -11,8 +11,10 @@
   <header>
     <nav>
       <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
     </nav>
   </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
   <main>
     
     <article class="bible-story-page">
@@ -71,6 +73,18 @@
       <img src="../img/Monaco_coronation_44ee5cb1.jpg" alt="Coronation of the Virgin" loading="lazy">
     </article>
   
+
+    <article class="artwork-card" data-title="Coronation of the Virgin" data-date="15th century">
+      <h3><a href="../artworks/CoronationOfTheVirginPantheon.html">Coronation of the Virgin</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Fresco</span>
+        <span class="date">15th century</span>
+      </div>
+      <p class="description">A 15th-century fresco attributed to the Tuscan school, located in the second niche of the Pantheon. It depicts the traditional subject of Christ crowning Mary as Queen of Heaven.</p>
+      
+    </article>
+  
         </div>
       </section>
     </article>
@@ -78,7 +92,7 @@
   </main>
   <footer>
     <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
-    <p class="last-updated">Last updated: February 6, 2026</p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
   </footer>
   <script src="../sort.js"></script>
   <script src="../tabs.js"></script>

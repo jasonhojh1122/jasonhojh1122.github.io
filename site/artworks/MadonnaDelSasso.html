@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madonna del Sasso - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artwork-page">
+      <h1>Madonna del Sasso <span class="badge badge-researched">Self-researched</span></h1>
+      
+      <ul class="artwork-metadata"><li><strong>Artist:</strong> <a href="../artists/Lorenzetto.html">Lorenzetto</a></li>
+<li><strong>Location:</strong> <a href="../locations/Pantheon.html">Pantheon</a>, Rome</li>
+<li><strong>Medium:</strong> Marble sculpture</li>
+<li><strong>Date:</strong> c. 1524</li></ul>
+      
+      <div class="description"><p>A marble statue of the Virgin and Child placed above Raphael&#39;s tomb in the third aedicule. Named &quot;Madonna of the Rock&quot; because Mary rests one foot on a boulder. Lorenzetto, a pupil of Raphael, created the sculpture as a close replica of the Venus Felix in the Vatican Museum, modeling the drapery after a version of the Aphrodite of Melos.</p>
+</div>
+      <div class="artwork-images">
+        
+      </div>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

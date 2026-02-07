@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annunciation - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artwork-page">
+      <h1>Annunciation <span class="badge badge-researched">Self-researched</span></h1>
+      
+      <ul class="artwork-metadata"><li><strong>Artist:</strong> <a href="../artists/MelozzoDaForli.html">Melozzo da Forlì</a></li>
+<li><strong>Location:</strong> <a href="../locations/Pantheon.html">Pantheon</a>, Rome</li>
+<li><strong>Medium:</strong> Fresco</li>
+<li><strong>Date:</strong> c. 1470s</li></ul>
+      
+    <div class="biblical-context">
+      <h3>Biblical Context</h3>
+      <p><a href="../biblestories/Annunciation.html">Annunciation</a> - The announcement by the Angel Gabriel to the Virgin Mary that she would conceive and bear the Son of God (Luke 1:26-38).</p>
+    </div>
+  
+      <div class="description"><p>Located in the seventh chapel of the Pantheon, this is the best-known painting in the building. The fresco depicts the traditional Annunciation scene with God in Heaven sending the dove of the Holy Spirit down to Earth, while the Archangel Gabriel kneels before Mary. It is an important example of Melozzo&#39;s Roman period.</p>
+</div>
+      <div class="artwork-images">
+        
+      </div>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>
