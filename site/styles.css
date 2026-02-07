@@ -29,8 +29,12 @@
   --color-badge-study-bg: linear-gradient(135deg, #E4ECF0 0%, #CCD9E5 100%);
   --color-badge-study-text: #2B4A5F;
   --color-badge-study-border: #A8C4D4;
-  --color-badge-booked-bg: #3A5F35;
-  --color-badge-booked-text: var(--color-warm-white);
+  --color-badge-booked-bg: #EEF2EB;
+  --color-badge-booked-text: #7A8E72;
+  --color-badge-booked-border: #D2D9CB;
+  --color-badge-linked-bg: #EAECF0;
+  --color-badge-linked-text: #727D8A;
+  --color-badge-linked-border: #CDD0D8;
 
   /* Typography */
   --font-display: 'Cormorant Garamond', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
@@ -1817,7 +1821,7 @@ img {
 }
 
 .trip-day-label {
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-size: 1.35rem;
   font-weight: 600;
   color: var(--color-ink);
@@ -1832,10 +1836,10 @@ img {
 
 .trip-day-label:hover,
 .trip-day-label:focus {
-  border-color: var(--color-gold);
-  background: var(--color-warm-white);
+  border-color: transparent;
+  background: transparent;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(199, 166, 107, 0.2);
+  box-shadow: none;
 }
 
 .trip-day-delete {
@@ -1871,7 +1875,7 @@ img {
 .trip-location-list::before {
   content: '';
   position: absolute;
-  left: 51px;
+  left: 37px;
   top: 24px;
   bottom: 24px;
   width: 1px;
@@ -1883,7 +1887,7 @@ img {
   display: flex;
   align-items: stretch;
   gap: var(--space-sm);
-  padding: var(--space-md) var(--space-sm) var(--space-md) calc(var(--space-sm) - 3px);
+  padding: var(--space-md) var(--space-sm) var(--space-md) var(--space-xs);
   background: var(--color-warm-white);
   cursor: grab;
   transition: all var(--transition-base);
@@ -1922,7 +1926,7 @@ img {
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 56px;
+  width: 40px;
   gap: 8px;
 }
 
@@ -1979,11 +1983,12 @@ img {
 }
 
 /* Column 3: Map link + booked badge — top/bottom anchored */
+/* Column 3: Map button — vertically centered */
 .trip-location-col-map {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   width: 48px;
 }
@@ -1994,28 +1999,62 @@ img {
   pointer-events: none;
 }
 
-.trip-booked-badge {
+/* Badge row between names and memo */
+.trip-location-badges {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.trip-booked-badge,
+.trip-linked-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-ui);
   font-size: 0.5rem;
   font-weight: 600;
-  padding: 2px 0;
+  padding: 1px 5px;
   border-radius: var(--radius-sm);
-  background: var(--color-badge-booked-bg);
-  color: var(--color-badge-booked-text);
+  border: 1px solid;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 1.2;
   white-space: nowrap;
-  width: 100%;
-  text-align: center;
 }
 
-.trip-booked-placeholder {
-  visibility: hidden;
-  pointer-events: none;
+.trip-booked-badge {
+  color: var(--color-badge-booked-text);
+  border-color: var(--color-badge-booked-border);
+  background: var(--color-badge-booked-bg);
+}
+
+.trip-linked-badge {
+  color: var(--color-badge-linked-text);
+  border-color: var(--color-badge-linked-border);
+  background: var(--color-badge-linked-bg);
+}
+
+/* Critical time indicator */
+.trip-time-critical .trip-location-time {
+  color: var(--color-terracotta);
+  font-weight: 700;
+}
+.trip-time-critical .trip-location-time-sep {
+  background: var(--color-terracotta);
+}
+.trip-time-critical::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-terracotta);
+  display: block;
+  margin: 0 auto 2px;
+  animation: critical-pulse 2s ease-in-out infinite;
+}
+@keyframes critical-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
 }
 
 /* Column 5 & 6: Action buttons */
@@ -2149,6 +2188,72 @@ img {
 .trip-location-map-link:hover {
   color: var(--color-warm-white);
   background: var(--color-gold);
+}
+
+/* Zero-height wrapper — sits between entries, floats above both */
+.trip-directions-wrapper {
+  list-style: none;
+  height: 0;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: var(--space-sm);
+}
+
+/* The tappable connector centered on the zero line */
+.trip-directions-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 24px;
+  transform: translateY(-50%);
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(199, 166, 107, 0.15);
+}
+
+/* Vertical dashed line through connector */
+.trip-directions-connector::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  border-left: 1px dashed var(--color-border-dark);
+  opacity: 0.35;
+  transition: all var(--transition-base);
+}
+
+/* Tappable dot centered on the line */
+.trip-directions-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-circle);
+  background: var(--color-border-dark);
+  position: relative;
+  z-index: 1;
+  transition: all var(--transition-base);
+  opacity: 0.4;
+}
+
+.trip-directions-connector:hover::before {
+  border-left-color: var(--color-terracotta);
+  opacity: 0.7;
+}
+
+.trip-directions-connector:hover .trip-directions-dot {
+  background: var(--color-terracotta);
+  opacity: 1;
+  transform: scale(1.4);
+  box-shadow: 0 0 0 3px rgba(184, 92, 56, 0.1);
+}
+
+.trip-directions-connector:active .trip-directions-dot {
+  transform: scale(1.1);
+  background: var(--color-terracotta-deep);
 }
 
 /* Action buttons */
@@ -2397,6 +2502,16 @@ img {
   font-size: 0.85rem;
   display: block;
   margin-top: var(--space-xs);
+}
+
+.trip-popup-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.trip-popup-link:hover strong {
+  color: var(--color-terracotta);
 }
 
 /* Route Legend - Matching Main Map Legend */
@@ -2909,12 +3024,13 @@ img {
   background: linear-gradient(135deg, var(--color-terracotta-deep), var(--color-terracotta-deep));
 }
 
-.trip-cache-ts {
+.trip-toolbar-stats {
   font-family: var(--font-ui);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--color-stone);
-  font-style: italic;
+  letter-spacing: 0.02em;
 }
+
 
 /* Trip Loading / Error States */
 .trip-loading {
@@ -3022,9 +3138,9 @@ a.trip-ticket-badge:hover {
   /* Card-style layout for each location */
   .trip-location-item {
     display: grid;
-    grid-template-columns: 44px 1fr auto;
-    gap: 0 var(--space-sm);
-    padding: var(--space-sm) var(--space-sm) var(--space-sm) calc(var(--space-sm) - 3px);
+    grid-template-columns: 36px 1fr auto;
+    gap: 0 var(--space-xs);
+    padding: var(--space-sm) var(--space-sm) var(--space-sm) var(--space-xs);
     border-left: 3px solid transparent;
     border-bottom: 1px solid var(--color-border);
     align-items: start;
@@ -3069,7 +3185,7 @@ a.trip-ticket-badge:hover {
   /* Top row: name */
   .trip-location-top {
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
     gap: var(--space-xs);
   }
 
@@ -3109,12 +3225,12 @@ a.trip-ticket-badge:hover {
     opacity: 1;
   }
 
-  /* Map column: stretch full height of grid row */
+  /* Map column: centered in grid row */
   .trip-location-col-map {
     grid-column: 3;
     grid-row: 1;
     width: auto;
-    align-self: stretch;
+    align-self: center;
   }
 
   .trip-location-map-link {
@@ -3128,13 +3244,21 @@ a.trip-ticket-badge:hover {
     -webkit-tap-highlight-color: rgba(199, 166, 107, 0.2);
   }
 
-  .trip-booked-badge {
-    font-size: 0.48rem;
-    padding: 2px 0;
+  /* Inline badges: slightly smaller on mobile */
+  .trip-booked-badge,
+  .trip-linked-badge {
+    font-size: 0.45rem;
+    padding: 1px 4px;
   }
 
   .trip-location-col-action {
     display: none;
+  }
+
+  /* Directions connector: wider tap area on mobile */
+  .trip-directions-connector {
+    width: 44px;
+    height: 28px;
   }
 
   /* Day map */

@@ -250,14 +250,23 @@
     refreshBtn.addEventListener('click', () => refreshData());
     toolbar.appendChild(refreshBtn);
 
+    // Stats
+    const totalEntries = tripData.days.reduce((sum, day) => sum + day.locations.length, 0);
+    const totalDays = tripData.days.length;
+    const cacheRaw = localStorage.getItem(CACHE_KEY);
+    const dataSize = cacheRaw ? cacheRaw.length : 0;
+    const sizeLabel = dataSize > 1024 ? (dataSize / 1024).toFixed(1) + ' KB' : dataSize + ' B';
+
+    const statsEl = document.createElement('span');
+    statsEl.className = 'trip-toolbar-stats';
     const ts = getCacheTimestamp();
-    if (ts) {
-      const tsEl = document.createElement('span');
-      tsEl.className = 'trip-cache-ts';
+    const tsText = ts ? (() => {
       const d = new Date(ts);
-      tsEl.textContent = 'Updated: ' + d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      toolbar.appendChild(tsEl);
-    }
+      return d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+    })() : '';
+
+    statsEl.textContent = totalDays + ' days · ' + totalEntries + ' entries · ' + sizeLabel + (tsText ? ' · ' + tsText : '');
+    toolbar.appendChild(statsEl);
 
     container.appendChild(toolbar);
 
@@ -305,6 +314,26 @@
     day.locations.forEach((entry, locIndex) => {
       const li = renderLocationItem(entry, day.id, locIndex);
       listEl.appendChild(li);
+
+      // Zero-height connector floating between entries, above both stacking contexts
+      if (locIndex < day.locations.length - 1) {
+        const next = day.locations[locIndex + 1];
+        if (entry.lat && entry.lng && next.lat && next.lng) {
+          const wrapper = document.createElement('li');
+          wrapper.className = 'trip-directions-wrapper';
+          const connector = document.createElement('a');
+          connector.className = 'trip-directions-connector';
+          connector.href = `https://www.google.com/maps/dir/?api=1&origin=${entry.lat},${entry.lng}&destination=${next.lat},${next.lng}&travelmode=transit`;
+          connector.target = '_blank';
+          connector.rel = 'noopener noreferrer';
+          connector.setAttribute('aria-label', 'Directions to ' + next.chineseName);
+          const dot = document.createElement('span');
+          dot.className = 'trip-directions-dot';
+          connector.appendChild(dot);
+          wrapper.appendChild(connector);
+          listEl.appendChild(wrapper);
+        }
+      }
     });
 
     dayEl.appendChild(listEl);
@@ -337,9 +366,18 @@
 
     // Time displayed as a compact range beneath the number
     if (entry.time) {
-      const timeParts = entry.time.split(/\s*[-–~]\s*/);
+      let timeStr = entry.time;
+      let isCritical = false;
+      if (timeStr.startsWith('C ')) {
+        isCritical = true;
+        timeStr = timeStr.substring(2);
+      }
+      const timeParts = timeStr.split(/\s*[-–~]\s*/);
       const timeWrap = document.createElement('div');
       timeWrap.className = 'trip-location-time-wrap';
+      if (isCritical) {
+        timeWrap.classList.add('trip-time-critical');
+      }
       if (timeParts.length >= 2) {
         const startEl = document.createElement('span');
         startEl.className = 'trip-location-time';
@@ -392,6 +430,27 @@
       contentCol.appendChild(engRow);
     }
 
+    // Badges row: below names, above memo
+    const isBooked = entry.ticketMemo && /booked/i.test(entry.ticketMemo);
+    const isLinked = !!entry.pageLinkName;
+    if (isBooked || isLinked) {
+      const badgeRow = document.createElement('div');
+      badgeRow.className = 'trip-location-badges';
+      if (isBooked) {
+        const badgeEl = document.createElement('span');
+        badgeEl.className = 'trip-booked-badge';
+        badgeEl.textContent = 'Booked';
+        badgeRow.appendChild(badgeEl);
+      }
+      if (isLinked) {
+        const linkedEl = document.createElement('span');
+        linkedEl.className = 'trip-linked-badge';
+        linkedEl.textContent = 'Linked';
+        badgeRow.appendChild(linkedEl);
+      }
+      contentCol.appendChild(badgeRow);
+    }
+
     // Memo
     if (entry.memo) {
       const memoRow = document.createElement('div');
@@ -403,11 +462,10 @@
       contentCol.appendChild(memoRow);
     }
 
-    // Column 4: Map link + booked badge (fixed slots)
+    // Column 3: Map button (vertically centered)
     const mapCol = document.createElement('div');
     mapCol.className = 'trip-location-col-map';
 
-    // Slot 1: Map button (or invisible placeholder)
     if (entry.mapLink) {
       const mapLink = document.createElement('a');
       mapLink.href = entry.mapLink;
@@ -423,13 +481,6 @@
       placeholder.textContent = 'Map';
       mapCol.appendChild(placeholder);
     }
-
-    // Slot 2: Booked badge (or invisible placeholder)
-    const isBooked = entry.ticketMemo && /booked/i.test(entry.ticketMemo);
-    const badgeEl = document.createElement('span');
-    badgeEl.className = 'trip-booked-badge' + (isBooked ? '' : ' trip-booked-placeholder');
-    badgeEl.textContent = 'Booked';
-    mapCol.appendChild(badgeEl);
 
     li.appendChild(numberCol);
     li.appendChild(contentCol);
@@ -595,12 +646,18 @@
         icon: createNumberedIcon(item.originalIndex + 1)
       }).addTo(map);
 
-      const popupContent = `
-        <div class="trip-popup">
-          <strong>${escapeHtml(entry.chineseName)}</strong>
-          ${entry.englishName ? `<span class="trip-popup-city">${escapeHtml(entry.englishName)}</span>` : ''}
-        </div>
-      `;
+      const pageLink = entry.pageLinkName ? `locations/${entry.pageLinkName.replace(/\.html$/, '')}.html` : '';
+      const popupContent = pageLink
+        ? `<div class="trip-popup">
+            <a href="${pageLink}" class="trip-popup-link">
+              <strong>${escapeHtml(entry.chineseName)}</strong>
+              ${entry.englishName ? `<span class="trip-popup-city">${escapeHtml(entry.englishName)}</span>` : ''}
+            </a>
+          </div>`
+        : `<div class="trip-popup">
+            <strong>${escapeHtml(entry.chineseName)}</strong>
+            ${entry.englishName ? `<span class="trip-popup-city">${escapeHtml(entry.englishName)}</span>` : ''}
+          </div>`;
 
       marker.bindPopup(popupContent, {
         className: 'trip-popup-container'
@@ -623,30 +680,17 @@
       for (let i = 0; i < locsWithIndex.length - 1; i++) {
         const from = locsWithIndex[i].entry;
         const to = locsWithIndex[i + 1].entry;
-        const polyline = L.polyline(
+        L.polyline(
           [[from.lat, from.lng], [to.lat, to.lng]],
           {
             color: '#B85C38',
-            weight: 3,
-            opacity: 0.7,
-            dashArray: '5, 10'
+            weight: 2,
+            opacity: 0.4,
+            dashArray: '5, 10',
+            interactive: false
           }
         ).addTo(map);
-
-        polyline.on('click', () => {
-          const url = `https://www.google.com/maps/dir/?api=1&origin=${from.lat},${from.lng}&destination=${to.lat},${to.lng}&travelmode=walking`;
-          window.open(url, '_blank');
-        });
-
-        polyline.on('mouseover', function() {
-          this.setStyle({ weight: 5, opacity: 1 });
-        });
-        polyline.on('mouseout', function() {
-          this.setStyle({ weight: 3, opacity: 0.7 });
-        });
       }
-
-      container.appendChild(createRouteLegend());
     }
 
     // Fit bounds
