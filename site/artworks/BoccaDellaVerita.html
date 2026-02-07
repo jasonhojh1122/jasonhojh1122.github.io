@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bocca della Verità - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artwork-page">
+      <h1>Bocca della Verità <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Bocca_della_Verit%C3%A0" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <ul class="artwork-metadata"><li><strong>Location:</strong> <a href="../locations/SantaMariaInCosmedin.html">Santa Maria in Cosmedin</a>, Rome</li>
+<li><strong>Medium:</strong> Marble (pavonazzetto from Phrygia)</li>
+<li><strong>Date:</strong> 1st century AD (placed in church portico 1632)</li></ul>
+      
+      <div class="description"><p>A large ancient Roman marble disc (1.75 meters across, 19 cm thick, weighing approximately 1,200 kg) bearing a bearded face in shallow relief with pierced eyes, nostrils, and mouth. Thought to represent an ocean deity or river god, it may have originally served as a drain cover or fountain. According to medieval legend, it will bite off the hand of any liar who places their hand in its mouth. It stands against the left wall of the church portico.</p>
+</div>
+      <div class="artwork-images">
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Et%C3%A0_imperiale%2C_chiusino_a_forma_di_mascherone_di_divinit%C3%A0_fluviale%2C_detta_bocca_della_verit%C3%A0%2C_collocata_qui_nel_1632.jpg" alt="img"></figure>
+      </div>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>

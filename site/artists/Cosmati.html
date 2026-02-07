@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmati - Italian Art</title>
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="artist-page">
+      <h1>Cosmati <span class="badge badge-researched">Self-researched</span></h1>
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Cosmati" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+      <div class="bio"><p><strong>Active</strong>: 12th–13th century, Rome
+<strong>Source</strong>: self-research</p>
+<p>A Roman family of seven members across four generations who were skilled architects, sculptors, and workers in decorative geometric mosaic. They specialized in a technique of opus sectile formed of elaborate inlays of small triangles and rectangles of colored stones and glass mosaics set into stone matrices. Their name is commemorated in the genre of &quot;Cosmatesque&quot; work. Initial inspiration for the technique was Byzantine, transmitted through Ravenna and Sicily, while some of the minutely-figured tiling patterns are Islamic in origin. Their work adorns many Roman churches including Santa Maria in Cosmedin, where the pavement, schola cantorum, pulpit, paschal candlestick, altar canopy, and episcopal throne all bear their distinctive style.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Trono_papale_1110759.JPG" alt="img"></p>
+</div>
+      
+      <section class="artworks-section">
+        <h2>Artworks</h2>
+        
+    <div class="sort-controls">
+      <span>Sort by:</span>
+      <button class="sort-btn active" data-sort="date">Date</button>
+      <button class="sort-btn" data-sort="title">Title</button>
+      
+    </div>
+  
+        <div class="artwork-grid">
+          
+    <article class="artwork-card" data-title="Schola Cantorum" data-date="13th century (incorporating 8th-century opus sectile elements)">
+      <h3><a href="../artworks/ScholaCantorum.html">Schola Cantorum</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Marble with Cosmatesque decoration</span>
+        <span class="date">13th century (incorporating 8th-century opus sectile elements)</span>
+      </div>
+      <p class="description">An enclosed choir area in the nave with intricately carved marble panels featuring Cosmatesque geometric inlay. Part of a larger ensemble of 13th-century marble liturgical furnishings including the pulpit, paschal candlestick, and episcopal throne (bishop&#039;s chair with three steps and lion-carved armrests).</p>
+      
+    </article>
+  
+
+    <article class="artwork-card" data-title="Cosmatesque Pavement" data-date="12th century">
+      <h3><a href="../artworks/CosmatescquePavement.html">Cosmatesque Pavement</a> <span class="badge badge-researched">Self-researched</span></h3>
+      <div class="artwork-meta">
+        
+        <span class="medium">Marble inlay (porphyry, serpentine, giallo antico)</span>
+        <span class="date">12th century</span>
+      </div>
+      <p class="description">The nave floor is a masterpiece of Cosmatesque opus sectile work, featuring elaborate geometric patterns of inlaid colored marble. Dominated by an enormous porphyry roundel with intricate patterning using purple-crimson porphyry, dark green serpentine, and yellow giallo antico marble set in white marble matrices.</p>
+      
+    </article>
+  
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 7, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>
