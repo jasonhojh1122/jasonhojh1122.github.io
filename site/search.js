@@ -1,6 +1,7 @@
 /**
  * Index page search functionality
  * Filters Artists, Locations, Bible Stories, and Trip tabs in real-time
+ * Also searches page content via search-index.json
  */
 (function() {
   'use strict';
@@ -8,11 +9,19 @@
   const searchInput = document.getElementById('index-search');
   const clearButton = document.querySelector('.search-clear');
   const resultsCount = document.querySelector('.search-results-count');
+  const resultsPanel = document.querySelector('.search-results-panel');
 
   // Exit early if not on index page
   if (!searchInput) return;
 
   let debounceTimer;
+  let searchIndex = null;
+
+  // Load search index
+  fetch('./search-index.json')
+    .then(r => r.json())
+    .then(data => { searchIndex = data; })
+    .catch(() => { /* index unavailable, content search disabled */ });
 
   /**
    * Debounce function to limit search frequency
@@ -60,52 +69,191 @@
   }
 
   /**
+   * Escape HTML special characters
+   */
+  function escapeHtml(text) {
+    var div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  /**
+   * Type label mapping
+   */
+  var typeLabels = {
+    'artist': 'Artist',
+    'artwork': 'Artwork',
+    'location': 'Location',
+    'bible story': 'Bible Story',
+    'term': 'Term'
+  };
+
+  /**
+   * Get the currently active tab name
+   */
+  function getActiveTab() {
+    var activeBtn = document.querySelector('.tab-btn.active');
+    return activeBtn ? activeBtn.dataset.tab : '';
+  }
+
+  /**
+   * Search the index for content matches and display results
+   */
+  function searchContentIndex(query) {
+    if (!resultsPanel) return;
+
+    if (!searchIndex || query.length < 2 || getActiveTab() === 'trip') {
+      resultsPanel.hidden = true;
+      resultsPanel.innerHTML = '';
+      return;
+    }
+
+    var lowerQuery = query.toLowerCase();
+    var titleMatches = [];
+    var contentMatches = [];
+
+    for (var i = 0; i < searchIndex.length; i++) {
+      var entry = searchIndex[i];
+      var titleMatch = entry.title.toLowerCase().includes(lowerQuery);
+      if (titleMatch) {
+        titleMatches.push(entry);
+      } else if (entry.content.toLowerCase().includes(lowerQuery)) {
+        contentMatches.push(entry);
+      }
+    }
+
+    // Sort each group alphabetically by title
+    titleMatches.sort(function(a, b) { return a.title.localeCompare(b.title); });
+    contentMatches.sort(function(a, b) { return a.title.localeCompare(b.title); });
+
+    if (titleMatches.length === 0 && contentMatches.length === 0) {
+      resultsPanel.hidden = true;
+      resultsPanel.innerHTML = '';
+      return;
+    }
+
+    var html = '';
+
+    if (titleMatches.length > 0) {
+      html += '<div class="search-results-group">';
+      html += '<div class="search-results-group-label">Title matches</div>';
+      for (var j = 0; j < titleMatches.length; j++) {
+        html += renderResult(titleMatches[j], query, false);
+      }
+      html += '</div>';
+    }
+
+    if (contentMatches.length > 0) {
+      if (titleMatches.length > 0) {
+        html += '<hr class="search-results-divider">';
+      }
+      html += '<div class="search-results-group">';
+      html += '<div class="search-results-group-label">Content matches</div>';
+      for (var k = 0; k < contentMatches.length; k++) {
+        html += renderResult(contentMatches[k], query, true);
+      }
+      html += '</div>';
+    }
+
+    resultsPanel.innerHTML = html;
+    resultsPanel.hidden = false;
+  }
+
+  /**
+   * Render a single search result item
+   */
+  function renderResult(entry, query, showSnippet) {
+    var label = typeLabels[entry.type] || entry.type;
+    var badgeClass = 'search-result-type search-result-type--' + entry.type.replace(/\s+/g, '-');
+    var subtitleHtml = entry.subtitle
+      ? '<div class="search-result-subtitle">' + escapeHtml(entry.subtitle) + '</div>'
+      : '';
+    var snippetHtml = '';
+
+    if (showSnippet) {
+      snippetHtml = '<div class="search-result-snippet">' + getSnippet(entry.content, query) + '</div>';
+    }
+
+    return '<a href="' + escapeHtml(entry.url) + '" class="search-result-item">' +
+      '<div class="search-result-body">' +
+        '<span class="search-result-title">' + escapeHtml(entry.title) + '</span>' +
+        subtitleHtml +
+        snippetHtml +
+      '</div>' +
+      '<span class="' + badgeClass + '">' + escapeHtml(label) + '</span>' +
+      '</a>';
+  }
+
+  /**
+   * Extract a snippet around the match with highlighting
+   */
+  function getSnippet(content, query) {
+    var lower = content.toLowerCase();
+    var idx = lower.indexOf(query.toLowerCase());
+    if (idx === -1) return '';
+
+    var contextChars = 80;
+    var start = Math.max(0, idx - contextChars);
+    var end = Math.min(content.length, idx + query.length + contextChars);
+
+    var before = content.slice(start, idx);
+    var match = content.slice(idx, idx + query.length);
+    var after = content.slice(idx + query.length, end);
+
+    var prefix = start > 0 ? '...' : '';
+    var suffix = end < content.length ? '...' : '';
+
+    return prefix + escapeHtml(before) + '<mark>' + escapeHtml(match) + '</mark>' + escapeHtml(after) + suffix;
+  }
+
+  /**
    * Filter all searchable content
    */
   function filterContent(query) {
-    const items = getSearchableItems();
-    const trimmedQuery = query.trim();
+    var items = getSearchableItems();
+    var trimmedQuery = query.trim();
 
     // If empty query, show everything
     if (!trimmedQuery) {
       resetAll(items);
       updateResultsCount(null);
+      searchContentIndex('');
       return;
     }
 
-    let totalVisible = 0;
+    var totalVisible = 0;
 
     // Filter artists
-    items.artists.forEach(li => {
-      const text = li.textContent;
-      const visible = matches(text, trimmedQuery);
+    items.artists.forEach(function(li) {
+      var text = li.textContent;
+      var visible = matches(text, trimmedQuery);
       setVisible(li, visible);
       if (visible) totalVisible++;
     });
 
     // Filter artworks
-    items.artworks.forEach(li => {
-      const text = li.textContent;
-      const visible = matches(text, trimmedQuery);
+    items.artworks.forEach(function(li) {
+      var text = li.textContent;
+      var visible = matches(text, trimmedQuery);
       setVisible(li, visible);
       if (visible) totalVisible++;
     });
 
     // Filter locations (and their city headers)
-    items.locationHeaders.forEach(header => {
+    items.locationHeaders.forEach(function(header) {
       // Get the location list that follows this header
-      const locationList = header.nextElementSibling;
+      var locationList = header.nextElementSibling;
       if (!locationList || !locationList.classList.contains('location-list')) return;
 
-      const locationItems = locationList.querySelectorAll('li');
-      let cityHasVisibleLocations = false;
+      var locationItems = locationList.querySelectorAll('li');
+      var cityHasVisibleLocations = false;
 
       // Check if city name matches
-      const cityMatches = matches(header.textContent, trimmedQuery);
+      var cityMatches = matches(header.textContent, trimmedQuery);
 
-      locationItems.forEach(li => {
-        const locationMatches = matches(li.textContent, trimmedQuery);
-        const visible = cityMatches || locationMatches;
+      locationItems.forEach(function(li) {
+        var locationMatches = matches(li.textContent, trimmedQuery);
+        var visible = cityMatches || locationMatches;
         setVisible(li, visible);
         if (visible) {
           cityHasVisibleLocations = true;
@@ -119,23 +267,23 @@
     });
 
     // Filter bible stories
-    items.bibleStories.forEach(li => {
-      const text = li.textContent;
-      const visible = matches(text, trimmedQuery);
+    items.bibleStories.forEach(function(li) {
+      var text = li.textContent;
+      var visible = matches(text, trimmedQuery);
       setVisible(li, visible);
       if (visible) totalVisible++;
     });
 
     // Filter terms (by category name, term name, or definition)
-    items.termsCategories.forEach(catEl => {
-      const catHeader = catEl.querySelector('h3');
-      const catMatches = catHeader ? matches(catHeader.textContent, trimmedQuery) : false;
-      const termItems = catEl.querySelectorAll('.term-item');
-      let catHasVisible = false;
+    items.termsCategories.forEach(function(catEl) {
+      var catHeader = catEl.querySelector('h3');
+      var catMatches = catHeader ? matches(catHeader.textContent, trimmedQuery) : false;
+      var termItems = catEl.querySelectorAll('.term-item');
+      var catHasVisible = false;
 
-      termItems.forEach(termEl => {
-        const termMatches = matches(termEl.textContent, trimmedQuery);
-        const visible = catMatches || termMatches;
+      termItems.forEach(function(termEl) {
+        var termMatches = matches(termEl.textContent, trimmedQuery);
+        var visible = catMatches || termMatches;
         setVisible(termEl, visible);
         if (visible) {
           catHasVisible = true;
@@ -147,27 +295,27 @@
     });
 
     // Filter trip days and locations
-    items.tripDays.forEach(dayEl => {
-      const dayLabel = dayEl.querySelector('.trip-day-label');
-      const dayLabelText = dayLabel ? dayLabel.value || dayLabel.textContent : '';
-      const dayMatches = matches(dayLabelText, trimmedQuery);
+    items.tripDays.forEach(function(dayEl) {
+      var dayLabel = dayEl.querySelector('.trip-day-label');
+      var dayLabelText = dayLabel ? dayLabel.value || dayLabel.textContent : '';
+      var dayMatches = matches(dayLabelText, trimmedQuery);
 
-      const locationItems = dayEl.querySelectorAll('.trip-location-item');
-      let hasVisibleLocation = false;
+      var locationItems = dayEl.querySelectorAll('.trip-location-item');
+      var hasVisibleLocation = false;
 
-      locationItems.forEach(locEl => {
+      locationItems.forEach(function(locEl) {
         // Get searchable text from location item
-        const locLink = locEl.querySelector('.trip-location-link');
-        const locComment = locEl.querySelector('.trip-location-comment');
-        const locTime = locEl.querySelector('.trip-location-time');
+        var locLink = locEl.querySelector('.trip-location-link');
+        var locComment = locEl.querySelector('.trip-location-comment');
+        var locTime = locEl.querySelector('.trip-location-time');
 
-        const searchText = [
+        var searchText = [
           locLink ? locLink.textContent : '',
           locComment ? locComment.textContent : '',
           locTime ? locTime.textContent : ''
         ].join(' ');
 
-        const locMatches = matches(searchText, trimmedQuery);
+        var locMatches = matches(searchText, trimmedQuery);
 
         if (locMatches) {
           hasVisibleLocation = true;
@@ -193,22 +341,25 @@
     });
 
     updateResultsCount(totalVisible);
+
+    // Content search
+    searchContentIndex(trimmedQuery);
   }
 
   /**
    * Reset all items to visible
    */
   function resetAll(items) {
-    items.artists.forEach(li => li.classList.remove('search-hidden'));
-    items.artworks.forEach(li => li.classList.remove('search-hidden'));
-    items.locationHeaders.forEach(h3 => h3.classList.remove('search-hidden'));
-    items.locations.forEach(li => li.classList.remove('search-hidden'));
-    document.querySelectorAll('.location-list').forEach(ul => ul.classList.remove('search-hidden'));
-    items.bibleStories.forEach(li => li.classList.remove('search-hidden'));
-    items.termsCategories.forEach(el => el.classList.remove('search-hidden'));
-    items.termItems.forEach(el => el.classList.remove('search-hidden'));
-    items.tripDays.forEach(el => el.classList.remove('search-hidden'));
-    items.tripLocations.forEach(el => {
+    items.artists.forEach(function(li) { li.classList.remove('search-hidden'); });
+    items.artworks.forEach(function(li) { li.classList.remove('search-hidden'); });
+    items.locationHeaders.forEach(function(h3) { h3.classList.remove('search-hidden'); });
+    items.locations.forEach(function(li) { li.classList.remove('search-hidden'); });
+    document.querySelectorAll('.location-list').forEach(function(ul) { ul.classList.remove('search-hidden'); });
+    items.bibleStories.forEach(function(li) { li.classList.remove('search-hidden'); });
+    items.termsCategories.forEach(function(el) { el.classList.remove('search-hidden'); });
+    items.termItems.forEach(function(el) { el.classList.remove('search-hidden'); });
+    items.tripDays.forEach(function(el) { el.classList.remove('search-hidden'); });
+    items.tripLocations.forEach(function(el) {
       el.classList.remove('search-hidden', 'trip-location-highlight');
     });
   }
@@ -228,7 +379,7 @@
     } else if (count === 1) {
       resultsCount.textContent = '1 result';
     } else {
-      resultsCount.textContent = `${count} results`;
+      resultsCount.textContent = count + ' results';
     }
   }
 
@@ -250,7 +401,7 @@
   }
 
   // Debounced search handler
-  const debouncedFilter = debounce(function() {
+  var debouncedFilter = debounce(function() {
     filterContent(searchInput.value);
     updateClearButton();
   }, 150);
@@ -265,6 +416,15 @@
   });
 
   clearButton.addEventListener('click', clearSearch);
+
+  // Re-evaluate search results panel when tab changes
+  document.querySelectorAll('.tab-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (searchInput.value.trim()) {
+        searchContentIndex(searchInput.value.trim());
+      }
+    });
+  });
 
   // Re-apply filter when trip tab content changes (after render)
   // Listen for custom event from trip.js
