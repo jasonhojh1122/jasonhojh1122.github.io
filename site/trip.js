@@ -96,7 +96,7 @@
     const days = [];
     let currentDay = null;
     let dayCount = 0;
-    const dayPattern = /^D\d+\s*\|/;
+    const dayPattern = /^Day\d+\s*\|/;
 
     for (const row of rows) {
       if (!row.c) continue;
@@ -371,7 +371,7 @@
 
     if (entry.pageLinkName) {
       const link = document.createElement('a');
-      link.href = `locations/${entry.pageLinkName}.html`;
+      link.href = `locations/${entry.pageLinkName.replace(/\.html$/, '')}.html`;
       link.className = 'trip-location-link';
       link.textContent = entry.chineseName;
       topRow.appendChild(link);

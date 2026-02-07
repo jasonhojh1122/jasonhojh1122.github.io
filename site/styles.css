@@ -22,6 +22,16 @@
   --color-border: #E3DCD0;
   --color-border-dark: #C9C0B0;
 
+  /* Semantic — Status badges */
+  --color-badge-research-bg: linear-gradient(135deg, #E8F0E4 0%, #D4E5CC 100%);
+  --color-badge-research-text: #3A5F35;
+  --color-badge-research-border: #B8D4AD;
+  --color-badge-study-bg: linear-gradient(135deg, #E4ECF0 0%, #CCD9E5 100%);
+  --color-badge-study-text: #2B4A5F;
+  --color-badge-study-border: #A8C4D4;
+  --color-badge-booked-bg: #3A5F35;
+  --color-badge-booked-text: var(--color-warm-white);
+
   /* Typography */
   --font-display: 'Cormorant Garamond', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   --font-body: 'Spectral', 'Georgia', serif;
@@ -48,6 +58,7 @@
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Border Radius - Unified System */
+  --radius-xs: 2px;      /* Decorative line-ends, thin indicators */
   --radius-sm: 3px;      /* Buttons, inputs, small interactive elements */
   --radius-md: 5px;      /* Cards, panels, containers */
   --radius-lg: 8px;      /* Large containers, modals */
@@ -319,7 +330,7 @@ a:hover {
   width: 2px;
   height: 6px;
   background: var(--color-stone);
-  border-radius: 2px;
+  border-radius: var(--radius-xs);
   bottom: 0;
   right: 2px;
   transform: rotate(-45deg);
@@ -1069,15 +1080,15 @@ ul li::before {
 }
 
 .badge-researched {
-  background: linear-gradient(135deg, #E8F0E4 0%, #D4E5CC 100%);
-  color: #3A5F35;
-  border: 1px solid #B8D4AD;
+  background: var(--color-badge-research-bg);
+  color: var(--color-badge-research-text);
+  border: 1px solid var(--color-badge-research-border);
 }
 
 .badge-study {
-  background: linear-gradient(135deg, #E4ECF0 0%, #CCD9E5 100%);
-  color: #2B4A5F;
-  border: 1px solid #A8C4D4;
+  background: var(--color-badge-study-bg);
+  color: var(--color-badge-study-text);
+  border: 1px solid var(--color-badge-study-border);
 }
 
 /* ===== Footer ===== */
@@ -1899,7 +1910,7 @@ img {
 .drop-indicator {
   height: 3px;
   background: linear-gradient(90deg, var(--color-terracotta), var(--color-gold));
-  border-radius: 2px;
+  border-radius: var(--radius-xs);
   margin: 0 var(--space-sm);
   box-shadow: 0 0 8px rgba(184, 92, 56, 0.4);
 }
@@ -1992,8 +2003,8 @@ img {
   font-weight: 600;
   padding: 2px 0;
   border-radius: var(--radius-sm);
-  background: #2d6a3a;
-  color: #fff;
+  background: var(--color-badge-booked-bg);
+  color: var(--color-badge-booked-text);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   line-height: 1;
@@ -2424,7 +2435,7 @@ img {
   width: 20px;
   height: 2px;
   background: var(--color-terracotta);
-  border-radius: 1px;
+  border-radius: var(--radius-xs);
   position: relative;
 }
 
@@ -3206,6 +3217,6 @@ a.trip-ticket-badge:hover {
   .artwork-card {
     break-inside: avoid;
     box-shadow: none;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border-dark);
   }
 }
