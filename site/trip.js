@@ -5,7 +5,7 @@
 (function() {
   'use strict';
 
-  const SHEET_JSON_URL = 'https://docs.google.com/spreadsheets/d/1Fscjw06IFmHPLCsXM2yRgIks50bSH-pjlpgwYNhVW3w/gviz/tq?tqx=out:json';
+  const SHEET_URL_KEY = 'italian-art-trip-sheet-url';
   const CACHE_KEY = 'italian-art-trip-cache';
   const CACHE_TS_KEY = 'italian-art-trip-cache-ts';
 
@@ -13,6 +13,77 @@
   let tripData = null;
   let dayMaps = {};
   let dayMarkers = {};
+
+  /**
+   * Get the saved sheet URL, or null if not set.
+   */
+  function getSavedSheetUrl() {
+    return localStorage.getItem(SHEET_URL_KEY) || null;
+  }
+
+  /**
+   * Save a Google Sheets URL to localStorage.
+   * Accepts a full Google Sheets URL and converts it to the gviz/tq JSON endpoint.
+   */
+  function saveSheetUrl(url) {
+    const gvizUrl = toGvizUrl(url);
+    localStorage.setItem(SHEET_URL_KEY, gvizUrl);
+    return gvizUrl;
+  }
+
+  /**
+   * Convert a Google Sheets URL to its gviz/tq JSON endpoint.
+   */
+  function toGvizUrl(url) {
+    url = url.trim();
+    // Already a gviz URL
+    if (url.includes('/gviz/tq')) return url;
+    // Extract spreadsheet ID from various URL formats
+    const match = url.match(/\/spreadsheets\/d\/([a-zA-Z0-9_-]+)/);
+    if (match) {
+      return 'https://docs.google.com/spreadsheets/d/' + match[1] + '/gviz/tq?tqx=out:json';
+    }
+    // Fallback: assume it's already a usable URL
+    return url;
+  }
+
+  /**
+   * Render the setup form asking the user to provide their Google Sheets URL.
+   */
+  function renderSetup(container) {
+    container.innerHTML = '';
+    const setup = document.createElement('div');
+    setup.className = 'trip-setup';
+    setup.innerHTML = `
+      <p class="trip-setup-title">Connect Google Sheet</p>
+      <p class="trip-setup-desc">Paste the URL of your Google Sheets itinerary to get started.</p>
+      <div class="trip-setup-form">
+        <input type="text" class="trip-setup-input" placeholder="https://docs.google.com/spreadsheets/d/..." />
+        <button class="trip-refresh-btn trip-setup-btn">Connect</button>
+      </div>
+      <p class="trip-setup-hint">The sheet must be shared as "Anyone with the link can view".</p>
+    `;
+    const input = setup.querySelector('.trip-setup-input');
+    const btn = setup.querySelector('.trip-setup-btn');
+    function submit() {
+      const val = input.value.trim();
+      if (!val) return;
+      if (!val.includes('docs.google.com/spreadsheets') && !val.includes('/gviz/tq')) {
+        input.classList.add('trip-setup-input-error');
+        return;
+      }
+      input.classList.remove('trip-setup-input-error');
+      saveSheetUrl(val);
+      // Clear old cache since the sheet changed
+      localStorage.removeItem(CACHE_KEY);
+      localStorage.removeItem(CACHE_TS_KEY);
+      initialized = false;
+      init();
+    }
+    btn.addEventListener('click', submit);
+    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') submit(); });
+    container.appendChild(setup);
+  }
 
   /**
    * Fetch sheet data using JSONP (script tag injection) to bypass CORS.
@@ -59,7 +130,7 @@
 
       // Inject script tag to fetch the data
       const script = document.createElement('script');
-      script.src = SHEET_JSON_URL;
+      script.src = getSavedSheetUrl();
       script.onerror = function() {
         cleanup();
         reject(new Error('Failed to load sheet data'));
@@ -250,6 +321,7 @@
     refreshBtn.addEventListener('click', () => refreshData());
     toolbar.appendChild(refreshBtn);
 
+
     // Stats
     const totalEntries = tripData.days.reduce((sum, day) => sum + day.locations.length, 0);
     const totalDays = tripData.days.length;
@@ -275,6 +347,48 @@
       const dayEl = renderDay(day);
       container.appendChild(dayEl);
     });
+
+    // Sheet URL footer
+    const footer = document.createElement('div');
+    footer.className = 'trip-sheet-footer';
+    const footerLabel = document.createElement('span');
+    footerLabel.className = 'trip-sheet-footer-label';
+    footerLabel.textContent = 'Google Sheet';
+    const footerInput = document.createElement('input');
+    footerInput.type = 'text';
+    footerInput.className = 'trip-sheet-footer-input';
+    footerInput.value = getSavedSheetUrl() || '';
+    const footerSave = document.createElement('button');
+    footerSave.className = 'trip-refresh-btn trip-sheet-footer-save';
+    footerSave.textContent = 'Save';
+    footerSave.style.display = 'none';
+
+    footerInput.addEventListener('input', () => {
+      const changed = footerInput.value.trim() !== (getSavedSheetUrl() || '');
+      footerSave.style.display = changed ? '' : 'none';
+    });
+
+    function applyNewUrl() {
+      const val = footerInput.value.trim();
+      if (!val) return;
+      const newUrl = saveSheetUrl(val);
+      footerInput.value = newUrl;
+      footerSave.style.display = 'none';
+      // Clear cache and reload
+      localStorage.removeItem(CACHE_KEY);
+      localStorage.removeItem(CACHE_TS_KEY);
+      initialized = false;
+      tripData = null;
+      init();
+    }
+
+    footerSave.addEventListener('click', applyNewUrl);
+    footerInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') applyNewUrl(); });
+
+    footer.appendChild(footerLabel);
+    footer.appendChild(footerInput);
+    footer.appendChild(footerSave);
+    container.appendChild(footer);
 
     // Initialize maps after DOM is ready
     requestAnimationFrame(() => {
@@ -742,6 +856,12 @@
 
     const container = document.getElementById('trip-container');
     if (!container) return;
+
+    // If no sheet URL is configured, show setup form
+    if (!getSavedSheetUrl()) {
+      renderSetup(container);
+      return;
+    }
 
     // Try loading from cache first
     const cached = loadCachedData();
