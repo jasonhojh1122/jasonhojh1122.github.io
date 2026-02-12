@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visitation - Italian Art</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-home">Italian Art</a>
+      <button class="copy-filename-btn" onclick="(function(btn){var f=location.pathname.split('/').pop()||'index.html';navigator.clipboard.writeText(f).then(function(){btn.classList.add('copied');btn.setAttribute('data-filename',f);setTimeout(function(){btn.classList.remove('copied')},1200)});})(this)" aria-label="Copy filename"></button>
+    </nav>
+  </header>
+  <script>document.querySelector('.copy-filename-btn').setAttribute('data-filename',location.pathname.split('/').pop()||'index.html');</script>
+  <main>
+    
+    <article class="bible-story-page">
+      <h1>Visitation</h1>
+      
+      <div class="external-links"><a href="https://en.wikipedia.org/wiki/Visitation_(Christianity" target="_blank" rel="noopener noreferrer">Wikipedia</a></div>
+
+      
+      <section class="summary-section">
+        <h2>Summary</h2>
+        <div class="summary"><p>The visit of the Virgin Mary to her cousin Elizabeth, who was pregnant with John the Baptist. Mary&#39;s greeting caused the unborn John to leap in Elizabeth&#39;s womb, and Elizabeth declared Mary blessed. Mary responded with the Magnificat.</p>
+</div>
+      </section>
+      
+
+      
+      <div class="biblical-reference">
+        <h3>Biblical Reference</h3>
+        <p><strong>Book(s):</strong> Luke</p>
+        <p><strong>Chapters/Verses:</strong> Luke 1:39-56</p>
+      </div>
+  
+
+      <section class="artworks-section">
+        <h2>Artworks Depicting This Story</h2>
+        
+        <div class="artwork-grid">
+          <p class="no-artworks">No artworks documented yet.</p>
+        </div>
+      </section>
+    </article>
+  
+  </main>
+  <footer>
+    <p>Travel notes on Italian Art · <a href="../credits.html">Image Credits</a></p>
+    <p class="last-updated">Last updated: February 12, 2026</p>
+  </footer>
+  <script src="../sort.js"></script>
+  <script src="../tabs.js"></script>
+  <script src="../search.js"></script>
+
+</body>
+</html>
