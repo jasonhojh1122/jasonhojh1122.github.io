@@ -1,0 +1,325 @@
+:root {
+  /* ── Collector's Vault Theme ── */
+  /* Primary accent — antique gold */
+  --color-accent: #c9a84c;
+  --color-accent-rgb: 201, 168, 76;
+
+  /* Semantic color groups */
+  --color-xp: #c9a84c;
+  --color-xp-rgb: 201, 168, 76;
+  --color-genre: #b497d6;
+  --color-genre-rgb: 180, 151, 214;
+  --color-tag: #7ab8a0;
+  --color-tag-rgb: 122, 184, 160;
+  --color-playtime: #d4896a;
+  --color-playtime-rgb: 212, 137, 106;
+
+  /* Legacy / misc */
+  --color-green: #7ab8a0;
+  --color-green-rgb: 122, 184, 160;
+  --color-amber: #d4896a;
+  --color-amber-rgb: 212, 137, 106;
+  --color-red: #c96b6b;
+  --color-yellow: #c9a84c;
+
+  /* Roundness — slightly larger for that plush feel */
+  --radius-lg: 1rem;
+  --radius-md: 0.625rem;
+  --radius-sm: 0.375rem;
+
+  /* Vault surfaces */
+  --vault-bg: #08080c;
+  --vault-card: #111118;
+  --vault-card-border: rgba(201, 168, 76, 0.08);
+  --vault-card-hover-border: rgba(201, 168, 76, 0.22);
+  --vault-text: #d4cec0;
+  --vault-muted: #7a756a;
+  --vault-divider: rgba(201, 168, 76, 0.06);
+}
+
+body {
+  background: var(--vault-bg);
+  background-attachment: fixed;
+  color: var(--vault-text);
+  font-family: "PT Mono", monospace;
+  min-height: 100vh;
+}
+
+/* Subtle linen/paper texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.012;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* Warm ambient glow from top */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse 80% 35% at 50% -5%, rgba(201, 168, 76, 0.04) 0%, transparent 70%);
+}
+
+body > * { position: relative; z-index: 1; }
+
+/* Scrollbar — gold tinted */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(201, 168, 76, 0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(201, 168, 76, 0.35); }
+
+/* Game card uniform sizing */
+game-card {
+  display: block;
+  height: 100%;
+}
+
+/* ── Card 3D tilt + vault lift effect ── */
+.card-tilt-wrap {
+  perspective: 800px;
+  height: 100%;
+}
+.card-adj-shadow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+  background: transparent;
+}
+.card-tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+  position: relative;
+}
+.card-tilt:hover {
+  z-index: 10;
+  transform: scale(1.04) translateY(-4px);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(201, 168, 76, 0.06);
+}
+
+/* Shine — warm gold tone */
+.card-tilt .card-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  background: radial-gradient(
+    circle at var(--shine-x, 50%) var(--shine-y, 50%),
+    rgba(201, 168, 76, 0.12) 0%,
+    rgba(255, 255, 255, 0.04) 30%,
+    transparent 60%
+  );
+}
+.card-tilt:hover .card-shine {
+  opacity: 1;
+}
+
+/* Edge glow — gold */
+.card-tilt .card-edge-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.08);
+}
+.card-tilt:hover .card-edge-glow {
+  opacity: 1;
+}
+
+/* ── Gold foil line at top of each card ── */
+.card-foil-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 4;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(201, 168, 76, 0.3) 15%,
+    rgba(201, 168, 76, 0.6) 50%,
+    rgba(201, 168, 76, 0.3) 85%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.card-tilt:hover .card-foil-line {
+  opacity: 1;
+}
+
+/* ── Holographic favorite card effect ── */
+.card-holo .card-holo-foil {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 3;
+  mix-blend-mode: screen;
+  transition: opacity 0.35s ease-out;
+  background:
+    linear-gradient(
+      133deg,
+      rgba(201, 168, 76, 0.14) 0%,
+      rgba(180, 151, 214, 0.14) 25%,
+      rgba(122, 184, 160, 0.14) 50%,
+      rgba(212, 137, 106, 0.14) 75%,
+      rgba(201, 168, 76, 0.14) 100%
+    );
+  background-size: 400% 400%;
+  background-position: var(--holo-x, 50%) var(--holo-y, 50%);
+  background-repeat: no-repeat;
+}
+.card-holo:hover .card-holo-foil {
+  opacity: 1;
+}
+
+.card-holo .card-holo-border {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  padding: 1.5px;
+  background:
+    linear-gradient(
+      var(--holo-angle, 133deg),
+      #c9a84c,
+      #b497d6,
+      #7ab8a0,
+      #d4896a,
+      #c9a84c
+    );
+  background-size: 300% 300%;
+  background-position: var(--holo-x, 50%) var(--holo-y, 50%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.card-holo:hover .card-holo-border {
+  opacity: 1;
+  padding: 2px;
+}
+
+/* Override default edge glow for holo cards */
+.card-holo:hover .card-edge-glow {
+  opacity: 0;
+}
+
+/* Idle shimmer — slower, more luxurious */
+@keyframes holoIdle {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.card-holo .card-holo-foil {
+  animation: holoIdle 5s ease-in-out infinite;
+  opacity: 0.8;
+}
+.card-holo:hover .card-holo-foil {
+  animation: none;
+}
+
+.card-holo .card-holo-border {
+  animation: holoIdle 5s ease-in-out infinite;
+  opacity: 0.8;
+}
+.card-holo:hover .card-holo-border {
+  animation: none;
+}
+
+/* Card entrance — slower, more dignified */
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.card-enter {
+  animation: cardReveal 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* Filter bar — gold tinted divider */
+.filter-bar {
+  position: relative;
+  border-top: 1px solid var(--vault-divider);
+}
+
+/* ── Game detail modal ── */
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: modalFadeIn 0.25s ease-out;
+}
+.modal-content {
+  position: relative;
+  background: linear-gradient(160deg, #13131a 0%, #0c0c11 100%);
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  max-width: 820px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(201, 168, 76, 0.04),
+    inset 0 1px 0 rgba(201, 168, 76, 0.06);
+  animation: modalSlideUp 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Image gradient overlay — matches vault card bg */
+.img-gradient::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, var(--vault-card) 0%, transparent 100%);
+  pointer-events: none;
+}

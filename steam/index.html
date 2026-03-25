@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Collection — Steam Library</title>
+  <link rel="icon" id="favicon" type="image/png" href="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Mono&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            steam: {
+              dark: "#0a0a0f",
+              darker: "#060609",
+              card: "#111118",
+              accent: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-accent-rgb), ${opacityValue})` : `var(--color-accent)`,
+              text: "#d4cec0",
+              muted: "#7a756a",
+            },
+            sxp: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-xp-rgb), ${opacityValue})` : `var(--color-xp)`,
+            sgenre: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-genre-rgb), ${opacityValue})` : `var(--color-genre)`,
+            stag: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-tag-rgb), ${opacityValue})` : `var(--color-tag)`,
+            splaytime: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-playtime-rgb), ${opacityValue})` : `var(--color-playtime)`,
+            sgreen: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-green-rgb), ${opacityValue})` : `var(--color-green)`,
+            samber: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-amber-rgb), ${opacityValue})` : `var(--color-amber)`,
+          },
+          fontFamily: {
+            display: ["EB Garamond", "serif"],
+            body: ["PT Mono", "monospace"],
+          },
+          borderRadius: {
+            sm: "var(--radius-sm)",
+            md: "var(--radius-md)",
+            lg: "var(--radius-md)",
+            xl: "var(--radius-lg)",
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "lit": "https://esm.sh/lit@3",
+        "lit/": "https://esm.sh/lit@3/"
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<steam-app></steam-app>
+
+<script type="module">
+import { LitElement, html, css, render as litRender } from "lit";
+
+// ── Utility ──
+function formatPlaytime(minutes) {
+  if (minutes < 60) return `${minutes}m`;
+  const h = (minutes / 60).toFixed(1);
+  return `${h}h`;
+}
+
+function parseReleaseDate(value) {
+  if (!value) return 0;
+  const months = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  const match = String(value).match(/(\d{1,2})\s+(\w{3}),?\s+(\d{4})/);
+  if (match) return new Date(Number(match[3]), months[match[2]] ?? 0, Number(match[1])).getTime();
+  const d = new Date(value);
+  return isNaN(d) ? 0 : d.getTime();
+}
+
+function formatDate(value) {
+  if (!value) return "N/A";
+  let d;
+  if (typeof value === "number") {
+    if (value === 0) return "Never";
+    d = new Date(value * 1000);
+  } else {
+    // Steam dates like "16 Nov, 2004" — parse manually
+    const months = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+    const match = String(value).match(/(\d{1,2})\s+(\w{3}),?\s+(\d{4})/);
+    if (match) {
+      d = new Date(Number(match[3]), months[match[2]] ?? 0, Number(match[1]));
+    } else {
+      d = new Date(value);
+    }
+    if (isNaN(d)) return value;
+  }
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}/${m}/${day}`;
+}
+
+function timeAgo(timestamp) {
+  if (!timestamp) return "Never";
+  const diff = Date.now() / 1000 - timestamp;
+  if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+  if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+  if (diff < 2592000) return `${Math.floor(diff / 86400)}d ago`;
+  return new Date(timestamp * 1000).toLocaleDateString();
+}
+
+// ── SteamApp (root) ──
+class SteamApp extends LitElement {
+  createRenderRoot() { return this; }
+
+  static properties = {
+    games: { type: Array },
+    allGames: { type: Array },
+    searchTerm: { type: String },
+    selectedGenres: { type: Array },
+    selectedTags: { type: Array },
+    sortBy: { type: String },
+    loading: { type: Boolean },
+    error: { type: String },
+    allGenres: { type: Array },
+    allTags: { type: Array },
+    selectedPlaytimes: { type: Array },
+    chartsExpanded: { type: Boolean },
+    profile: { type: Object },
+    selectedGame: { type: Object },
+  };
+
+  constructor() {
+    super();
+    this.games = [];
+    this.allGames = [];
+    this.searchTerm = "";
+    this.selectedGenres = [];
+    this.selectedTags = [];
+    this.sortBy = "last-played";
+    this.loading = true;
+    this.error = null;
+    this.allGenres = [];
+    this.allTags = [];
+    this.selectedPlaytimes = [];
+    this.chartsExpanded = false;
+    this.profile = null;
+    this.selectedGame = null;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.addEventListener("game-detail-open", (e) => {
+      this.selectedGame = e.detail.game;
+    });
+    this._readURL();
+    this._loadData();
+    window.addEventListener("popstate", () => this._readURL());
+  }
+
+  _readURL() {
+    const p = new URLSearchParams(window.location.search);
+    if (p.has("q")) this.searchTerm = p.get("q");
+    if (p.has("sort")) this.sortBy = p.get("sort");
+    if (p.has("genres")) this.selectedGenres = p.get("genres").split(",").filter(Boolean);
+    if (p.has("tags")) this.selectedTags = p.get("tags").split(",").filter(Boolean);
+    if (p.has("playtime")) this.selectedPlaytimes = p.get("playtime").split(",").filter(Boolean);
+    if (p.has("charts")) this.chartsExpanded = p.get("charts") === "1";
+  }
+
+  _pushURL() {
+    const p = new URLSearchParams();
+    if (this.searchTerm) p.set("q", this.searchTerm);
+    if (this.sortBy && this.sortBy !== "last-played") p.set("sort", this.sortBy);
+    if (this.selectedGenres.length) p.set("genres", this.selectedGenres.join(","));
+    if (this.selectedTags.length) p.set("tags", this.selectedTags.join(","));
+    if (this.selectedPlaytimes.length) p.set("playtime", this.selectedPlaytimes.join(","));
+    if (this.chartsExpanded) p.set("charts", "1");
+    const qs = p.toString();
+    const url = qs ? `?${qs}` : window.location.pathname;
+    history.replaceState(null, "", url);
+  }
+
+  async _loadData() {
+    try {
+      const res = await fetch("data/library.json");
+      if (!res.ok) throw new Error("Could not load library.json. Run `npm run build` first.");
+      const data = await res.json();
+      this.allGames = data.games;
+      this.games = data.games;
+      this.profile = data.meta?.profile || null;
+      if (this.profile?.avatarUrl) document.getElementById("favicon").href = this.profile.avatarUrl;
+      const genreSet = new Set();
+      data.games.forEach((g) => g.genres?.forEach((genre) => genreSet.add(genre)));
+      this.allGenres = [...genreSet].sort();
+      const tagCounts = {};
+      data.games.forEach((g) => g.tags?.forEach((tag) => {
+        tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+      }));
+      this.allTags = ["Favorite", ...Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).map((e) => e[0])];
+    } catch (e) {
+      this.error = e.message;
+    }
+    this.loading = false;
+  }
+
+  get filteredGames() {
+    let result = this.allGames;
+
+    if (this.searchTerm) {
+      const term = this.searchTerm.toLowerCase();
+      result = result.filter((g) => {
+        const fields = [
+          g.name, g.developer, g.shortDescription, g.releaseDate,
+          ...(g.genres || []), ...(g.tags || []),
+        ];
+        return fields.some((f) => f && f.toLowerCase().includes(term));
+      });
+    }
+
+    if (this.selectedGenres.length > 0) {
+      result = result.filter((g) =>
+        this.selectedGenres.some((sg) => g.genres?.includes(sg))
+      );
+    }
+
+    if (this.selectedTags.length > 0) {
+      result = result.filter((g) =>
+        this.selectedTags.some((st) => st === "Favorite" ? g.favorite : g.tags?.includes(st))
+      );
+    }
+
+    if (this.selectedPlaytimes.length > 0) {
+      result = result.filter((g) => {
+        const h = g.playtimeForever / 60;
+        return this.selectedPlaytimes.some((bucket) => {
+          switch (bucket) {
+            case "0h": return h === 0;
+            case "<1h": return h > 0 && h < 1;
+            case "1-10h": return h >= 1 && h < 10;
+            case "10-50h": return h >= 10 && h < 50;
+            case "50-100h": return h >= 50 && h < 100;
+            case "100h+": return h >= 100;
+            default: return true;
+          }
+        });
+      });
+    }
+
+    const comparators = {
+      "playtime-desc": (a, b) => b.playtimeForever - a.playtimeForever,
+      "playtime-asc": (a, b) => a.playtimeForever - b.playtimeForever,
+      "name-asc": (a, b) => a.name.localeCompare(b.name),
+      "name-desc": (a, b) => b.name.localeCompare(a.name),
+      "last-played": (a, b) => b.lastPlayed - a.lastPlayed,
+      "achievements": (a, b) => {
+        const aP = a.achievements ? a.achievements.unlocked / a.achievements.total : 0;
+        const bP = b.achievements ? b.achievements.unlocked / b.achievements.total : 0;
+        return bP - aP;
+      },
+      "release-newest": (a, b) => parseReleaseDate(b.releaseDate) - parseReleaseDate(a.releaseDate),
+      "release-oldest": (a, b) => parseReleaseDate(a.releaseDate) - parseReleaseDate(b.releaseDate),
+    };
+
+    return [...result].sort(comparators[this.sortBy] || comparators["playtime-desc"]);
+  }
+
+  get stats() {
+    const games = this.allGames;
+    const totalPlaytime = games.reduce((s, g) => s + g.playtimeForever, 0);
+    const played = games.filter((g) => g.playtimeForever > 0);
+    const avgPlaytime = played.length ? totalPlaytime / played.length : 0;
+    const totalAchievements = games.reduce((s, g) => s + (g.achievements?.unlocked || 0), 0);
+    const totalPossible = games.reduce((s, g) => s + (g.achievements?.total || 0), 0);
+    return { totalPlaytime, avgPlaytime, played: played.length, unplayed: games.length - played.length, totalAchievements, totalPossible };
+  }
+
+  _onSearch(e) { this.searchTerm = e.detail; this._pushURL(); }
+  _onSort(e) { this.sortBy = e.detail; this._pushURL(); }
+  _onGenre(e) { this.selectedGenres = e.detail; this._pushURL(); }
+  _onTag(e) { this.selectedTags = e.detail; this._pushURL(); }
+  _onPlaytime(e) { this.selectedPlaytimes = e.detail; this._pushURL(); }
+  _onChartsToggle() { this.chartsExpanded = !this.chartsExpanded; this._pushURL(); }
+  _onChartFilter(e) {
+    const { type, value } = e.detail;
+    const toggle = (arr) => arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value];
+    if (type === "genre") this.selectedGenres = toggle(this.selectedGenres);
+    else if (type === "tag") this.selectedTags = toggle(this.selectedTags);
+    else if (type === "playtime") this.selectedPlaytimes = toggle(this.selectedPlaytimes);
+    this._pushURL();
+  }
+
+  render() {
+    if (this.loading) return html`<div class="flex items-center justify-center h-screen text-xl text-steam-muted font-body">Loading library...</div>`;
+    if (this.error) return html`<div class="flex items-center justify-center h-screen text-xl text-red-400 font-body">${this.error}</div>`;
+
+    const stats = this.stats;
+    const filtered = this.filteredGames;
+
+    return html`
+      <div style="display:flex;flex-direction:column;height:100vh;overflow:hidden;">
+        <!-- Part 1: Header (never scrolls, cards can't appear here) -->
+        <div style="flex:none;">
+          <div class="max-w-[1400px] mx-auto px-6 pt-8 pb-4">
+            <div class="flex items-center justify-between gap-4 flex-wrap">
+              ${this.profile ? html`
+                <div class="flex items-center gap-4">
+                  <img src="${this.profile.avatarUrl}" alt="${this.profile.personaName}" class="w-12 h-12 rounded-full ring-2 ring-steam-accent/30 shadow-lg shadow-black/40" />
+                  <div class="flex flex-col gap-1">
+                    <div class="flex items-center gap-2.5">
+                      <span class="font-display text-2xl font-600 tracking-normal text-white leading-none">${this.profile.personaName}'s Library</span>
+                      <span class="inline-flex items-center justify-center px-2 py-0.5 rounded bg-sxp/20 text-sxp text-xs font-bold font-body">Lv ${this.profile.level}</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div class="w-32 h-1 rounded-full bg-white/[0.06] overflow-hidden">
+                        <div class="h-full rounded-full bg-sxp transition-all" style="width: ${this.profile.xp + this.profile.xpNeededToLevelUp > 0 ? Math.round(this.profile.xp / (this.profile.xp + this.profile.xpNeededToLevelUp) * 100) : 0}%"></div>
+                      </div>
+                      <span class="text-steam-muted text-[10px] font-body">${this.profile.xp} / ${this.profile.xp + this.profile.xpNeededToLevelUp} XP</span>
+                    </div>
+                  </div>
+                </div>
+              ` : html`
+                <div>
+                  <h1 class="font-display text-4xl font-700 tracking-normal text-white leading-none">The Collection</h1>
+                </div>
+              `}
+              <div class="flex items-center gap-4 text-xs font-body">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-steam-muted">Games</span>
+                  <span class="text-white font-semibold">${this.allGames.length}</span>
+                </div>
+                <div class="w-px h-3 bg-steam-accent/15"></div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-steam-muted">Playtime</span>
+                  <span class="text-white font-semibold">${formatPlaytime(stats.totalPlaytime)}</span>
+                </div>
+                <div class="w-px h-3 bg-steam-accent/15"></div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-steam-muted">Played</span>
+                  <span class="text-white font-semibold">${stats.played}</span>
+                  <span class="text-steam-muted">/</span>
+                  <span class="text-white font-semibold">${stats.unplayed}</span>
+                </div>
+                <div class="w-px h-3 bg-steam-accent/15"></div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-steam-muted">Achievements</span>
+                  <span class="text-white font-semibold">${stats.totalPossible ? Math.round(stats.totalAchievements / stats.totalPossible * 100) : 0}%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filter-bar">
+            <div class="max-w-[1400px] mx-auto px-6 py-3">
+              <search-bar
+                .allGenres=${this.allGenres}
+                .selectedGenres=${this.selectedGenres}
+                .allTags=${this.allTags}
+                .selectedTags=${this.selectedTags}
+                .sortBy=${this.sortBy}
+                .selectedPlaytimes=${this.selectedPlaytimes}
+                .chartsExpanded=${this.chartsExpanded}
+                @search-changed=${this._onSearch}
+                @sort-changed=${this._onSort}
+                @genre-changed=${this._onGenre}
+                @tag-changed=${this._onTag}
+                @playtime-changed=${this._onPlaytime}
+                @charts-toggled=${this._onChartsToggle}
+              ></search-bar>
+            </div>
+          </div>
+          ${this.chartsExpanded ? html`
+            <div class="max-w-[1400px] mx-auto px-6 py-3">
+              <stats-panel .games=${this.allGames} .expanded=${this.chartsExpanded} .selectedGenres=${this.selectedGenres} .selectedTags=${this.selectedTags} .selectedPlaytimes=${this.selectedPlaytimes} @chart-filter=${this._onChartFilter}></stats-panel>
+            </div>
+          ` : ""}
+        </div>
+
+        <!-- Part 2: Scrollable cards area -->
+        <div style="flex:1;overflow-y:auto;min-height:0;">
+          <div class="max-w-[1400px] mx-auto px-6 py-3">
+            <div class="text-xs text-steam-muted font-body">${filtered.length} games</div>
+          </div>
+          <div class="max-w-[1400px] mx-auto px-6 pb-8">
+            <game-grid .games=${filtered}></game-grid>
+          </div>
+        </div>
+      </div>
+
+      ${this.selectedGame ? html`
+        <game-detail-modal .game=${this.selectedGame} @close-modal=${() => this.selectedGame = null}></game-detail-modal>
+      ` : ""}
+    `;
+  }
+}
+customElements.define("steam-app", SteamApp);
+
+// ── SearchBar ──
+class SearchBar extends LitElement {
+  createRenderRoot() { return this; }
+
+  static properties = {
+    allGenres: { type: Array },
+    selectedGenres: { type: Array },
+    allTags: { type: Array },
+    selectedTags: { type: Array },
+    selectedPlaytimes: { type: Array },
+    sortBy: { type: String },
+    chartsExpanded: { type: Boolean },
+    genreDropdownOpen: { type: Boolean },
+    tagDropdownOpen: { type: Boolean },
+    playtimeDropdownOpen: { type: Boolean },
+    sortDropdownOpen: { type: Boolean },
+    genreSearch: { type: String },
+    tagSearch: { type: String },
+  };
+
+  constructor() {
+    super();
+    this.genreDropdownOpen = false;
+    this.tagDropdownOpen = false;
+    this.playtimeDropdownOpen = false;
+    this.sortDropdownOpen = false;
+    this.genreSearch = "";
+    this.tagSearch = "";
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    // Portal container for dropdown panels — appended to document.body to escape all stacking contexts
+    this._portal = document.createElement("div");
+    this._portal.id = "dropdown-portal";
+    document.body.appendChild(this._portal);
+
+    this._outsideClickHandler = (e) => {
+      if (!this.contains(e.target) && !this._portal.contains(e.target)) {
+        this._closeAllDropdowns();
+      }
+    };
+    document.addEventListener("click", this._outsideClickHandler);
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    document.removeEventListener("click", this._outsideClickHandler);
+    this._portal?.remove();
+  }
+
+  _closeAllDropdowns() {
+    this.genreDropdownOpen = false;
+    this.tagDropdownOpen = false;
+    this.playtimeDropdownOpen = false;
+    this.sortDropdownOpen = false;
+    this.genreSearch = "";
+    this.tagSearch = "";
+    this._dropdownRect = null;
+  }
+
+  _openDropdown(name, e) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const wasOpen = this[name];
+    this._closeAllDropdowns();
+    if (!wasOpen) {
+      this[name] = true;
+      this._dropdownRect = rect;
+    }
+  }
+
+  _getPanelStyle(alignRight = false) {
+    if (!this._dropdownRect) return "";
+    const r = this._dropdownRect;
+    const left = alignRight ? "auto" : `${r.left}px`;
+    const right = alignRight ? `${window.innerWidth - r.right}px` : "auto";
+    return `position:fixed; top:${r.bottom + 4}px; left:${left}; right:${right}; z-index:99999;`;
+  }
+
+  updated() {
+    litRender(this._renderPortalContent(), this._portal);
+  }
+
+  _renderPortalContent() {
+    const panelClass = "bg-[#0e0e14] border border-white/[0.06] rounded-lg shadow-[0_16px_48px_rgba(0,0,0,0.5)] w-56";
+    const itemClass = "flex items-center gap-2 px-3 py-1.5 hover:bg-white/[0.04] cursor-pointer text-sm text-steam-text";
+    const searchClass = "w-full bg-white/[0.04] border border-white/[0.06] rounded px-2 py-1 text-xs text-white placeholder-steam-muted focus:outline-none focus:border-steam-accent/25";
+    const filteredGenres = (this.allGenres || []).filter(g => !this.genreSearch || g.toLowerCase().includes(this.genreSearch.toLowerCase()));
+    const filteredTags = (this.allTags || []).filter(t => !this.tagSearch || t.toLowerCase().includes(this.tagSearch.toLowerCase())).slice(0, 50);
+    const playtimeOptions = [
+      { value: "0h", label: "Unplayed (0h)" },
+      { value: "<1h", label: "Under 1h" },
+      { value: "1-10h", label: "1 - 10h" },
+      { value: "10-50h", label: "10 - 50h" },
+      { value: "50-100h", label: "50 - 100h" },
+      { value: "100h+", label: "100h+" },
+    ];
+    const sortOptions = [
+      { value: "playtime-desc", label: "Playtime (most)" },
+      { value: "playtime-asc", label: "Playtime (least)" },
+      { value: "name-asc", label: "Name (A-Z)" },
+      { value: "name-desc", label: "Name (Z-A)" },
+      { value: "release-newest", label: "Release (newest)" },
+      { value: "release-oldest", label: "Release (oldest)" },
+      { value: "last-played", label: "Last Played" },
+      { value: "achievements", label: "Achievement %" },
+    ];
+
+    if (this.genreDropdownOpen) {
+      return html`
+        <div class="${panelClass} max-h-72 flex flex-col" style=${this._getPanelStyle()}>
+          <div class="p-2 border-b border-white/[0.06]">
+            <input type="text" placeholder="Filter genres..." .value=${this.genreSearch} @input=${(e) => { this.genreSearch = e.target.value; }} class=${searchClass} />
+          </div>
+          <div class="overflow-y-auto">
+            ${this.selectedGenres.length ? html`
+              <button @click=${() => this._clearGenres()} class="w-full text-left px-3 py-1.5 text-xs text-red-400 hover:bg-white/5">Clear all</button>
+            ` : ""}
+            ${filteredGenres.map((genre) => html`
+              <label class=${itemClass}>
+                <input type="checkbox" .checked=${this.selectedGenres.includes(genre)} @change=${() => this._toggleGenre(genre)} class="accent-[var(--color-genre)]" />
+                ${genre}
+              </label>
+            `)}
+          </div>
+        </div>
+      `;
+    }
+    if (this.tagDropdownOpen) {
+      return html`
+        <div class="${panelClass} max-h-72 flex flex-col" style=${this._getPanelStyle()}>
+          <div class="p-2 border-b border-white/[0.06]">
+            <input type="text" placeholder="Filter tags..." .value=${this.tagSearch} @input=${(e) => { this.tagSearch = e.target.value; }} class=${searchClass} />
+          </div>
+          <div class="overflow-y-auto">
+            ${this.selectedTags.length ? html`
+              <button @click=${() => this._clearTags()} class="w-full text-left px-3 py-1.5 text-xs text-red-400 hover:bg-white/5">Clear all</button>
+            ` : ""}
+            ${filteredTags.map((tag) => html`
+              <label class="${itemClass} ${tag === 'Favorite' ? 'text-yellow-400' : ''}">
+                <input type="checkbox" .checked=${this.selectedTags.includes(tag)} @change=${() => this._toggleTag(tag)} class="${tag === 'Favorite' ? 'accent-yellow-400' : 'accent-[var(--color-tag)]'}" />
+                ${tag === 'Favorite' ? html`<svg class="w-3 h-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>` : ''}
+                ${tag}
+              </label>
+            `)}
+          </div>
+        </div>
+      `;
+    }
+    if (this.playtimeDropdownOpen) {
+      return html`
+        <div class="${panelClass} w-48" style=${this._getPanelStyle()}>
+          ${(this.selectedPlaytimes || []).length ? html`
+            <button @click=${() => this._clearPlaytimes()} class="w-full text-left px-3 py-1.5 text-xs text-red-400 hover:bg-white/5">Clear all</button>
+          ` : ""}
+          ${playtimeOptions.map((opt) => html`
+            <label class=${itemClass}>
+              <input type="checkbox" .checked=${(this.selectedPlaytimes || []).includes(opt.value)} @change=${() => this._togglePlaytime(opt.value)} class="accent-[var(--color-playtime)]" />
+              ${opt.label}
+            </label>
+          `)}
+        </div>
+      `;
+    }
+    if (this.sortDropdownOpen) {
+      return html`
+        <div class="${panelClass} w-52" style=${this._getPanelStyle(true)}>
+          ${sortOptions.map((opt) => html`
+            <label class=${itemClass}>
+              <input type="radio" name="sort" .checked=${this.sortBy === opt.value} @change=${() => this._selectSort(opt.value)} class="accent-[var(--color-accent)]" />
+              ${opt.label}
+            </label>
+          `)}
+        </div>
+      `;
+    }
+    return html``;
+  }
+
+  _toggleCharts() {
+    this.dispatchEvent(new CustomEvent("charts-toggled"));
+  }
+
+  _onInput(e) {
+    this.dispatchEvent(new CustomEvent("search-changed", { detail: e.target.value }));
+  }
+
+  _toggleGenre(genre) {
+    const current = [...this.selectedGenres];
+    const idx = current.indexOf(genre);
+    if (idx >= 0) current.splice(idx, 1);
+    else current.push(genre);
+    this.dispatchEvent(new CustomEvent("genre-changed", { detail: current }));
+  }
+
+  _clearGenres() {
+    this.dispatchEvent(new CustomEvent("genre-changed", { detail: [] }));
+  }
+
+  _toggleTag(tag) {
+    const current = [...this.selectedTags];
+    const idx = current.indexOf(tag);
+    if (idx >= 0) current.splice(idx, 1);
+    else current.push(tag);
+    this.dispatchEvent(new CustomEvent("tag-changed", { detail: current }));
+  }
+
+  _clearTags() {
+    this.dispatchEvent(new CustomEvent("tag-changed", { detail: [] }));
+  }
+
+  _togglePlaytime(value) {
+    const current = [...(this.selectedPlaytimes || [])];
+    const idx = current.indexOf(value);
+    if (idx >= 0) current.splice(idx, 1);
+    else current.push(value);
+    this.dispatchEvent(new CustomEvent("playtime-changed", { detail: current }));
+  }
+
+  _clearPlaytimes() {
+    this.dispatchEvent(new CustomEvent("playtime-changed", { detail: [] }));
+  }
+
+  _selectSort(value) {
+    this.sortDropdownOpen = false;
+    this.dispatchEvent(new CustomEvent("sort-changed", { detail: value }));
+  }
+
+  render() {
+    const chevron = html`<svg class="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>`;
+    const btnClass = "bg-white/[0.03] border border-white/[0.06] rounded-lg px-3 py-1.5 text-sm text-steam-text hover:border-steam-accent/25 flex items-center gap-2 transition-all duration-200";
+
+    return html`
+      <div class="flex flex-wrap gap-2.5 items-center font-body">
+        <input
+          type="text"
+          placeholder="Search games..."
+          @input=${this._onInput}
+          class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-3 py-1.5 text-sm text-white placeholder-steam-muted outline-none focus:border-steam-accent/30 flex-1 min-w-[180px] transition-all duration-200"
+        />
+
+        <button @click=${(e) => this._openDropdown("genreDropdownOpen", e)} class=${btnClass}>
+          Genres ${this.selectedGenres.length ? html`<span class="bg-sgenre/20 text-sgenre text-[10px] rounded-full px-1.5 font-semibold">${this.selectedGenres.length}</span>` : ""}
+          ${chevron}
+        </button>
+
+        <button @click=${(e) => this._openDropdown("tagDropdownOpen", e)} class=${btnClass}>
+          Tags ${this.selectedTags.length ? html`<span class="bg-stag/20 text-stag text-[10px] rounded-full px-1.5 font-semibold">${this.selectedTags.length}</span>` : ""}
+          ${chevron}
+        </button>
+
+        <button @click=${(e) => this._openDropdown("playtimeDropdownOpen", e)} class=${btnClass}>
+          Playtime ${(this.selectedPlaytimes || []).length ? html`<span class="bg-splaytime/20 text-splaytime text-[10px] rounded-full px-1.5 font-semibold">${this.selectedPlaytimes.length}</span>` : ""}
+          ${chevron}
+        </button>
+
+        <button @click=${(e) => this._openDropdown("sortDropdownOpen", e)} class=${btnClass}>
+          Sort
+          ${chevron}
+        </button>
+
+        <button
+          @click=${this._toggleCharts}
+          class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-2.5 py-1.5 text-steam-text hover:border-steam-accent/25 transition-all duration-200 ${this.chartsExpanded ? "border-steam-accent/25 text-steam-accent" : ""}"
+          title="Toggle charts"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zm6-4a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zm6-3a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/></svg>
+        </button>
+
+      </div>
+    `;
+  }
+}
+customElements.define("search-bar", SearchBar);
+
+// ── GameGrid ──
+class GameGrid extends LitElement {
+  createRenderRoot() { return this; }
+
+  static properties = {
+    games: { type: Array },
+  };
+
+  render() {
+    return html`
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        ${this.games.map((g, i) => html`<game-card .game=${g} .index=${i}></game-card>`)}
+      </div>
+    `;
+  }
+}
+customElements.define("game-grid", GameGrid);
+
+// ── Card ──
+class GameCard extends LitElement {
+  createRenderRoot() { return this; }
+
+  static properties = {
+    game: { type: Object },
+    index: { type: Number },
+  };
+
+  _getAdjacentCards() {
+    const grid = this.closest("game-grid");
+    if (!grid) return { cards: [], cols: 0, idx: -1 };
+    const cards = [...grid.querySelectorAll("game-card")];
+    const idx = cards.indexOf(this);
+    const gridEl = grid.querySelector(".grid");
+    const cols = gridEl
+      ? getComputedStyle(gridEl).gridTemplateColumns.split(" ").length
+      : 4;
+    return { cards, cols, idx };
+  }
+
+  _clearAdjacentShadows() {
+    if (this._shadowedCards) {
+      for (const el of this._shadowedCards) {
+        const overlay = el.querySelector(".card-adj-shadow");
+        if (overlay) overlay.style.opacity = "0";
+      }
+      this._shadowedCards = null;
+    }
+  }
+
+  _onMouseMove(e) {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateY = ((x - centerX) / centerX) * 12;
+    const rotateX = ((centerY - y) / centerY) * 12;
+    const shineX = (x / rect.width) * 100;
+    const shineY = (y / rect.height) * 100;
+
+    card.style.transform = `scale(1.04) translateY(-4px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    const accentRgb = getComputedStyle(document.documentElement).getPropertyValue("--color-accent-rgb").trim();
+    card.style.boxShadow = `0 25px 50px rgba(0,0,0,0.5), 0 0 30px rgba(${accentRgb},0.06)`;
+    card.style.setProperty("--shine-x", `${100 - shineX}%`);
+    card.style.setProperty("--shine-y", `${100 - shineY}%`);
+
+    // Holographic foil position for favorite cards
+    if (this.game?.favorite) {
+      const pingPong = (v) => { const t = v % 200; return t <= 100 ? t : 200 - t; };
+      const holoX = pingPong(shineX * 3);
+      const holoY = pingPong(shineY * 3);
+      const angle = Math.atan2(y - centerY, x - centerX) * (180 / Math.PI) + 180;
+      card.style.setProperty("--holo-x", `${holoX}%`);
+      card.style.setProperty("--holo-y", `${holoY}%`);
+      card.style.setProperty("--holo-angle", `${angle}deg`);
+    }
+
+    // Adjacent card shadows
+    const { cards, cols, idx } = this._getAdjacentCards();
+    if (idx < 0) return;
+
+    const row = Math.floor(idx / cols);
+    const shadowed = new Set();
+
+    const neighbors = [
+      { di: -1,    side: "right", condition: idx % cols > 0,              intensity: Math.abs(rotateY) / 12, active: rotateY > 0 },
+      { di: 1,     side: "left",  condition: idx % cols < cols - 1,       intensity: Math.abs(rotateY) / 12, active: rotateY < 0 },
+      { di: -cols, side: "bottom",condition: row > 0,                     intensity: Math.abs(rotateX) / 12, active: rotateX < 0 },
+      { di: cols,  side: "top",   condition: idx + cols < cards.length,   intensity: Math.abs(rotateX) / 12, active: rotateX > 0 },
+    ];
+
+    const gradients = {
+      left:   "linear-gradient(to right, rgba(0,0,0,0.8), transparent 60%)",
+      right:  "linear-gradient(to left, rgba(0,0,0,0.8), transparent 60%)",
+      top:    "linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 60%)",
+      bottom: "linear-gradient(to top, rgba(0,0,0,0.8), transparent 60%)",
+    };
+
+    for (const n of neighbors) {
+      if (!n.condition) continue;
+      const neighbor = cards[idx + n.di];
+      if (!neighbor) continue;
+      const overlay = neighbor.querySelector(".card-adj-shadow");
+      if (!overlay) continue;
+
+      if (n.active && n.intensity >= 0.05) {
+        overlay.style.background = gradients[n.side];
+        overlay.style.opacity = String(Math.min(n.intensity, 1));
+        shadowed.add(neighbor);
+      } else {
+        overlay.style.opacity = "0";
+      }
+    }
+
+    // Clear any previously shadowed cards that are no longer active
+    if (this._shadowedCards) {
+      for (const el of this._shadowedCards) {
+        if (!shadowed.has(el)) {
+          const overlay = el.querySelector(".card-adj-shadow");
+          if (overlay) overlay.style.opacity = "0";
+        }
+      }
+    }
+    this._shadowedCards = shadowed;
+  }
+
+  _onMouseLeave(e) {
+    const card = e.currentTarget;
+    card.style.transform = "";
+    card.style.boxShadow = "";
+    this._clearAdjacentShadows();
+  }
+
+  _openDetail() {
+    this.dispatchEvent(new CustomEvent("game-detail-open", {
+      detail: { game: this.game },
+      bubbles: true,
+      composed: true,
+    }));
+  }
+
+  render() {
+    const g = this.game;
+    const achPct = g.achievements ? Math.round((g.achievements.unlocked / g.achievements.total) * 100) : null;
+    const delay = Math.min((this.index || 0) * 40, 800);
+
+    const isFav = g.favorite;
+
+    return html`
+      <div class="card-tilt-wrap card-enter relative" style="animation-delay: ${delay}ms">
+        <div class="card-adj-shadow rounded-xl"></div>
+        <div @click=${this._openDetail}
+           class="card-tilt ${isFav ? 'card-holo' : ''} bg-[#111118] border border-white/[0.05] rounded-xl overflow-hidden flex flex-col h-full cursor-pointer shadow-[inset_0_1px_0_rgba(255,255,255,0.03),0_2px_8px_rgba(0,0,0,0.3)]"
+           @mousemove=${this._onMouseMove}
+           @mouseleave=${this._onMouseLeave}>
+          <div class="card-shine"></div>
+          <div class="card-edge-glow"></div>
+          <div class="card-foil-line"></div>
+          ${isFav ? html`
+            <div class="card-holo-foil"></div>
+            <div class="card-holo-border"></div>
+          ` : ''}
+          <div class="relative img-gradient overflow-hidden">
+            <img src="${g.headerImage}" alt="${g.name}" class="block w-full aspect-[460/215] object-cover scale-[1.01]" loading="lazy" />
+            ${g.playtime2Weeks > 0 ? html`
+              <div class="absolute top-2 right-2 bg-stag/80 text-white text-[9px] px-2 py-0.5 rounded font-medium font-body tracking-widest uppercase backdrop-blur-sm">Playing</div>
+            ` : ""}
+            <div class="absolute bottom-2 left-2.5 right-2.5 z-10">
+              <div class="text-white font-display font-600 text-[17px] leading-snug line-clamp-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]" title="${g.name}">${g.name}</div>
+            </div>
+          </div>
+          <div class="p-3 font-body flex flex-col flex-1">
+            <div class="flex items-center justify-between text-xs mb-1.5">
+              <span class="text-splaytime font-display font-600 text-[13px] tracking-wide">${formatPlaytime(g.playtimeForever)}</span>
+              ${g.developer ? html`<span class="text-steam-muted truncate">${g.developer}</span>` : ""}
+            </div>
+            <div class="flex items-center justify-between text-[11px] text-steam-muted mb-2">
+              <span>Released</span>
+              <span>${formatDate(g.releaseDate)}</span>
+            </div>
+            <div class="flex items-center justify-between text-[11px] text-steam-muted mb-2">
+              <span>Last played</span>
+              <span>${formatDate(g.lastPlayed)}</span>
+            </div>
+            <div class="mt-auto">
+              ${g.genres?.length ? html`
+                <div class="flex flex-wrap gap-1 mb-1.5">
+                  ${g.genres.slice(0, 3).map((genre) => html`
+                    <span class="text-[10px] bg-sgenre/10 text-sgenre/80 px-1.5 py-0.5 rounded-md">${genre}</span>
+                  `)}
+                </div>
+              ` : ""}
+              ${g.tags?.length ? html`
+                <div class="flex flex-wrap gap-1">
+                  ${g.tags.slice(0, 3).map((tag) => html`
+                    <span class="text-[10px] bg-stag/10 text-stag/80 px-1.5 py-0.5 rounded-md">${tag}</span>
+                  `)}
+                </div>
+              ` : ""}
+              ${achPct !== null ? html`
+                <div class="mt-2 flex items-center gap-2">
+                  <div class="flex-1 bg-white/[0.06] rounded-full h-[3px]">
+                    <div class="bg-steam-accent/50 h-[3px] rounded-full" style="width:${achPct}%"></div>
+                  </div>
+                  <div class="text-[10px] text-steam-muted whitespace-nowrap">${g.achievements.unlocked}/${g.achievements.total}</div>
+                </div>
+              ` : html`
+                <div class="mt-2">
+                  <div class="bg-white/[0.06] rounded-full h-[3px]"></div>
+                </div>
+              `}
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+}
+customElements.define("game-card", GameCard);
+
+// ── Detail Modal ──
+class GameDetailModal extends LitElement {
+  createRenderRoot() { return this; }
+
+  static properties = {
+    game: { type: Object },
+  };
+
+  connectedCallback() {
+    super.connectedCallback();
+    this._keyHandler = (e) => { if (e.key === "Escape") this._close(); };
+    document.addEventListener("keydown", this._keyHandler);
+    document.body.style.overflow = "hidden";
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    document.removeEventListener("keydown", this._keyHandler);
+    document.body.style.overflow = "";
+  }
+
+  _close() {
+    this.dispatchEvent(new CustomEvent("close-modal", { bubbles: true, composed: true }));
+  }
+
+  _onBackdropClick(e) {
+    if (e.target === e.currentTarget) this._close();
+  }
+
+  render() {
+    const g = this.game;
+    if (!g) return "";
+    const achPct = g.achievements ? Math.round((g.achievements.unlocked / g.achievements.total) * 100) : null;
+    const storeUrl = `https://store.steampowered.com/app/${g.appid}`;
+
+    return html`
+      <div class="modal-backdrop" @click=${this._onBackdropClick}>
+        <div class="modal-content">
+          <!-- Close button -->
+          <button @click=${this._close}
+            class="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-black/60 hover:bg-black/80 text-white/70 hover:text-white transition-all border border-white/[0.06] shadow-lg"
+            style="backdrop-filter:blur(4px)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+
+          <div class="flex flex-col md:flex-row gap-6 pt-6">
+            <!-- Left: Card visual -->
+            <div class="md:w-[380px] flex-shrink-0">
+              <img src="${g.headerImage}" alt="${g.name}" class="w-full rounded-lg" />
+              <div class="mt-4">
+                <h2 class="text-white font-display font-700 text-3xl leading-tight">${g.name}</h2>
+                ${g.developer ? html`
+                  <div class="text-sm text-steam-muted mt-1 font-body">${g.developer}</div>
+                ` : ""}
+              </div>
+              <table class="mt-3 font-body w-full text-sm" style="border-collapse:separate;border-spacing:0 4px">
+                <tr>
+                  <td class="text-[11px] text-steam-muted">Release date</td>
+                  <td class="text-right text-white font-body" style="font-weight:600">${formatDate(g.releaseDate)}</td>
+                </tr>
+                <tr>
+                  <td class="text-[11px] text-steam-muted">Last played</td>
+                  <td class="text-right text-white font-body" style="font-weight:600">${formatDate(g.lastPlayed)}</td>
+                </tr>
+                <tr>
+                  <td class="text-[11px] text-steam-muted">Total playtime</td>
+                  <td class="text-right text-splaytime font-display" style="font-weight:600">${formatPlaytime(g.playtimeForever)}</td>
+                </tr>
+                ${g.playtime2Weeks > 0 ? html`
+                  <tr>
+                    <td class="text-[11px] text-steam-muted">Last 2 weeks</td>
+                    <td class="text-right text-splaytime font-display" style="font-weight:600">${formatPlaytime(g.playtime2Weeks)}</td>
+                  </tr>
+                ` : ""}
+              </table>
+              ${achPct !== null ? html`
+                <div class="mt-3 font-body">
+                  <div class="flex items-center justify-between text-xs mb-1">
+                    <span class="text-steam-muted">Achievements</span>
+                    <span class="text-gray-400 font-semibold">${g.achievements.unlocked} / ${g.achievements.total} (${achPct}%)</span>
+                  </div>
+                  <div class="w-full bg-white/[0.06] rounded-full h-1.5">
+                    <div class="bg-steam-accent/50 h-1.5 rounded-full transition-all" style="width:${achPct}%"></div>
+                  </div>
+                </div>
+              ` : ""}
+            </div>
+
+            <!-- Right: Details -->
+            <div class="flex-1 font-body min-w-0">
+              ${g.shortDescription ? html`
+                <p class="text-steam-text text-sm leading-relaxed">${g.shortDescription}</p>
+              ` : ""}
+
+              ${g.genres?.length ? html`
+                <div class="mt-4">
+                  <div class="text-[11px] text-steam-muted uppercase tracking-[0.15em] mb-2 font-medium font-body">Genres</div>
+                  <div class="flex flex-wrap gap-1.5">
+                    ${g.genres.map((genre) => html`
+                      <span class="text-xs bg-sgenre/10 text-sgenre/80 px-2 py-1 rounded-md">${genre}</span>
+                    `)}
+                  </div>
+                </div>
+              ` : ""}
+
+              ${g.tags?.length || g.favorite ? html`
+                <div class="mt-4">
+                  <div class="text-[11px] text-steam-muted uppercase tracking-[0.15em] mb-2 font-medium font-body">Tags</div>
+                  <div class="flex flex-wrap gap-1.5">
+                    ${g.favorite ? html`
+                      <span class="inline-flex items-center gap-1 text-xs font-semibold text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded-md border border-yellow-400/20">
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        Favorite
+                      </span>
+                    ` : ""}
+                    ${(g.tags || []).map((tag) => html`
+                      <span class="text-xs bg-stag/10 text-stag/80 px-2 py-1 rounded-md">${tag}</span>
+                    `)}
+                  </div>
+                </div>
+              ` : ""}
+
+              <div class="mt-6">
+                <a href="${storeUrl}" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-2 bg-steam-accent/10 hover:bg-steam-accent/20 text-steam-accent border border-steam-accent/15 hover:border-steam-accent/30 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  View on Steam Store
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+}
+customElements.define("game-detail-modal", GameDetailModal);
+
+// ── StatsPanel ──
+class StatsPanel extends LitElement {
+  createRenderRoot() { return this; }
+
+  static properties = {
+    games: { type: Array },
+    expanded: { type: Boolean },
+    selectedGenres: { type: Array },
+    selectedTags: { type: Array },
+    selectedPlaytimes: { type: Array },
+  };
+
+  _genreData() {
+    const counts = {};
+    this.games.forEach((g) => g.genres?.forEach((genre) => {
+      counts[genre] = (counts[genre] || 0) + 1;
+    }));
+    return Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 15);
+  }
+
+  _tagData() {
+    const counts = {};
+    this.games.forEach((g) => g.tags?.forEach((tag) => {
+      counts[tag] = (counts[tag] || 0) + 1;
+    }));
+    return Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 15);
+  }
+
+  _playtimeBuckets() {
+    const buckets = { "0h": 0, "<1h": 0, "1-10h": 0, "10-50h": 0, "50-100h": 0, "100h+": 0 };
+    this.games.forEach((g) => {
+      const h = g.playtimeForever / 60;
+      if (h === 0) buckets["0h"]++;
+      else if (h < 1) buckets["<1h"]++;
+      else if (h < 10) buckets["1-10h"]++;
+      else if (h < 50) buckets["10-50h"]++;
+      else if (h < 100) buckets["50-100h"]++;
+      else buckets["100h+"]++;
+    });
+    return buckets;
+  }
+
+  updated(changed) {
+    if ((changed.has("games") || changed.has("expanded") || changed.has("selectedGenres") || changed.has("selectedTags") || changed.has("selectedPlaytimes")) && this.expanded && this.games?.length) {
+      this._renderCharts();
+    }
+  }
+
+  _makeClickHandler(filterType) {
+    return (evt, elements, chart) => {
+      if (!elements.length) return;
+      const idx = elements[0].index;
+      const label = chart.data.labels[idx];
+      this.dispatchEvent(new CustomEvent("chart-filter", { detail: { type: filterType, value: label }, bubbles: true }));
+    };
+  }
+
+  _barColors(labels, selected, activeColor, dimColor) {
+    if (!selected || selected.length === 0) return labels.map(() => activeColor);
+    return labels.map((l) => selected.includes(l) ? activeColor : dimColor);
+  }
+
+  _renderCharts() {
+    const chartOpts = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+    };
+    const gridColor = "rgba(255,255,255,0.03)";
+    const labelColor = "#7a756a";
+    const textColor = "#d4cec0";
+
+    // Read theme colors from CSS variables
+    const rs = getComputedStyle(document.documentElement);
+    const genreRgb = rs.getPropertyValue("--color-genre-rgb").trim();
+    const tagRgb = rs.getPropertyValue("--color-tag-rgb").trim();
+    const playtimeRgb = rs.getPropertyValue("--color-playtime-rgb").trim();
+    const genreColor = rs.getPropertyValue("--color-genre").trim();
+    const tagColor = rs.getPropertyValue("--color-tag").trim();
+    const playtimeColor = rs.getPropertyValue("--color-playtime").trim();
+
+    const genreCanvas = this.querySelector("#genre-chart");
+    if (genreCanvas) {
+      const existing = Chart.getChart(genreCanvas);
+      if (existing) existing.destroy();
+      const genreData = this._genreData();
+      const genreLabels = genreData.map((d) => d[0]);
+      new Chart(genreCanvas, {
+        type: "bar",
+        data: {
+          labels: genreLabels,
+          datasets: [{ data: genreData.map((d) => d[1]), backgroundColor: this._barColors(genreLabels, this.selectedGenres, genreColor, `rgba(${genreRgb},0.25)`), borderRadius: 4 }],
+        },
+        options: { ...chartOpts, indexAxis: "y", onClick: this._makeClickHandler("genre"), scales: { x: { ticks: { color: labelColor }, grid: { color: gridColor } }, y: { ticks: { color: textColor }, grid: { display: false } } } },
+      });
+    }
+
+    const tagCanvas = this.querySelector("#tag-chart");
+    if (tagCanvas) {
+      const existing = Chart.getChart(tagCanvas);
+      if (existing) existing.destroy();
+      const tagData = this._tagData();
+      const tagLabels = tagData.map((d) => d[0]);
+      new Chart(tagCanvas, {
+        type: "bar",
+        data: {
+          labels: tagLabels,
+          datasets: [{ data: tagData.map((d) => d[1]), backgroundColor: this._barColors(tagLabels, this.selectedTags, tagColor, `rgba(${tagRgb},0.25)`), borderRadius: 4 }],
+        },
+        options: { ...chartOpts, indexAxis: "y", onClick: this._makeClickHandler("tag"), scales: { x: { ticks: { color: labelColor }, grid: { color: gridColor } }, y: { ticks: { color: textColor }, grid: { display: false } } } },
+      });
+    }
+
+    const ptCanvas = this.querySelector("#playtime-chart");
+    if (ptCanvas) {
+      const existing = Chart.getChart(ptCanvas);
+      if (existing) existing.destroy();
+      const buckets = this._playtimeBuckets();
+      const ptLabels = Object.keys(buckets);
+      new Chart(ptCanvas, {
+        type: "bar",
+        data: {
+          labels: ptLabels,
+          datasets: [{ data: Object.values(buckets), backgroundColor: this._barColors(ptLabels, this.selectedPlaytimes, playtimeColor, `rgba(${playtimeRgb},0.25)`), borderRadius: 4 }],
+        },
+        options: { ...chartOpts, indexAxis: "y", onClick: this._makeClickHandler("playtime"), scales: { x: { ticks: { color: labelColor }, grid: { color: gridColor } }, y: { ticks: { color: textColor }, grid: { display: false } } } },
+      });
+    }
+  }
+
+  render() {
+    if (!this.expanded) return html``;
+    return html`
+      <div class="font-body">
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white/[0.02] border border-white/[0.04] rounded-xl p-4">
+            <h3 class="text-xs font-semibold text-steam-muted uppercase tracking-wider mb-3">Games by Genre</h3>
+            <div style="height:320px"><canvas id="genre-chart"></canvas></div>
+          </div>
+          <div class="bg-white/[0.02] border border-white/[0.04] rounded-xl p-4">
+            <h3 class="text-xs font-semibold text-steam-muted uppercase tracking-wider mb-3">Top Tags</h3>
+            <div style="height:320px"><canvas id="tag-chart"></canvas></div>
+          </div>
+          <div class="bg-white/[0.02] border border-white/[0.04] rounded-xl p-4">
+            <h3 class="text-xs font-semibold text-steam-muted uppercase tracking-wider mb-3">Playtime Distribution</h3>
+            <div style="height:320px"><canvas id="playtime-chart"></canvas></div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+}
+customElements.define("stats-panel", StatsPanel);
+</script>
+
+</body>
+</html>
