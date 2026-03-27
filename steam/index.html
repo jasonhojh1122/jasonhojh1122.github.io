@@ -129,6 +129,7 @@ class SteamApp extends LitElement {
     chartsExpanded: { type: Boolean },
     profile: { type: Object },
     selectedGame: { type: Object },
+    showBackToTop: { type: Boolean },
   };
 
   constructor() {
@@ -147,6 +148,27 @@ class SteamApp extends LitElement {
     this.chartsExpanded = false;
     this.profile = null;
     this.selectedGame = null;
+    this.showBackToTop = false;
+    this._scrollContainer = null;
+  }
+
+  updated(changed) {
+    if (!this._scrollContainer && !this.loading) {
+      this._scrollContainer = this.querySelector('[data-scroll-area]');
+      if (this._scrollContainer) {
+        this._scrollContainer.addEventListener('scroll', () => {
+          const grid = this._scrollContainer.querySelector('game-grid');
+          if (!grid) return;
+          const card = grid.querySelector('.card-tilt-wrap');
+          const rowH = card ? card.offsetHeight + 20 : 300;
+          this.showBackToTop = this._scrollContainer.scrollTop > rowH * 3;
+        }, { passive: true });
+      }
+    }
+  }
+
+  _scrollToTop() {
+    this._scrollContainer?.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   connectedCallback() {
@@ -369,15 +391,15 @@ class SteamApp extends LitElement {
               ></search-bar>
             </div>
           </div>
+        </div>
+
+        <!-- Part 2: Scrollable cards area -->
+        <div data-scroll-area style="flex:1;overflow-y:scroll;min-height:0;-webkit-overflow-scrolling:touch;">
           ${this.chartsExpanded ? html`
             <div class="max-w-[1400px] mx-auto px-6 py-3">
               <stats-panel .games=${this.allGames} .expanded=${this.chartsExpanded} .selectedGenres=${this.selectedGenres} .selectedTags=${this.selectedTags} .selectedPlaytimes=${this.selectedPlaytimes} @chart-filter=${this._onChartFilter}></stats-panel>
             </div>
           ` : ""}
-        </div>
-
-        <!-- Part 2: Scrollable cards area -->
-        <div style="flex:1;overflow-y:auto;min-height:0;">
           <div class="max-w-[1400px] mx-auto px-6 py-3">
             <div class="text-xs text-steam-muted font-body">${filtered.length} games</div>
           </div>
@@ -385,6 +407,15 @@ class SteamApp extends LitElement {
             <game-grid .games=${filtered}></game-grid>
           </div>
         </div>
+
+        <button
+          @click=${this._scrollToTop}
+          class="fixed bottom-6 right-6 z-40 w-10 h-10 rounded-full bg-steam-accent/90 text-steam-darker flex items-center justify-center shadow-lg shadow-black/40 hover:bg-steam-accent transition-all duration-300 cursor-pointer"
+          style="opacity:${this.showBackToTop ? 1 : 0};pointer-events:${this.showBackToTop ? 'auto' : 'none'};transform:translateY(${this.showBackToTop ? '0' : '1rem'})"
+          aria-label="Back to top"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+        </button>
       </div>
 
       ${this.selectedGame ? html`
@@ -719,11 +750,10 @@ class GameCard extends LitElement {
     }
   }
 
-  _onMouseMove(e) {
-    const card = e.currentTarget;
+  _applyTilt(card, clientX, clientY) {
     const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
     const rotateY = ((x - centerX) / centerX) * 12;
@@ -797,11 +827,57 @@ class GameCard extends LitElement {
     this._shadowedCards = shadowed;
   }
 
+  _onMouseMove(e) {
+    this._applyTilt(e.currentTarget, e.clientX, e.clientY);
+  }
+
   _onMouseLeave(e) {
     const card = e.currentTarget;
     card.style.transform = "";
     card.style.boxShadow = "";
     this._clearAdjacentShadows();
+  }
+
+  _onTouchStart(e) {
+    const touch = e.touches[0];
+    this._touchStartX = touch.clientX;
+    this._touchStartY = touch.clientY;
+    this._touchCard = e.currentTarget;
+    this._touchTilting = false;
+    this._touchHoldTimer = setTimeout(() => {
+      this._touchTilting = true;
+      this._touchCard.classList.add("card-tilt-active");
+      this._applyTilt(this._touchCard, touch.clientX, touch.clientY);
+    }, 200);
+  }
+
+  _onTouchMove(e) {
+    const touch = e.touches[0];
+    if (!this._touchTilting) {
+      // If finger moved significantly before hold activated, cancel tilt and allow scroll
+      const dx = touch.clientX - this._touchStartX;
+      const dy = touch.clientY - this._touchStartY;
+      if (Math.abs(dx) > 10 || Math.abs(dy) > 10) {
+        clearTimeout(this._touchHoldTimer);
+        this._touchHoldTimer = null;
+      }
+      return;
+    }
+    e.preventDefault();
+    this._applyTilt(this._touchCard, touch.clientX, touch.clientY);
+  }
+
+  _onTouchEnd() {
+    clearTimeout(this._touchHoldTimer);
+    this._touchHoldTimer = null;
+    if (this._touchCard) {
+      this._touchCard.classList.remove("card-tilt-active");
+      this._touchCard.style.transform = "";
+      this._touchCard.style.boxShadow = "";
+      this._clearAdjacentShadows();
+    }
+    this._touchTilting = false;
+    this._touchCard = null;
   }
 
   _openDetail() {
@@ -825,7 +901,11 @@ class GameCard extends LitElement {
         <div @click=${this._openDetail}
            class="card-tilt ${isFav ? 'card-holo' : ''} bg-[#111118] border border-white/[0.05] rounded-xl overflow-hidden flex flex-col h-full cursor-pointer shadow-[inset_0_1px_0_rgba(255,255,255,0.03),0_2px_8px_rgba(0,0,0,0.3)]"
            @mousemove=${this._onMouseMove}
-           @mouseleave=${this._onMouseLeave}>
+           @mouseleave=${this._onMouseLeave}
+           @touchstart=${this._onTouchStart}
+           @touchmove=${this._onTouchMove}
+           @touchend=${this._onTouchEnd}
+           @touchcancel=${this._onTouchEnd}>
           <div class="card-shine"></div>
           <div class="card-edge-glow"></div>
           <div class="card-foil-line"></div>

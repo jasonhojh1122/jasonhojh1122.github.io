@@ -37,12 +37,16 @@
   --vault-divider: rgba(201, 168, 76, 0.06);
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   background: var(--vault-bg);
   background-attachment: fixed;
   color: var(--vault-text);
   font-family: "PT Mono", monospace;
-  min-height: 100vh;
 }
 
 /* Subtle linen/paper texture overlay */
@@ -100,8 +104,12 @@ game-card {
   transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   will-change: transform;
   position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
-.card-tilt:hover {
+.card-tilt:hover,
+.card-tilt.card-tilt-active {
   z-index: 10;
   transform: scale(1.04) translateY(-4px);
   box-shadow:
@@ -125,7 +133,8 @@ game-card {
     transparent 60%
   );
 }
-.card-tilt:hover .card-shine {
+.card-tilt:hover .card-shine,
+.card-tilt.card-tilt-active .card-shine {
   opacity: 1;
 }
 
@@ -141,7 +150,8 @@ game-card {
   border: 1px solid rgba(201, 168, 76, 0.25);
   box-shadow: 0 0 20px rgba(201, 168, 76, 0.08);
 }
-.card-tilt:hover .card-edge-glow {
+.card-tilt:hover .card-edge-glow,
+.card-tilt.card-tilt-active .card-edge-glow {
   opacity: 1;
 }
 
@@ -164,7 +174,8 @@ game-card {
   opacity: 0;
   transition: opacity 0.3s ease-out;
 }
-.card-tilt:hover .card-foil-line {
+.card-tilt:hover .card-foil-line,
+.card-tilt.card-tilt-active .card-foil-line {
   opacity: 1;
 }
 
@@ -190,7 +201,8 @@ game-card {
   background-position: var(--holo-x, 50%) var(--holo-y, 50%);
   background-repeat: no-repeat;
 }
-.card-holo:hover .card-holo-foil {
+.card-holo:hover .card-holo-foil,
+.card-holo.card-tilt-active .card-holo-foil {
   opacity: 1;
 }
 
@@ -220,13 +232,15 @@ game-card {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
-.card-holo:hover .card-holo-border {
+.card-holo:hover .card-holo-border,
+.card-holo.card-tilt-active .card-holo-border {
   opacity: 1;
   padding: 2px;
 }
 
 /* Override default edge glow for holo cards */
-.card-holo:hover .card-edge-glow {
+.card-holo:hover .card-edge-glow,
+.card-holo.card-tilt-active .card-edge-glow {
   opacity: 0;
 }
 
@@ -240,7 +254,8 @@ game-card {
   animation: holoIdle 5s ease-in-out infinite;
   opacity: 0.8;
 }
-.card-holo:hover .card-holo-foil {
+.card-holo:hover .card-holo-foil,
+.card-holo.card-tilt-active .card-holo-foil {
   animation: none;
 }
 
@@ -248,7 +263,8 @@ game-card {
   animation: holoIdle 5s ease-in-out infinite;
   opacity: 0.8;
 }
-.card-holo:hover .card-holo-border {
+.card-holo:hover .card-holo-border,
+.card-holo.card-tilt-active .card-holo-border {
   animation: none;
 }
 
