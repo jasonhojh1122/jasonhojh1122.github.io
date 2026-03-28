@@ -27,8 +27,6 @@
             sgenre: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-genre-rgb), ${opacityValue})` : `var(--color-genre)`,
             stag: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-tag-rgb), ${opacityValue})` : `var(--color-tag)`,
             splaytime: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-playtime-rgb), ${opacityValue})` : `var(--color-playtime)`,
-            sgreen: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-green-rgb), ${opacityValue})` : `var(--color-green)`,
-            samber: ({ opacityValue }) => opacityValue !== undefined ? `rgba(var(--color-amber-rgb), ${opacityValue})` : `var(--color-amber)`,
           },
           fontFamily: {
             display: ["EB Garamond", "serif"],
@@ -69,13 +67,20 @@ function formatPlaytime(minutes) {
   return `${h}h`;
 }
 
+const STEAM_MONTHS = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+const STEAM_DATE_RE = /(\d{1,2})\s+(\w{3}),?\s+(\d{4})/;
+
+function parseSteamDate(value) {
+  const match = String(value).match(STEAM_DATE_RE);
+  if (match) return new Date(Number(match[3]), STEAM_MONTHS[match[2]] ?? 0, Number(match[1]));
+  const d = new Date(value);
+  return isNaN(d) ? null : d;
+}
+
 function parseReleaseDate(value) {
   if (!value) return 0;
-  const months = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-  const match = String(value).match(/(\d{1,2})\s+(\w{3}),?\s+(\d{4})/);
-  if (match) return new Date(Number(match[3]), months[match[2]] ?? 0, Number(match[1])).getTime();
-  const d = new Date(value);
-  return isNaN(d) ? 0 : d.getTime();
+  const d = parseSteamDate(value);
+  return d ? d.getTime() : 0;
 }
 
 function formatDate(value) {
@@ -85,20 +90,32 @@ function formatDate(value) {
     if (value === 0) return "Never";
     d = new Date(value * 1000);
   } else {
-    // Steam dates like "16 Nov, 2004" — parse manually
-    const months = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-    const match = String(value).match(/(\d{1,2})\s+(\w{3}),?\s+(\d{4})/);
-    if (match) {
-      d = new Date(Number(match[3]), months[match[2]] ?? 0, Number(match[1]));
-    } else {
-      d = new Date(value);
-    }
-    if (isNaN(d)) return value;
+    d = parseSteamDate(value);
+    if (!d) return value;
   }
   const y = d.getFullYear();
   const m = String(d.getMonth() + 1).padStart(2, "0");
   const day = String(d.getDate()).padStart(2, "0");
   return `${y}/${m}/${day}`;
+}
+
+function achPct(g) {
+  return g.achievements ? Math.round((g.achievements.unlocked / g.achievements.total) * 100) : null;
+}
+
+function toggleInArray(arr, item) {
+  const copy = [...arr];
+  const idx = copy.indexOf(item);
+  if (idx >= 0) copy.splice(idx, 1);
+  else copy.push(item);
+  return copy;
+}
+
+function countByField(games, field, limit) {
+  const counts = {};
+  games.forEach((g) => g[field]?.forEach((v) => { counts[v] = (counts[v] || 0) + 1; }));
+  const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  return limit ? sorted.slice(0, limit) : sorted;
 }
 
 function timeAgo(timestamp) {
@@ -115,7 +132,6 @@ class SteamApp extends LitElement {
   createRenderRoot() { return this; }
 
   static properties = {
-    games: { type: Array },
     allGames: { type: Array },
     searchTerm: { type: String },
     selectedGenres: { type: Array },
@@ -134,7 +150,6 @@ class SteamApp extends LitElement {
 
   constructor() {
     super();
-    this.games = [];
     this.allGames = [];
     this.searchTerm = "";
     this.selectedGenres = [];
@@ -210,17 +225,12 @@ class SteamApp extends LitElement {
       if (!res.ok) throw new Error("Could not load library.json. Run `npm run build` first.");
       const data = await res.json();
       this.allGames = data.games;
-      this.games = data.games;
       this.profile = data.meta?.profile || null;
       if (this.profile?.avatarUrl) document.getElementById("favicon").href = this.profile.avatarUrl;
       const genreSet = new Set();
       data.games.forEach((g) => g.genres?.forEach((genre) => genreSet.add(genre)));
       this.allGenres = [...genreSet].sort();
-      const tagCounts = {};
-      data.games.forEach((g) => g.tags?.forEach((tag) => {
-        tagCounts[tag] = (tagCounts[tag] || 0) + 1;
-      }));
-      this.allTags = ["Favorite", ...Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).map((e) => e[0])];
+      this.allTags = ["Favorite", ...countByField(data.games, "tags").map((e) => e[0])];
     } catch (e) {
       this.error = e.message;
     }
@@ -299,6 +309,13 @@ class SteamApp extends LitElement {
   }
 
   _onSearch(e) { this.searchTerm = e.detail; this._pushURL(); }
+  _onClearAll() {
+    this.searchTerm = "";
+    this.selectedGenres = [];
+    this.selectedTags = [];
+    this.selectedPlaytimes = [];
+    this._pushURL();
+  }
   _onSort(e) { this.sortBy = e.detail; this._pushURL(); }
   _onGenre(e) { this.selectedGenres = e.detail; this._pushURL(); }
   _onTag(e) { this.selectedTags = e.detail; this._pushURL(); }
@@ -379,6 +396,7 @@ class SteamApp extends LitElement {
                 .selectedGenres=${this.selectedGenres}
                 .allTags=${this.allTags}
                 .selectedTags=${this.selectedTags}
+                .searchTerm=${this.searchTerm}
                 .sortBy=${this.sortBy}
                 .selectedPlaytimes=${this.selectedPlaytimes}
                 .chartsExpanded=${this.chartsExpanded}
@@ -388,6 +406,7 @@ class SteamApp extends LitElement {
                 @tag-changed=${this._onTag}
                 @playtime-changed=${this._onPlaytime}
                 @charts-toggled=${this._onChartsToggle}
+                @clear-all=${this._onClearAll}
               ></search-bar>
             </div>
           </div>
@@ -436,6 +455,7 @@ class SearchBar extends LitElement {
     allTags: { type: Array },
     selectedTags: { type: Array },
     selectedPlaytimes: { type: Array },
+    searchTerm: { type: String },
     sortBy: { type: String },
     chartsExpanded: { type: Boolean },
     genreDropdownOpen: { type: Boolean },
@@ -605,6 +625,14 @@ class SearchBar extends LitElement {
     return html``;
   }
 
+  get _hasActiveFilters() {
+    return !!(this.searchTerm || this.selectedGenres.length || this.selectedTags.length || (this.selectedPlaytimes || []).length);
+  }
+
+  _clearAll() {
+    this.dispatchEvent(new CustomEvent("clear-all"));
+  }
+
   _toggleCharts() {
     this.dispatchEvent(new CustomEvent("charts-toggled"));
   }
@@ -614,11 +642,7 @@ class SearchBar extends LitElement {
   }
 
   _toggleGenre(genre) {
-    const current = [...this.selectedGenres];
-    const idx = current.indexOf(genre);
-    if (idx >= 0) current.splice(idx, 1);
-    else current.push(genre);
-    this.dispatchEvent(new CustomEvent("genre-changed", { detail: current }));
+    this.dispatchEvent(new CustomEvent("genre-changed", { detail: toggleInArray(this.selectedGenres, genre) }));
   }
 
   _clearGenres() {
@@ -626,11 +650,7 @@ class SearchBar extends LitElement {
   }
 
   _toggleTag(tag) {
-    const current = [...this.selectedTags];
-    const idx = current.indexOf(tag);
-    if (idx >= 0) current.splice(idx, 1);
-    else current.push(tag);
-    this.dispatchEvent(new CustomEvent("tag-changed", { detail: current }));
+    this.dispatchEvent(new CustomEvent("tag-changed", { detail: toggleInArray(this.selectedTags, tag) }));
   }
 
   _clearTags() {
@@ -638,11 +658,7 @@ class SearchBar extends LitElement {
   }
 
   _togglePlaytime(value) {
-    const current = [...(this.selectedPlaytimes || [])];
-    const idx = current.indexOf(value);
-    if (idx >= 0) current.splice(idx, 1);
-    else current.push(value);
-    this.dispatchEvent(new CustomEvent("playtime-changed", { detail: current }));
+    this.dispatchEvent(new CustomEvent("playtime-changed", { detail: toggleInArray(this.selectedPlaytimes || [], value) }));
   }
 
   _clearPlaytimes() {
@@ -663,9 +679,16 @@ class SearchBar extends LitElement {
         <input
           type="text"
           placeholder="Search games..."
+          .value=${this.searchTerm || ""}
           @input=${this._onInput}
           class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-3 py-1.5 text-sm text-white placeholder-steam-muted outline-none focus:border-steam-accent/30 flex-1 min-w-[180px] transition-all duration-200"
         />
+
+        ${this._hasActiveFilters ? html`
+          <button @click=${this._clearAll} class="bg-white/[0.03] border border-white/[0.06] rounded-lg px-2.5 text-red-400 hover:border-red-400/30 hover:bg-red-400/5 flex items-center justify-center self-stretch transition-all duration-200" title="Clear all filters">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        ` : ""}
 
         <button @click=${(e) => this._openDropdown("genreDropdownOpen", e)} class=${btnClass}>
           Genres ${this.selectedGenres.length ? html`<span class="bg-sgenre/20 text-sgenre text-[10px] rounded-full px-1.5 font-semibold">${this.selectedGenres.length}</span>` : ""}
@@ -719,6 +742,20 @@ class GameGrid extends LitElement {
 }
 customElements.define("game-grid", GameGrid);
 
+// Cached accent color (static, read once)
+let _accentRgbCache = null;
+function getAccentRgb() {
+  if (!_accentRgbCache) _accentRgbCache = getComputedStyle(document.documentElement).getPropertyValue("--color-accent-rgb").trim();
+  return _accentRgbCache;
+}
+
+// Shared observer to toggle .card-visible for holo animation gating
+const cardVisibilityObserver = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    entry.target.classList.toggle("card-visible", entry.isIntersecting);
+  }
+}, { rootMargin: "100px" });
+
 // ── Card ──
 class GameCard extends LitElement {
   createRenderRoot() { return this; }
@@ -728,7 +765,18 @@ class GameCard extends LitElement {
     index: { type: Number },
   };
 
+  connectedCallback() {
+    super.connectedCallback();
+    cardVisibilityObserver.observe(this);
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    cardVisibilityObserver.unobserve(this);
+  }
+
   _getAdjacentCards() {
+    if (this._adjCache) return this._adjCache;
     const grid = this.closest("game-grid");
     if (!grid) return { cards: [], cols: 0, idx: -1 };
     const cards = [...grid.querySelectorAll("game-card")];
@@ -737,7 +785,12 @@ class GameCard extends LitElement {
     const cols = gridEl
       ? getComputedStyle(gridEl).gridTemplateColumns.split(" ").length
       : 4;
-    return { cards, cols, idx };
+    this._adjCache = { cards, cols, idx };
+    return this._adjCache;
+  }
+
+  updated() {
+    this._adjCache = null;
   }
 
   _clearAdjacentShadows() {
@@ -751,6 +804,7 @@ class GameCard extends LitElement {
   }
 
   _applyTilt(card, clientX, clientY) {
+    card.style.willChange = 'transform';
     const rect = card.getBoundingClientRect();
     const x = clientX - rect.left;
     const y = clientY - rect.top;
@@ -762,8 +816,7 @@ class GameCard extends LitElement {
     const shineY = (y / rect.height) * 100;
 
     card.style.transform = `scale(1.04) translateY(-4px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    const accentRgb = getComputedStyle(document.documentElement).getPropertyValue("--color-accent-rgb").trim();
-    card.style.boxShadow = `0 25px 50px rgba(0,0,0,0.5), 0 0 30px rgba(${accentRgb},0.06)`;
+    card.style.boxShadow = `0 25px 50px rgba(0,0,0,0.5), 0 0 30px rgba(${getAccentRgb()},0.06)`;
     card.style.setProperty("--shine-x", `${100 - shineX}%`);
     card.style.setProperty("--shine-y", `${100 - shineY}%`);
 
@@ -835,6 +888,7 @@ class GameCard extends LitElement {
     const card = e.currentTarget;
     card.style.transform = "";
     card.style.boxShadow = "";
+    card.style.willChange = "";
     this._clearAdjacentShadows();
   }
 
@@ -874,6 +928,7 @@ class GameCard extends LitElement {
       this._touchCard.classList.remove("card-tilt-active");
       this._touchCard.style.transform = "";
       this._touchCard.style.boxShadow = "";
+      this._touchCard.style.willChange = "";
       this._clearAdjacentShadows();
     }
     this._touchTilting = false;
@@ -890,7 +945,7 @@ class GameCard extends LitElement {
 
   render() {
     const g = this.game;
-    const achPct = g.achievements ? Math.round((g.achievements.unlocked / g.achievements.total) * 100) : null;
+    const pct = achPct(g);
     const delay = Math.min((this.index || 0) * 40, 800);
 
     const isFav = g.favorite;
@@ -950,10 +1005,10 @@ class GameCard extends LitElement {
                   `)}
                 </div>
               ` : ""}
-              ${achPct !== null ? html`
+              ${pct !== null ? html`
                 <div class="mt-2 flex items-center gap-2">
                   <div class="flex-1 bg-white/[0.06] rounded-full h-[3px]">
-                    <div class="bg-steam-accent/50 h-[3px] rounded-full" style="width:${achPct}%"></div>
+                    <div class="bg-steam-accent/50 h-[3px] rounded-full" style="width:${pct}%"></div>
                   </div>
                   <div class="text-[10px] text-steam-muted whitespace-nowrap">${g.achievements.unlocked}/${g.achievements.total}</div>
                 </div>
@@ -1003,7 +1058,7 @@ class GameDetailModal extends LitElement {
   render() {
     const g = this.game;
     if (!g) return "";
-    const achPct = g.achievements ? Math.round((g.achievements.unlocked / g.achievements.total) * 100) : null;
+    const pct = achPct(g);
     const storeUrl = `https://store.steampowered.com/app/${g.appid}`;
 
     return html`
@@ -1046,14 +1101,14 @@ class GameDetailModal extends LitElement {
                   </tr>
                 ` : ""}
               </table>
-              ${achPct !== null ? html`
+              ${pct !== null ? html`
                 <div class="mt-3 font-body">
                   <div class="flex items-center justify-between text-xs mb-1">
                     <span class="text-steam-muted">Achievements</span>
-                    <span class="text-gray-400 font-semibold">${g.achievements.unlocked} / ${g.achievements.total} (${achPct}%)</span>
+                    <span class="text-gray-400 font-semibold">${g.achievements.unlocked} / ${g.achievements.total} (${pct}%)</span>
                   </div>
                   <div class="w-full bg-white/[0.06] rounded-full h-1.5">
-                    <div class="bg-steam-accent/50 h-1.5 rounded-full transition-all" style="width:${achPct}%"></div>
+                    <div class="bg-steam-accent/50 h-1.5 rounded-full transition-all" style="width:${pct}%"></div>
                   </div>
                 </div>
               ` : ""}
@@ -1121,21 +1176,8 @@ class StatsPanel extends LitElement {
     selectedPlaytimes: { type: Array },
   };
 
-  _genreData() {
-    const counts = {};
-    this.games.forEach((g) => g.genres?.forEach((genre) => {
-      counts[genre] = (counts[genre] || 0) + 1;
-    }));
-    return Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 15);
-  }
-
-  _tagData() {
-    const counts = {};
-    this.games.forEach((g) => g.tags?.forEach((tag) => {
-      counts[tag] = (counts[tag] || 0) + 1;
-    }));
-    return Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 15);
-  }
+  _genreData() { return countByField(this.games, "genres", 15); }
+  _tagData() { return countByField(this.games, "tags", 15); }
 
   _playtimeBuckets() {
     const buckets = { "0h": 0, "<1h": 0, "1-10h": 0, "10-50h": 0, "50-100h": 0, "100h+": 0 };
