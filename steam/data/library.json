@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-04-10T14:46:39.104Z",
+    "generatedAt": "2026-04-10T19:00:27.802Z",
     "gameCount": 398,
     "profile": {
       "personaName": "DeithZireael",
@@ -16455,7 +16455,8 @@
         "Singleplayer",
         "Anime",
         "Female Protagonist",
-        "Sandbox"
+        "Sandbox",
+        "Sexual Content"
       ],
       "releaseDate": "23 Feb, 2016",
       "developer": "Godot Engine",
@@ -16635,7 +16636,7 @@
       "appid": 2868840,
       "name": "Slay the Spire 2",
       "playtimeForever": 216,
-      "playtime2Weeks": 74,
+      "playtime2Weeks": 68,
       "lastPlayed": 1774692265,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2868840/f92b09dab91f1d1738f72fe0dd9be18dcc2901f9.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg",
