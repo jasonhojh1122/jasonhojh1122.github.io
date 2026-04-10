@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-03-25T14:32:34.491Z",
-    "gameCount": 396,
+    "generatedAt": "2026-04-10T14:46:39.104Z",
+    "gameCount": 398,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/b6c4eb969284819e00601a5812bd4bb7aed06bee_full.jpg",
       "level": 42,
-      "xp": 11448,
-      "xpNeededToLevelUp": 52
+      "xp": 11450,
+      "xpNeededToLevelUp": 50
     }
   },
   "games": [
@@ -1216,7 +1216,7 @@
       "appid": 219990,
       "name": "Grim Dawn",
       "playtimeForever": 0,
-      "playtime2Weeks": 0,
+      "playtime2Weeks": 13,
       "lastPlayed": 0,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/219990/762057f2b14463ae1cbf0701a4cdb25cf94e8a0c.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219990/header.jpg",
@@ -4019,33 +4019,6 @@
       }
     },
     {
-      "appid": 404790,
-      "name": "Godot Engine",
-      "playtimeForever": 218,
-      "playtime2Weeks": 1,
-      "lastPlayed": 1774110263,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/404790/057ae868c1d0975b941d73f58d1dc17c8a15a090.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/404790/c729c37f6f294e20b5873a560a58e5164ab35a04/header.jpg",
-      "shortDescription": "Godot Engine is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface. It provides a comprehensive set of common tools, so that you can focus on making games without having to reinvent the wheel.",
-      "genres": [
-        "Game Development"
-      ],
-      "tags": [
-        "Game Development",
-        "Software",
-        "Utilities",
-        "3D",
-        "2D",
-        "Free to Play",
-        "Programming",
-        "Story Rich",
-        "Indie"
-      ],
-      "releaseDate": "23 Feb, 2016",
-      "developer": "Godot Engine",
-      "achievements": null
-    },
-    {
       "appid": 406970,
       "name": "The Uncertain: Last Quiet Day",
       "playtimeForever": 38,
@@ -6389,6 +6362,50 @@
       }
     },
     {
+      "appid": 683320,
+      "name": "GRIS",
+      "playtimeForever": 430,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1609863457,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/683320/10a3afeac4adedb37acaec02885bdc3c102eca93.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/683320/header.jpg",
+      "shortDescription": "Gris is a hopeful young girl lost in her own world, dealing with a painful experience in her life. Her journey through sorrow is manifested in her dress, which grants new abilities to better navigate her faded reality.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Indie"
+      ],
+      "tags": [
+        "Beautiful",
+        "Atmospheric",
+        "Great Soundtrack",
+        "Indie",
+        "Female Protagonist",
+        "Adventure",
+        "Hand-drawn",
+        "Platformer",
+        "Singleplayer",
+        "Relaxing",
+        "2D",
+        "Story Rich",
+        "Puzzle",
+        "Colorful",
+        "Puzzle Platformer",
+        "Surreal",
+        "Casual",
+        "Exploration",
+        "Walking Simulator",
+        "Anime"
+      ],
+      "releaseDate": "13 Dec, 2018",
+      "developer": "Nomada Studio",
+      "achievements": {
+        "total": 17,
+        "unlocked": 7
+      },
+      "favorite": true
+    },
+    {
       "appid": 684680,
       "name": "Polygoneer",
       "playtimeForever": 0,
@@ -7098,50 +7115,6 @@
       }
     },
     {
-      "appid": 808610,
-      "name": "Run TavernQuest",
-      "playtimeForever": 354,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1772816572,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/808610/725c72ca8540d65d0e397866db652bde6bd454b3.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/808610/111c36efcb420312833979616c490a0f2a20984b/header.jpg",
-      "shortDescription": "A classic text adventure - but you're not the one playing it. You're the game master for an idiot player named STEVE. Parse the player's enigmatic commands and decide how NPCs react to him. Who knew that running an RPG would be so frustrating?",
-      "genres": [
-        "Indie Games",
-        "Adventure",
-        "Indie",
-        "RPG"
-      ],
-      "tags": [
-        "Choose Your Own Adventure",
-        "Comedy",
-        "Text-Based",
-        "Interactive Fiction",
-        "Funny",
-        "Choices Matter",
-        "Dynamic Narration",
-        "Narration",
-        "Story Rich",
-        "Fantasy",
-        "Medieval",
-        "Adventure",
-        "1980s",
-        "Retro",
-        "Indie",
-        "Satire",
-        "Old School",
-        "Singleplayer",
-        "RPG",
-        "Point & Click"
-      ],
-      "releaseDate": "27 Jan, 2026",
-      "developer": "Silicon Sundial",
-      "achievements": {
-        "total": 32,
-        "unlocked": 19
-      }
-    },
-    {
       "appid": 812810,
       "name": "missed messages.",
       "playtimeForever": 53,
@@ -7826,50 +7799,6 @@
       "achievements": {
         "total": 45,
         "unlocked": 20
-      }
-    },
-    {
-      "appid": 965580,
-      "name": "Root",
-      "playtimeForever": 36,
-      "playtime2Weeks": 36,
-      "lastPlayed": 1774101934,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/965580/18008c5174b3c919fb15543d0f7527875a2095ef.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/965580/header.jpg",
-      "shortDescription": "Might makes right in the wild wood! The award-winning board game of asymmetrical woodland warfare comes to cross-platform digital play! Combine subtle strategy and bold daring to guide your forest faction to victory!",
-      "genres": [
-        "Strategy Games",
-        "Indie",
-        "Simulation",
-        "Strategy"
-      ],
-      "tags": [
-        "Board Game",
-        "Tabletop",
-        "Strategy",
-        "War",
-        "Wargame",
-        "Cute",
-        "Indie",
-        "Turn-Based Strategy",
-        "Simulation",
-        "PvP",
-        "Multiplayer",
-        "Singleplayer",
-        "Asynchronous Multiplayer",
-        "Touch-Friendly",
-        "Card Game",
-        "Puzzle",
-        "Solitaire",
-        "Early Access",
-        "Top-Down",
-        "Cartoony"
-      ],
-      "releaseDate": "24 Sep, 2020",
-      "developer": "Dire Wolf",
-      "achievements": {
-        "total": 58,
-        "unlocked": 0
       }
     },
     {
@@ -14149,49 +14078,6 @@
       }
     },
     {
-      "appid": 2057760,
-      "name": "Esoteric Ebb",
-      "playtimeForever": 358,
-      "playtime2Weeks": 267,
-      "lastPlayed": 1774098010,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2057760/c729da9c1f3dc276b462655ac71e0a8bce54f331.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg",
-      "shortDescription": "Esoteric Ebb is a single-player CRPG inspired by the freedom of tabletop adventures. Unravel a political conspiracy with your goblin sidekick. Roll dice in tense encounters. Become a cleric of legends or completely ruin the campaign.",
-      "genres": [
-        "RPG Games",
-        "Indie",
-        "RPG"
-      ],
-      "tags": [
-        "Story Rich",
-        "Choices Matter",
-        "RPG",
-        "Dungeons & Dragons",
-        "Isometric",
-        "Interactive Fiction",
-        "CRPG",
-        "Singleplayer",
-        "Hand-drawn",
-        "Nonlinear",
-        "Political",
-        "Narrative",
-        "Adventure",
-        "Point & Click",
-        "Atmospheric",
-        "Exploration",
-        "Funny",
-        "Tabletop",
-        "Turn-Based",
-        "Character Customization"
-      ],
-      "releaseDate": "3 Mar, 2026",
-      "developer": "Christoffer Bodegård",
-      "achievements": {
-        "total": 56,
-        "unlocked": 5
-      }
-    },
-    {
       "appid": 2089600,
       "name": "Urban Myth Dissolution Center",
       "playtimeForever": 225,
@@ -14828,50 +14714,6 @@
       "releaseDate": "31 Mar, 2023",
       "developer": "landfall",
       "achievements": null
-    },
-    {
-      "appid": 2379780,
-      "name": "Balatro",
-      "playtimeForever": 304,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1768607076,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2379780/b6018068070ab0e23561694c11f7950dd6f4c752.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2379780/7a85430784e4d613cdb0547414d8cf16ffa45747/header.jpg",
-      "shortDescription": "The poker roguelike. Balatro is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.",
-      "genres": [
-        "Indie Games",
-        "Casual",
-        "Indie",
-        "Strategy"
-      ],
-      "tags": [
-        "Card Game",
-        "Roguelike",
-        "Roguelike Deckbuilder",
-        "Deckbuilding",
-        "Singleplayer",
-        "Strategy",
-        "Pixel Graphics",
-        "Replay Value",
-        "Roguelite",
-        "Indie",
-        "Turn-Based",
-        "Casual",
-        "Card Battler",
-        "Difficult",
-        "Choices Matter",
-        "2D",
-        "Relaxing",
-        "Turn-Based Strategy",
-        "Arcade",
-        "Procedural Generation"
-      ],
-      "releaseDate": "20 Feb, 2024",
-      "developer": "LocalThunk",
-      "achievements": {
-        "total": 31,
-        "unlocked": 8
-      }
     },
     {
       "appid": 2381620,
@@ -15829,47 +15671,6 @@
       }
     },
     {
-      "appid": 2868840,
-      "name": "Slay the Spire 2",
-      "playtimeForever": 30,
-      "playtime2Weeks": 34,
-      "lastPlayed": 1774363615,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2868840/f92b09dab91f1d1738f72fe0dd9be18dcc2901f9.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg",
-      "shortDescription": "The iconic roguelike deckbuilder returns. Craft a unique deck, encounter bizarre creatures, and discover relics of immense power in Slay the Spire 2!",
-      "genres": [
-        "Strategy Games",
-        "Indie",
-        "Strategy",
-        "Early Access"
-      ],
-      "tags": [
-        "Strategy",
-        "Roguelike",
-        "Card Game",
-        "Deckbuilding",
-        "Co-op",
-        "Roguelike Deckbuilder",
-        "Multiplayer",
-        "Card Battler",
-        "Turn-Based Combat",
-        "Indie",
-        "Dungeon Crawler",
-        "Roguelite",
-        "2D",
-        "Early Access",
-        "Fantasy",
-        "Replay Value",
-        "Singleplayer",
-        "Difficult",
-        "Procedural Generation",
-        "Mouse only"
-      ],
-      "releaseDate": "5 Mar, 2026",
-      "developer": "Mega Crit",
-      "achievements": null
-    },
-    {
       "appid": 2881650,
       "name": "Content Warning",
       "playtimeForever": 0,
@@ -16126,47 +15927,6 @@
       "achievements": null
     },
     {
-      "appid": 3101040,
-      "name": "Magical Girl Witch Trials",
-      "playtimeForever": 17,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1768868776,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
-      "shortDescription": "Thirteen girls awaken, only to find themselves in a prison. What awaits them: a Witch Trial. Help them prepare for the trial by exploring the prison in order to find the witch hidden amongst them. Find the witch, learn what kind of magic she holds, dispel the lies, and prepare for the execution.",
-      "genres": [
-        "Indie Games",
-        "Adventure",
-        "Indie",
-        "Simulation"
-      ],
-      "tags": [
-        "Visual Novel",
-        "Female Protagonist",
-        "Cute",
-        "Detective",
-        "Mystery",
-        "LGBTQ+",
-        "Story Rich",
-        "Sexual Content",
-        "Anime",
-        "Gore",
-        "Gothic",
-        "Multiple Endings",
-        "Violent",
-        "Investigation",
-        "Indie",
-        "Logic",
-        "Choices Matter",
-        "Choose Your Own Adventure",
-        "Adventure",
-        "Psychological Horror"
-      ],
-      "releaseDate": "18 Jul, 2025",
-      "developer": "Acacia",
-      "achievements": null
-    },
-    {
       "appid": 3107330,
       "name": "Nodebuster",
       "playtimeForever": 179,
@@ -16332,53 +16092,6 @@
       "achievements": {
         "total": 15,
         "unlocked": 1
-      }
-    },
-    {
-      "appid": 3314790,
-      "name": "CloverPit",
-      "playtimeForever": 220,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1772939145,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3314790/93fcc4d2c3798356f019f030e7599dc13bd6a95a.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3314790/8ba81356b84aa937573fa29fdd708dbd96b01537/header.jpg",
-      "shortDescription": "A rogue-lite slot machine nightmare. Gamble for your life in a never-ending debt simulator!",
-      "genres": [
-        "Strategy Games",
-        "Action",
-        "Adventure",
-        "Indie",
-        "Simulation",
-        "Sports",
-        "Strategy"
-      ],
-      "tags": [
-        "Gambling",
-        "Roguelite",
-        "Psychological Horror",
-        "Roguelike",
-        "Strategy",
-        "First-Person",
-        "Dark Humor",
-        "3D",
-        "Horror",
-        "Psychological",
-        "Dark",
-        "Singleplayer",
-        "Indie",
-        "Resource Management",
-        "Surreal",
-        "Multiple Endings",
-        "Simulation",
-        "Retro",
-        "Adventure",
-        "Action"
-      ],
-      "releaseDate": "26 Sep, 2025",
-      "developer": "Panik Arcade",
-      "achievements": {
-        "total": 30,
-        "unlocked": 12
       }
     },
     {
@@ -16718,48 +16431,425 @@
       "achievements": null
     },
     {
-      "appid": 683320,
-      "name": "GRIS",
-      "playtimeForever": 430,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1609863457,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/683320/10a3afeac4adedb37acaec02885bdc3c102eca93.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/683320/header.jpg",
-      "shortDescription": "Gris is a hopeful young girl lost in her own world, dealing with a painful experience in her life. Her journey through sorrow is manifested in her dress, which grants new abilities to better navigate her faded reality.",
+      "appid": 404790,
+      "name": "Godot Engine",
+      "playtimeForever": 435,
+      "playtime2Weeks": 217,
+      "lastPlayed": 1775660209,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/404790/057ae868c1d0975b941d73f58d1dc17c8a15a090.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/404790/c729c37f6f294e20b5873a560a58e5164ab35a04/header.jpg",
+      "shortDescription": "Godot Engine is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface. It provides a comprehensive set of common tools, so that you can focus on making games without having to reinvent the wheel.",
       "genres": [
-        "Adventure Games",
+        "Game Development"
+      ],
+      "tags": [
+        "Game Development",
+        "Software",
+        "Utilities",
+        "3D",
+        "2D",
+        "Free to Play",
+        "Programming",
+        "Story Rich",
+        "Indie",
+        "Singleplayer",
+        "Anime",
+        "Female Protagonist",
+        "Sandbox"
+      ],
+      "releaseDate": "23 Feb, 2016",
+      "developer": "Godot Engine",
+      "achievements": null
+    },
+    {
+      "appid": 1127500,
+      "name": "Mini Motorways",
+      "playtimeForever": 9,
+      "playtime2Weeks": 9,
+      "lastPlayed": 1775569609,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1127500/288282565a18a500ba96d36f4014f562d8cc1ccf.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1127500/cb2bf5e828d15bf9c2fc46effd248badfccb3df2/header.jpg",
+      "shortDescription": "Mini Motorways is a strategy simulation game about designing the road map for a growing city. Build a traffic network, one road at a time, to create a bustling metropolis. Redesign your roads and place your motorways to get everyone where they need to go. How long can you keep the city moving?",
+      "genres": [
+        "Strategy Games",
+        "Casual",
+        "Simulation",
+        "Strategy"
+      ],
+      "tags": [
+        "Strategy",
+        "Simulation",
+        "Casual",
+        "Management",
+        "Minimalist",
+        "Puzzle",
+        "Indie",
+        "Relaxing",
+        "Transportation",
+        "Singleplayer",
+        "Building",
+        "Stylized",
+        "City Builder",
+        "Top-Down",
+        "Beautiful",
+        "Resource Management",
+        "Family Friendly",
+        "Great Soundtrack",
+        "Touch-Friendly",
+        "Roguelike"
+      ],
+      "releaseDate": "20 Jul, 2021",
+      "developer": "Dinosaur Polo Club",
+      "achievements": {
+        "total": 160,
+        "unlocked": 1
+      }
+    },
+    {
+      "appid": 3101040,
+      "name": "Magical Girl Witch Trials",
+      "playtimeForever": 18,
+      "playtime2Weeks": 1,
+      "lastPlayed": 1775524964,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
+      "shortDescription": "Thirteen girls awaken, only to find themselves in a prison. What awaits them: a Witch Trial. Help them prepare for the trial by exploring the prison in order to find the witch hidden amongst them. Find the witch, learn what kind of magic she holds, dispel the lies, and prepare for the execution.",
+      "genres": [
+        "Indie Games",
         "Adventure",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Visual Novel",
+        "Female Protagonist",
+        "Cute",
+        "Detective",
+        "Mystery",
+        "LGBTQ+",
+        "Story Rich",
+        "Sexual Content",
+        "Anime",
+        "Gore",
+        "Gothic",
+        "Multiple Endings",
+        "Violent",
+        "Investigation",
+        "Indie",
+        "Logic",
+        "Choices Matter",
+        "Choose Your Own Adventure",
+        "Adventure",
+        "Psychological Horror"
+      ],
+      "releaseDate": "18 Jul, 2025",
+      "developer": "Acacia",
+      "achievements": null
+    },
+    {
+      "appid": 2057760,
+      "name": "Esoteric Ebb",
+      "playtimeForever": 429,
+      "playtime2Weeks": 70,
+      "lastPlayed": 1775218328,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2057760/c729da9c1f3dc276b462655ac71e0a8bce54f331.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg",
+      "shortDescription": "Esoteric Ebb is a single-player CRPG inspired by the freedom of tabletop adventures. Unravel a political conspiracy with your goblin sidekick. Roll dice in tense encounters. Become a cleric of legends or completely ruin the campaign.",
+      "genres": [
+        "RPG Games",
+        "Indie",
+        "RPG"
+      ],
+      "tags": [
+        "Story Rich",
+        "Choices Matter",
+        "RPG",
+        "Dungeons & Dragons",
+        "Isometric",
+        "CRPG",
+        "Interactive Fiction",
+        "Singleplayer",
+        "Hand-drawn",
+        "Nonlinear",
+        "Political",
+        "Narrative",
+        "Adventure",
+        "Point & Click",
+        "Atmospheric",
+        "Exploration",
+        "Funny",
+        "Tabletop",
+        "Turn-Based",
+        "Character Customization"
+      ],
+      "releaseDate": "3 Mar, 2026",
+      "developer": "Christoffer Bodegård",
+      "achievements": {
+        "total": 56,
+        "unlocked": 5
+      }
+    },
+    {
+      "appid": 4018950,
+      "name": "Lost Wiki: Kozlovka",
+      "playtimeForever": 92,
+      "playtime2Weeks": 92,
+      "lastPlayed": 1775002442,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4018950/d16e35372902538446b8b6fd20003b39a653d868.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4018950/62daa88bc13e7ca41c88c65260cf04cd8747ad2a/header.jpg",
+      "shortDescription": "Explore a wikipedia-like database and solve a small town mystery in Eastern Europe. Step into the shoes of a journalist in the 90s as you sprawl through articles and uncover the secrets that have been laid in front of you.",
+      "genres": [
+        "Indie Games",
         "Indie"
       ],
       "tags": [
-        "Beautiful",
-        "Atmospheric",
-        "Great Soundtrack",
-        "Indie",
-        "Female Protagonist",
-        "Adventure",
-        "Hand-drawn",
-        "Platformer",
-        "Singleplayer",
-        "Relaxing",
-        "2D",
+        "Mystery",
+        "Detective",
+        "Investigation",
+        "Conspiracy",
         "Story Rich",
         "Puzzle",
-        "Colorful",
-        "Puzzle Platformer",
-        "Surreal",
-        "Casual",
-        "Exploration",
-        "Walking Simulator",
-        "Anime"
+        "Interactive Fiction",
+        "Thriller",
+        "Simulation",
+        "Text-Based",
+        "Pixel Graphics",
+        "1990's",
+        "Atmospheric",
+        "Indie",
+        "RPG",
+        "Dark",
+        "Lore-Rich",
+        "Old School",
+        "Linear",
+        "Narration"
       ],
-      "releaseDate": "13 Dec, 2018",
-      "developer": "Nomada Studio",
+      "releaseDate": "20 Mar, 2026",
+      "developer": "yattytheman",
       "achievements": {
-        "total": 17,
-        "unlocked": 7
-      },
-      "favorite": true
+        "total": 6,
+        "unlocked": 3
+      }
+    },
+    {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "playtimeForever": 216,
+      "playtime2Weeks": 74,
+      "lastPlayed": 1774692265,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2868840/f92b09dab91f1d1738f72fe0dd9be18dcc2901f9.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg",
+      "shortDescription": "The iconic roguelike deckbuilder returns. Craft a unique deck, encounter bizarre creatures, and discover relics of immense power in Slay the Spire 2!",
+      "genres": [
+        "Strategy Games",
+        "Indie",
+        "Strategy",
+        "Early Access"
+      ],
+      "tags": [
+        "Strategy",
+        "Roguelike",
+        "Card Game",
+        "Deckbuilding",
+        "Co-op",
+        "Roguelike Deckbuilder",
+        "Multiplayer",
+        "Turn-Based Combat",
+        "Card Battler",
+        "Indie",
+        "Dungeon Crawler",
+        "Roguelite",
+        "2D",
+        "Early Access",
+        "Difficult",
+        "Singleplayer",
+        "Fantasy",
+        "Replay Value",
+        "Procedural Generation",
+        "Mouse only"
+      ],
+      "releaseDate": "5 Mar, 2026",
+      "developer": "Mega Crit",
+      "achievements": null
+    },
+    {
+      "appid": 965580,
+      "name": "Root",
+      "playtimeForever": 36,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1774101934,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/965580/18008c5174b3c919fb15543d0f7527875a2095ef.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/965580/header.jpg",
+      "shortDescription": "Might makes right in the wild wood! The award-winning board game of asymmetrical woodland warfare comes to cross-platform digital play! Combine subtle strategy and bold daring to guide your forest faction to victory!",
+      "genres": [
+        "Strategy Games",
+        "Indie",
+        "Simulation",
+        "Strategy"
+      ],
+      "tags": [
+        "Board Game",
+        "Tabletop",
+        "Strategy",
+        "War",
+        "Wargame",
+        "Cute",
+        "Indie",
+        "Turn-Based Strategy",
+        "Simulation",
+        "PvP",
+        "Multiplayer",
+        "Singleplayer",
+        "Asynchronous Multiplayer",
+        "Touch-Friendly",
+        "Card Game",
+        "Puzzle",
+        "Solitaire",
+        "Early Access",
+        "Top-Down",
+        "Cartoony"
+      ],
+      "releaseDate": "24 Sep, 2020",
+      "developer": "Dire Wolf",
+      "achievements": {
+        "total": 58,
+        "unlocked": 0
+      }
+    },
+    {
+      "appid": 3314790,
+      "name": "CloverPit",
+      "playtimeForever": 220,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1772939145,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3314790/93fcc4d2c3798356f019f030e7599dc13bd6a95a.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3314790/f9e9b212e2d5a11bb049e31639c80e49b231f427/header_alt_assets_1.jpg",
+      "shortDescription": "A rogue-lite slot machine nightmare. Gamble for your life in a never-ending debt simulator!",
+      "genres": [
+        "Strategy Games",
+        "Action",
+        "Adventure",
+        "Indie",
+        "Simulation",
+        "Sports",
+        "Strategy"
+      ],
+      "tags": [
+        "Gambling",
+        "Roguelite",
+        "Roguelike",
+        "Psychological Horror",
+        "Strategy",
+        "First-Person",
+        "Dark Humor",
+        "3D",
+        "Horror",
+        "Psychological",
+        "Dark",
+        "Singleplayer",
+        "Indie",
+        "Resource Management",
+        "Surreal",
+        "Multiple Endings",
+        "Simulation",
+        "Retro",
+        "Adventure",
+        "Action"
+      ],
+      "releaseDate": "26 Sep, 2025",
+      "developer": "Panik Arcade",
+      "achievements": {
+        "total": 30,
+        "unlocked": 12
+      }
+    },
+    {
+      "appid": 808610,
+      "name": "Run TavernQuest",
+      "playtimeForever": 354,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1772816572,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/808610/725c72ca8540d65d0e397866db652bde6bd454b3.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/808610/111c36efcb420312833979616c490a0f2a20984b/header.jpg",
+      "shortDescription": "A classic text adventure - but you're not the one playing it. You're the game master for an idiot player named STEVE. Parse the player's enigmatic commands and decide how NPCs react to him. Who knew that running an RPG would be so frustrating?",
+      "genres": [
+        "Indie Games",
+        "Adventure",
+        "Indie",
+        "RPG"
+      ],
+      "tags": [
+        "Choose Your Own Adventure",
+        "Comedy",
+        "Text-Based",
+        "Interactive Fiction",
+        "Funny",
+        "Choices Matter",
+        "Dynamic Narration",
+        "Narration",
+        "Story Rich",
+        "Fantasy",
+        "Medieval",
+        "Adventure",
+        "1980s",
+        "Retro",
+        "Indie",
+        "Satire",
+        "Old School",
+        "Singleplayer",
+        "RPG",
+        "Point & Click"
+      ],
+      "releaseDate": "27 Jan, 2026",
+      "developer": "Silicon Sundial",
+      "achievements": {
+        "total": 32,
+        "unlocked": 19
+      }
+    },
+    {
+      "appid": 2379780,
+      "name": "Balatro",
+      "playtimeForever": 304,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1768607076,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2379780/b6018068070ab0e23561694c11f7950dd6f4c752.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2379780/7a85430784e4d613cdb0547414d8cf16ffa45747/header.jpg",
+      "shortDescription": "The poker roguelike. Balatro is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.",
+      "genres": [
+        "Indie Games",
+        "Casual",
+        "Indie",
+        "Strategy"
+      ],
+      "tags": [
+        "Card Game",
+        "Roguelike",
+        "Roguelike Deckbuilder",
+        "Deckbuilding",
+        "Singleplayer",
+        "Strategy",
+        "Pixel Graphics",
+        "Replay Value",
+        "Roguelite",
+        "Indie",
+        "Turn-Based",
+        "Casual",
+        "Card Battler",
+        "Difficult",
+        "2D",
+        "Choices Matter",
+        "Relaxing",
+        "Turn-Based Strategy",
+        "Arcade",
+        "Procedural Generation"
+      ],
+      "releaseDate": "20 Feb, 2024",
+      "developer": "LocalThunk",
+      "achievements": {
+        "total": 31,
+        "unlocked": 8
+      }
     }
   ]
 }
