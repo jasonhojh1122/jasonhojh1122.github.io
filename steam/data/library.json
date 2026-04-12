@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-04-11T19:00:26.333Z",
+    "generatedAt": "2026-04-12T19:00:26.781Z",
     "gameCount": 398,
     "profile": {
       "personaName": "DeithZireael",
@@ -3591,46 +3591,6 @@
         "total": 70,
         "unlocked": 0
       }
-    },
-    {
-      "appid": 365670,
-      "name": "Blender",
-      "playtimeForever": 972,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1741443811,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/365670/48733cd333eea6e40711a1b9c6dde32ffe363ced.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/365670/99bc1f2663329e904172e27c1bb65325d9c7cf9b/header.jpg",
-      "shortDescription": "Blender is the free and open source 3D creation suite. Free to use for everyone, for any purpose.",
-      "genres": [
-        "Animation & Modeling",
-        "Design & Illustration",
-        "Video Production"
-      ],
-      "tags": [
-        "Animation & Modeling",
-        "Software",
-        "Design & Illustration",
-        "Free to Play",
-        "Game Development",
-        "Video Production",
-        "3D",
-        "Difficult",
-        "Utilities",
-        "GameMaker",
-        "Physics",
-        "Singleplayer",
-        "Survival Horror",
-        "3D Vision",
-        "Sandbox",
-        "2D",
-        "Moddable",
-        "Building",
-        "Hentai",
-        "Story Rich"
-      ],
-      "releaseDate": "2 Jan, 1994",
-      "developer": "Blender Foundation",
-      "achievements": null
     },
     {
       "appid": 368230,
@@ -14716,6 +14676,50 @@
       "achievements": null
     },
     {
+      "appid": 2379780,
+      "name": "Balatro",
+      "playtimeForever": 304,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1768607076,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2379780/b6018068070ab0e23561694c11f7950dd6f4c752.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2379780/7a85430784e4d613cdb0547414d8cf16ffa45747/header.jpg",
+      "shortDescription": "The poker roguelike. Balatro is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.",
+      "genres": [
+        "Indie Games",
+        "Casual",
+        "Indie",
+        "Strategy"
+      ],
+      "tags": [
+        "Card Game",
+        "Roguelike",
+        "Roguelike Deckbuilder",
+        "Deckbuilding",
+        "Singleplayer",
+        "Strategy",
+        "Pixel Graphics",
+        "Replay Value",
+        "Roguelite",
+        "Indie",
+        "Turn-Based",
+        "Casual",
+        "Card Battler",
+        "Difficult",
+        "2D",
+        "Choices Matter",
+        "Relaxing",
+        "Turn-Based Strategy",
+        "Arcade",
+        "Procedural Generation"
+      ],
+      "releaseDate": "20 Feb, 2024",
+      "developer": "LocalThunk",
+      "achievements": {
+        "total": 31,
+        "unlocked": 8
+      }
+    },
+    {
       "appid": 2381620,
       "name": "Steam Engine Simulator",
       "playtimeForever": 33,
@@ -16433,9 +16437,9 @@
     {
       "appid": 404790,
       "name": "Godot Engine",
-      "playtimeForever": 435,
-      "playtime2Weeks": 217,
-      "lastPlayed": 1775660209,
+      "playtimeForever": 862,
+      "playtime2Weeks": 643,
+      "lastPlayed": 1776018924,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/404790/057ae868c1d0975b941d73f58d1dc17c8a15a090.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/404790/c729c37f6f294e20b5873a560a58e5164ab35a04/header.jpg",
       "shortDescription": "Godot Engine is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface. It provides a comprehensive set of common tools, so that you can focus on making games without having to reinvent the wheel.",
@@ -16463,11 +16467,52 @@
       "achievements": null
     },
     {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "playtimeForever": 456,
+      "playtime2Weeks": 240,
+      "lastPlayed": 1776001542,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2868840/f92b09dab91f1d1738f72fe0dd9be18dcc2901f9.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg",
+      "shortDescription": "The iconic roguelike deckbuilder returns. Craft a unique deck, encounter bizarre creatures, and discover relics of immense power in Slay the Spire 2!",
+      "genres": [
+        "Strategy Games",
+        "Indie",
+        "Strategy",
+        "Early Access"
+      ],
+      "tags": [
+        "Strategy",
+        "Roguelike",
+        "Card Game",
+        "Deckbuilding",
+        "Co-op",
+        "Multiplayer",
+        "Roguelike Deckbuilder",
+        "Turn-Based Combat",
+        "Card Battler",
+        "Indie",
+        "Dungeon Crawler",
+        "Roguelite",
+        "2D",
+        "Early Access",
+        "Difficult",
+        "Singleplayer",
+        "Replay Value",
+        "Fantasy",
+        "Procedural Generation",
+        "Mouse only"
+      ],
+      "releaseDate": "5 Mar, 2026",
+      "developer": "Mega Crit",
+      "achievements": null
+    },
+    {
       "appid": 1127500,
       "name": "Mini Motorways",
-      "playtimeForever": 9,
-      "playtime2Weeks": 9,
-      "lastPlayed": 1775569609,
+      "playtimeForever": 122,
+      "playtime2Weeks": 122,
+      "lastPlayed": 1775982661,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1127500/288282565a18a500ba96d36f4014f562d8cc1ccf.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1127500/cb2bf5e828d15bf9c2fc46effd248badfccb3df2/header.jpg",
       "shortDescription": "Mini Motorways is a strategy simulation game about designing the road map for a growing city. Build a traffic network, one road at a time, to create a bustling metropolis. Redesign your roads and place your motorways to get everyone where they need to go. How long can you keep the city moving?",
@@ -16503,8 +16548,48 @@
       "developer": "Dinosaur Polo Club",
       "achievements": {
         "total": 160,
-        "unlocked": 1
+        "unlocked": 12
       }
+    },
+    {
+      "appid": 365670,
+      "name": "Blender",
+      "playtimeForever": 994,
+      "playtime2Weeks": 22,
+      "lastPlayed": 1775963634,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/365670/48733cd333eea6e40711a1b9c6dde32ffe363ced.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/365670/99bc1f2663329e904172e27c1bb65325d9c7cf9b/header.jpg",
+      "shortDescription": "Blender is the free and open source 3D creation suite. Free to use for everyone, for any purpose.",
+      "genres": [
+        "Animation & Modeling",
+        "Design & Illustration",
+        "Video Production"
+      ],
+      "tags": [
+        "Animation & Modeling",
+        "Software",
+        "Design & Illustration",
+        "Free to Play",
+        "Game Development",
+        "Video Production",
+        "3D",
+        "Difficult",
+        "Utilities",
+        "GameMaker",
+        "Physics",
+        "Singleplayer",
+        "Survival Horror",
+        "3D Vision",
+        "Sandbox",
+        "2D",
+        "Moddable",
+        "Building",
+        "Hentai",
+        "Story Rich"
+      ],
+      "releaseDate": "2 Jan, 1994",
+      "developer": "Blender Foundation",
+      "achievements": null
     },
     {
       "appid": 3101040,
@@ -16574,8 +16659,8 @@
         "Nonlinear",
         "Political",
         "Narrative",
-        "Adventure",
         "Point & Click",
+        "Adventure",
         "Atmospheric",
         "Exploration",
         "Funny",
@@ -16594,7 +16679,7 @@
       "appid": 4018950,
       "name": "Lost Wiki: Kozlovka",
       "playtimeForever": 92,
-      "playtime2Weeks": 92,
+      "playtime2Weeks": 69,
       "lastPlayed": 1775002442,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4018950/d16e35372902538446b8b6fd20003b39a653d868.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4018950/62daa88bc13e7ca41c88c65260cf04cd8747ad2a/header.jpg",
@@ -16631,47 +16716,6 @@
         "total": 6,
         "unlocked": 3
       }
-    },
-    {
-      "appid": 2868840,
-      "name": "Slay the Spire 2",
-      "playtimeForever": 216,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1774692265,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2868840/f92b09dab91f1d1738f72fe0dd9be18dcc2901f9.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg",
-      "shortDescription": "The iconic roguelike deckbuilder returns. Craft a unique deck, encounter bizarre creatures, and discover relics of immense power in Slay the Spire 2!",
-      "genres": [
-        "Strategy Games",
-        "Indie",
-        "Strategy",
-        "Early Access"
-      ],
-      "tags": [
-        "Strategy",
-        "Roguelike",
-        "Card Game",
-        "Deckbuilding",
-        "Co-op",
-        "Roguelike Deckbuilder",
-        "Multiplayer",
-        "Turn-Based Combat",
-        "Card Battler",
-        "Indie",
-        "Dungeon Crawler",
-        "Roguelite",
-        "2D",
-        "Early Access",
-        "Difficult",
-        "Singleplayer",
-        "Fantasy",
-        "Replay Value",
-        "Procedural Generation",
-        "Mouse only"
-      ],
-      "releaseDate": "5 Mar, 2026",
-      "developer": "Mega Crit",
-      "achievements": null
     },
     {
       "appid": 965580,
@@ -16806,50 +16850,6 @@
       "achievements": {
         "total": 32,
         "unlocked": 19
-      }
-    },
-    {
-      "appid": 2379780,
-      "name": "Balatro",
-      "playtimeForever": 304,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1768607076,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2379780/b6018068070ab0e23561694c11f7950dd6f4c752.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2379780/7a85430784e4d613cdb0547414d8cf16ffa45747/header.jpg",
-      "shortDescription": "The poker roguelike. Balatro is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.",
-      "genres": [
-        "Indie Games",
-        "Casual",
-        "Indie",
-        "Strategy"
-      ],
-      "tags": [
-        "Card Game",
-        "Roguelike",
-        "Roguelike Deckbuilder",
-        "Deckbuilding",
-        "Singleplayer",
-        "Strategy",
-        "Pixel Graphics",
-        "Replay Value",
-        "Roguelite",
-        "Indie",
-        "Turn-Based",
-        "Casual",
-        "Card Battler",
-        "Difficult",
-        "2D",
-        "Choices Matter",
-        "Relaxing",
-        "Turn-Based Strategy",
-        "Arcade",
-        "Procedural Generation"
-      ],
-      "releaseDate": "20 Feb, 2024",
-      "developer": "LocalThunk",
-      "achievements": {
-        "total": 31,
-        "unlocked": 8
       }
     }
   ]
