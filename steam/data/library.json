@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-04-12T19:00:26.781Z",
+    "generatedAt": "2026-04-13T19:00:24.751Z",
     "gameCount": 398,
     "profile": {
       "personaName": "DeithZireael",
@@ -16437,9 +16437,9 @@
     {
       "appid": 404790,
       "name": "Godot Engine",
-      "playtimeForever": 862,
-      "playtime2Weeks": 643,
-      "lastPlayed": 1776018924,
+      "playtimeForever": 1336,
+      "playtime2Weeks": 1118,
+      "lastPlayed": 1776095416,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/404790/057ae868c1d0975b941d73f58d1dc17c8a15a090.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/404790/c729c37f6f294e20b5873a560a58e5164ab35a04/header.jpg",
       "shortDescription": "Godot Engine is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface. It provides a comprehensive set of common tools, so that you can focus on making games without having to reinvent the wheel.",
@@ -16482,8 +16482,8 @@
         "Early Access"
       ],
       "tags": [
-        "Strategy",
         "Roguelike",
+        "Strategy",
         "Card Game",
         "Deckbuilding",
         "Co-op",
@@ -16495,8 +16495,8 @@
         "Dungeon Crawler",
         "Roguelite",
         "2D",
-        "Early Access",
         "Difficult",
+        "Early Access",
         "Singleplayer",
         "Replay Value",
         "Fantasy",
@@ -16679,7 +16679,7 @@
       "appid": 4018950,
       "name": "Lost Wiki: Kozlovka",
       "playtimeForever": 92,
-      "playtime2Weeks": 69,
+      "playtime2Weeks": 21,
       "lastPlayed": 1775002442,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4018950/d16e35372902538446b8b6fd20003b39a653d868.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4018950/62daa88bc13e7ca41c88c65260cf04cd8747ad2a/header.jpg",
