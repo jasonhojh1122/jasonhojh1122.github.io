@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-04-17T19:00:24.942Z",
+    "generatedAt": "2026-04-18T19:00:24.738Z",
     "gameCount": 399,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/b6c4eb969284819e00601a5812bd4bb7aed06bee_full.jpg",
       "level": 42,
-      "xp": 11451,
-      "xpNeededToLevelUp": 49
+      "xp": 11453,
+      "xpNeededToLevelUp": 47
     }
   },
   "games": [
@@ -1216,7 +1216,7 @@
       "appid": 219990,
       "name": "Grim Dawn",
       "playtimeForever": 0,
-      "playtime2Weeks": 13,
+      "playtime2Weeks": 0,
       "lastPlayed": 0,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/219990/762057f2b14463ae1cbf0701a4cdb25cf94e8a0c.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219990/header.jpg",
@@ -16481,9 +16481,9 @@
     {
       "appid": 1947910,
       "name": "OPUS: Prism Peak",
-      "playtimeForever": 70,
-      "playtime2Weeks": 70,
-      "lastPlayed": 1776444081,
+      "playtimeForever": 89,
+      "playtime2Weeks": 89,
+      "lastPlayed": 1776529128,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1947910/790495f1da15482e3affda87752505944c9538d9.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1947910/582757238952893925e0fd0f99167e92cd69805b/header.jpg",
       "shortDescription": "OPUS: Prism Peak is a narrative adventure where you play as a weary photographer stranded in the Dusklands, traveling with a girl who's lost her memories. Together, you'll uncover the mysteries of this land through your camera and find your way home.",
@@ -16518,7 +16518,7 @@
       "developer": "SIGONO INC.",
       "achievements": {
         "total": 42,
-        "unlocked": 2
+        "unlocked": 3
       }
     },
     {
@@ -16545,8 +16545,8 @@
         "Multiplayer",
         "Roguelike Deckbuilder",
         "Turn-Based Combat",
-        "Card Battler",
         "Indie",
+        "Card Battler",
         "Dungeon Crawler",
         "Roguelite",
         "2D",
