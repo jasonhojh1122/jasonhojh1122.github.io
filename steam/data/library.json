@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-04-18T19:00:24.738Z",
-    "gameCount": 399,
+    "generatedAt": "2026-04-19T19:00:24.476Z",
+    "gameCount": 400,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/b6c4eb969284819e00601a5812bd4bb7aed06bee_full.jpg",
@@ -16143,6 +16143,53 @@
       }
     },
     {
+      "appid": 3314790,
+      "name": "CloverPit",
+      "playtimeForever": 220,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1772939145,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3314790/93fcc4d2c3798356f019f030e7599dc13bd6a95a.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3314790/f9e9b212e2d5a11bb049e31639c80e49b231f427/header_alt_assets_1.jpg",
+      "shortDescription": "A rogue-lite slot machine nightmare. Gamble for your life in a never-ending debt simulator!",
+      "genres": [
+        "Strategy Games",
+        "Action",
+        "Adventure",
+        "Indie",
+        "Simulation",
+        "Sports",
+        "Strategy"
+      ],
+      "tags": [
+        "Gambling",
+        "Roguelite",
+        "Roguelike",
+        "Psychological Horror",
+        "Strategy",
+        "First-Person",
+        "Dark Humor",
+        "3D",
+        "Horror",
+        "Psychological",
+        "Dark",
+        "Singleplayer",
+        "Indie",
+        "Resource Management",
+        "Surreal",
+        "Multiple Endings",
+        "Simulation",
+        "Retro",
+        "Adventure",
+        "Action"
+      ],
+      "releaseDate": "26 Sep, 2025",
+      "developer": "Panik Arcade",
+      "achievements": {
+        "total": 30,
+        "unlocked": 12
+      }
+    },
+    {
       "appid": 3372980,
       "name": "Tower Wizard",
       "playtimeForever": 533,
@@ -16479,11 +16526,100 @@
       "achievements": null
     },
     {
+      "appid": 1127500,
+      "name": "Mini Motorways",
+      "playtimeForever": 210,
+      "playtime2Weeks": 210,
+      "lastPlayed": 1776609966,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1127500/288282565a18a500ba96d36f4014f562d8cc1ccf.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1127500/cb2bf5e828d15bf9c2fc46effd248badfccb3df2/header.jpg",
+      "shortDescription": "Mini Motorways is a strategy simulation game about designing the road map for a growing city. Build a traffic network, one road at a time, to create a bustling metropolis. Redesign your roads and place your motorways to get everyone where they need to go. How long can you keep the city moving?",
+      "genres": [
+        "Strategy Games",
+        "Casual",
+        "Simulation",
+        "Strategy"
+      ],
+      "tags": [
+        "Strategy",
+        "Simulation",
+        "Casual",
+        "Management",
+        "Minimalist",
+        "Puzzle",
+        "Indie",
+        "Relaxing",
+        "Transportation",
+        "Singleplayer",
+        "Building",
+        "Stylized",
+        "City Builder",
+        "Top-Down",
+        "Beautiful",
+        "Resource Management",
+        "Family Friendly",
+        "Great Soundtrack",
+        "Touch-Friendly",
+        "Roguelike"
+      ],
+      "releaseDate": "20 Jul, 2021",
+      "developer": "Dinosaur Polo Club",
+      "achievements": {
+        "total": 160,
+        "unlocked": 21
+      }
+    },
+    {
+      "appid": 2879840,
+      "name": "Escape Simulator 2",
+      "playtimeForever": 13,
+      "playtime2Weeks": 13,
+      "lastPlayed": 1776582181,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2879840/5a074cdd5ce4819bf6b201aeabd704edb13e4bb6.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2879840/f1f548311fadd53263adca4647e380eaa75588c6/header.jpg",
+      "shortDescription": "Sequel to the best-selling escape room game, brings a fresh take on first-person puzzles with a variety of new rooms to explore solo or with friends. Solve intricate puzzles, uncover hidden secrets, or craft your own escape rooms with Room Editor 2.0.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Casual",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Logic",
+        "Co-op",
+        "Puzzle",
+        "Level Editor",
+        "Escape Room",
+        "Atmospheric",
+        "Adventure",
+        "Casual",
+        "Indie",
+        "First-Person",
+        "Hidden Object",
+        "Exploration",
+        "Character Customization",
+        "Online Co-Op",
+        "Mystery",
+        "Simulation",
+        "Point & Click",
+        "Detective",
+        "Singleplayer",
+        "Investigation"
+      ],
+      "releaseDate": "27 Oct, 2025",
+      "developer": "Pine Studio",
+      "achievements": {
+        "total": 25,
+        "unlocked": 1
+      }
+    },
+    {
       "appid": 1947910,
       "name": "OPUS: Prism Peak",
-      "playtimeForever": 89,
-      "playtime2Weeks": 89,
-      "lastPlayed": 1776529128,
+      "playtimeForever": 101,
+      "playtime2Weeks": 101,
+      "lastPlayed": 1776567431,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1947910/790495f1da15482e3affda87752505944c9538d9.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1947910/582757238952893925e0fd0f99167e92cd69805b/header.jpg",
       "shortDescription": "OPUS: Prism Peak is a narrative adventure where you play as a weary photographer stranded in the Dusklands, traveling with a girl who's lost her memories. Together, you'll uncover the mysteries of this land through your camera and find your way home.",
@@ -16518,7 +16654,7 @@
       "developer": "SIGONO INC.",
       "achievements": {
         "total": 42,
-        "unlocked": 3
+        "unlocked": 4
       }
     },
     {
@@ -16593,50 +16729,6 @@
       "releaseDate": "23 Feb, 2016",
       "developer": "Godot Engine",
       "achievements": null
-    },
-    {
-      "appid": 1127500,
-      "name": "Mini Motorways",
-      "playtimeForever": 122,
-      "playtime2Weeks": 122,
-      "lastPlayed": 1775982661,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1127500/288282565a18a500ba96d36f4014f562d8cc1ccf.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1127500/cb2bf5e828d15bf9c2fc46effd248badfccb3df2/header.jpg",
-      "shortDescription": "Mini Motorways is a strategy simulation game about designing the road map for a growing city. Build a traffic network, one road at a time, to create a bustling metropolis. Redesign your roads and place your motorways to get everyone where they need to go. How long can you keep the city moving?",
-      "genres": [
-        "Strategy Games",
-        "Casual",
-        "Simulation",
-        "Strategy"
-      ],
-      "tags": [
-        "Strategy",
-        "Simulation",
-        "Casual",
-        "Management",
-        "Minimalist",
-        "Puzzle",
-        "Indie",
-        "Relaxing",
-        "Transportation",
-        "Singleplayer",
-        "Building",
-        "Stylized",
-        "City Builder",
-        "Top-Down",
-        "Beautiful",
-        "Resource Management",
-        "Family Friendly",
-        "Great Soundtrack",
-        "Touch-Friendly",
-        "Roguelike"
-      ],
-      "releaseDate": "20 Jul, 2021",
-      "developer": "Dinosaur Polo Club",
-      "achievements": {
-        "total": 160,
-        "unlocked": 12
-      }
     },
     {
       "appid": 365670,
@@ -16846,53 +16938,6 @@
       "achievements": {
         "total": 58,
         "unlocked": 0
-      }
-    },
-    {
-      "appid": 3314790,
-      "name": "CloverPit",
-      "playtimeForever": 220,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1772939145,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3314790/93fcc4d2c3798356f019f030e7599dc13bd6a95a.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3314790/f9e9b212e2d5a11bb049e31639c80e49b231f427/header_alt_assets_1.jpg",
-      "shortDescription": "A rogue-lite slot machine nightmare. Gamble for your life in a never-ending debt simulator!",
-      "genres": [
-        "Strategy Games",
-        "Action",
-        "Adventure",
-        "Indie",
-        "Simulation",
-        "Sports",
-        "Strategy"
-      ],
-      "tags": [
-        "Gambling",
-        "Roguelite",
-        "Roguelike",
-        "Psychological Horror",
-        "Strategy",
-        "First-Person",
-        "Dark Humor",
-        "3D",
-        "Horror",
-        "Psychological",
-        "Dark",
-        "Singleplayer",
-        "Indie",
-        "Resource Management",
-        "Surreal",
-        "Multiple Endings",
-        "Simulation",
-        "Retro",
-        "Adventure",
-        "Action"
-      ],
-      "releaseDate": "26 Sep, 2025",
-      "developer": "Panik Arcade",
-      "achievements": {
-        "total": 30,
-        "unlocked": 12
       }
     }
   ]
