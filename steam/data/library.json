@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-04-19T19:00:24.476Z",
+    "generatedAt": "2026-04-20T19:00:25.939Z",
     "gameCount": 400,
     "profile": {
       "personaName": "DeithZireael",
@@ -16526,6 +16526,94 @@
       "achievements": null
     },
     {
+      "appid": 1947910,
+      "name": "OPUS: Prism Peak",
+      "playtimeForever": 400,
+      "playtime2Weeks": 400,
+      "lastPlayed": 1776710039,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1947910/790495f1da15482e3affda87752505944c9538d9.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1947910/582757238952893925e0fd0f99167e92cd69805b/header.jpg",
+      "shortDescription": "OPUS: Prism Peak is a narrative adventure where you play as a weary photographer stranded in the Dusklands, traveling with a girl who's lost her memories. Together, you'll uncover the mysteries of this land through your camera and find your way home.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Indie"
+      ],
+      "tags": [
+        "Story Rich",
+        "Visual Novel",
+        "Anime",
+        "Emotional",
+        "Exploration",
+        "Nostalgia",
+        "Adventure",
+        "Atmospheric",
+        "Lore-Rich",
+        "First-Person",
+        "Drama",
+        "Narrative",
+        "Singleplayer",
+        "Narration",
+        "Walking Simulator",
+        "Mystery",
+        "Soundtrack",
+        "Female Protagonist",
+        "Relaxing",
+        "Controller"
+      ],
+      "releaseDate": "15 Apr, 2026",
+      "developer": "SIGONO INC.",
+      "achievements": {
+        "total": 40,
+        "unlocked": 4
+      }
+    },
+    {
+      "appid": 2879840,
+      "name": "Escape Simulator 2",
+      "playtimeForever": 65,
+      "playtime2Weeks": 65,
+      "lastPlayed": 1776647322,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2879840/5a074cdd5ce4819bf6b201aeabd704edb13e4bb6.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2879840/f1f548311fadd53263adca4647e380eaa75588c6/header.jpg",
+      "shortDescription": "Sequel to the best-selling escape room game, brings a fresh take on first-person puzzles with a variety of new rooms to explore solo or with friends. Solve intricate puzzles, uncover hidden secrets, or craft your own escape rooms with Room Editor 2.0.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Casual",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Logic",
+        "Co-op",
+        "Puzzle",
+        "Level Editor",
+        "Escape Room",
+        "Atmospheric",
+        "Adventure",
+        "Casual",
+        "Indie",
+        "First-Person",
+        "Hidden Object",
+        "Exploration",
+        "Character Customization",
+        "Online Co-Op",
+        "Mystery",
+        "Simulation",
+        "Point & Click",
+        "Detective",
+        "Singleplayer",
+        "Investigation"
+      ],
+      "releaseDate": "27 Oct, 2025",
+      "developer": "Pine Studio",
+      "achievements": {
+        "total": 25,
+        "unlocked": 4
+      }
+    },
+    {
       "appid": 1127500,
       "name": "Mini Motorways",
       "playtimeForever": 210,
@@ -16567,94 +16655,6 @@
       "achievements": {
         "total": 160,
         "unlocked": 21
-      }
-    },
-    {
-      "appid": 2879840,
-      "name": "Escape Simulator 2",
-      "playtimeForever": 13,
-      "playtime2Weeks": 13,
-      "lastPlayed": 1776582181,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2879840/5a074cdd5ce4819bf6b201aeabd704edb13e4bb6.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2879840/f1f548311fadd53263adca4647e380eaa75588c6/header.jpg",
-      "shortDescription": "Sequel to the best-selling escape room game, brings a fresh take on first-person puzzles with a variety of new rooms to explore solo or with friends. Solve intricate puzzles, uncover hidden secrets, or craft your own escape rooms with Room Editor 2.0.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "Casual",
-        "Indie",
-        "Simulation"
-      ],
-      "tags": [
-        "Logic",
-        "Co-op",
-        "Puzzle",
-        "Level Editor",
-        "Escape Room",
-        "Atmospheric",
-        "Adventure",
-        "Casual",
-        "Indie",
-        "First-Person",
-        "Hidden Object",
-        "Exploration",
-        "Character Customization",
-        "Online Co-Op",
-        "Mystery",
-        "Simulation",
-        "Point & Click",
-        "Detective",
-        "Singleplayer",
-        "Investigation"
-      ],
-      "releaseDate": "27 Oct, 2025",
-      "developer": "Pine Studio",
-      "achievements": {
-        "total": 25,
-        "unlocked": 1
-      }
-    },
-    {
-      "appid": 1947910,
-      "name": "OPUS: Prism Peak",
-      "playtimeForever": 101,
-      "playtime2Weeks": 101,
-      "lastPlayed": 1776567431,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1947910/790495f1da15482e3affda87752505944c9538d9.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1947910/582757238952893925e0fd0f99167e92cd69805b/header.jpg",
-      "shortDescription": "OPUS: Prism Peak is a narrative adventure where you play as a weary photographer stranded in the Dusklands, traveling with a girl who's lost her memories. Together, you'll uncover the mysteries of this land through your camera and find your way home.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "Indie"
-      ],
-      "tags": [
-        "Story Rich",
-        "Visual Novel",
-        "Emotional",
-        "Anime",
-        "Exploration",
-        "Nostalgia",
-        "Adventure",
-        "Atmospheric",
-        "Lore-Rich",
-        "First-Person",
-        "Drama",
-        "Narrative",
-        "Singleplayer",
-        "Narration",
-        "Walking Simulator",
-        "Mystery",
-        "Soundtrack",
-        "Female Protagonist",
-        "Relaxing",
-        "Controller"
-      ],
-      "releaseDate": "15 Apr, 2026",
-      "developer": "SIGONO INC.",
-      "achievements": {
-        "total": 42,
-        "unlocked": 4
       }
     },
     {
