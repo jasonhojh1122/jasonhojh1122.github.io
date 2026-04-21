@@ -1,11 +1,11 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-04-20T19:00:25.939Z",
+    "generatedAt": "2026-04-21T19:00:24.916Z",
     "gameCount": 400,
     "profile": {
       "personaName": "DeithZireael",
-      "avatarUrl": "https://avatars.steamstatic.com/b6c4eb969284819e00601a5812bd4bb7aed06bee_full.jpg",
+      "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
       "level": 42,
       "xp": 11453,
       "xpNeededToLevelUp": 47
@@ -16528,9 +16528,9 @@
     {
       "appid": 1947910,
       "name": "OPUS: Prism Peak",
-      "playtimeForever": 400,
-      "playtime2Weeks": 400,
-      "lastPlayed": 1776710039,
+      "playtimeForever": 1137,
+      "playtime2Weeks": 1137,
+      "lastPlayed": 1776755577,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1947910/790495f1da15482e3affda87752505944c9538d9.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1947910/582757238952893925e0fd0f99167e92cd69805b/header.jpg",
       "shortDescription": "OPUS: Prism Peak is a narrative adventure where you play as a weary photographer stranded in the Dusklands, traveling with a girl who's lost her memories. Together, you'll uncover the mysteries of this land through your camera and find your way home.",
@@ -16563,10 +16563,7 @@
       ],
       "releaseDate": "15 Apr, 2026",
       "developer": "SIGONO INC.",
-      "achievements": {
-        "total": 40,
-        "unlocked": 4
-      }
+      "achievements": null
     },
     {
       "appid": 2879840,
@@ -16608,16 +16605,13 @@
       ],
       "releaseDate": "27 Oct, 2025",
       "developer": "Pine Studio",
-      "achievements": {
-        "total": 25,
-        "unlocked": 4
-      }
+      "achievements": null
     },
     {
       "appid": 1127500,
       "name": "Mini Motorways",
       "playtimeForever": 210,
-      "playtime2Weeks": 210,
+      "playtime2Weeks": 200,
       "lastPlayed": 1776609966,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1127500/288282565a18a500ba96d36f4014f562d8cc1ccf.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1127500/cb2bf5e828d15bf9c2fc46effd248badfccb3df2/header.jpg",
@@ -16652,10 +16646,7 @@
       ],
       "releaseDate": "20 Jul, 2021",
       "developer": "Dinosaur Polo Club",
-      "achievements": {
-        "total": 160,
-        "unlocked": 21
-      }
+      "achievements": null
     },
     {
       "appid": 2868840,
@@ -16702,7 +16693,7 @@
       "appid": 404790,
       "name": "Godot Engine",
       "playtimeForever": 1336,
-      "playtime2Weeks": 1118,
+      "playtime2Weeks": 966,
       "lastPlayed": 1776095416,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/404790/057ae868c1d0975b941d73f58d1dc17c8a15a090.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/404790/c729c37f6f294e20b5873a560a58e5164ab35a04/header.jpg",
@@ -16774,7 +16765,7 @@
       "appid": 3101040,
       "name": "Magical Girl Witch Trials",
       "playtimeForever": 18,
-      "playtime2Weeks": 1,
+      "playtime2Weeks": 0,
       "lastPlayed": 1775524964,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
@@ -16849,10 +16840,7 @@
       ],
       "releaseDate": "3 Mar, 2026",
       "developer": "Christoffer Bodegård",
-      "achievements": {
-        "total": 56,
-        "unlocked": 5
-      }
+      "achievements": null
     },
     {
       "appid": 4018950,
@@ -16891,10 +16879,7 @@
       ],
       "releaseDate": "20 Mar, 2026",
       "developer": "yattytheman",
-      "achievements": {
-        "total": 6,
-        "unlocked": 3
-      }
+      "achievements": null
     },
     {
       "appid": 965580,
@@ -16935,10 +16920,7 @@
       ],
       "releaseDate": "24 Sep, 2020",
       "developer": "Dire Wolf",
-      "achievements": {
-        "total": 58,
-        "unlocked": 0
-      }
+      "achievements": null
     }
   ]
 }
