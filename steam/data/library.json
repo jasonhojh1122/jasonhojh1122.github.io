@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-04-24T19:00:23.722Z",
-    "gameCount": 400,
+    "generatedAt": "2026-04-25T19:00:23.624Z",
+    "gameCount": 401,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
@@ -7804,6 +7804,47 @@
         "total": 45,
         "unlocked": 20
       }
+    },
+    {
+      "appid": 965580,
+      "name": "Root",
+      "playtimeForever": 36,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1774101934,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/965580/18008c5174b3c919fb15543d0f7527875a2095ef.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/965580/header.jpg",
+      "shortDescription": "Might makes right in the wild wood! The award-winning board game of asymmetrical woodland warfare comes to cross-platform digital play! Combine subtle strategy and bold daring to guide your forest faction to victory!",
+      "genres": [
+        "Strategy Games",
+        "Indie",
+        "Simulation",
+        "Strategy"
+      ],
+      "tags": [
+        "Board Game",
+        "Tabletop",
+        "Strategy",
+        "War",
+        "Wargame",
+        "Cute",
+        "Indie",
+        "Turn-Based Strategy",
+        "Simulation",
+        "PvP",
+        "Multiplayer",
+        "Singleplayer",
+        "Asynchronous Multiplayer",
+        "Touch-Friendly",
+        "Card Game",
+        "Puzzle",
+        "Solitaire",
+        "Early Access",
+        "Top-Down",
+        "Cartoony"
+      ],
+      "releaseDate": "24 Sep, 2020",
+      "developer": "Dire Wolf",
+      "achievements": null
     },
     {
       "appid": 973810,
@@ -16526,6 +16567,46 @@
       "achievements": null
     },
     {
+      "appid": 3606890,
+      "name": "Upload Labs",
+      "playtimeForever": 7,
+      "playtime2Weeks": 7,
+      "lastPlayed": 1777075884,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3606890/5c68ccf4c818c2120966aa23ca1fbb4890d31060.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3606890/93b3fb78b1c6efc64089b7f2ef493a53aaaabecd/header.jpg",
+      "shortDescription": "A sci-fi management game where you build and optimize your computer's system from the ground up. Connect and configure interconnected nodes to efficiently download, process, and upload files. Manage your setup, solve system challenges, and become the ultimate system architect",
+      "genres": [
+        "Free To Play Games",
+        "Simulation",
+        "Free To Play"
+      ],
+      "tags": [
+        "Simulation",
+        "Automation",
+        "Idler",
+        "Free to Play",
+        "Programming",
+        "Management",
+        "Time Management",
+        "Clicker",
+        "Logic",
+        "Immersive Sim",
+        "Hacking",
+        "Economy",
+        "Sci-fi",
+        "2D",
+        "Resource Management",
+        "Sandbox",
+        "Relaxing",
+        "Mining",
+        "Futuristic",
+        "Space"
+      ],
+      "releaseDate": "3 Oct, 2025",
+      "developer": "EnigmaDev Studios",
+      "achievements": null
+    },
+    {
       "appid": 1127500,
       "name": "Mini Motorways",
       "playtimeForever": 256,
@@ -16879,47 +16960,6 @@
       ],
       "releaseDate": "20 Mar, 2026",
       "developer": "yattytheman",
-      "achievements": null
-    },
-    {
-      "appid": 965580,
-      "name": "Root",
-      "playtimeForever": 36,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1774101934,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/965580/18008c5174b3c919fb15543d0f7527875a2095ef.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/965580/header.jpg",
-      "shortDescription": "Might makes right in the wild wood! The award-winning board game of asymmetrical woodland warfare comes to cross-platform digital play! Combine subtle strategy and bold daring to guide your forest faction to victory!",
-      "genres": [
-        "Strategy Games",
-        "Indie",
-        "Simulation",
-        "Strategy"
-      ],
-      "tags": [
-        "Board Game",
-        "Tabletop",
-        "Strategy",
-        "War",
-        "Wargame",
-        "Cute",
-        "Indie",
-        "Turn-Based Strategy",
-        "Simulation",
-        "PvP",
-        "Multiplayer",
-        "Singleplayer",
-        "Asynchronous Multiplayer",
-        "Touch-Friendly",
-        "Card Game",
-        "Puzzle",
-        "Solitaire",
-        "Early Access",
-        "Top-Down",
-        "Cartoony"
-      ],
-      "releaseDate": "24 Sep, 2020",
-      "developer": "Dire Wolf",
       "achievements": null
     }
   ]
