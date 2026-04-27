@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-04-26T19:00:24.079Z",
+    "generatedAt": "2026-04-27T19:00:24.276Z",
     "gameCount": 401,
     "profile": {
       "personaName": "DeithZireael",
@@ -16793,8 +16793,8 @@
         "Multiplayer",
         "Roguelike Deckbuilder",
         "Turn-Based Combat",
-        "Indie",
         "Card Battler",
+        "Indie",
         "Dungeon Crawler",
         "Roguelite",
         "2D",
@@ -16814,7 +16814,7 @@
       "appid": 404790,
       "name": "Godot Engine",
       "playtimeForever": 1336,
-      "playtime2Weeks": 449,
+      "playtime2Weeks": 0,
       "lastPlayed": 1776095416,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/404790/057ae868c1d0975b941d73f58d1dc17c8a15a090.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/404790/c729c37f6f294e20b5873a560a58e5164ab35a04/header.jpg",
