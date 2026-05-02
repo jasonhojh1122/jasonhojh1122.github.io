@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-05-01T19:00:26.411Z",
+    "generatedAt": "2026-05-02T19:00:29.726Z",
     "gameCount": 401,
     "profile": {
       "personaName": "DeithZireael",
@@ -16691,7 +16691,7 @@
       "appid": 1947910,
       "name": "OPUS: Prism Peak",
       "playtimeForever": 1137,
-      "playtime2Weeks": 1066,
+      "playtime2Weeks": 1047,
       "lastPlayed": 1776755577,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1947910/790495f1da15482e3affda87752505944c9538d9.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1947910/582757238952893925e0fd0f99167e92cd69805b/header.jpg",
@@ -16788,8 +16788,8 @@
         "Roguelike",
         "Strategy",
         "Card Game",
-        "Deckbuilding",
         "Co-op",
+        "Deckbuilding",
         "Multiplayer",
         "Roguelike Deckbuilder",
         "Turn-Based Combat",
