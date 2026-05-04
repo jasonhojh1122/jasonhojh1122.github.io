@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-05-03T19:00:25.439Z",
+    "generatedAt": "2026-05-04T19:00:26.030Z",
     "gameCount": 401,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
       "level": 42,
-      "xp": 11454,
-      "xpNeededToLevelUp": 46
+      "xp": 11455,
+      "xpNeededToLevelUp": 45
     }
   },
   "games": [
@@ -16569,9 +16569,9 @@
     {
       "appid": 2057760,
       "name": "Esoteric Ebb",
-      "playtimeForever": 951,
-      "playtime2Weeks": 522,
-      "lastPlayed": 1777823066,
+      "playtimeForever": 1092,
+      "playtime2Weeks": 663,
+      "lastPlayed": 1777904961,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2057760/c729da9c1f3dc276b462655ac71e0a8bce54f331.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg",
       "shortDescription": "Esoteric Ebb is a single-player CRPG inspired by the freedom of tabletop adventures. Unravel a political conspiracy with your goblin sidekick. Roll dice in tense encounters. Become a cleric of legends or completely ruin the campaign.",
@@ -16691,7 +16691,7 @@
       "appid": 1947910,
       "name": "OPUS: Prism Peak",
       "playtimeForever": 1137,
-      "playtime2Weeks": 1035,
+      "playtime2Weeks": 710,
       "lastPlayed": 1776755577,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1947910/790495f1da15482e3affda87752505944c9538d9.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1947910/582757238952893925e0fd0f99167e92cd69805b/header.jpg",
@@ -16731,7 +16731,7 @@
       "appid": 2879840,
       "name": "Escape Simulator 2",
       "playtimeForever": 65,
-      "playtime2Weeks": 52,
+      "playtime2Weeks": 0,
       "lastPlayed": 1776647322,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2879840/5a074cdd5ce4819bf6b201aeabd704edb13e4bb6.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2879840/f1f548311fadd53263adca4647e380eaa75588c6/header.jpg",
@@ -16903,8 +16903,8 @@
         "Cute",
         "Detective",
         "Mystery",
-        "Story Rich",
         "LGBTQ+",
+        "Story Rich",
         "Sexual Content",
         "Anime",
         "Gore",
