@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-05-05T19:00:23.903Z",
+    "generatedAt": "2026-05-06T19:00:25.508Z",
     "gameCount": 401,
     "profile": {
       "personaName": "DeithZireael",
@@ -16569,9 +16569,9 @@
     {
       "appid": 2057760,
       "name": "Esoteric Ebb",
-      "playtimeForever": 1243,
-      "playtime2Weeks": 814,
-      "lastPlayed": 1777995233,
+      "playtimeForever": 1313,
+      "playtime2Weeks": 884,
+      "lastPlayed": 1778079692,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2057760/c729da9c1f3dc276b462655ac71e0a8bce54f331.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg",
       "shortDescription": "Esoteric Ebb is a single-player CRPG inspired by the freedom of tabletop adventures. Unravel a political conspiracy with your goblin sidekick. Roll dice in tense encounters. Become a cleric of legends or completely ruin the campaign.",
@@ -16874,8 +16874,8 @@
         "Sandbox",
         "2D",
         "Moddable",
-        "Building",
         "Hentai",
+        "Building",
         "Story Rich"
       ],
       "releaseDate": "2 Jan, 1994",
