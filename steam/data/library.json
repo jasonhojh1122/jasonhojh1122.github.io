@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-05-07T19:00:24.187Z",
+    "generatedAt": "2026-05-08T19:00:24.573Z",
     "gameCount": 401,
     "profile": {
       "personaName": "DeithZireael",
@@ -16569,9 +16569,9 @@
     {
       "appid": 2057760,
       "name": "Esoteric Ebb",
-      "playtimeForever": 1458,
-      "playtime2Weeks": 1029,
-      "lastPlayed": 1778170780,
+      "playtimeForever": 1643,
+      "playtime2Weeks": 1214,
+      "lastPlayed": 1778255522,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2057760/c729da9c1f3dc276b462655ac71e0a8bce54f331.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg",
       "shortDescription": "Esoteric Ebb is a single-player CRPG inspired by the freedom of tabletop adventures. Unravel a political conspiracy with your goblin sidekick. Roll dice in tense encounters. Become a cleric of legends or completely ruin the campaign.",
@@ -16610,7 +16610,7 @@
       "appid": 1127500,
       "name": "Mini Motorways",
       "playtimeForever": 279,
-      "playtime2Weeks": 52,
+      "playtime2Weeks": 23,
       "lastPlayed": 1777172725,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1127500/288282565a18a500ba96d36f4014f562d8cc1ccf.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1127500/cb2bf5e828d15bf9c2fc46effd248badfccb3df2/header.jpg",
@@ -16787,14 +16787,14 @@
       "tags": [
         "Roguelike",
         "Strategy",
+        "Deckbuilding",
         "Card Game",
         "Co-op",
-        "Deckbuilding",
         "Multiplayer",
         "Roguelike Deckbuilder",
         "Turn-Based Combat",
-        "Card Battler",
         "Indie",
+        "Card Battler",
         "Roguelite",
         "Dungeon Crawler",
         "2D",
@@ -16802,9 +16802,9 @@
         "Singleplayer",
         "Early Access",
         "Replay Value",
+        "LGBTQ+",
         "Fantasy",
-        "Procedural Generation",
-        "Mouse Only"
+        "Procedural Generation"
       ],
       "releaseDate": "5 Mar, 2026",
       "developer": "Mega Crit",
