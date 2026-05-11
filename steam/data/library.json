@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-05-10T19:00:26.919Z",
-    "gameCount": 401,
+    "generatedAt": "2026-05-11T19:00:26.681Z",
+    "gameCount": 402,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
@@ -16567,6 +16567,85 @@
       "achievements": null
     },
     {
+      "appid": 4018950,
+      "name": "Lost Wiki: Kozlovka",
+      "playtimeForever": 92,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1775002442,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4018950/d16e35372902538446b8b6fd20003b39a653d868.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4018950/62daa88bc13e7ca41c88c65260cf04cd8747ad2a/header.jpg",
+      "shortDescription": "Explore a wikipedia-like database and solve a small town mystery in Eastern Europe. Step into the shoes of a journalist in the 90s as you sprawl through articles and uncover the secrets that have been laid in front of you.",
+      "genres": [
+        "Indie Games",
+        "Indie"
+      ],
+      "tags": [
+        "Mystery",
+        "Detective",
+        "Investigation",
+        "Conspiracy",
+        "Story Rich",
+        "Puzzle",
+        "Interactive Fiction",
+        "Thriller",
+        "Simulation",
+        "Text-Based",
+        "Pixel Graphics",
+        "1990's",
+        "Atmospheric",
+        "Indie",
+        "RPG",
+        "Dark",
+        "Lore-Rich",
+        "Old School",
+        "Linear",
+        "Narration"
+      ],
+      "releaseDate": "20 Mar, 2026",
+      "developer": "yattytheman",
+      "achievements": null
+    },
+    {
+      "appid": 4197610,
+      "name": "Librarian: Tidy Up the Arcane Library!",
+      "playtimeForever": 61,
+      "playtime2Weeks": 61,
+      "lastPlayed": 1778510123,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4197610/2ee4f16b8de69873c13c7e3432f126e8bde5f4ad.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4197610/2162be8e12b6bcbf696e508a4b6297c378c33bda/header.jpg",
+      "shortDescription": "Librarian: Tidy Up the Arcane Library! is a single-player simulation. You need return scattered books to proper places in an Arcane Library. As completed rows of bookshelves, you can learn ability to improve your efficiency. Use your skills and strategies to shelve 3,072 books as quick as you can.",
+      "genres": [
+        "Simulation Games",
+        "Casual",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Collectathon",
+        "Hidden Object",
+        "Puzzle",
+        "Immersive Sim",
+        "Relaxing",
+        "3D",
+        "Casual",
+        "Funny",
+        "Simulation",
+        "Realistic",
+        "Fantasy",
+        "Artificial Intelligence",
+        "Magic",
+        "Tactical",
+        "Score Attack",
+        "Atmospheric",
+        "Singleplayer",
+        "Memes",
+        "Indie"
+      ],
+      "releaseDate": "30 Apr, 2026",
+      "developer": "ArtRising",
+      "achievements": null
+    },
+    {
       "appid": 2057760,
       "name": "Esoteric Ebb",
       "playtimeForever": 2256,
@@ -16785,7 +16864,6 @@
         "Early Access"
       ],
       "tags": [
-        "LGBTQ+",
         "Roguelike",
         "Card Game",
         "Deckbuilding",
@@ -16799,12 +16877,13 @@
         "Roguelite",
         "Difficult",
         "Dungeon Crawler",
+        "Early Access",
         "2D",
         "Singleplayer",
-        "Early Access",
         "Replay Value",
         "Fantasy",
-        "Procedural Generation"
+        "Procedural Generation",
+        "Political"
       ],
       "releaseDate": "5 Mar, 2026",
       "developer": "Mega Crit",
@@ -16921,45 +17000,6 @@
       ],
       "releaseDate": "18 Jul, 2025",
       "developer": "Acacia",
-      "achievements": null
-    },
-    {
-      "appid": 4018950,
-      "name": "Lost Wiki: Kozlovka",
-      "playtimeForever": 92,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1775002442,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4018950/d16e35372902538446b8b6fd20003b39a653d868.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4018950/62daa88bc13e7ca41c88c65260cf04cd8747ad2a/header.jpg",
-      "shortDescription": "Explore a wikipedia-like database and solve a small town mystery in Eastern Europe. Step into the shoes of a journalist in the 90s as you sprawl through articles and uncover the secrets that have been laid in front of you.",
-      "genres": [
-        "Indie Games",
-        "Indie"
-      ],
-      "tags": [
-        "Mystery",
-        "Detective",
-        "Investigation",
-        "Conspiracy",
-        "Story Rich",
-        "Puzzle",
-        "Interactive Fiction",
-        "Thriller",
-        "Simulation",
-        "Text-Based",
-        "Pixel Graphics",
-        "1990's",
-        "Atmospheric",
-        "Indie",
-        "RPG",
-        "Dark",
-        "Lore-Rich",
-        "Old School",
-        "Linear",
-        "Narration"
-      ],
-      "releaseDate": "20 Mar, 2026",
-      "developer": "yattytheman",
       "achievements": null
     }
   ]
