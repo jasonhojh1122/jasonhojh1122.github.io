@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-05-18T19:00:24.985Z",
+    "generatedAt": "2026-05-19T19:00:23.813Z",
     "gameCount": 402,
     "profile": {
       "personaName": "DeithZireael",
@@ -16666,8 +16666,8 @@
         "Cute",
         "Detective",
         "Mystery",
-        "LGBTQ+",
         "Story Rich",
+        "LGBTQ+",
         "Sexual Content",
         "Anime",
         "Gore",
@@ -16703,11 +16703,11 @@
       ],
       "tags": [
         "Collectathon",
+        "Relaxing",
         "Puzzle",
         "Hidden Object",
-        "Relaxing",
-        "Immersive Sim",
         "Artificial Intelligence",
+        "Immersive Sim",
         "3D",
         "Casual",
         "Funny",
@@ -16721,7 +16721,7 @@
         "Score Attack",
         "Memes",
         "Indie",
-        "Cozy"
+        "Organizing"
       ],
       "releaseDate": "30 Apr, 2026",
       "developer": "ArtRising",
@@ -16731,7 +16731,7 @@
       "appid": 2057760,
       "name": "Esoteric Ebb",
       "playtimeForever": 2256,
-      "playtime2Weeks": 1163,
+      "playtime2Weeks": 1013,
       "lastPlayed": 1778421185,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2057760/c729da9c1f3dc276b462655ac71e0a8bce54f331.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg",
@@ -16863,15 +16863,15 @@
         "Indie"
       ],
       "tags": [
-        "Emotional",
-        "Story Rich",
         "Exploration",
-        "Photo Editing",
-        "Atmospheric",
+        "Story Rich",
+        "Emotional",
+        "Animals",
         "Adventure",
+        "Atmospheric",
+        "Walking Simulator",
         "Puzzle",
         "Anime",
-        "Walking Simulator",
         "Visual Novel",
         "Nostalgia",
         "Lore-Rich",
@@ -16905,8 +16905,8 @@
         "Simulation"
       ],
       "tags": [
-        "Logic",
         "Co-op",
+        "Logic",
         "Puzzle",
         "Level Editor",
         "Escape Room",
