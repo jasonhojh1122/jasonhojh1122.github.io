@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-05-19T19:00:23.813Z",
+    "generatedAt": "2026-05-20T19:00:24.492Z",
     "gameCount": 402,
     "profile": {
       "personaName": "DeithZireael",
@@ -16716,8 +16716,8 @@
         "Magic",
         "Realistic",
         "Tactical",
-        "Atmospheric",
         "Singleplayer",
+        "Atmospheric",
         "Score Attack",
         "Memes",
         "Indie",
@@ -16731,7 +16731,7 @@
       "appid": 2057760,
       "name": "Esoteric Ebb",
       "playtimeForever": 2256,
-      "playtime2Weeks": 1013,
+      "playtime2Weeks": 942,
       "lastPlayed": 1778421185,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2057760/c729da9c1f3dc276b462655ac71e0a8bce54f331.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg",
@@ -16828,7 +16828,7 @@
         "Idler",
         "Free to Play",
         "Programming",
-        "incremental",
+        "Incremental",
         "Management",
         "Time Management",
         "Logic",
