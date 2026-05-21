@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-05-20T19:00:24.492Z",
+    "generatedAt": "2026-05-21T19:00:23.732Z",
     "gameCount": 402,
     "profile": {
       "personaName": "DeithZireael",
@@ -16635,11 +16635,11 @@
         "Sandbox",
         "2D",
         "Moddable",
-        "Hentai",
         "Building",
+        "Hentai",
         "Story Rich",
         "Sexual Content",
-        "Nudity"
+        "Action"
       ],
       "releaseDate": "2 Jan, 1994",
       "developer": "Blender Foundation",
@@ -16702,13 +16702,13 @@
         "Simulation"
       ],
       "tags": [
-        "Collectathon",
         "Relaxing",
+        "Collectathon",
         "Puzzle",
         "Hidden Object",
         "Artificial Intelligence",
-        "Immersive Sim",
         "3D",
+        "Immersive Sim",
         "Casual",
         "Funny",
         "Simulation",
@@ -16731,7 +16731,7 @@
       "appid": 2057760,
       "name": "Esoteric Ebb",
       "playtimeForever": 2256,
-      "playtime2Weeks": 942,
+      "playtime2Weeks": 797,
       "lastPlayed": 1778421185,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2057760/c729da9c1f3dc276b462655ac71e0a8bce54f331.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg",
@@ -16952,8 +16952,8 @@
         "Strategy",
         "Co-op",
         "Roguelike Deckbuilder",
-        "Multiplayer",
         "Political",
+        "Multiplayer",
         "Turn-Based Combat",
         "Card Battler",
         "Indie",
