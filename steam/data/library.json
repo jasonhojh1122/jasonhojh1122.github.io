@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-05-24T19:00:24.171Z",
+    "generatedAt": "2026-05-25T19:00:24.127Z",
     "gameCount": 402,
     "profile": {
       "personaName": "DeithZireael",
@@ -16690,7 +16690,7 @@
       "appid": 4197610,
       "name": "Librarian: Tidy Up the Arcane Library!",
       "playtimeForever": 261,
-      "playtime2Weeks": 261,
+      "playtime2Weeks": 199,
       "lastPlayed": 1778632580,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4197610/2ee4f16b8de69873c13c7e3432f126e8bde5f4ad.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4197610/2162be8e12b6bcbf696e508a4b6297c378c33bda/header.jpg",
@@ -16704,8 +16704,8 @@
       "tags": [
         "Relaxing",
         "Collectathon",
-        "Puzzle",
         "Artificial Intelligence",
+        "Puzzle",
         "Hidden Object",
         "3D",
         "Immersive Sim",
@@ -16720,8 +16720,8 @@
         "Atmospheric",
         "Score Attack",
         "Memes",
-        "Indie",
-        "Organizing"
+        "Organizing",
+        "Indie"
       ],
       "releaseDate": "30 Apr, 2026",
       "developer": "ArtRising",
@@ -16951,8 +16951,8 @@
         "Deckbuilding",
         "Strategy",
         "Co-op",
-        "Roguelike Deckbuilder",
         "Political",
+        "Roguelike Deckbuilder",
         "Multiplayer",
         "Turn-Based Combat",
         "Card Battler",
