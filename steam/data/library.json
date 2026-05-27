@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-05-26T19:00:24.066Z",
-    "gameCount": 402,
+    "generatedAt": "2026-05-27T19:00:25.126Z",
+    "gameCount": 403,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
       "level": 43,
-      "xp": 11505,
-      "xpNeededToLevelUp": 495
+      "xp": 11507,
+      "xpNeededToLevelUp": 493
     }
   },
   "games": [
@@ -3977,6 +3977,37 @@
         "total": 16,
         "unlocked": 14
       }
+    },
+    {
+      "appid": 404790,
+      "name": "Godot Engine",
+      "playtimeForever": 1336,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1776095416,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/404790/057ae868c1d0975b941d73f58d1dc17c8a15a090.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/404790/c729c37f6f294e20b5873a560a58e5164ab35a04/header.jpg",
+      "shortDescription": "Godot Engine is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface. It provides a comprehensive set of common tools, so that you can focus on making games without having to reinvent the wheel.",
+      "genres": [
+        "Game Development"
+      ],
+      "tags": [
+        "Game Development",
+        "Software",
+        "Utilities",
+        "3D",
+        "2D",
+        "Free to Play",
+        "Programming",
+        "Story Rich",
+        "Sandbox",
+        "Singleplayer",
+        "Indie",
+        "Anime",
+        "Female Protagonist"
+      ],
+      "releaseDate": "23 Feb, 2016",
+      "developer": "Godot Engine",
+      "achievements": null
     },
     {
       "appid": 406970,
@@ -16606,11 +16637,53 @@
       "achievements": null
     },
     {
+      "appid": 4630570,
+      "name": "RUNNING TRAIN",
+      "playtimeForever": 115,
+      "playtime2Weeks": 115,
+      "lastPlayed": 1779897633,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4630570/68ae63bc4e04ca07b63cc5d555d8dd4035ae87de.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4630570/59d75b8993423c4e710d2b1ff377e682a6b7f810/header.jpg",
+      "shortDescription": "New realistic 3DCG Train Game is here! Step into the crew's cabin and immerse yourself as train operator. Navigate 40km+ across Japanese Rural Railway with breathtakingly detailed scenery through the seaside and heart of countryside.",
+      "genres": [
+        "Simulation Games",
+        "Casual",
+        "Indie",
+        "Simulation",
+        "Early Access"
+      ],
+      "tags": [
+        "Simulation",
+        "Trains",
+        "Driving",
+        "Indie",
+        "3D",
+        "Immersive Sim",
+        "Realistic",
+        "Transportation",
+        "Automobile Sim",
+        "Casual",
+        "Cinematic",
+        "Physics",
+        "Arcade",
+        "Relaxing",
+        "Singleplayer",
+        "First-Person",
+        "Third Person",
+        "Retro",
+        "Controller",
+        "Early Access"
+      ],
+      "releaseDate": "24 May, 2026",
+      "developer": "Novatetsu Games",
+      "achievements": null
+    },
+    {
       "appid": 3101040,
       "name": "Magical Girl Witch Trials",
-      "playtimeForever": 1017,
-      "playtime2Weeks": 999,
-      "lastPlayed": 1779804712,
+      "playtimeForever": 1128,
+      "playtime2Weeks": 1110,
+      "lastPlayed": 1779893949,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
       "shortDescription": "Thirteen girls awaken, only to find themselves in a prison. What awaits them: a Witch Trial. Help them prepare for the trial by exploring the prison in order to find the witch hidden amongst them. Find the witch, learn what kind of magic she holds, dispel the lies, and prepare for the execution.",
@@ -16626,8 +16699,8 @@
         "Cute",
         "Detective",
         "Mystery",
-        "Story Rich",
         "LGBTQ+",
+        "Story Rich",
         "Sexual Content",
         "Anime",
         "Gore",
@@ -16690,7 +16763,7 @@
       "appid": 4197610,
       "name": "Librarian: Tidy Up the Arcane Library!",
       "playtimeForever": 261,
-      "playtime2Weeks": 12,
+      "playtime2Weeks": 0,
       "lastPlayed": 1778632580,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4197610/2ee4f16b8de69873c13c7e3432f126e8bde5f4ad.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4197610/2162be8e12b6bcbf696e508a4b6297c378c33bda/header.jpg",
@@ -16718,8 +16791,8 @@
         "Realistic",
         "Tactical",
         "Atmospheric",
-        "Score Attack",
         "Organizing",
+        "Score Attack",
         "Memes",
         "Indie"
       ],
@@ -16950,8 +17023,8 @@
         "Card Game",
         "Deckbuilding",
         "Strategy",
-        "Co-op",
         "Political",
+        "Co-op",
         "Roguelike Deckbuilder",
         "Multiplayer",
         "Turn-Based Combat",
@@ -16969,37 +17042,6 @@
       ],
       "releaseDate": "5 Mar, 2026",
       "developer": "Mega Crit",
-      "achievements": null
-    },
-    {
-      "appid": 404790,
-      "name": "Godot Engine",
-      "playtimeForever": 1336,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1776095416,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/404790/057ae868c1d0975b941d73f58d1dc17c8a15a090.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/404790/c729c37f6f294e20b5873a560a58e5164ab35a04/header.jpg",
-      "shortDescription": "Godot Engine is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface. It provides a comprehensive set of common tools, so that you can focus on making games without having to reinvent the wheel.",
-      "genres": [
-        "Game Development"
-      ],
-      "tags": [
-        "Game Development",
-        "Software",
-        "Utilities",
-        "3D",
-        "2D",
-        "Free to Play",
-        "Programming",
-        "Story Rich",
-        "Sandbox",
-        "Singleplayer",
-        "Indie",
-        "Anime",
-        "Female Protagonist"
-      ],
-      "releaseDate": "23 Feb, 2016",
-      "developer": "Godot Engine",
       "achievements": null
     }
   ]
