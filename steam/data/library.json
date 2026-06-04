@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-06-03T19:00:24.590Z",
-    "gameCount": 403,
+    "generatedAt": "2026-06-04T19:00:24.617Z",
+    "gameCount": 404,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
@@ -15791,6 +15791,47 @@
       }
     },
     {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "playtimeForever": 540,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1776175966,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2868840/f92b09dab91f1d1738f72fe0dd9be18dcc2901f9.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg",
+      "shortDescription": "The iconic roguelike deckbuilder returns. Craft a unique deck, encounter bizarre creatures, and discover relics of immense power in Slay the Spire 2!",
+      "genres": [
+        "Strategy Games",
+        "Indie",
+        "Strategy",
+        "Early Access"
+      ],
+      "tags": [
+        "Roguelike",
+        "Card Game",
+        "Deckbuilding",
+        "Strategy",
+        "Political",
+        "Co-op",
+        "Roguelike Deckbuilder",
+        "Multiplayer",
+        "Turn-Based Combat",
+        "Card Battler",
+        "Indie",
+        "Roguelite",
+        "Difficult",
+        "Early Access",
+        "2D",
+        "Singleplayer",
+        "Dungeon Crawler",
+        "Replay Value",
+        "Procedural Generation",
+        "Fantasy"
+      ],
+      "releaseDate": "5 Mar, 2026",
+      "developer": "Mega Crit",
+      "achievements": null
+    },
+    {
       "appid": 2881650,
       "name": "Content Warning",
       "playtimeForever": 0,
@@ -16637,6 +16678,48 @@
       "achievements": null
     },
     {
+      "appid": 1466060,
+      "name": "Tainted Grail: The Fall of Avalon",
+      "playtimeForever": 95,
+      "playtime2Weeks": 95,
+      "lastPlayed": 1780587729,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
+      "shortDescription": "Step into a dark reimagination of Arthurian legends in this first person, open world RPG. Explore a world stuck in everlasting autumn, witness falling legends and make meaningful choices woven into a complex, branching storyline.",
+      "genres": [
+        "RPG Games",
+        "Action",
+        "Adventure",
+        "Indie",
+        "RPG"
+      ],
+      "tags": [
+        "Adventure",
+        "RPG",
+        "Open World",
+        "Dark Fantasy",
+        "First-Person",
+        "Character Customization",
+        "Third Person",
+        "Exploration",
+        "Singleplayer",
+        "Action RPG",
+        "Choices Matter",
+        "Story Rich",
+        "Action",
+        "Nonlinear",
+        "Survival Horror",
+        "Immersive",
+        "Narrative",
+        "Multiple Endings",
+        "Immersive Sim",
+        "FPS"
+      ],
+      "releaseDate": "23 May, 2025",
+      "developer": "Questline",
+      "achievements": null
+    },
+    {
       "appid": 3101040,
       "name": "Magical Girl Witch Trials",
       "playtimeForever": 1846,
@@ -16712,8 +16795,8 @@
         "First-Person",
         "Third Person",
         "Retro",
-        "Controller",
-        "Early Access"
+        "Early Access",
+        "Controller"
       ],
       "releaseDate": "24 May, 2026",
       "developer": "Novatetsu Games",
@@ -16783,10 +16866,10 @@
         "Casual",
         "3D",
         "Immersive Sim",
-        "Simulation",
         "Organizing",
-        "Singleplayer",
+        "Simulation",
         "Fantasy",
+        "Singleplayer",
         "Magic",
         "Funny",
         "Realistic",
@@ -17001,47 +17084,6 @@
       ],
       "releaseDate": "27 Oct, 2025",
       "developer": "Pine Studio",
-      "achievements": null
-    },
-    {
-      "appid": 2868840,
-      "name": "Slay the Spire 2",
-      "playtimeForever": 540,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1776175966,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2868840/f92b09dab91f1d1738f72fe0dd9be18dcc2901f9.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg",
-      "shortDescription": "The iconic roguelike deckbuilder returns. Craft a unique deck, encounter bizarre creatures, and discover relics of immense power in Slay the Spire 2!",
-      "genres": [
-        "Strategy Games",
-        "Indie",
-        "Strategy",
-        "Early Access"
-      ],
-      "tags": [
-        "Roguelike",
-        "Card Game",
-        "Deckbuilding",
-        "Strategy",
-        "Political",
-        "Co-op",
-        "Roguelike Deckbuilder",
-        "Multiplayer",
-        "Turn-Based Combat",
-        "Card Battler",
-        "Indie",
-        "Roguelite",
-        "Difficult",
-        "Early Access",
-        "2D",
-        "Singleplayer",
-        "Dungeon Crawler",
-        "Replay Value",
-        "Procedural Generation",
-        "Fantasy"
-      ],
-      "releaseDate": "5 Mar, 2026",
-      "developer": "Mega Crit",
       "achievements": null
     }
   ]
