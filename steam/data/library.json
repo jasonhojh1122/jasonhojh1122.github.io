@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-06-15T19:00:25.438Z",
+    "generatedAt": "2026-06-16T19:00:24.277Z",
     "gameCount": 404,
     "profile": {
       "personaName": "DeithZireael",
@@ -16802,7 +16802,7 @@
       "appid": 3101040,
       "name": "Magical Girl Witch Trials",
       "playtimeForever": 1846,
-      "playtime2Weeks": 51,
+      "playtime2Weeks": 0,
       "lastPlayed": 1780362961,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
@@ -16828,8 +16828,8 @@
         "Multiple Endings",
         "Violent",
         "Investigation",
-        "Logic",
         "Indie",
+        "Logic",
         "Choices Matter",
         "Psychological Horror",
         "Choose Your Own Adventure",
