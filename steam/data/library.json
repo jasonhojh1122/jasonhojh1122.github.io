@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-06-22T19:00:24.385Z",
+    "generatedAt": "2026-06-23T19:00:26.515Z",
     "gameCount": 404,
     "profile": {
       "personaName": "DeithZireael",
@@ -16678,9 +16678,9 @@
     {
       "appid": 1466060,
       "name": "Tainted Grail: The Fall of Avalon",
-      "playtimeForever": 1079,
-      "playtime2Weeks": 638,
-      "lastPlayed": 1782089448,
+      "playtimeForever": 1202,
+      "playtime2Weeks": 761,
+      "lastPlayed": 1782227872,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
       "shortDescription": "Step into a dark reimagination of Arthurian legends in this first person, open world RPG. Explore a world stuck in everlasting autumn, witness falling legends and make meaningful choices woven into a complex, branching storyline.",
@@ -16899,8 +16899,8 @@
       "tags": [
         "Relaxing",
         "Collectathon",
-        "Puzzle",
         "Artificial Intelligence",
+        "Puzzle",
         "Organizing",
         "Hidden Object",
         "Casual",
