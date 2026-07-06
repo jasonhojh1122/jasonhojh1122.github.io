@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-07-05T19:00:25.774Z",
+    "generatedAt": "2026-07-06T19:00:25.362Z",
     "gameCount": 405,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
       "level": 43,
-      "xp": 11515,
-      "xpNeededToLevelUp": 485
+      "xp": 11512,
+      "xpNeededToLevelUp": 488
     }
   },
   "games": [
@@ -16718,9 +16718,9 @@
     {
       "appid": 1466060,
       "name": "Tainted Grail: The Fall of Avalon",
-      "playtimeForever": 1942,
-      "playtime2Weeks": 904,
-      "lastPlayed": 1783218387,
+      "playtimeForever": 2219,
+      "playtime2Weeks": 1139,
+      "lastPlayed": 1783352425,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
       "shortDescription": "Step into a dark reimagination of Arthurian legends in this first person, open world RPG. Explore a world stuck in everlasting autumn, witness falling legends and make meaningful choices woven into a complex, branching storyline.",
@@ -16760,9 +16760,9 @@
     {
       "appid": 365670,
       "name": "Blender",
-      "playtimeForever": 2034,
-      "playtime2Weeks": 82,
-      "lastPlayed": 1782630844,
+      "playtimeForever": 2097,
+      "playtime2Weeks": 145,
+      "lastPlayed": 1783336860,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/365670/48733cd333eea6e40711a1b9c6dde32ffe363ced.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/365670/99bc1f2663329e904172e27c1bb65325d9c7cf9b/header.jpg",
       "shortDescription": "Blender is the free and open source 3D creation suite. Free to use for everyone, for any purpose.",
