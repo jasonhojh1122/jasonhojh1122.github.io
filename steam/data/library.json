@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-07-09T19:00:24.468Z",
+    "generatedAt": "2026-07-10T19:00:25.220Z",
     "gameCount": 405,
     "profile": {
       "personaName": "DeithZireael",
@@ -16718,9 +16718,9 @@
     {
       "appid": 1466060,
       "name": "Tainted Grail: The Fall of Avalon",
-      "playtimeForever": 2464,
-      "playtime2Weeks": 1075,
-      "lastPlayed": 1783607811,
+      "playtimeForever": 2716,
+      "playtime2Weeks": 1327,
+      "lastPlayed": 1783690660,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
       "shortDescription": "Step into a dark reimagination of Arthurian legends in this first person, open world RPG. Explore a world stuck in everlasting autumn, witness falling legends and make meaningful choices woven into a complex, branching storyline.",
@@ -17051,7 +17051,7 @@
       "playtime2Weeks": 0,
       "lastPlayed": 1777172725,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1127500/288282565a18a500ba96d36f4014f562d8cc1ccf.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1127500/420f79567bdbf7a9fc43ad695a1cdd3521f60fd0/header_alt_assets_2.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1127500/cb2bf5e828d15bf9c2fc46effd248badfccb3df2/header.jpg",
       "shortDescription": "Mini Motorways is a strategy simulation game about designing the road map for a growing city. Build a traffic network, one road at a time, to create a bustling metropolis. Redesign your roads and place your motorways to get everyone where they need to go. How long can you keep the city moving?",
       "genres": [
         "Strategy Games",
