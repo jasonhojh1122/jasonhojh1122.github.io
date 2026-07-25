@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-07-24T19:00:25.556Z",
+    "generatedAt": "2026-07-25T19:00:24.782Z",
     "gameCount": 406,
     "profile": {
       "personaName": "DeithZireael",
@@ -16760,9 +16760,9 @@
     {
       "appid": 1466060,
       "name": "Tainted Grail: The Fall of Avalon",
-      "playtimeForever": 3781,
-      "playtime2Weeks": 1065,
-      "lastPlayed": 1784816948,
+      "playtimeForever": 3876,
+      "playtime2Weeks": 831,
+      "lastPlayed": 1784952393,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
       "shortDescription": "Step into a dark reimagination of Arthurian legends in this first person, open world RPG. Explore a world stuck in everlasting autumn, witness falling legends and make meaningful choices woven into a complex, branching storyline.",
@@ -16784,8 +16784,8 @@
         "Third Person",
         "Singleplayer",
         "Action RPG",
-        "Story Rich",
         "Choices Matter",
+        "Story Rich",
         "Action",
         "Nonlinear",
         "Survival Horror",
@@ -17151,8 +17151,8 @@
         "Time Management",
         "Logic",
         "Immersive Sim",
-        "Hacking",
         "Economy",
+        "Hacking",
         "Sci-fi",
         "2D",
         "Resource Management",
