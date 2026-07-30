@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-07-29T19:00:24.778Z",
+    "generatedAt": "2026-07-30T19:00:25.713Z",
     "gameCount": 407,
     "profile": {
       "personaName": "DeithZireael",
@@ -16800,9 +16800,9 @@
     {
       "appid": 1206070,
       "name": "Phonopolis",
-      "playtimeForever": 48,
-      "playtime2Weeks": 48,
-      "lastPlayed": 1785337326,
+      "playtimeForever": 102,
+      "playtime2Weeks": 102,
+      "lastPlayed": 1785419889,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1206070/d3f15259b90432160546a4298510f4abdcb3293f.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1206070/87a50691d40d18b212ca990ecd6cf4e6173431a0/header.jpg",
       "shortDescription": "Phonopolis is a story-driven puzzle adventure set in a hand-painted 3D world made of cardboard. Solve a wide variety of playful puzzles and help Felix end the Leader's oppressive influence in a resonant dystopian city inspired by avant-garde art.",
@@ -16827,12 +16827,12 @@
         "Stylized",
         "Colorful",
         "Logic",
-        "Political",
         "Singleplayer",
         "Indie",
         "Atmospheric",
         "Cinematic",
-        "3D"
+        "3D",
+        "Philosophical"
       ],
       "releaseDate": "20 May, 2026",
       "developer": "Amanita Design",
@@ -16841,9 +16841,9 @@
     {
       "appid": 3043580,
       "name": "Keeper",
-      "playtimeForever": 31,
-      "playtime2Weeks": 31,
-      "lastPlayed": 1785334396,
+      "playtimeForever": 58,
+      "playtime2Weeks": 58,
+      "lastPlayed": 1785372005,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3043580/19eefcf12b3946eba0a4de791530ee4fbcb6cbaf.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3043580/d27862539e2110cfae3e8004a0a8532e2f5d7a02/header.jpg",
       "shortDescription": "From Lee Petty and Double Fine Productions, Keeper is an atmospheric puzzle adventure in which a long-forgotten lighthouse is awakened and, joined by a spirited seabird, it embarks upon a heartening tale of unlikely companionship, and an unexpected journey into realms beyond understanding",
@@ -16880,7 +16880,7 @@
       "appid": 1466060,
       "name": "Tainted Grail: The Fall of Avalon",
       "playtimeForever": 4336,
-      "playtime2Weeks": 1145,
+      "playtime2Weeks": 1051,
       "lastPlayed": 1785247965,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
@@ -17061,8 +17061,8 @@
         "Cute",
         "Detective",
         "Mystery",
-        "LGBTQ+",
         "Story Rich",
+        "LGBTQ+",
         "Sexual Content",
         "Anime",
         "Gore",
@@ -17187,7 +17187,6 @@
         "Singleplayer",
         "Interactive Fiction",
         "Hand-drawn",
-        "Political",
         "Nonlinear",
         "Narrative",
         "Point & Click",
@@ -17198,7 +17197,8 @@
         "Tabletop",
         "Turn-Based",
         "Character Customization",
-        "Visual Novel"
+        "Visual Novel",
+        "Colorful"
       ],
       "releaseDate": "3 Mar, 2026",
       "developer": "Christoffer Bodegård",
