@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-07-30T19:00:25.713Z",
+    "generatedAt": "2026-07-31T19:00:26.687Z",
     "gameCount": 407,
     "profile": {
       "personaName": "DeithZireael",
@@ -6928,50 +6928,6 @@
       "achievements": {
         "total": 35,
         "unlocked": 23
-      }
-    },
-    {
-      "appid": 757310,
-      "name": "Sable",
-      "playtimeForever": 331,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1712977304,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/757310/99b24f25b351f471e84ac9f3a25498505b679695.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/header.jpg",
-      "shortDescription": "Embark on an unique and unforgettable journey and guide Sable through her Gliding; a rite of passage that will take her across vast deserts and mesmerizing landscapes, capped by the remains of spaceships and ancient wonders.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "Indie",
-        "RPG"
-      ],
-      "tags": [
-        "Atmospheric",
-        "Exploration",
-        "Story Rich",
-        "Female Protagonist",
-        "Adventure",
-        "Open World",
-        "Choose Your Own Adventure",
-        "Singleplayer",
-        "Multiple Endings",
-        "Choices Matter",
-        "Puzzle",
-        "Stylized",
-        "Relaxing",
-        "3D Platformer",
-        "Sci-fi",
-        "Platformer",
-        "Puzzle Platformer",
-        "RPG",
-        "Comic Book",
-        "Hand-drawn"
-      ],
-      "releaseDate": "23 Sep, 2021",
-      "developer": "Shedworks",
-      "achievements": {
-        "total": 56,
-        "unlocked": 14
       }
     },
     {
@@ -14235,6 +14191,46 @@
       }
     },
     {
+      "appid": 2057760,
+      "name": "Esoteric Ebb",
+      "playtimeForever": 2256,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1778421185,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2057760/c729da9c1f3dc276b462655ac71e0a8bce54f331.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg",
+      "shortDescription": "Esoteric Ebb is a single-player CRPG inspired by the freedom of tabletop adventures. Unravel a political conspiracy with your goblin sidekick. Roll dice in tense encounters. Become a cleric of legends or completely ruin the campaign.",
+      "genres": [
+        "RPG Games",
+        "Indie",
+        "RPG"
+      ],
+      "tags": [
+        "Story Rich",
+        "Choices Matter",
+        "RPG",
+        "CRPG",
+        "Isometric",
+        "Singleplayer",
+        "Interactive Fiction",
+        "Hand-drawn",
+        "Nonlinear",
+        "Narrative",
+        "Point & Click",
+        "Atmospheric",
+        "Adventure",
+        "Funny",
+        "Exploration",
+        "Tabletop",
+        "Turn-Based",
+        "Character Customization",
+        "Visual Novel",
+        "Colorful"
+      ],
+      "releaseDate": "3 Mar, 2026",
+      "developer": "Christoffer Bodegård",
+      "achievements": null
+    },
+    {
       "appid": 2089600,
       "name": "Urban Myth Dissolution Center",
       "playtimeForever": 225,
@@ -16798,11 +16794,52 @@
       "achievements": null
     },
     {
+      "appid": 757310,
+      "name": "Sable",
+      "playtimeForever": 383,
+      "playtime2Weeks": 52,
+      "lastPlayed": 1785511022,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/757310/99b24f25b351f471e84ac9f3a25498505b679695.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/header.jpg",
+      "shortDescription": "Embark on an unique and unforgettable journey and guide Sable through her Gliding; a rite of passage that will take her across vast deserts and mesmerizing landscapes, capped by the remains of spaceships and ancient wonders.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Indie",
+        "RPG"
+      ],
+      "tags": [
+        "Atmospheric",
+        "Exploration",
+        "Story Rich",
+        "Adventure",
+        "Open World",
+        "Female Protagonist",
+        "Choose Your Own Adventure",
+        "Singleplayer",
+        "Multiple Endings",
+        "Choices Matter",
+        "Puzzle",
+        "Stylized",
+        "Relaxing",
+        "3D Platformer",
+        "Sci-fi",
+        "Platformer",
+        "Puzzle Platformer",
+        "RPG",
+        "Comic Book",
+        "Hand-drawn"
+      ],
+      "releaseDate": "23 Sep, 2021",
+      "developer": "Shedworks",
+      "achievements": null
+    },
+    {
       "appid": 1206070,
       "name": "Phonopolis",
-      "playtimeForever": 102,
-      "playtime2Weeks": 102,
-      "lastPlayed": 1785419889,
+      "playtimeForever": 204,
+      "playtime2Weeks": 204,
+      "lastPlayed": 1785507390,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1206070/d3f15259b90432160546a4298510f4abdcb3293f.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1206070/87a50691d40d18b212ca990ecd6cf4e6173431a0/header.jpg",
       "shortDescription": "Phonopolis is a story-driven puzzle adventure set in a hand-painted 3D world made of cardboard. Solve a wide variety of playful puzzles and help Felix end the Leader's oppressive influence in a resonant dystopian city inspired by avant-garde art.",
@@ -16880,7 +16917,7 @@
       "appid": 1466060,
       "name": "Tainted Grail: The Fall of Avalon",
       "playtimeForever": 4336,
-      "playtime2Weeks": 1051,
+      "playtime2Weeks": 982,
       "lastPlayed": 1785247965,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
@@ -17162,46 +17199,6 @@
       ],
       "releaseDate": "30 Apr, 2026",
       "developer": "ArtRising",
-      "achievements": null
-    },
-    {
-      "appid": 2057760,
-      "name": "Esoteric Ebb",
-      "playtimeForever": 2256,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1778421185,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2057760/c729da9c1f3dc276b462655ac71e0a8bce54f331.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg",
-      "shortDescription": "Esoteric Ebb is a single-player CRPG inspired by the freedom of tabletop adventures. Unravel a political conspiracy with your goblin sidekick. Roll dice in tense encounters. Become a cleric of legends or completely ruin the campaign.",
-      "genres": [
-        "RPG Games",
-        "Indie",
-        "RPG"
-      ],
-      "tags": [
-        "Story Rich",
-        "Choices Matter",
-        "RPG",
-        "CRPG",
-        "Isometric",
-        "Singleplayer",
-        "Interactive Fiction",
-        "Hand-drawn",
-        "Nonlinear",
-        "Narrative",
-        "Point & Click",
-        "Atmospheric",
-        "Adventure",
-        "Funny",
-        "Exploration",
-        "Tabletop",
-        "Turn-Based",
-        "Character Customization",
-        "Visual Novel",
-        "Colorful"
-      ],
-      "releaseDate": "3 Mar, 2026",
-      "developer": "Christoffer Bodegård",
       "achievements": null
     }
   ]
