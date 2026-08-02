@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-01T19:00:28.440Z",
+    "generatedAt": "2026-08-02T19:00:25.403Z",
     "gameCount": 408,
     "profile": {
       "personaName": "DeithZireael",
@@ -16835,6 +16835,47 @@
       "achievements": null
     },
     {
+      "appid": 757310,
+      "name": "Sable",
+      "playtimeForever": 521,
+      "playtime2Weeks": 189,
+      "lastPlayed": 1785685064,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/757310/99b24f25b351f471e84ac9f3a25498505b679695.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/header.jpg",
+      "shortDescription": "Embark on an unique and unforgettable journey and guide Sable through her Gliding; a rite of passage that will take her across vast deserts and mesmerizing landscapes, capped by the remains of spaceships and ancient wonders.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Indie",
+        "RPG"
+      ],
+      "tags": [
+        "Atmospheric",
+        "Exploration",
+        "Story Rich",
+        "Adventure",
+        "Open World",
+        "Female Protagonist",
+        "Choose Your Own Adventure",
+        "Singleplayer",
+        "Multiple Endings",
+        "Choices Matter",
+        "Puzzle",
+        "Stylized",
+        "Relaxing",
+        "3D Platformer",
+        "Sci-fi",
+        "Platformer",
+        "Puzzle Platformer",
+        "RPG",
+        "Comic Book",
+        "Hand-drawn"
+      ],
+      "releaseDate": "23 Sep, 2021",
+      "developer": "Shedworks",
+      "achievements": null
+    },
+    {
       "appid": 2612680,
       "name": "Cureocity",
       "playtimeForever": 21,
@@ -16872,47 +16913,6 @@
       ],
       "releaseDate": "21 Mar, 2024",
       "developer": "Bread On Board",
-      "achievements": null
-    },
-    {
-      "appid": 757310,
-      "name": "Sable",
-      "playtimeForever": 459,
-      "playtime2Weeks": 128,
-      "lastPlayed": 1785554892,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/757310/99b24f25b351f471e84ac9f3a25498505b679695.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/header.jpg",
-      "shortDescription": "Embark on an unique and unforgettable journey and guide Sable through her Gliding; a rite of passage that will take her across vast deserts and mesmerizing landscapes, capped by the remains of spaceships and ancient wonders.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "Indie",
-        "RPG"
-      ],
-      "tags": [
-        "Atmospheric",
-        "Exploration",
-        "Story Rich",
-        "Adventure",
-        "Open World",
-        "Female Protagonist",
-        "Choose Your Own Adventure",
-        "Singleplayer",
-        "Multiple Endings",
-        "Choices Matter",
-        "Puzzle",
-        "Stylized",
-        "Relaxing",
-        "3D Platformer",
-        "Sci-fi",
-        "Platformer",
-        "Puzzle Platformer",
-        "RPG",
-        "Comic Book",
-        "Hand-drawn"
-      ],
-      "releaseDate": "23 Sep, 2021",
-      "developer": "Shedworks",
       "achievements": null
     },
     {
@@ -17146,8 +17146,8 @@
         "Gore",
         "Psychological Horror",
         "Puzzle",
-        "Experimental",
         "Action",
+        "Experimental",
         "Roguelike",
         "Simulation",
         "Surreal",
