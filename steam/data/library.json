@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-04T19:00:25.205Z",
-    "gameCount": 408,
+    "generatedAt": "2026-08-05T19:00:24.678Z",
+    "gameCount": 409,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
       "level": 43,
-      "xp": 11513,
-      "xpNeededToLevelUp": 487
+      "xp": 11515,
+      "xpNeededToLevelUp": 485
     }
   },
   "games": [
@@ -16835,11 +16835,93 @@
       "achievements": null
     },
     {
+      "appid": 4630570,
+      "name": "RUNNING TRAIN",
+      "playtimeForever": 143,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1779927292,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4630570/68ae63bc4e04ca07b63cc5d555d8dd4035ae87de.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4630570/59d75b8993423c4e710d2b1ff377e682a6b7f810/header.jpg",
+      "shortDescription": "New realistic 3DCG Train Game is here! Step into the crew's cabin and immerse yourself as train operator. Navigate 40km+ across Japanese Rural Railway with breathtakingly detailed scenery through the seaside and heart of countryside.",
+      "genres": [
+        "Simulation Games",
+        "Casual",
+        "Indie",
+        "Simulation",
+        "Early Access"
+      ],
+      "tags": [
+        "Simulation",
+        "Trains",
+        "Driving",
+        "Indie",
+        "3D",
+        "Realistic",
+        "Immersive Sim",
+        "Transportation",
+        "Automobile Sim",
+        "Casual",
+        "Cinematic",
+        "Physics",
+        "Arcade",
+        "Relaxing",
+        "Singleplayer",
+        "First-Person",
+        "Third Person",
+        "Retro",
+        "Early Access",
+        "Controller"
+      ],
+      "releaseDate": "24 May, 2026",
+      "developer": "Novatetsu Games",
+      "achievements": null
+    },
+    {
+      "appid": 460950,
+      "name": "Katana ZERO",
+      "playtimeForever": 47,
+      "playtime2Weeks": 47,
+      "lastPlayed": 1785938499,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/460950/874ee87e03abd66ff158727c051ceb173e3cba3c.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/header.jpg",
+      "shortDescription": "Katana ZERO is a stylish neo-noir, action-platformer featuring breakneck action and instant-death combat. Slash, dash, and manipulate time to unravel your past in a beautifully brutal acrobatic display.",
+      "genres": [
+        "Indie Games",
+        "Action",
+        "Indie"
+      ],
+      "tags": [
+        "Pixel Graphics",
+        "Action",
+        "Great Soundtrack",
+        "Story Rich",
+        "Platformer",
+        "Cyberpunk",
+        "2D Platformer",
+        "Indie",
+        "Hack and Slash",
+        "2D",
+        "Fast-Paced",
+        "Violent",
+        "Difficult",
+        "Singleplayer",
+        "Time Manipulation",
+        "Gore",
+        "Ninja",
+        "Retro",
+        "Noir",
+        "Sci-fi"
+      ],
+      "releaseDate": "18 Apr, 2019",
+      "developer": "Askiisoft",
+      "achievements": null
+    },
+    {
       "appid": 757310,
       "name": "Sable",
-      "playtimeForever": 716,
-      "playtime2Weeks": 384,
-      "lastPlayed": 1785852942,
+      "playtimeForever": 738,
+      "playtime2Weeks": 406,
+      "lastPlayed": 1785890574,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/757310/99b24f25b351f471e84ac9f3a25498505b679695.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/header.jpg",
       "shortDescription": "Embark on an unique and unforgettable journey and guide Sable through her Gliding; a rite of passage that will take her across vast deserts and mesmerizing landscapes, capped by the remains of spaceships and ancient wonders.",
@@ -16998,7 +17080,7 @@
       "appid": 1466060,
       "name": "Tainted Grail: The Fall of Avalon",
       "playtimeForever": 4336,
-      "playtime2Weeks": 768,
+      "playtime2Weeks": 673,
       "lastPlayed": 1785247965,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
@@ -17197,48 +17279,6 @@
       ],
       "releaseDate": "18 Jul, 2025",
       "developer": "Acacia",
-      "achievements": null
-    },
-    {
-      "appid": 4630570,
-      "name": "RUNNING TRAIN",
-      "playtimeForever": 143,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1779927292,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4630570/68ae63bc4e04ca07b63cc5d555d8dd4035ae87de.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4630570/59d75b8993423c4e710d2b1ff377e682a6b7f810/header.jpg",
-      "shortDescription": "New realistic 3DCG Train Game is here! Step into the crew's cabin and immerse yourself as train operator. Navigate 40km+ across Japanese Rural Railway with breathtakingly detailed scenery through the seaside and heart of countryside.",
-      "genres": [
-        "Simulation Games",
-        "Casual",
-        "Indie",
-        "Simulation",
-        "Early Access"
-      ],
-      "tags": [
-        "Simulation",
-        "Trains",
-        "Driving",
-        "Indie",
-        "3D",
-        "Realistic",
-        "Immersive Sim",
-        "Transportation",
-        "Automobile Sim",
-        "Casual",
-        "Cinematic",
-        "Physics",
-        "Arcade",
-        "Relaxing",
-        "Singleplayer",
-        "First-Person",
-        "Third Person",
-        "Retro",
-        "Early Access",
-        "Controller"
-      ],
-      "releaseDate": "24 May, 2026",
-      "developer": "Novatetsu Games",
       "achievements": null
     }
   ]
