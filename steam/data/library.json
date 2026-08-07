@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-06T19:00:25.217Z",
+    "generatedAt": "2026-08-07T19:00:26.549Z",
     "gameCount": 409,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
       "level": 43,
-      "xp": 11516,
-      "xpNeededToLevelUp": 484
+      "xp": 11517,
+      "xpNeededToLevelUp": 483
     }
   },
   "games": [
@@ -16879,9 +16879,9 @@
     {
       "appid": 460950,
       "name": "Katana ZERO",
-      "playtimeForever": 113,
-      "playtime2Weeks": 113,
-      "lastPlayed": 1786032698,
+      "playtimeForever": 159,
+      "playtime2Weeks": 159,
+      "lastPlayed": 1786063496,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/460950/874ee87e03abd66ff158727c051ceb173e3cba3c.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/header.jpg",
       "shortDescription": "Katana ZERO is a stylish neo-noir, action-platformer featuring breakneck action and instant-death combat. Slash, dash, and manipulate time to unravel your past in a beautifully brutal acrobatic display.",
@@ -17261,8 +17261,8 @@
         "Cute",
         "Detective",
         "Mystery",
-        "Story Rich",
         "LGBTQ+",
+        "Story Rich",
         "Sexual Content",
         "Anime",
         "Gore",
