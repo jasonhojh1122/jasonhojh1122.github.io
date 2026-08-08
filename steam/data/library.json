@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-07T19:00:26.549Z",
-    "gameCount": 409,
+    "generatedAt": "2026-08-08T19:00:27.525Z",
+    "gameCount": 410,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
       "level": 43,
-      "xp": 11517,
-      "xpNeededToLevelUp": 483
+      "xp": 11518,
+      "xpNeededToLevelUp": 482
     }
   },
   "games": [
@@ -16122,6 +16122,47 @@
       "achievements": null
     },
     {
+      "appid": 3101040,
+      "name": "Magical Girl Witch Trials",
+      "playtimeForever": 1846,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1780362961,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
+      "shortDescription": "Thirteen girls awaken, only to find themselves in a prison. What awaits them: a Witch Trial. Help them prepare for the trial by exploring the prison in order to find the witch hidden amongst them. Find the witch, learn what kind of magic she holds, dispel the lies, and prepare for the execution.",
+      "genres": [
+        "Indie Games",
+        "Adventure",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Visual Novel",
+        "Female Protagonist",
+        "Cute",
+        "Detective",
+        "Mystery",
+        "LGBTQ+",
+        "Story Rich",
+        "Sexual Content",
+        "Anime",
+        "Gore",
+        "Gothic",
+        "Multiple Endings",
+        "Violent",
+        "Investigation",
+        "Logic",
+        "Indie",
+        "Psychological Horror",
+        "Choices Matter",
+        "Choose Your Own Adventure",
+        "Adventure"
+      ],
+      "releaseDate": "18 Jul, 2025",
+      "developer": "Acacia",
+      "achievements": null
+    },
+    {
       "appid": 3107330,
       "name": "Nodebuster",
       "playtimeForever": 179,
@@ -16877,11 +16918,52 @@
       "achievements": null
     },
     {
+      "appid": 4920000,
+      "name": "Beastfolk Barber Demo",
+      "playtimeForever": 18,
+      "playtime2Weeks": 18,
+      "lastPlayed": 1786208070,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4920000/9c151d0a5aba0248e70eab7df82f6b53ca17a2d7.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4920000/39f95c217821ce7ebb1699231ddad935cae2e155/header.jpg",
+      "shortDescription": "You're a barber in a city full of beastfolk. Chat with your customers, style their look, help them see something new in the mirror... and in themselves.",
+      "genres": [
+        "Indie Games",
+        "Casual",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Dialogue Heavy",
+        "Relaxing",
+        "Interactive Fiction",
+        "Atmospheric",
+        "Simulation",
+        "Pixel Graphics",
+        "2D",
+        "Choices Matter",
+        "Visual Novel",
+        "Story Rich",
+        "Casual",
+        "Fantasy",
+        "Anime",
+        "Emotional",
+        "Cozy",
+        "Narrative",
+        "Female Protagonist",
+        "Adventure",
+        "Philosophical",
+        "Singleplayer"
+      ],
+      "releaseDate": "6 Aug, 2026",
+      "developer": "Safe Flight Games",
+      "achievements": null
+    },
+    {
       "appid": 460950,
       "name": "Katana ZERO",
-      "playtimeForever": 159,
-      "playtime2Weeks": 159,
-      "lastPlayed": 1786063496,
+      "playtimeForever": 333,
+      "playtime2Weeks": 333,
+      "lastPlayed": 1786206831,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/460950/874ee87e03abd66ff158727c051ceb173e3cba3c.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/header.jpg",
       "shortDescription": "Katana ZERO is a stylish neo-noir, action-platformer featuring breakneck action and instant-death combat. Slash, dash, and manipulate time to unravel your past in a beautifully brutal acrobatic display.",
@@ -17080,7 +17162,7 @@
       "appid": 1466060,
       "name": "Tainted Grail: The Fall of Avalon",
       "playtimeForever": 4336,
-      "playtime2Weeks": 554,
+      "playtime2Weeks": 459,
       "lastPlayed": 1785247965,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
@@ -17238,47 +17320,6 @@
       ],
       "releaseDate": "4 Apr, 2024",
       "developer": "Mike Klubnika",
-      "achievements": null
-    },
-    {
-      "appid": 3101040,
-      "name": "Magical Girl Witch Trials",
-      "playtimeForever": 1846,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1780362961,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
-      "shortDescription": "Thirteen girls awaken, only to find themselves in a prison. What awaits them: a Witch Trial. Help them prepare for the trial by exploring the prison in order to find the witch hidden amongst them. Find the witch, learn what kind of magic she holds, dispel the lies, and prepare for the execution.",
-      "genres": [
-        "Indie Games",
-        "Adventure",
-        "Indie",
-        "Simulation"
-      ],
-      "tags": [
-        "Visual Novel",
-        "Female Protagonist",
-        "Cute",
-        "Detective",
-        "Mystery",
-        "LGBTQ+",
-        "Story Rich",
-        "Sexual Content",
-        "Anime",
-        "Gore",
-        "Gothic",
-        "Multiple Endings",
-        "Violent",
-        "Investigation",
-        "Logic",
-        "Indie",
-        "Psychological Horror",
-        "Choices Matter",
-        "Choose Your Own Adventure",
-        "Adventure"
-      ],
-      "releaseDate": "18 Jul, 2025",
-      "developer": "Acacia",
       "achievements": null
     }
   ]
