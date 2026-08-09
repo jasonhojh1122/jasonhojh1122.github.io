@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-08T19:00:27.525Z",
+    "generatedAt": "2026-08-09T19:00:27.776Z",
     "gameCount": 410,
     "profile": {
       "personaName": "DeithZireael",
@@ -16122,47 +16122,6 @@
       "achievements": null
     },
     {
-      "appid": 3101040,
-      "name": "Magical Girl Witch Trials",
-      "playtimeForever": 1846,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1780362961,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
-      "shortDescription": "Thirteen girls awaken, only to find themselves in a prison. What awaits them: a Witch Trial. Help them prepare for the trial by exploring the prison in order to find the witch hidden amongst them. Find the witch, learn what kind of magic she holds, dispel the lies, and prepare for the execution.",
-      "genres": [
-        "Indie Games",
-        "Adventure",
-        "Indie",
-        "Simulation"
-      ],
-      "tags": [
-        "Visual Novel",
-        "Female Protagonist",
-        "Cute",
-        "Detective",
-        "Mystery",
-        "LGBTQ+",
-        "Story Rich",
-        "Sexual Content",
-        "Anime",
-        "Gore",
-        "Gothic",
-        "Multiple Endings",
-        "Violent",
-        "Investigation",
-        "Logic",
-        "Indie",
-        "Psychological Horror",
-        "Choices Matter",
-        "Choose Your Own Adventure",
-        "Adventure"
-      ],
-      "releaseDate": "18 Jul, 2025",
-      "developer": "Acacia",
-      "achievements": null
-    },
-    {
       "appid": 3107330,
       "name": "Nodebuster",
       "playtimeForever": 179,
@@ -16921,7 +16880,7 @@
       "appid": 4920000,
       "name": "Beastfolk Barber Demo",
       "playtimeForever": 18,
-      "playtime2Weeks": 18,
+      "playtime2Weeks": 49,
       "lastPlayed": 1786208070,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4920000/9c151d0a5aba0248e70eab7df82f6b53ca17a2d7.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4920000/39f95c217821ce7ebb1699231ddad935cae2e155/header.jpg",
@@ -17162,7 +17121,7 @@
       "appid": 1466060,
       "name": "Tainted Grail: The Fall of Avalon",
       "playtimeForever": 4336,
-      "playtime2Weeks": 459,
+      "playtime2Weeks": 311,
       "lastPlayed": 1785247965,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
@@ -17265,8 +17224,8 @@
         "Video Production",
         "Difficult",
         "Utilities",
-        "Physics",
         "Survival Horror",
+        "Physics",
         "Singleplayer",
         "Sandbox",
         "2D",
@@ -17320,6 +17279,47 @@
       ],
       "releaseDate": "4 Apr, 2024",
       "developer": "Mike Klubnika",
+      "achievements": null
+    },
+    {
+      "appid": 3101040,
+      "name": "Magical Girl Witch Trials",
+      "playtimeForever": 1846,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1780362961,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
+      "shortDescription": "Thirteen girls awaken, only to find themselves in a prison. What awaits them: a Witch Trial. Help them prepare for the trial by exploring the prison in order to find the witch hidden amongst them. Find the witch, learn what kind of magic she holds, dispel the lies, and prepare for the execution.",
+      "genres": [
+        "Indie Games",
+        "Adventure",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Visual Novel",
+        "Female Protagonist",
+        "Cute",
+        "Detective",
+        "Mystery",
+        "LGBTQ+",
+        "Story Rich",
+        "Sexual Content",
+        "Anime",
+        "Gore",
+        "Gothic",
+        "Multiple Endings",
+        "Violent",
+        "Investigation",
+        "Logic",
+        "Indie",
+        "Psychological Horror",
+        "Choices Matter",
+        "Choose Your Own Adventure",
+        "Adventure"
+      ],
+      "releaseDate": "18 Jul, 2025",
+      "developer": "Acacia",
       "achievements": null
     }
   ]
