@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-10T19:00:25.490Z",
-    "gameCount": 410,
+    "generatedAt": "2026-08-11T19:00:25.632Z",
+    "gameCount": 411,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
@@ -16122,6 +16122,47 @@
       "achievements": null
     },
     {
+      "appid": 3101040,
+      "name": "Magical Girl Witch Trials",
+      "playtimeForever": 1846,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1780362961,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
+      "shortDescription": "Thirteen girls awaken, only to find themselves in a prison. What awaits them: a Witch Trial. Help them prepare for the trial by exploring the prison in order to find the witch hidden amongst them. Find the witch, learn what kind of magic she holds, dispel the lies, and prepare for the execution.",
+      "genres": [
+        "Indie Games",
+        "Adventure",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Visual Novel",
+        "Female Protagonist",
+        "Cute",
+        "Detective",
+        "Mystery",
+        "LGBTQ+",
+        "Story Rich",
+        "Sexual Content",
+        "Anime",
+        "Gore",
+        "Gothic",
+        "Multiple Endings",
+        "Violent",
+        "Investigation",
+        "Logic",
+        "Indie",
+        "Psychological Horror",
+        "Choices Matter",
+        "Choose Your Own Adventure",
+        "Adventure"
+      ],
+      "releaseDate": "18 Jul, 2025",
+      "developer": "Acacia",
+      "achievements": null
+    },
+    {
       "appid": 3107330,
       "name": "Nodebuster",
       "playtimeForever": 179,
@@ -16918,6 +16959,47 @@
       "achievements": null
     },
     {
+      "appid": 2950790,
+      "name": "IRON NEST: Heavy Turret Simulator",
+      "playtimeForever": 94,
+      "playtime2Weeks": 94,
+      "lastPlayed": 1786461967,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2950790/9e5fd22a0678b6d1b82850f2f95a83f82f2a1c96.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/e6c9e990560078611472e5dab98e79a405ed33f4/header.jpg",
+      "shortDescription": "IRON NEST is a brutal dieselpunk heavy-artillery game where you dominate the battlefield through a colossal war machine. Take map measurements based on the received coordinates, strain the hydraulics, and gunlay the cannons to unleash devastating blows ⟹ Will you obey High Command, Operator?",
+      "genres": [
+        "Simulation Games",
+        "Action",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Military",
+        "Simulation",
+        "Realistic",
+        "3D",
+        "Alternate History",
+        "War",
+        "Indie",
+        "Immersive Sim",
+        "Action",
+        "First-Person",
+        "Historical",
+        "Steampunk",
+        "World War I",
+        "Atmospheric",
+        "World War II",
+        "Tactical",
+        "Replay Value",
+        "Wargame",
+        "Physics",
+        "Logic"
+      ],
+      "releaseDate": "6 Aug, 2026",
+      "developer": "Nick Nieuwoudt",
+      "achievements": null
+    },
+    {
       "appid": 460950,
       "name": "Katana ZERO",
       "playtimeForever": 333,
@@ -17121,7 +17203,7 @@
       "appid": 1466060,
       "name": "Tainted Grail: The Fall of Avalon",
       "playtimeForever": 4336,
-      "playtime2Weeks": 114,
+      "playtime2Weeks": 0,
       "lastPlayed": 1785247965,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
@@ -17223,8 +17305,8 @@
         "3D",
         "Video Production",
         "Difficult",
-        "Utilities",
         "Survival Horror",
+        "Utilities",
         "Physics",
         "Singleplayer",
         "Sandbox",
@@ -17279,47 +17361,6 @@
       ],
       "releaseDate": "4 Apr, 2024",
       "developer": "Mike Klubnika",
-      "achievements": null
-    },
-    {
-      "appid": 3101040,
-      "name": "Magical Girl Witch Trials",
-      "playtimeForever": 1846,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1780362961,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3101040/8a8cabc19943234faa0a59154775897858e66897.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3101040/header.jpg",
-      "shortDescription": "Thirteen girls awaken, only to find themselves in a prison. What awaits them: a Witch Trial. Help them prepare for the trial by exploring the prison in order to find the witch hidden amongst them. Find the witch, learn what kind of magic she holds, dispel the lies, and prepare for the execution.",
-      "genres": [
-        "Indie Games",
-        "Adventure",
-        "Indie",
-        "Simulation"
-      ],
-      "tags": [
-        "Visual Novel",
-        "Female Protagonist",
-        "Cute",
-        "Detective",
-        "Mystery",
-        "LGBTQ+",
-        "Story Rich",
-        "Sexual Content",
-        "Anime",
-        "Gore",
-        "Gothic",
-        "Multiple Endings",
-        "Violent",
-        "Investigation",
-        "Logic",
-        "Indie",
-        "Psychological Horror",
-        "Choices Matter",
-        "Choose Your Own Adventure",
-        "Adventure"
-      ],
-      "releaseDate": "18 Jul, 2025",
-      "developer": "Acacia",
       "achievements": null
     }
   ]
