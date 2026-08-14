@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-13T19:00:25.307Z",
+    "generatedAt": "2026-08-14T19:00:26.672Z",
     "gameCount": 411,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
       "level": 43,
-      "xp": 11518,
-      "xpNeededToLevelUp": 482
+      "xp": 11519,
+      "xpNeededToLevelUp": 481
     }
   },
   "games": [
@@ -15824,47 +15824,6 @@
       }
     },
     {
-      "appid": 2835570,
-      "name": "Buckshot Roulette",
-      "playtimeForever": 264,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1780933137,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2835570/81779afdc4209795d9ccf7948514b9a227acf601.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2835570/header.jpg",
-      "shortDescription": "Play Russian roulette with a 12-gauge shotgun. Four enter. One leaves. Roll the dice with your life. Good luck!",
-      "genres": [
-        "Indie Games",
-        "Action",
-        "Indie",
-        "Simulation"
-      ],
-      "tags": [
-        "Multiplayer",
-        "Dark",
-        "Gambling",
-        "Horror",
-        "First-Person",
-        "Strategy",
-        "Singleplayer",
-        "Indie",
-        "Psychological",
-        "3D",
-        "Gore",
-        "Psychological Horror",
-        "Puzzle",
-        "Action",
-        "Experimental",
-        "Roguelike",
-        "Simulation",
-        "Surreal",
-        "FPS",
-        "Roguelite"
-      ],
-      "releaseDate": "4 Apr, 2024",
-      "developer": "Mike Klubnika",
-      "achievements": null
-    },
-    {
       "appid": 2868840,
       "name": "Slay the Spire 2",
       "playtimeForever": 540,
@@ -17002,9 +16961,9 @@
     {
       "appid": 2950790,
       "name": "IRON NEST: Heavy Turret Simulator",
-      "playtimeForever": 94,
-      "playtime2Weeks": 94,
-      "lastPlayed": 1786461967,
+      "playtimeForever": 111,
+      "playtime2Weeks": 111,
+      "lastPlayed": 1786667683,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2950790/9e5fd22a0678b6d1b82850f2f95a83f82f2a1c96.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/e6c9e990560078611472e5dab98e79a405ed33f4/header.jpg",
       "shortDescription": "IRON NEST is a brutal dieselpunk heavy-artillery game where you dominate the battlefield through a colossal war machine. Take map measurements based on the received coordinates, strain the hydraulics, and gunlay the cannons to unleash devastating blows ⟹ Will you obey High Command, Operator?",
@@ -17030,8 +16989,8 @@
         "Atmospheric",
         "World War I",
         "Tactical",
-        "World War II",
         "Wargame",
+        "World War II",
         "Replay Value",
         "Physics",
         "Logic"
@@ -17084,7 +17043,7 @@
       "appid": 757310,
       "name": "Sable",
       "playtimeForever": 738,
-      "playtime2Weeks": 406,
+      "playtime2Weeks": 354,
       "lastPlayed": 1785890574,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/757310/99b24f25b351f471e84ac9f3a25498505b679695.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/header.jpg",
@@ -17165,7 +17124,7 @@
       "appid": 1206070,
       "name": "Phonopolis",
       "playtimeForever": 204,
-      "playtime2Weeks": 101,
+      "playtime2Weeks": 0,
       "lastPlayed": 1785507390,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1206070/d3f15259b90432160546a4298510f4abdcb3293f.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1206070/87a50691d40d18b212ca990ecd6cf4e6173431a0/header.jpg",
@@ -17357,10 +17316,51 @@
         "Hentai",
         "Story Rich",
         "Sexual Content",
-        "Action"
+        "Open World"
       ],
       "releaseDate": "2 Jan, 1994",
       "developer": "Blender Foundation",
+      "achievements": null
+    },
+    {
+      "appid": 2835570,
+      "name": "Buckshot Roulette",
+      "playtimeForever": 264,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1780933137,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2835570/81779afdc4209795d9ccf7948514b9a227acf601.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2835570/header.jpg",
+      "shortDescription": "Play Russian roulette with a 12-gauge shotgun. Four enter. One leaves. Roll the dice with your life. Good luck!",
+      "genres": [
+        "Indie Games",
+        "Action",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Multiplayer",
+        "Dark",
+        "Gambling",
+        "Horror",
+        "First-Person",
+        "Strategy",
+        "Singleplayer",
+        "Indie",
+        "Psychological",
+        "3D",
+        "Gore",
+        "Psychological Horror",
+        "Puzzle",
+        "Action",
+        "Experimental",
+        "Roguelike",
+        "Simulation",
+        "Surreal",
+        "FPS",
+        "Roguelite"
+      ],
+      "releaseDate": "4 Apr, 2024",
+      "developer": "Mike Klubnika",
       "achievements": null
     }
   ]
