@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-19T19:00:26.125Z",
+    "generatedAt": "2026-08-20T19:00:24.886Z",
     "gameCount": 412,
     "profile": {
       "personaName": "DeithZireael",
@@ -17004,9 +17004,9 @@
     {
       "appid": 1478500,
       "name": "Big Walk",
-      "playtimeForever": 466,
-      "playtime2Weeks": 466,
-      "lastPlayed": 1787066075,
+      "playtimeForever": 627,
+      "playtime2Weeks": 627,
+      "lastPlayed": 1787238907,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1478500/aba91d96c91f87c1aa3d87eedae20fbbf01f2d54.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/62eeee1507dbac905e128a62f2ce690550238db0/header.jpg",
       "shortDescription": "Hang out and get lost with close friends in a big world. A cooperative online walker-talker from the creators of Untitled Goose Game.",
@@ -17025,13 +17025,13 @@
         "Multiplayer",
         "First-Person",
         "Sandbox",
-        "Immersive Sim",
         "Casual",
+        "Immersive Sim",
         "Atmospheric",
         "Dialogue Heavy",
         "Nonlinear",
-        "Investigation",
         "Nature",
+        "Investigation",
         "Colorful",
         "Mystery",
         "Physics"
@@ -17120,7 +17120,7 @@
       "appid": 460950,
       "name": "Katana ZERO",
       "playtimeForever": 333,
-      "playtime2Weeks": 285,
+      "playtime2Weeks": 219,
       "lastPlayed": 1786206831,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/460950/874ee87e03abd66ff158727c051ceb173e3cba3c.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/header.jpg",
