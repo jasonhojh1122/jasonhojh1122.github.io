@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-20T19:00:24.886Z",
-    "gameCount": 412,
+    "generatedAt": "2026-08-21T19:00:25.646Z",
+    "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
@@ -15619,6 +15619,47 @@
       }
     },
     {
+      "appid": 2693730,
+      "name": "Dawnsbury Days",
+      "playtimeForever": 4,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1784644748,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2693730/05ff8cc02654615af56a9021d36c10c867d688a4.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2693730/header.jpg",
+      "shortDescription": "Lead a group of childhood friends through their first adventures in a turn-based tactical RPG played under the rules of PF2E, the second edition of a powerful OGL ruleset. Customize their builds, acquire loot and level up, and ultimately defeat the sinister enemies who threaten your hometown.",
+      "genres": [
+        "RPG Games",
+        "Indie",
+        "RPG",
+        "Strategy"
+      ],
+      "tags": [
+        "RPG",
+        "Turn-Based Tactics",
+        "CRPG",
+        "Strategy",
+        "Tactical RPG",
+        "Character Customization",
+        "Anime",
+        "Turn-Based Combat",
+        "Tabletop",
+        "Party-Based RPG",
+        "Cinematic",
+        "Female Protagonist",
+        "Cute",
+        "Fantasy",
+        "Singleplayer",
+        "Colorful",
+        "Indie",
+        "Moddable",
+        "Grid-Based Movement",
+        "Old School"
+      ],
+      "releaseDate": "8 Mar, 2024",
+      "developer": "Dawnsbury Studios",
+      "achievements": null
+    },
+    {
       "appid": 2702170,
       "name": "Strange Jigsaws",
       "playtimeForever": 141,
@@ -17002,6 +17043,82 @@
       "achievements": null
     },
     {
+      "appid": 2106840,
+      "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
+      "playtimeForever": 16,
+      "playtime2Weeks": 16,
+      "lastPlayed": 1787325111,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
+      "shortDescription": "How far would you go to bring someone back from the dead? Discover the depths that some will go to in this horror-adventure game.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "RPG",
+        "Simulation"
+      ],
+      "tags": [
+        "Visual Novel",
+        "Adventure",
+        "Horror",
+        "Anime",
+        "Simulation",
+        "Text-Based",
+        "Supernatural",
+        "Hand-drawn",
+        "Mystery",
+        "1980s",
+        "Story Rich",
+        "2D Platformer",
+        "Multiple Endings",
+        "Retro",
+        "Singleplayer",
+        "RPG",
+        "Point & Click",
+        "JRPG",
+        "Choose Your Own Adventure",
+        "Cinematic"
+      ],
+      "releaseDate": "8 Mar, 2023",
+      "developer": "Square Enix",
+      "achievements": null
+    },
+    {
+      "appid": 251110,
+      "name": "INFRA",
+      "playtimeForever": 246,
+      "playtime2Weeks": 185,
+      "lastPlayed": 1787323821,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/251110/6a5ef28948896b98ae149ba18de7e6e11dcea310.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251110/header.jpg",
+      "shortDescription": "INFRA puts you into the boots of a structural analyst on a routine mission. Quickly though, your task turns into a fight for survival, all caused by deep-rooted schemes of the past. Your tools are simple: your camera and the wits to navigate a labyrinth of debris.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Indie"
+      ],
+      "tags": [
+        "Puzzle",
+        "Exploration",
+        "Atmospheric",
+        "First-Person",
+        "Walking Simulator",
+        "Adventure",
+        "Mystery",
+        "Story Rich",
+        "Indie",
+        "Singleplayer",
+        "Horror",
+        "Great Soundtrack",
+        "Psychological Horror",
+        "Open World",
+        "Immersive Sim"
+      ],
+      "releaseDate": "15 Jan, 2016",
+      "developer": "Loiste Interactive",
+      "achievements": null
+    },
+    {
       "appid": 1478500,
       "name": "Big Walk",
       "playtimeForever": 627,
@@ -17038,41 +17155,6 @@
       ],
       "releaseDate": "4 Aug, 2026",
       "developer": "House House",
-      "achievements": null
-    },
-    {
-      "appid": 251110,
-      "name": "INFRA",
-      "playtimeForever": 165,
-      "playtime2Weeks": 103,
-      "lastPlayed": 1787013826,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/251110/6a5ef28948896b98ae149ba18de7e6e11dcea310.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251110/header.jpg",
-      "shortDescription": "INFRA puts you into the boots of a structural analyst on a routine mission. Quickly though, your task turns into a fight for survival, all caused by deep-rooted schemes of the past. Your tools are simple: your camera and the wits to navigate a labyrinth of debris.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "Indie"
-      ],
-      "tags": [
-        "Puzzle",
-        "Exploration",
-        "Atmospheric",
-        "First-Person",
-        "Walking Simulator",
-        "Adventure",
-        "Mystery",
-        "Story Rich",
-        "Indie",
-        "Singleplayer",
-        "Horror",
-        "Great Soundtrack",
-        "Psychological Horror",
-        "Open World",
-        "Immersive Sim"
-      ],
-      "releaseDate": "15 Jan, 2016",
-      "developer": "Loiste Interactive",
       "achievements": null
     },
     {
@@ -17120,7 +17202,7 @@
       "appid": 460950,
       "name": "Katana ZERO",
       "playtimeForever": 333,
-      "playtime2Weeks": 219,
+      "playtime2Weeks": 173,
       "lastPlayed": 1786206831,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/460950/874ee87e03abd66ff158727c051ceb173e3cba3c.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/header.jpg",
@@ -17356,47 +17438,6 @@
       ],
       "releaseDate": "23 May, 2025",
       "developer": "Questline",
-      "achievements": null
-    },
-    {
-      "appid": 2693730,
-      "name": "Dawnsbury Days",
-      "playtimeForever": 4,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1784644748,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2693730/05ff8cc02654615af56a9021d36c10c867d688a4.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2693730/header.jpg",
-      "shortDescription": "Lead a group of childhood friends through their first adventures in a turn-based tactical RPG played under the rules of PF2E, the second edition of a powerful OGL ruleset. Customize their builds, acquire loot and level up, and ultimately defeat the sinister enemies who threaten your hometown.",
-      "genres": [
-        "RPG Games",
-        "Indie",
-        "RPG",
-        "Strategy"
-      ],
-      "tags": [
-        "RPG",
-        "Turn-Based Tactics",
-        "CRPG",
-        "Strategy",
-        "Tactical RPG",
-        "Character Customization",
-        "Anime",
-        "Turn-Based Combat",
-        "Tabletop",
-        "Party-Based RPG",
-        "Cinematic",
-        "Female Protagonist",
-        "Cute",
-        "Fantasy",
-        "Singleplayer",
-        "Colorful",
-        "Indie",
-        "Moddable",
-        "Grid-Based Movement",
-        "Old School"
-      ],
-      "releaseDate": "8 Mar, 2024",
-      "developer": "Dawnsbury Studios",
       "achievements": null
     }
   ]
