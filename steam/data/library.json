@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-25T19:00:24.508Z",
+    "generatedAt": "2026-08-26T19:00:28.403Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -17005,7 +17005,7 @@
       "appid": 4920000,
       "name": "Beastfolk Barber Demo",
       "playtimeForever": 54,
-      "playtime2Weeks": 5,
+      "playtime2Weeks": 0,
       "lastPlayed": 1786546796,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4920000/9c151d0a5aba0248e70eab7df82f6b53ca17a2d7.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4920000/39f95c217821ce7ebb1699231ddad935cae2e155/header.jpg",
@@ -17045,9 +17045,9 @@
     {
       "appid": 1478500,
       "name": "Big Walk",
-      "playtimeForever": 932,
-      "playtime2Weeks": 932,
-      "lastPlayed": 1787671332,
+      "playtimeForever": 1144,
+      "playtime2Weeks": 1144,
+      "lastPlayed": 1787760015,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1478500/aba91d96c91f87c1aa3d87eedae20fbbf01f2d54.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/62eeee1507dbac905e128a62f2ce690550238db0/header.jpg",
       "shortDescription": "Hang out and get lost with close friends in a big world. A cooperative online walker-talker from the creators of Untitled Goose Game.",
@@ -17058,8 +17058,8 @@
       "tags": [
         "Open World",
         "Co-op Campaign",
-        "Puzzle",
         "Exploration",
+        "Puzzle",
         "Adventure",
         "Relaxing",
         "Multiplayer",
@@ -17137,8 +17137,8 @@
         "Indie"
       ],
       "tags": [
-        "Puzzle",
         "Exploration",
+        "Puzzle",
         "Atmospheric",
         "First-Person",
         "Walking Simulator",
