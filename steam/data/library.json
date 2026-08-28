@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-27T19:00:30.717Z",
+    "generatedAt": "2026-08-28T19:00:26.188Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -4435,50 +4435,6 @@
       "achievements": {
         "total": 17,
         "unlocked": 10
-      }
-    },
-    {
-      "appid": 435150,
-      "name": "Divinity: Original Sin 2",
-      "playtimeForever": 1839,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1664092215,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/435150/519a99caef7c5e2b4625c8c2fa0620fb66a752f3.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/3f6ee788cb01bd65097c52399d536eb424b4876f/header.jpg",
-      "shortDescription": "The critically acclaimed RPG that raised the bar, from the creators of Baldur's Gate 3. Gather your party. Master deep, tactical combat. Venture as a party of up to four - but know that only one of you will have the chance to become a God.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "RPG",
-        "Strategy"
-      ],
-      "tags": [
-        "Tactical RPG",
-        "RPG",
-        "Turn-Based Strategy",
-        "Story Rich",
-        "Fantasy",
-        "Character Customization",
-        "CRPG",
-        "Exploration",
-        "Party-Based RPG",
-        "Strategy RPG",
-        "PvP",
-        "Female Protagonist",
-        "Co-op Campaign",
-        "Local Co-Op",
-        "Choices Matter",
-        "Romance",
-        "Isometric",
-        "Strategy",
-        "Moddable",
-        "Funny"
-      ],
-      "releaseDate": "14 Sep, 2017",
-      "developer": "Larian Studios",
-      "achievements": {
-        "total": 97,
-        "unlocked": 14
       }
     },
     {
@@ -11494,6 +11450,48 @@
       }
     },
     {
+      "appid": 1466060,
+      "name": "Tainted Grail: The Fall of Avalon",
+      "playtimeForever": 4336,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1785247965,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
+      "shortDescription": "Step into a dark reimagination of Arthurian legends in this first person, open world RPG. Explore a world stuck in everlasting autumn, witness falling legends and make meaningful choices woven into a complex, branching storyline.",
+      "genres": [
+        "RPG Games",
+        "Action",
+        "Adventure",
+        "Indie",
+        "RPG"
+      ],
+      "tags": [
+        "RPG",
+        "Open World",
+        "Adventure",
+        "Dark Fantasy",
+        "First-Person",
+        "Character Customization",
+        "Exploration",
+        "Third Person",
+        "Singleplayer",
+        "Action RPG",
+        "Choices Matter",
+        "Story Rich",
+        "Action",
+        "Nonlinear",
+        "Survival Horror",
+        "Multiple Endings",
+        "Immersive",
+        "Narrative",
+        "Immersive Sim",
+        "FPS"
+      ],
+      "releaseDate": "23 May, 2025",
+      "developer": "Questline",
+      "achievements": null
+    },
+    {
       "appid": 1478540,
       "name": "Bless Unleashed - Beta Test",
       "playtimeForever": 0,
@@ -17043,6 +17041,47 @@
       "achievements": null
     },
     {
+      "appid": 435150,
+      "name": "Divinity: Original Sin 2",
+      "playtimeForever": 1991,
+      "playtime2Weeks": 151,
+      "lastPlayed": 1787931314,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/435150/519a99caef7c5e2b4625c8c2fa0620fb66a752f3.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/3f6ee788cb01bd65097c52399d536eb424b4876f/header.jpg",
+      "shortDescription": "The critically acclaimed RPG that raised the bar, from the creators of Baldur's Gate 3. Gather your party. Master deep, tactical combat. Venture as a party of up to four - but know that only one of you will have the chance to become a God.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "RPG",
+        "Strategy"
+      ],
+      "tags": [
+        "RPG",
+        "Tactical RPG",
+        "Turn-Based Strategy",
+        "Story Rich",
+        "Fantasy",
+        "Character Customization",
+        "CRPG",
+        "Exploration",
+        "Party-Based RPG",
+        "Strategy RPG",
+        "PvP",
+        "Female Protagonist",
+        "Co-op Campaign",
+        "Local Co-Op",
+        "Choices Matter",
+        "Romance",
+        "Isometric",
+        "Strategy",
+        "Moddable",
+        "Funny"
+      ],
+      "releaseDate": "14 Sep, 2017",
+      "developer": "Larian Studios",
+      "achievements": null
+    },
+    {
       "appid": 1478500,
       "name": "Big Walk",
       "playtimeForever": 1144,
@@ -17161,7 +17200,7 @@
       "appid": 2950790,
       "name": "IRON NEST: Heavy Turret Simulator",
       "playtimeForever": 172,
-      "playtime2Weeks": 77,
+      "playtime2Weeks": 60,
       "lastPlayed": 1786805930,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2950790/9e5fd22a0678b6d1b82850f2f95a83f82f2a1c96.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/e6c9e990560078611472e5dab98e79a405ed33f4/header.jpg",
@@ -17186,8 +17225,8 @@
         "Steampunk",
         "Tactical",
         "Atmospheric",
-        "Historical",
         "World War I",
+        "Historical",
         "Wargame",
         "World War II",
         "Replay Value",
@@ -17396,48 +17435,6 @@
       ],
       "releaseDate": "17 Oct, 2025",
       "developer": "Double Fine Productions",
-      "achievements": null
-    },
-    {
-      "appid": 1466060,
-      "name": "Tainted Grail: The Fall of Avalon",
-      "playtimeForever": 4336,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1785247965,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1466060/3ef098b29007cc4bf1c57e3148b1db4ff228d142.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/5660590ed7a97a0e2dddf20fd7a83379e23b7231/header.jpg",
-      "shortDescription": "Step into a dark reimagination of Arthurian legends in this first person, open world RPG. Explore a world stuck in everlasting autumn, witness falling legends and make meaningful choices woven into a complex, branching storyline.",
-      "genres": [
-        "RPG Games",
-        "Action",
-        "Adventure",
-        "Indie",
-        "RPG"
-      ],
-      "tags": [
-        "RPG",
-        "Open World",
-        "Adventure",
-        "Dark Fantasy",
-        "First-Person",
-        "Character Customization",
-        "Exploration",
-        "Third Person",
-        "Singleplayer",
-        "Action RPG",
-        "Choices Matter",
-        "Story Rich",
-        "Action",
-        "Nonlinear",
-        "Survival Horror",
-        "Multiple Endings",
-        "Immersive",
-        "Narrative",
-        "Immersive Sim",
-        "FPS"
-      ],
-      "releaseDate": "23 May, 2025",
-      "developer": "Questline",
       "achievements": null
     }
   ]
