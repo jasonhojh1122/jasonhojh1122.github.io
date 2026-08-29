@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-28T19:00:26.188Z",
+    "generatedAt": "2026-08-29T19:00:25.729Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -17041,6 +17041,47 @@
       "achievements": null
     },
     {
+      "appid": 2106840,
+      "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
+      "playtimeForever": 297,
+      "playtime2Weeks": 297,
+      "lastPlayed": 1788018287,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
+      "shortDescription": "How far would you go to bring someone back from the dead? Discover the depths that some will go to in this horror-adventure game.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "RPG",
+        "Simulation"
+      ],
+      "tags": [
+        "Visual Novel",
+        "Adventure",
+        "Horror",
+        "Anime",
+        "Simulation",
+        "Text-Based",
+        "Supernatural",
+        "Hand-drawn",
+        "Mystery",
+        "1980s",
+        "Story Rich",
+        "2D Platformer",
+        "Multiple Endings",
+        "Retro",
+        "Singleplayer",
+        "RPG",
+        "Point & Click",
+        "JRPG",
+        "Choose Your Own Adventure",
+        "Cinematic"
+      ],
+      "releaseDate": "8 Mar, 2023",
+      "developer": "Square Enix",
+      "achievements": null
+    },
+    {
       "appid": 435150,
       "name": "Divinity: Original Sin 2",
       "playtimeForever": 1991,
@@ -17097,8 +17138,8 @@
       "tags": [
         "Open World",
         "Co-op Campaign",
-        "Exploration",
         "Puzzle",
+        "Exploration",
         "Adventure",
         "Relaxing",
         "Multiplayer",
@@ -17118,47 +17159,6 @@
       ],
       "releaseDate": "4 Aug, 2026",
       "developer": "House House",
-      "achievements": null
-    },
-    {
-      "appid": 2106840,
-      "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
-      "playtimeForever": 260,
-      "playtime2Weeks": 260,
-      "lastPlayed": 1787466862,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
-      "shortDescription": "How far would you go to bring someone back from the dead? Discover the depths that some will go to in this horror-adventure game.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "RPG",
-        "Simulation"
-      ],
-      "tags": [
-        "Visual Novel",
-        "Adventure",
-        "Horror",
-        "Anime",
-        "Simulation",
-        "Text-Based",
-        "Supernatural",
-        "Hand-drawn",
-        "Mystery",
-        "1980s",
-        "Story Rich",
-        "2D Platformer",
-        "Multiple Endings",
-        "Retro",
-        "Singleplayer",
-        "RPG",
-        "Point & Click",
-        "JRPG",
-        "Choose Your Own Adventure",
-        "Cinematic"
-      ],
-      "releaseDate": "8 Mar, 2023",
-      "developer": "Square Enix",
       "achievements": null
     },
     {
@@ -17200,7 +17200,7 @@
       "appid": 2950790,
       "name": "IRON NEST: Heavy Turret Simulator",
       "playtimeForever": 172,
-      "playtime2Weeks": 60,
+      "playtime2Weeks": 0,
       "lastPlayed": 1786805930,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2950790/9e5fd22a0678b6d1b82850f2f95a83f82f2a1c96.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/e6c9e990560078611472e5dab98e79a405ed33f4/header.jpg",
@@ -17222,8 +17222,8 @@
         "Indie",
         "Action",
         "First-Person",
-        "Steampunk",
         "Tactical",
+        "Steampunk",
         "Atmospheric",
         "World War I",
         "Historical",
