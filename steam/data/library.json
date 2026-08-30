@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-29T19:00:25.729Z",
+    "generatedAt": "2026-08-30T19:00:24.609Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -8518,51 +8518,6 @@
       "achievements": null
     },
     {
-      "appid": 1086940,
-      "name": "Baldur's Gate 3",
-      "playtimeForever": 10085,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1750779656,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
-      "shortDescription": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons &amp; Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
-      "genres": [
-        "RPG Games",
-        "Adventure",
-        "RPG",
-        "Strategy"
-      ],
-      "tags": [
-        "RPG",
-        "Character Customization",
-        "Choices Matter",
-        "Dungeons & Dragons",
-        "Turn-Based Combat",
-        "Story Rich",
-        "Sexual Content",
-        "CRPG",
-        "Fantasy",
-        "Adventure",
-        "Romance",
-        "Online Co-Op",
-        "Multiplayer",
-        "Strategy",
-        "Singleplayer",
-        "Nudity",
-        "Co-op Campaign",
-        "Class-Based",
-        "Dark Fantasy",
-        "Combat"
-      ],
-      "releaseDate": "3 Aug, 2023",
-      "developer": "Larian Studios",
-      "achievements": {
-        "total": 54,
-        "unlocked": 30
-      },
-      "favorite": true
-    },
-    {
       "appid": 1089980,
       "name": "The Henry Stickmin Collection",
       "playtimeForever": 142,
@@ -16119,6 +16074,44 @@
       }
     },
     {
+      "appid": 3043580,
+      "name": "Keeper",
+      "playtimeForever": 58,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1785372005,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3043580/19eefcf12b3946eba0a4de791530ee4fbcb6cbaf.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3043580/d27862539e2110cfae3e8004a0a8532e2f5d7a02/header.jpg",
+      "shortDescription": "From Lee Petty and Double Fine Productions, Keeper is an atmospheric puzzle adventure in which a long-forgotten lighthouse is awakened and, joined by a spirited seabird, it embarks upon a heartening tale of unlikely companionship, and an unexpected journey into realms beyond understanding",
+      "genres": [
+        "Adventure Games",
+        "Adventure"
+      ],
+      "tags": [
+        "Adventure",
+        "Atmospheric",
+        "Cinematic",
+        "Psychedelic",
+        "Puzzle",
+        "Third Person",
+        "Surreal",
+        "Story Rich",
+        "Exploration",
+        "Colorful",
+        "Stylized",
+        "Fantasy",
+        "Philosophical",
+        "Mystery",
+        "Nature",
+        "Singleplayer",
+        "3D",
+        "Linear",
+        "Walking Simulator"
+      ],
+      "releaseDate": "17 Oct, 2025",
+      "developer": "Double Fine Productions",
+      "achievements": null
+    },
+    {
       "appid": 3047750,
       "name": "Herdling",
       "playtimeForever": 163,
@@ -17041,6 +17034,48 @@
       "achievements": null
     },
     {
+      "appid": 1086940,
+      "name": "Baldur's Gate 3",
+      "playtimeForever": 10199,
+      "playtime2Weeks": 114,
+      "lastPlayed": 1788102343,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
+      "shortDescription": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons &amp; Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
+      "genres": [
+        "RPG Games",
+        "Adventure",
+        "RPG",
+        "Strategy"
+      ],
+      "tags": [
+        "RPG",
+        "Character Customization",
+        "Choices Matter",
+        "Turn-Based Combat",
+        "Story Rich",
+        "Sexual Content",
+        "CRPG",
+        "Fantasy",
+        "Adventure",
+        "Romance",
+        "Online Co-Op",
+        "Multiplayer",
+        "Nudity",
+        "Strategy",
+        "Singleplayer",
+        "Co-op Campaign",
+        "Class-Based",
+        "Dark Fantasy",
+        "Combat",
+        "LGBTQ+"
+      ],
+      "releaseDate": "3 Aug, 2023",
+      "developer": "Larian Studios",
+      "achievements": null,
+      "favorite": true
+    },
+    {
       "appid": 2106840,
       "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
       "playtimeForever": 297,
@@ -17126,7 +17161,7 @@
       "appid": 1478500,
       "name": "Big Walk",
       "playtimeForever": 1144,
-      "playtime2Weeks": 1144,
+      "playtime2Weeks": 970,
       "lastPlayed": 1787760015,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1478500/aba91d96c91f87c1aa3d87eedae20fbbf01f2d54.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/62eeee1507dbac905e128a62f2ce690550238db0/header.jpg",
@@ -17136,8 +17171,8 @@
         "Adventure"
       ],
       "tags": [
-        "Open World",
         "Co-op Campaign",
+        "Open World",
         "Puzzle",
         "Exploration",
         "Adventure",
@@ -17165,7 +17200,7 @@
       "appid": 251110,
       "name": "INFRA",
       "playtimeForever": 246,
-      "playtime2Weeks": 185,
+      "playtime2Weeks": 109,
       "lastPlayed": 1787323821,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/251110/6a5ef28948896b98ae149ba18de7e6e11dcea310.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251110/header.jpg",
@@ -17397,44 +17432,6 @@
       ],
       "releaseDate": "20 May, 2026",
       "developer": "Amanita Design",
-      "achievements": null
-    },
-    {
-      "appid": 3043580,
-      "name": "Keeper",
-      "playtimeForever": 58,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1785372005,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3043580/19eefcf12b3946eba0a4de791530ee4fbcb6cbaf.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3043580/d27862539e2110cfae3e8004a0a8532e2f5d7a02/header.jpg",
-      "shortDescription": "From Lee Petty and Double Fine Productions, Keeper is an atmospheric puzzle adventure in which a long-forgotten lighthouse is awakened and, joined by a spirited seabird, it embarks upon a heartening tale of unlikely companionship, and an unexpected journey into realms beyond understanding",
-      "genres": [
-        "Adventure Games",
-        "Adventure"
-      ],
-      "tags": [
-        "Adventure",
-        "Atmospheric",
-        "Cinematic",
-        "Psychedelic",
-        "Puzzle",
-        "Third Person",
-        "Surreal",
-        "Story Rich",
-        "Exploration",
-        "Colorful",
-        "Stylized",
-        "Fantasy",
-        "Philosophical",
-        "Mystery",
-        "Nature",
-        "Singleplayer",
-        "3D",
-        "Linear",
-        "Walking Simulator"
-      ],
-      "releaseDate": "17 Oct, 2025",
-      "developer": "Double Fine Productions",
       "achievements": null
     }
   ]
