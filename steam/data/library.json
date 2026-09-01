@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-08-31T19:00:27.305Z",
+    "generatedAt": "2026-09-01T19:00:26.385Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -17161,7 +17161,7 @@
       "appid": 1478500,
       "name": "Big Walk",
       "playtimeForever": 1144,
-      "playtime2Weeks": 831,
+      "playtime2Weeks": 678,
       "lastPlayed": 1787760015,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1478500/aba91d96c91f87c1aa3d87eedae20fbbf01f2d54.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/62eeee1507dbac905e128a62f2ce690550238db0/header.jpg",
@@ -17200,7 +17200,7 @@
       "appid": 251110,
       "name": "INFRA",
       "playtimeForever": 246,
-      "playtime2Weeks": 109,
+      "playtime2Weeks": 81,
       "lastPlayed": 1787323821,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/251110/6a5ef28948896b98ae149ba18de7e6e11dcea310.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251110/header.jpg",
@@ -17265,8 +17265,8 @@
         "Wargame",
         "World War II",
         "Replay Value",
-        "Physics",
-        "Logic"
+        "Logic",
+        "Physics"
       ],
       "releaseDate": "6 Aug, 2026",
       "developer": "Nick Nieuwoudt",
