@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-02T19:00:26.801Z",
+    "generatedAt": "2026-09-03T19:00:28.956Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -17036,9 +17036,9 @@
     {
       "appid": 2106840,
       "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
-      "playtimeForever": 415,
-      "playtime2Weeks": 415,
-      "lastPlayed": 1788361577,
+      "playtimeForever": 486,
+      "playtime2Weeks": 486,
+      "lastPlayed": 1788447195,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
       "shortDescription": "How far would you go to bring someone back from the dead? Discover the depths that some will go to in this horror-adventure game.",
@@ -17161,7 +17161,7 @@
       "appid": 1478500,
       "name": "Big Walk",
       "playtimeForever": 1144,
-      "playtime2Weeks": 678,
+      "playtime2Weeks": 517,
       "lastPlayed": 1787760015,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1478500/aba91d96c91f87c1aa3d87eedae20fbbf01f2d54.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/62eeee1507dbac905e128a62f2ce690550238db0/header.jpg",
@@ -17338,8 +17338,8 @@
         "Singleplayer",
         "Multiple Endings",
         "Choices Matter",
-        "Puzzle",
         "Stylized",
+        "Puzzle",
         "Relaxing",
         "3D Platformer",
         "Sci-fi",
