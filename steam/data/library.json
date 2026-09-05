@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-04T19:00:27.607Z",
+    "generatedAt": "2026-09-05T19:00:27.943Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -9549,6 +9549,47 @@
       "favorite": true
     },
     {
+      "appid": 1206070,
+      "name": "Phonopolis",
+      "playtimeForever": 204,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1785507390,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1206070/d3f15259b90432160546a4298510f4abdcb3293f.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1206070/87a50691d40d18b212ca990ecd6cf4e6173431a0/header.jpg",
+      "shortDescription": "Phonopolis is a story-driven puzzle adventure set in a hand-painted 3D world made of cardboard. Solve a wide variety of playful puzzles and help Felix end the Leader's oppressive influence in a resonant dystopian city inspired by avant-garde art.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Casual",
+        "Indie"
+      ],
+      "tags": [
+        "Puzzle",
+        "Hand-drawn",
+        "Adventure",
+        "Relaxing",
+        "Story Rich",
+        "Point & Click",
+        "Cozy",
+        "Casual",
+        "Dystopian ",
+        "Family Friendly",
+        "Linear",
+        "Stylized",
+        "Colorful",
+        "Logic",
+        "Singleplayer",
+        "Indie",
+        "Atmospheric",
+        "Cinematic",
+        "3D",
+        "Philosophical"
+      ],
+      "releaseDate": "20 May, 2026",
+      "developer": "Amanita Design",
+      "achievements": null
+    },
+    {
       "appid": 1207400,
       "name": "Sokpop S06: Klym",
       "playtimeForever": 5,
@@ -16829,45 +16870,6 @@
       "achievements": null
     },
     {
-      "appid": 4018950,
-      "name": "Lost Wiki: Kozlovka",
-      "playtimeForever": 92,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1775002442,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4018950/d16e35372902538446b8b6fd20003b39a653d868.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4018950/62daa88bc13e7ca41c88c65260cf04cd8747ad2a/header.jpg",
-      "shortDescription": "Explore a wikipedia-like database and solve a small town mystery in Eastern Europe. Step into the shoes of a journalist in the 90s as you sprawl through articles and uncover the secrets that have been laid in front of you.",
-      "genres": [
-        "Indie Games",
-        "Indie"
-      ],
-      "tags": [
-        "Mystery",
-        "Detective",
-        "Investigation",
-        "Conspiracy",
-        "Story Rich",
-        "Puzzle",
-        "Interactive Fiction",
-        "Thriller",
-        "Simulation",
-        "Text-Based",
-        "Pixel Graphics",
-        "1990's",
-        "Atmospheric",
-        "Indie",
-        "RPG",
-        "Dark",
-        "Lore-Rich",
-        "Old School",
-        "Linear",
-        "Narration"
-      ],
-      "releaseDate": "20 Mar, 2026",
-      "developer": "yattytheman",
-      "achievements": null
-    },
-    {
       "appid": 4197610,
       "name": "Librarian: Tidy Up the Arcane Library!",
       "playtimeForever": 261,
@@ -17034,10 +17036,49 @@
       "achievements": null
     },
     {
+      "appid": 4018950,
+      "name": "Lost Wiki: Kozlovka",
+      "playtimeForever": 96,
+      "playtime2Weeks": 3,
+      "lastPlayed": 1788577788,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4018950/d16e35372902538446b8b6fd20003b39a653d868.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4018950/62daa88bc13e7ca41c88c65260cf04cd8747ad2a/header.jpg",
+      "shortDescription": "Explore a wikipedia-like database and solve a small town mystery in Eastern Europe. Step into the shoes of a journalist in the 90s as you sprawl through articles and uncover the secrets that have been laid in front of you.",
+      "genres": [
+        "Indie Games",
+        "Indie"
+      ],
+      "tags": [
+        "Mystery",
+        "Detective",
+        "Investigation",
+        "Conspiracy",
+        "Story Rich",
+        "Puzzle",
+        "Interactive Fiction",
+        "Thriller",
+        "Text-Based",
+        "Simulation",
+        "Pixel Graphics",
+        "1990's",
+        "Atmospheric",
+        "Indie",
+        "RPG",
+        "Dark",
+        "Lore-Rich",
+        "Old School",
+        "Linear",
+        "Singleplayer"
+      ],
+      "releaseDate": "20 Mar, 2026",
+      "developer": "yattytheman",
+      "achievements": null
+    },
+    {
       "appid": 2106840,
       "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
       "playtimeForever": 554,
-      "playtime2Weeks": 538,
+      "playtime2Weeks": 401,
       "lastPlayed": 1788535776,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
@@ -17391,47 +17432,6 @@
       ],
       "releaseDate": "21 Mar, 2024",
       "developer": "Bread On Board",
-      "achievements": null
-    },
-    {
-      "appid": 1206070,
-      "name": "Phonopolis",
-      "playtimeForever": 204,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1785507390,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1206070/d3f15259b90432160546a4298510f4abdcb3293f.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1206070/87a50691d40d18b212ca990ecd6cf4e6173431a0/header.jpg",
-      "shortDescription": "Phonopolis is a story-driven puzzle adventure set in a hand-painted 3D world made of cardboard. Solve a wide variety of playful puzzles and help Felix end the Leader's oppressive influence in a resonant dystopian city inspired by avant-garde art.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "Casual",
-        "Indie"
-      ],
-      "tags": [
-        "Puzzle",
-        "Hand-drawn",
-        "Adventure",
-        "Relaxing",
-        "Story Rich",
-        "Point & Click",
-        "Cozy",
-        "Casual",
-        "Dystopian ",
-        "Family Friendly",
-        "Linear",
-        "Stylized",
-        "Colorful",
-        "Logic",
-        "Singleplayer",
-        "Indie",
-        "Atmospheric",
-        "Cinematic",
-        "3D",
-        "Philosophical"
-      ],
-      "releaseDate": "20 May, 2026",
-      "developer": "Amanita Design",
       "achievements": null
     }
   ]
