@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-08T19:00:25.700Z",
+    "generatedAt": "2026-09-09T19:00:24.960Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -17036,6 +17036,47 @@
       "achievements": null
     },
     {
+      "appid": 2106840,
+      "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
+      "playtimeForever": 654,
+      "playtime2Weeks": 393,
+      "lastPlayed": 1788916118,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
+      "shortDescription": "How far would you go to bring someone back from the dead? Discover the depths that some will go to in this horror-adventure game.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "RPG",
+        "Simulation"
+      ],
+      "tags": [
+        "Visual Novel",
+        "Adventure",
+        "Horror",
+        "Anime",
+        "Simulation",
+        "Text-Based",
+        "Supernatural",
+        "Hand-drawn",
+        "Mystery",
+        "1980s",
+        "Story Rich",
+        "2D Platformer",
+        "Multiple Endings",
+        "Retro",
+        "Singleplayer",
+        "RPG",
+        "Point & Click",
+        "JRPG",
+        "Choose Your Own Adventure",
+        "Cinematic"
+      ],
+      "releaseDate": "8 Mar, 2023",
+      "developer": "Square Enix",
+      "achievements": null
+    },
+    {
       "appid": 1086940,
       "name": "Baldur's Gate 3",
       "playtimeForever": 10499,
@@ -17076,47 +17117,6 @@
       "developer": "Larian Studios",
       "achievements": null,
       "favorite": true
-    },
-    {
-      "appid": 2106840,
-      "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
-      "playtimeForever": 600,
-      "playtime2Weeks": 340,
-      "lastPlayed": 1788742472,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
-      "shortDescription": "How far would you go to bring someone back from the dead? Discover the depths that some will go to in this horror-adventure game.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "RPG",
-        "Simulation"
-      ],
-      "tags": [
-        "Visual Novel",
-        "Adventure",
-        "Horror",
-        "Anime",
-        "Simulation",
-        "Text-Based",
-        "Supernatural",
-        "Hand-drawn",
-        "Mystery",
-        "1980s",
-        "Story Rich",
-        "2D Platformer",
-        "Multiple Endings",
-        "Retro",
-        "Singleplayer",
-        "RPG",
-        "Point & Click",
-        "JRPG",
-        "Choose Your Own Adventure",
-        "Cinematic"
-      ],
-      "releaseDate": "8 Mar, 2023",
-      "developer": "Square Enix",
-      "achievements": null
     },
     {
       "appid": 4018950,
@@ -17202,7 +17202,7 @@
       "appid": 1478500,
       "name": "Big Walk",
       "playtimeForever": 1144,
-      "playtime2Weeks": 211,
+      "playtime2Weeks": 0,
       "lastPlayed": 1787760015,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1478500/aba91d96c91f87c1aa3d87eedae20fbbf01f2d54.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/62eeee1507dbac905e128a62f2ce690550238db0/header.jpg",
