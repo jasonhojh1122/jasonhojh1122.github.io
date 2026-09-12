@@ -117,6 +117,7 @@
 [data-theme="wall"] .works  { --bar-top: #b6aaa9; --bar-bottom: #baafae; }
 [data-theme="wall"] .photos { --bar-top: #a49a97; --bar-bottom: #a29897; }
 [data-theme="wall"] .about  { --bar-top: #929192; --bar-bottom: #606461; }
+[data-theme="wall"] .steam  { --bar-top: #a79c9b; --bar-bottom: #a49b98; }
 
 [data-theme="wall"] .title {
   font-weight: 600;
@@ -134,3 +135,15 @@
 [data-theme="wall"] .links a { font-weight: 400; }
 [data-theme="wall"] .facts dt,
 [data-theme="wall"] .status { font-weight: 500; }
+
+/* steam page: the label on a print, the tools, the counts */
+[data-theme="wall"] .counts h3 { font-weight: 600; }
+[data-theme="wall"] .stats dd { font-weight: 600; }
+[data-theme="wall"] .what { font-weight: 500; }
+[data-theme="wall"] .is-fav .what { font-weight: 600; }
+[data-theme="wall"] .hrs,
+[data-theme="wall"] .find,
+[data-theme="wall"] .sift,
+[data-theme="wall"] .tool,
+[data-theme="wall"] .pick summary,
+[data-theme="wall"] .bars { font-weight: 400; }
