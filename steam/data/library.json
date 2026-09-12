@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-11T19:00:24.504Z",
+    "generatedAt": "2026-09-12T19:00:24.492Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -439,45 +439,6 @@
         "total": 25,
         "unlocked": 1
       }
-    },
-    {
-      "appid": 38400,
-      "name": "Fallout",
-      "playtimeForever": 0,
-      "playtime2Weeks": 0,
-      "lastPlayed": 0,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/38400/df0001a1aa011e6c7a8f38a65908070eba3d2f61.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/38400/header.jpg",
-      "shortDescription": "You've just unearthed the classic post-apocalyptic role-playing game that revitalized the entire CRPG genre. The Fallout® SPECIAL system allows drastically different types of characters, meaningful decisions and development that puts you in complete control. Explore the devastated ruins of a golden age civilization.",
-      "genres": [
-        "RPG Games",
-        "RPG"
-      ],
-      "tags": [
-        "RPG",
-        "Post-apocalyptic",
-        "Classic",
-        "Open World",
-        "Isometric",
-        "Turn-Based",
-        "Turn-Based Combat",
-        "Singleplayer",
-        "Sci-fi",
-        "Atmospheric",
-        "Multiple Endings",
-        "1990's",
-        "CRPG",
-        "Retro",
-        "Adventure",
-        "Exploration",
-        "2D",
-        "Difficult",
-        "Tactical",
-        "Sandbox"
-      ],
-      "releaseDate": "30 Sep, 1997",
-      "developer": "Interplay Inc.",
-      "achievements": null
     },
     {
       "appid": 40700,
@@ -15332,6 +15293,46 @@
       }
     },
     {
+      "appid": 2612680,
+      "name": "Cureocity",
+      "playtimeForever": 21,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1785591015,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2612680/450542e1978e764266feae64148542afa67eb406.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2612680/header.jpg",
+      "shortDescription": "“People think battles need powerful weapons, but strategy at hand is key.&quot;The story follows a rookie adventurer and a new healer in a dungeon quest, with the core gameplay involving hand-picked methods using weapons and items. Fight or purify? Heal or alter? The choice is in your hands.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Indie"
+      ],
+      "tags": [
+        "Indie",
+        "Cute",
+        "Adventure",
+        "Puzzle",
+        "Hand-drawn",
+        "Female Protagonist",
+        "Turn-Based Tactics",
+        "Turn-Based Strategy",
+        "2D",
+        "Cartoon",
+        "Wholesome",
+        "Relaxing",
+        "Cartoony",
+        "Emotional",
+        "Casual",
+        "Singleplayer",
+        "Turn-Based Combat",
+        "Exploration",
+        "Free to Play",
+        "RPG"
+      ],
+      "releaseDate": "21 Mar, 2024",
+      "developer": "Bread On Board",
+      "achievements": null
+    },
+    {
       "appid": 2612700,
       "name": "S4U: CITYPUNK 2011 AND LOVE PUNCH",
       "playtimeForever": 151,
@@ -17036,11 +17037,50 @@
       "achievements": null
     },
     {
+      "appid": 38400,
+      "name": "Fallout",
+      "playtimeForever": 11,
+      "playtime2Weeks": 11,
+      "lastPlayed": 1789185448,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/38400/df0001a1aa011e6c7a8f38a65908070eba3d2f61.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/38400/header.jpg",
+      "shortDescription": "You've just unearthed the classic post-apocalyptic role-playing game that revitalized the entire CRPG genre. The Fallout® SPECIAL system allows drastically different types of characters, meaningful decisions and development that puts you in complete control. Explore the devastated ruins of a golden age civilization.",
+      "genres": [
+        "RPG Games",
+        "RPG"
+      ],
+      "tags": [
+        "RPG",
+        "Post-apocalyptic",
+        "Classic",
+        "Open World",
+        "Isometric",
+        "Turn-Based",
+        "Turn-Based Combat",
+        "Singleplayer",
+        "Sci-fi",
+        "Atmospheric",
+        "Multiple Endings",
+        "CRPG",
+        "1990's",
+        "Retro",
+        "Adventure",
+        "Exploration",
+        "2D",
+        "Difficult",
+        "Tactical",
+        "Sandbox"
+      ],
+      "releaseDate": "30 Sep, 1997",
+      "developer": "Interplay Inc.",
+      "achievements": null
+    },
+    {
       "appid": 2106840,
       "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
-      "playtimeForever": 654,
-      "playtime2Weeks": 393,
-      "lastPlayed": 1788916118,
+      "playtimeForever": 674,
+      "playtime2Weeks": 376,
+      "lastPlayed": 1789184587,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
       "shortDescription": "How far would you go to bring someone back from the dead? Discover the depths that some will go to in this horror-adventure game.",
@@ -17074,7 +17114,10 @@
       ],
       "releaseDate": "8 Mar, 2023",
       "developer": "Square Enix",
-      "achievements": null
+      "achievements": {
+        "total": 34,
+        "unlocked": 27
+      }
     },
     {
       "appid": 1086940,
@@ -17115,7 +17158,10 @@
       ],
       "releaseDate": "3 Aug, 2023",
       "developer": "Larian Studios",
-      "achievements": null,
+      "achievements": {
+        "total": 54,
+        "unlocked": 31
+      },
       "favorite": true
     },
     {
@@ -17155,7 +17201,10 @@
       ],
       "releaseDate": "20 Mar, 2026",
       "developer": "yattytheman",
-      "achievements": null
+      "achievements": {
+        "total": 6,
+        "unlocked": 3
+      }
     },
     {
       "appid": 435150,
@@ -17196,7 +17245,10 @@
       ],
       "releaseDate": "14 Sep, 2017",
       "developer": "Larian Studios",
-      "achievements": null
+      "achievements": {
+        "total": 97,
+        "unlocked": 14
+      }
     },
     {
       "appid": 1478500,
@@ -17235,7 +17287,10 @@
       ],
       "releaseDate": "4 Aug, 2026",
       "developer": "House House",
-      "achievements": null
+      "achievements": {
+        "total": 12,
+        "unlocked": 12
+      }
     },
     {
       "appid": 251110,
@@ -17270,7 +17325,10 @@
       ],
       "releaseDate": "15 Jan, 2016",
       "developer": "Loiste Interactive",
-      "achievements": null
+      "achievements": {
+        "total": 74,
+        "unlocked": 3
+      }
     },
     {
       "appid": 2950790,
@@ -17311,7 +17369,10 @@
       ],
       "releaseDate": "6 Aug, 2026",
       "developer": "Nick Nieuwoudt",
-      "achievements": null
+      "achievements": {
+        "total": 33,
+        "unlocked": 6
+      }
     },
     {
       "appid": 460950,
@@ -17351,7 +17412,10 @@
       ],
       "releaseDate": "18 Apr, 2019",
       "developer": "Askiisoft",
-      "achievements": null
+      "achievements": {
+        "total": 22,
+        "unlocked": 4
+      }
     },
     {
       "appid": 757310,
@@ -17392,47 +17456,10 @@
       ],
       "releaseDate": "23 Sep, 2021",
       "developer": "Shedworks",
-      "achievements": null
-    },
-    {
-      "appid": 2612680,
-      "name": "Cureocity",
-      "playtimeForever": 21,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1785591015,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2612680/450542e1978e764266feae64148542afa67eb406.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2612680/header.jpg",
-      "shortDescription": "“People think battles need powerful weapons, but strategy at hand is key.&quot;The story follows a rookie adventurer and a new healer in a dungeon quest, with the core gameplay involving hand-picked methods using weapons and items. Fight or purify? Heal or alter? The choice is in your hands.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "Indie"
-      ],
-      "tags": [
-        "Indie",
-        "Cute",
-        "Adventure",
-        "Puzzle",
-        "Hand-drawn",
-        "Female Protagonist",
-        "Turn-Based Tactics",
-        "Turn-Based Strategy",
-        "2D",
-        "Cartoon",
-        "Wholesome",
-        "Relaxing",
-        "Cartoony",
-        "Emotional",
-        "Casual",
-        "Singleplayer",
-        "Turn-Based Combat",
-        "Exploration",
-        "Free to Play",
-        "RPG"
-      ],
-      "releaseDate": "21 Mar, 2024",
-      "developer": "Bread On Board",
-      "achievements": null
+      "achievements": {
+        "total": 56,
+        "unlocked": 25
+      }
     }
   ]
 }
