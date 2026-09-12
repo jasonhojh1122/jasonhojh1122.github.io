@@ -1,0 +1,288 @@
+/* ---------------------------------------------------------------------------
+   works.css — structure for the Works page. One column of boxes, one box per
+   project: a media reel on the left, the write-up on the right. Geometry
+   only; colour, surface and type come from the theme through tokens.
+
+   Tokens read here (a theme may set any of them; fallbacks apply):
+     --works-scale (one knob: the column and its type, 1 = sizes as written)
+     --sheet-max --title-size --name-size --body-size --meta-size
+     --line       (edge thickness: a box, a frame, a button, the hover rule)
+     --hair       (the thinner rule inside a box: dividers, a picture's edge;
+                   declared in base.css, where it also edges the lettering)
+     --box-gap
+   Inside the sheet, spacing is set in em so it follows the type around it;
+   only the lightbox (viewport UI) stays in rem.
+     --panel --panel-ink --panel-ink-soft --panel-edge --thumb-ground
+     --lightbox-backdrop
+   --------------------------------------------------------------------------- */
+
+:root {
+  --works-scale: 0.8;
+  --sheet-max:  calc(76rem * var(--works-scale));
+  --title-size: calc(clamp(1.5rem, 3.2vw, 2.4rem) * var(--works-scale));
+  --name-size:  calc(clamp(1.5rem, 2.6vw, 2.1rem) * var(--works-scale));
+  --body-size:  calc(1rem * var(--works-scale));
+  --meta-size:  calc(0.9rem * var(--works-scale));
+  --line:       2px;
+  --box-gap:    calc(1.5rem * var(--works-scale));
+  --media-w:    minmax(calc(20rem * var(--works-scale)), 58%);
+}
+
+body.works { min-height: auto; }
+
+/* --- the wall behind the sheet --------------------------------------------- */
+/* The frame is taller than the window by --drift, and works.js slides it up
+   by that much over the full length of the page, so the wall scrolls slower
+   than the sheet in front of it. The base transition on transform is off
+   here so the slide follows the scroll without lag. */
+
+.works { --drift: 60vh; }
+.works .frame {
+  bottom: auto;
+  height: calc(100% + var(--drift));
+  transition: opacity var(--fade) var(--ease);
+  will-change: transform;
+}
+
+.sheet {
+  position: relative;
+  z-index: 1;
+  max-width: var(--sheet-max);
+  margin: 0 auto;
+  font-size: var(--body-size);
+  padding: 0 var(--pad) calc(var(--pad) * 2);
+  /* the page runs under a phone's status bar and toolbar (viewport-fit=cover)
+     so the wall covers them; the sheet itself keeps clear of them */
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: calc(var(--pad) * 2 + env(safe-area-inset-bottom, 0px));
+}
+
+/* --- header ------------------------------------------------------------- */
+
+.top { text-align: center; padding-block: var(--pad); }  /* equal above and below the title */
+.title {
+  margin: 0;
+  font-size: var(--title-size);
+  line-height: 1.1;
+  color: var(--ink);
+}
+/* the site name: pointing at it draws the rule round it, as on the front
+   page (the drawing itself is in base.css) */
+.home {
+  position: relative;
+  display: inline-block;
+  padding: var(--item-pad);
+  color: inherit;
+  text-decoration: none;
+}
+.home:focus { outline: none; }
+
+/* --- the boxes ------------------------------------------------------------ */
+
+.list { display: flex; flex-direction: column; gap: var(--box-gap); }
+
+.box {
+  display: grid;
+  grid-template-columns: var(--media-w) 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "media head" "media side" "info info";
+  gap: 0 calc(clamp(1rem, 2.5vw, 2rem) * var(--works-scale));
+  padding: calc(clamp(0.9rem, 2vw, 1.4rem) * var(--works-scale));
+  background: var(--panel);
+  color: var(--panel-ink);
+  border: var(--line) solid var(--panel-edge);
+  scroll-margin-top: 1em;
+}
+
+/* The picture sits beside the name and the facts, which are about the same
+   height whatever the project. The lists, which are not, run underneath at
+   full width so the box closes wherever they end. */
+.box-head { grid-area: head; min-width: 0; padding-bottom: 1em; border-bottom: var(--hair) solid var(--panel-edge); margin-bottom: 1em; }
+.side { grid-area: side; min-width: 0; }
+
+/* media: a reel of slides you swipe or click through, dots underneath */
+.media { grid-area: media; display: flex; flex-direction: column; gap: 0.6em; min-width: 0; }
+
+.reel {
+  position: relative;
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border: var(--line) solid var(--panel-edge);
+  background: var(--thumb-ground);
+}
+.reel::-webkit-scrollbar { display: none; }
+.reel:focus { outline: none; }
+.reel:focus-visible { outline: var(--line) solid var(--panel-ink); outline-offset: 2px; }
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;   /* a fast flick moves one slide, not several */
+  overflow: hidden;
+}
+.slide img, .slide iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  display: block;
+  border: 0;
+}
+.slide img { object-fit: contain; }
+.slide.is-video img { object-fit: cover; }
+.slide.is-empty { display: grid; place-items: center; }
+.slide.is-empty span { font-size: 5em; line-height: 1; }
+
+.play {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 4.2em; height: 4.2em;
+  border: var(--line) solid var(--panel-edge);
+  background: var(--panel);
+  color: var(--panel-ink);
+  padding: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.play svg { width: 1.5em; height: 1.5em; display: block; fill: currentColor; margin-left: 0.2em; }
+.play:hover, .play:focus-visible { transform: scale(1.06); }
+
+.dots { display: flex; justify-content: center; gap: 0.45em; }
+.dots button {
+  width: 0.85em; height: 0.85em;
+  padding: 0;
+  border: var(--line) solid var(--panel-edge);
+  background: var(--panel);
+  cursor: pointer;
+}
+.dots button[aria-selected="true"] { background: var(--panel-ink); }
+.dots button:focus-visible { outline: var(--line) solid var(--panel-ink); outline-offset: 2px; }
+
+
+.name {
+  margin: 0 0 0.2em;
+  font-size: var(--name-size);
+  line-height: 1.15;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35em;
+}
+.status {
+  font-size: 0.5em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2em 0.6em;
+  border: var(--hair) solid var(--panel-edge);
+  vertical-align: middle;
+}
+.tagline { margin: 0; font-size: 1.1em; line-height: 1.4; }
+
+.facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.45em 1.2em;
+  font-size: var(--meta-size);
+  line-height: 1.4;
+}
+.facts dt { font-size: 0.78em; letter-spacing: 0.06em; text-transform: uppercase; color: var(--panel-ink-soft); padding-top: 0.3em; }
+.facts dd { margin: 0; }
+
+/* info: what I did on the left, recognition on the right */
+.info {
+  grid-area: info;
+  min-width: 0;
+  line-height: 1.55;
+  margin-top: 1.2em;
+  padding-top: 0.2em;
+  border-top: var(--hair) solid var(--panel-edge);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 calc(clamp(1rem, 2.5vw, 2rem) * var(--works-scale));
+}
+.info.is-wide { grid-template-columns: 1fr; }
+.info section { min-width: 0; }
+.info h3 { margin: 1em 0 0.3em; font-size: 1em; letter-spacing: 0.04em; text-transform: uppercase; }
+.info ul { margin: 0; padding-left: 1.2em; }
+.info li + li { margin-top: 0.3em; }
+
+
+.links { margin: 1em 0 0; display: flex; flex-wrap: wrap; gap: 0.5em 0.6em; }
+.links a {
+  color: var(--panel-ink);
+  text-decoration: none;
+  font-size: var(--meta-size);
+  padding: 0.4em 0.9em;
+  border: var(--line) solid var(--panel-edge);
+}
+.links a:hover, .links a:focus-visible { background: var(--panel-ink); color: var(--panel); }
+
+/* --- lightbox ------------------------------------------------------------ */
+
+.light {
+  border: 0; padding: 0;
+  background: transparent;
+  max-width: 100vw; max-height: 100vh;
+  width: 100vw; height: 100vh;
+  display: none;
+  place-items: center;
+}
+.light[open] { display: grid; }
+.light::backdrop { background: var(--lightbox-backdrop); }
+.light img {
+  max-width: min(96vw, 1600px);
+  max-height: 92vh;
+  width: auto; height: auto;
+  border: var(--line) solid var(--panel-edge);
+  background: var(--panel);
+}
+.light button {
+  position: fixed;
+  border: var(--line) solid var(--panel-edge);
+  background: var(--panel);
+  color: var(--panel-ink);
+  padding: 0;
+  width: 2.6rem; height: 2.6rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.light button svg {
+  width: 1.1rem; height: 1.1rem;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: square;
+}
+.light-x { top: calc(1rem + env(safe-area-inset-top, 0px)); right: 1rem; }
+.light-arrow { top: 50%; transform: translateY(-50%); }
+.light-arrow.prev { left: 1rem; }
+.light-arrow.next { right: 1rem; }
+.light button:focus-visible { outline: var(--line) solid var(--ink); outline-offset: 2px; }
+
+/* --- narrow --------------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  :root { --works-scale: 1; --box-gap: 1rem; }
+  .box { grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "head" "media" "side" "info"; }
+  .box-head { border-bottom: 0; margin-bottom: 0; padding-bottom: 0.9em; }
+  .side { margin-top: 1.1em; }
+  .info { grid-template-columns: 1fr; margin-top: 1.25em; }
+  .info section + section { margin-top: 0.5em; }
+  .light-arrow { top: auto; bottom: calc(1rem + env(safe-area-inset-bottom, 0px)); transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reel { scroll-behavior: auto; }
+  .works { --drift: 0px; }   /* the wall stays put; works.js checks this too */
+}

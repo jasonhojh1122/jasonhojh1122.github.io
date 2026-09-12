@@ -1,0 +1,136 @@
+/* ---------------------------------------------------------------------------
+   theme-wall.css — "the wall"
+
+   Six frames of one cracked, painted pilaster, photographed on Fuji film
+   simulation. The photograph is the interface: pointing at a section changes
+   which part of the wall you are standing in front of. No colour is invented —
+   every tone on the page comes out of the negative.
+
+   ---------------------------------------------------------------------------
+   TOKEN CONTRACT — a theme must define all of these, and may override any
+   geometry token declared in base.css.
+
+     TYPE    --font
+     TEXT    --ink  --ink-mid  --ink-soft  --ink-faint
+     PAGE    --wall            (flat ground shown before the photograph loads)
+     RULE    --rule            (the line drawn round a section on hover)
+
+   Optional, read by base.css if present:
+     any of --pad --mark-size --nav-size --nav-lead --nav-gap --line --item-pad
+            --fade --react --draw --ease
+   --------------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@100..900&display=swap");
+
+[data-theme="wall"] {
+  --font: "M PLUS U", "Helvetica Neue", Arial, sans-serif;
+
+  /* white lettering with a black edge, cut against the plaster */
+  --ink:       #ffffff;
+  --ink-mid:   #ffffff;
+  --ink-soft:  #ffffff;
+  --ink-faint: #ffffff;
+  --wall:      #b4afa8;
+
+  --edge:       #17150f;   /* warm near-black out of the cracks */
+  --edge-width: var(--hair);   /* the same 1px as the rules inside a box, whatever the type size */
+
+  --rule:       #ffffff;   /* the rule round a section: white, like the lettering */
+
+  /* M PLUS U carries most of its space above the capitals, so the rule is
+     padded unevenly to sit an equal distance from the word on every side. */
+  --nav-lead:   1;
+  --item-pad:   0.21em 0.35em 0.36em;
+}
+
+/* --- the six frames ------------------------------------------------------ */
+/* The Works, Photos and About pages each stand in front of a wall of their
+   own, under the same name as the front page's frame for that section.
+   about.jpg is DSCF1665, the concrete lattice, turned upright and cut to
+   the lattice alone (rows 37% to 96%, columns from 4%: the studded slope
+   at the top left and the trees are out, the ledge and the grass at the
+   foot stay); about-sm.jpg is the middle half of that, since a phone looks
+   at a strip of it. */
+/* The resting wall paints straight away. The other five are held behind
+   .is-warm, which main.js adds once the page has finished loading, so the
+   first frame is never queued behind five it cannot see yet. */
+
+[data-theme="wall"] .frame[data-frame="rest"] { background-image: url("../background/web/rest.jpg"); }
+[data-theme="wall"] .ground.is-warm .frame[data-frame="works"] { background-image: url("../background/web/works.jpg"); }
+[data-theme="wall"] .ground.is-warm .frame[data-frame="photos"] { background-image: url("../background/web/photos.jpg"); }
+[data-theme="wall"] .ground.is-warm .frame[data-frame="steam"] { background-image: url("../background/web/steam.jpg"); }
+[data-theme="wall"] .ground.is-warm .frame[data-frame="italy"] { background-image: url("../background/web/italy.jpg"); }
+[data-theme="wall"] .ground.is-warm .frame[data-frame="about"] { background-image: url("../background/web/about.jpg"); }
+
+@media (max-width: 700px) {
+  [data-theme="wall"] .frame[data-frame="rest"] { background-image: url("../background/web/rest-sm.jpg"); }
+  [data-theme="wall"] .ground.is-warm .frame[data-frame="works"] { background-image: url("../background/web/works-sm.jpg"); }
+  [data-theme="wall"] .ground.is-warm .frame[data-frame="photos"] { background-image: url("../background/web/photos-sm.jpg"); }
+  [data-theme="wall"] .ground.is-warm .frame[data-frame="steam"] { background-image: url("../background/web/steam-sm.jpg"); }
+  [data-theme="wall"] .ground.is-warm .frame[data-frame="italy"] { background-image: url("../background/web/italy-sm.jpg"); }
+  [data-theme="wall"] .ground.is-warm .frame[data-frame="about"] { background-image: url("../background/web/about-sm.jpg"); }
+}
+
+/* The edge does the lifting now; the photograph is left completely alone. */
+[data-theme="wall"] .wash { background: none; }
+
+/* --- type ---------------------------------------------------------------- */
+/* One family, read across its weight axis: the domain a step heavier than
+   the sections. */
+
+[data-theme="wall"] .mark {
+  font-weight: 600;
+  letter-spacing: -0.008em;
+}
+
+[data-theme="wall"] .item {
+  font-weight: 500;
+  letter-spacing: 0.004em;
+}
+
+/* The black edge: a stroke painted *behind* the fill, so the white letterform
+   keeps its full width. Where paint-order is not honoured the stroke sits on
+   the glyph edge instead, which is still readable — just a hair thinner. */
+[data-theme="wall"] .mark,
+[data-theme="wall"] .item {
+  -webkit-text-stroke: calc(var(--edge-width) * 2) var(--edge);
+  paint-order: stroke fill;
+  text-shadow: 0 0.04em 0.12em rgba(23, 21, 15, 0.35);
+}
+
+/* --- works page ------------------------------------------------------------ */
+/* Paper on plaster: white boxes ruled in the same near-black as the type edge,
+   no rounding anywhere. The page title sits on the wall in the front-page
+   lettering; everything inside a box is set dark on white. */
+
+[data-theme="wall"] {
+  --panel:            #ffffff;
+  --panel-ink:        #17150f;
+  --panel-ink-soft:   #5d5850;
+  --panel-edge:       #17150f;
+  --thumb-ground:     #ffffff;
+  --lightbox-backdrop: rgba(23, 21, 15, 0.86);
+}
+
+/* what a phone's status bar and toolbar are painted: the top and bottom
+   edge of each page's wall (base.css .bar) */
+[data-theme="wall"] .works  { --bar-top: #b6aaa9; --bar-bottom: #baafae; }
+[data-theme="wall"] .photos { --bar-top: #a49a97; --bar-bottom: #a29897; }
+[data-theme="wall"] .about  { --bar-top: #929192; --bar-bottom: #606461; }
+
+[data-theme="wall"] .title {
+  font-weight: 600;
+  letter-spacing: -0.008em;
+  -webkit-text-stroke: calc(var(--edge-width) * 2) var(--edge);
+  paint-order: stroke fill;
+  text-shadow: 0 0.04em 0.12em rgba(23, 21, 15, 0.35);
+}
+[data-theme="wall"] .name,
+[data-theme="wall"] .info h3,
+[data-theme="wall"] .more summary,
+[data-theme="wall"] .slide.is-empty span { font-weight: 600; }
+[data-theme="wall"] .tagline { font-weight: 500; }
+[data-theme="wall"] .info,
+[data-theme="wall"] .links a { font-weight: 400; }
+[data-theme="wall"] .facts dt,
+[data-theme="wall"] .status { font-weight: 500; }

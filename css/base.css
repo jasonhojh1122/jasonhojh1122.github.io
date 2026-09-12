@@ -1,0 +1,286 @@
+/* ---------------------------------------------------------------------------
+   base.css — structure only.
+   No literal colours, no typefaces, no textures live here. Every visual value
+   comes from a custom property that a theme file defines. Swapping the look is
+   swapping one <link> in index.html.
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* geometry — themes may override any of these */
+  --pad:        clamp(1.25rem, 3.4vw, 2.9rem);
+  --mark-size:  clamp(1.7rem, 3.75vw, 2.8rem);
+  --nav-size:   clamp(1.3rem, 2.9vw, 2.15rem);
+  --nav-lead:   1.15;
+  --nav-gap:    0.85em;    /* between sections, in nav ems */
+  --line:       2px;       /* the rule drawn round a section on hover, as on the works boxes */
+  --hair:       1px;       /* the thinner line: dividers inside a box, and the edge round the lettering */
+  --item-pad:   0.25em 0.6em;
+  --stack-gap:  calc(var(--nav-size) * 3);   /* between the mark and the sections */
+
+  --fade:       780ms;   /* wall cross-dissolve */
+  --react:      280ms;   /* type reacting to the pointer */
+  --draw:       200ms;   /* the rule being drawn round a section, all four sides */
+  --ease:       cubic-bezier(0.22, 0.72, 0.24, 1);
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--wall);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- the wall ------------------------------------------------------------ */
+
+.ground { position: fixed; inset: 0; z-index: 0; overflow: hidden; }
+
+.frame {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.018);
+  transition: opacity var(--fade) var(--ease),
+              transform calc(var(--fade) * 2.4) var(--ease);
+  will-change: opacity;
+}
+.frame.is-on { opacity: 1; transform: scale(1); }
+
+/* light falling across the wall — a theme decides how much */
+.wash { position: absolute; inset: 0; pointer-events: none; }
+
+/* --- the page ------------------------------------------------------------ */
+
+/* One centred stack: who this is, then a clear breath, then where you can go. */
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--stack-gap);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mark {
+  margin: 0;
+  font-size: var(--mark-size);
+  line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.tld { color: var(--ink-soft); }
+
+/* The frame caption is no longer drawn; it stays as a live region so the
+   "in preparation" state still reaches assistive tech. */
+.cap {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: var(--nav-gap);
+  row-gap: 0;
+  font-size: var(--nav-size);
+  max-width: 100%;
+}
+
+.item {
+  position: relative;
+  font-size: var(--nav-size);
+  line-height: var(--nav-lead);
+  padding: var(--item-pad);
+  color: var(--ink-soft);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--react) var(--ease);
+}
+.item.is-pending { cursor: default; }
+
+/* Pointing at a section draws the works-box rule round the word, as if by a
+   pen; the lettering itself is left alone. The site name at the top of the
+   Works and Photos pages (.home) is drawn round the same way. The rule is two L-shaped pieces, one hung from the top-left
+   corner and one from the bottom-right; growing their width and then their
+   height in turn walks a single line round all four sides. */
+:is(.item, .home)::before, :is(.item, .home)::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;   /* the * rule does not reach pseudo-elements */
+  width: 0;
+  height: 0;
+  border: 0 solid var(--rule);
+  visibility: hidden;
+  pointer-events: none;
+  transition: width var(--react) var(--ease),
+              height var(--react) var(--ease),
+              visibility 0s linear var(--react);
+}
+:is(.item, .home)::before { top: 0; left: 0; border-top-width: var(--line); border-right-width: var(--line); }
+:is(.item, .home)::after  { bottom: 0; right: 0; border-bottom-width: var(--line); border-left-width: var(--line); }
+.item.is-pending::before, .item.is-pending::after { border-style: dashed; }
+
+:is(.item, .home):hover::before, :is(.item, .home):focus-visible::before, :is(.item, .home).is-live::before,
+:is(.item, .home):hover::after,  :is(.item, .home):focus-visible::after,  :is(.item, .home).is-live::after {
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+}
+/* one side each quarter of --draw: top, right, bottom, left */
+:is(.item, .home):hover::before, :is(.item, .home):focus-visible::before, :is(.item, .home).is-live::before {
+  transition: width  calc(var(--draw) / 4) linear,
+              height calc(var(--draw) / 4) linear calc(var(--draw) / 4),
+              visibility 0s;
+}
+:is(.item, .home):hover::after, :is(.item, .home):focus-visible::after, :is(.item, .home).is-live::after {
+  transition: width  calc(var(--draw) / 4) linear calc(var(--draw) / 2),
+              height calc(var(--draw) / 4) linear calc(var(--draw) * 3 / 4),
+              visibility 0s;
+}
+
+:is(.item, .home):hover, :is(.item, .home):focus-visible, :is(.item, .home).is-live { color: var(--ink); }
+/* A section still in preparation gets its rule in a broken line: it shows
+   its wall, and that is all it can do yet. */
+.item.is-pending:hover,
+.item.is-pending:focus-visible,
+.item.is-pending.is-live { color: var(--ink-mid); }
+
+.item:focus { outline: none; }
+
+/* --- a phone's bars ------------------------------------------------------ */
+/* Safari on iOS 26 does not draw a fixed layer under its status bar or its
+   toolbar. It paints those strips itself: it hit-tests a point 4px in from
+   each edge and, if that lands on a fixed element taller than 10px and at
+   least 90% of the viewport wide, uses that element's background-color;
+   otherwise the page's own colour (WebKit LocalFrameView::fixedContainerEdges,
+   which looks at the style, not at the pixels). So each edge has such a
+   strip in the colour of the photograph's edge (--bar-top / --bar-bottom,
+   set per theme and page), fully masked so it never shows, and under it
+   the wall itself is blurred along the edge and fades back to sharp: the
+   bar's glass, the blur and the wall run into one another. iOS only. */
+.bar { display: none; }
+@supports (-webkit-touch-callout: none) {
+  .bar {
+    display: block;
+    position: fixed;
+    left: 0; right: 0;
+    height: 12px;
+    z-index: 9;
+    -webkit-mask-image: linear-gradient(transparent, transparent);   /* read by Safari, never seen */
+  }
+  .bar-top { top: 0;    background-color: var(--bar-top, var(--wall)); }
+  .bar-bot { bottom: 0; background-color: var(--bar-bottom, var(--wall)); }
+
+  /* The wall blurs towards each edge in two steps, a wide gentle one and
+     a narrow strong one, and the bar's colour bleeds a little way into the
+     strong one, so nothing meets at a line: sharp wall, soft blur, deep
+     blur, the tint of the bar, the bar. */
+  .ground::before, .ground::after,
+  .wash::before, .wash::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .ground::before, .ground::after {            /* wide and gentle */
+    height: 140px;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+  .wash::before, .wash::after {                /* narrow and deep, carrying the bar's colour in */
+    height: 72px;
+    -webkit-backdrop-filter: blur(22px) saturate(1.1);
+    backdrop-filter: blur(22px) saturate(1.1);
+  }
+  .ground::before {
+    top: 0;
+    -webkit-mask-image: linear-gradient(to bottom, #000, rgba(0,0,0,.55) 45%, transparent);
+    mask-image: linear-gradient(to bottom, #000, rgba(0,0,0,.55) 45%, transparent);
+  }
+  .ground::after {
+    bottom: 0;
+    -webkit-mask-image: linear-gradient(to top, #000, rgba(0,0,0,.55) 45%, transparent);
+    mask-image: linear-gradient(to top, #000, rgba(0,0,0,.55) 45%, transparent);
+  }
+  .wash::before {
+    top: 0;
+    background-image: linear-gradient(to bottom, var(--bar-top, var(--wall)), transparent 60%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 10%, rgba(0,0,0,.6) 50%, transparent);
+    mask-image: linear-gradient(to bottom, #000 10%, rgba(0,0,0,.6) 50%, transparent);
+  }
+  .wash::after {
+    bottom: 0;
+    background-image: linear-gradient(to top, var(--bar-bottom, var(--wall)), transparent 60%);
+    -webkit-mask-image: linear-gradient(to top, #000 10%, rgba(0,0,0,.6) 50%, transparent);
+    mask-image: linear-gradient(to top, #000 10%, rgba(0,0,0,.6) 50%, transparent);
+  }
+}
+
+/* --- entrance ------------------------------------------------------------ */
+
+/* The light arrives; the lettering was already cut into the wall. */
+@keyframes expose { from { opacity: 0; } to { opacity: 1; } }
+html.js .ground { animation: expose 1100ms var(--ease) both; }
+
+/* --- no javascript ------------------------------------------------------- */
+
+html.no-js .item { color: var(--ink); }
+html.no-js .frame[data-frame="rest"] { opacity: 1; transform: none; }
+
+/* --- narrow -------------------------------------------------------------- */
+
+@media (max-width: 700px) {
+  :root {
+    --mark-size: clamp(1.5rem, 7.2vw, 2rem);
+    --nav-size:  clamp(1.05rem, 4.6vw, 1.4rem);
+    --nav-lead:  1.0;
+    --nav-gap:   0.6em;
+  }
+}
+
+@media (max-height: 480px) and (orientation: landscape) {
+  :root {
+    --mark-size: clamp(1.3rem, 6vh, 2rem);
+    --nav-size:  clamp(1rem, 4.4vh, 1.5rem);
+  }
+}
+
+/* --- reduced motion ------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .frame { transition: opacity 1ms linear; transform: none; }
+  .frame.is-on { transform: none; }
+  :root { --draw: 1ms; }
+  :is(.item, .home), :is(.item, .home)::before, :is(.item, .home)::after,
+  :is(.item, .home):hover, :is(.item, .home):hover::before, :is(.item, .home):hover::after,
+  :is(.item, .home).is-live, :is(.item, .home).is-live::before, :is(.item, .home).is-live::after { transition-duration: 1ms; transition-delay: 0s; }
+  html.js .ground { animation: none; }
+}

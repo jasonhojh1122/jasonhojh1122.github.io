@@ -1,0 +1,46 @@
+/* ---------------------------------------------------------------------------
+   about.css — the About page, on top of works.css. One box on the wall, a
+   notice bolted to the concrete: who this is, where the name comes from,
+   and where else to find me. The box is narrower than a Works box, so a
+   line of the note is a comfortable length, and the wall shows round it.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --sheet-max: calc(46rem * var(--works-scale));
+}
+
+/* The notice sits in the middle of the wall, between the title and the
+   bottom of the window, rather than hanging under the title. */
+.about .sheet { min-height: 100svh; display: flex; flex-direction: column; }
+.about .list  { flex: 1; justify-content: center; }
+
+/* --- the notice ------------------------------------------------------------ */
+/* The Works box grid, folded into one column: the name and what I do, a
+   rule, the note on the name, a rule, the links. */
+
+.notice {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "head" "info" "side";
+}
+
+.notice .info {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;           /* the head already draws the rule above the note */
+}
+.notice .info h3:first-child { margin-top: 0; }
+.notice .info p { margin: 0.55em 0 0; }
+
+.notice .side {
+  margin-top: 1.4em;
+  padding-top: 1.2em;
+  border-top: var(--hair) solid var(--panel-edge);
+}
+.notice .links { margin-top: 0; }
+
+/* --- narrow --------------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .notice .box-head { border-bottom: var(--hair) solid var(--panel-edge); margin-bottom: 1em; }   /* works.css lifts it for the reel; there is no reel here */
+}

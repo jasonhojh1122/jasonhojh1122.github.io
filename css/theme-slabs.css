@@ -1,0 +1,174 @@
+/* ---------------------------------------------------------------------------
+   theme-slabs.css — "the slabs"
+
+   One photograph of a concrete retaining wall: a zigzag of wedge-shaped
+   slabs, each face leaning at its own angle, mossy where the water runs.
+   The domain is painted on the big pale wedge that comes toward you on the
+   right; the sections are painted on the dark band below it that comes
+   toward you on the left. Each block of lettering is tilted to run
+   parallel with the edge of the slab it stands on.
+
+   The photograph is a fixed stage with the negative's own proportions,
+   sized to cover the window. Every position and size on it is written in
+   container units of that stage, so the lettering stays glued to its slab
+   whatever the window is; a phone simply looks at a narrower window of
+   the same stage.
+
+   ---------------------------------------------------------------------------
+   TOKEN CONTRACT — a theme must define all of these, and may override any
+   geometry token declared in base.css.
+
+     TYPE    --font
+     TEXT    --ink  --ink-mid  --ink-soft  --ink-faint
+     PAGE    --wall            (flat ground shown before the photograph loads)
+     RULE    --rule            (the line drawn round a section on hover)
+
+   Optional, read by base.css if present:
+     any of --pad --mark-size --nav-size --nav-lead --nav-gap --line --item-pad
+            --fade --react --draw --ease
+   --------------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@100..900&display=swap");
+
+[data-theme="slabs"] {
+  --font: "M PLUS U", "Helvetica Neue", Arial, sans-serif;
+
+  /* white lettering with a black edge, cut into the concrete */
+  --ink:       #ffffff;
+  --ink-mid:   #ffffff;
+  --ink-soft:  #ffffff;
+  --ink-faint: #ffffff;
+  --wall:      #8e8781;      /* the mean of the pale wedge */
+
+  --edge:       #14130f;     /* the black in the moss stains */
+  --edge-width: var(--hair);   /* the same 1px as the rules inside a box, whatever the type size */
+  --rule:       #ffffff;     /* the rule round a section: white, like the lettering */
+
+  /* what a phone's status bar and toolbar are painted: the top and the
+     bottom edge of the negative where the phone looks at it (base.css .bar) */
+  --bar-top:    #475749;
+  --bar-bottom: #7f797a;
+
+  /* --- the stage ------------------------------------------------------ */
+  /* slabs.jpg is DSCF1895 resized to 2560 wide and cropped to 2560 × 1440:
+     the top 10% (trees) and the bottom 5.6% of the negative are trimmed.
+     The stage covers the window at that ratio and --look-x says which point
+     of the picture sits under the window's centre line (0 left, 1 right). */
+  --photo-ratio: 1.7778;
+  --stage-w: max(100vw, 100vh * var(--photo-ratio));
+  --look-x:  0.5;
+
+  /* --- where the lettering lies, in fractions of the stage --------------- */
+  /* Each block sits just above the lower edge of its slab and is tilted to
+     run parallel with that edge, as lettering painted along it would. */
+  --mark-x:      67cqw;
+  --mark-y:      44.2cqh;
+  --mark-tilt:   6.6deg;     /* the pale wedge's lower edge, falling to the right */
+  --mark-size:   5.5cqw;
+
+  --nav-x:       41cqw;
+  --nav-y:       70.5cqh;
+  --nav-w:       max-content;   /* one line on the wide band */
+  --nav-tilt:   -1.4deg;     /* the dark band's lower edge, rising a little */
+  --nav-size:    2.4cqw;
+  --nav-gap:     0.9em;
+  /* M PLUS U carries most of its space above the capitals, so the rule is
+     padded unevenly to sit an equal distance from the word on every side. */
+  --nav-lead:    1;
+  --item-pad:    0.21em 0.35em 0.36em;
+}
+
+/* --- the photograph ------------------------------------------------------- */
+/* There is one negative, so only the resting frame is drawn and it never
+   changes: pointing at a section leaves the wall exactly as it is. The other
+   five frames are removed, so main.js toggling them has nothing to fade. */
+
+[data-theme="slabs"] .frame[data-frame="rest"] {
+  inset: auto;
+  top: 50%;
+  left: calc(50vw - var(--look-x) * var(--stage-w));
+  width: var(--stage-w);
+  height: calc(var(--stage-w) / var(--photo-ratio));
+  translate: 0 -50%;
+  transform: none;
+  opacity: 1;
+  transition: none;
+  background-image: url("../background/web/slabs.jpg");
+}
+[data-theme="slabs"] .frame:not([data-frame="rest"]) { display: none; }
+[data-theme="slabs"] .wash { background: none; }
+
+/* --- the stage --------------------------------------------------------- */
+/* The page is the same rectangle as the photograph, so container units
+   inside it are fractions of the negative. */
+
+[data-theme="slabs"] .page {
+  position: fixed;
+  top: 50%;
+  left: calc(50vw - var(--look-x) * var(--stage-w));
+  width: var(--stage-w);
+  height: calc(var(--stage-w) / var(--photo-ratio));
+  min-height: 0;
+  translate: 0 -50%;
+  padding: 0;
+  display: block;
+  container-type: size;
+}
+
+[data-theme="slabs"] .head,
+[data-theme="slabs"] .nav { position: absolute; }
+
+[data-theme="slabs"] .head {
+  left: var(--mark-x);
+  top: var(--mark-y);
+  transform: translate(-50%, -50%) rotate(var(--mark-tilt));
+}
+
+[data-theme="slabs"] .nav {
+  left: var(--nav-x);
+  top: var(--nav-y);
+  width: var(--nav-w);
+  transform: translate(-50%, -50%) rotate(var(--nav-tilt));
+}
+
+/* --- type ---------------------------------------------------------------- */
+
+[data-theme="slabs"] .mark {
+  font-weight: 600;
+  letter-spacing: -0.008em;
+}
+[data-theme="slabs"] .item {
+  font-weight: 500;
+  letter-spacing: 0.004em;
+}
+[data-theme="slabs"] .mark,
+[data-theme="slabs"] .item {
+  -webkit-text-stroke: calc(var(--edge-width) * 2) var(--edge);
+  paint-order: stroke fill;
+  text-shadow: 0 0.04em 0.12em rgba(20, 19, 15, 0.35);
+}
+
+/* --- narrow -------------------------------------------------------------- */
+/* A phone looks at the middle-right of the negative, where the pale wedge
+   is already tall and the dark band has not yet thinned out. The sections
+   wrap into two lines on the band. */
+
+@media (max-aspect-ratio: 1/1) {
+  [data-theme="slabs"] {
+    --look-x:     0.575;
+
+    --mark-x:     57.5cqw;
+    --mark-y:     43.6cqh;
+    --mark-size:  2.7cqw;
+
+    --nav-x:      57.5cqw;
+    --nav-y:      68.1cqh;
+    --nav-w:      25cqw;          /* two lines on the phone */
+    --nav-size:   1.6cqw;
+    --nav-gap:    0.55em;
+  }
+  [data-theme="slabs"] .nav { row-gap: 0.35em; }
+}
+
+/* --- reduced motion ------------------------------------------------------ */
+/* Nothing here moves on its own; base.css already stills the hover rule. */
