@@ -43,9 +43,13 @@
   --item-pad:   0.21em 0.35em 0.36em;
 }
 
-/* --- the six frames ------------------------------------------------------ */
+/* --- the six frames, and one more --------------------------------------- */
 /* The Works, Photos and About pages each stand in front of a wall of their
-   own, under the same name as the front page's frame for that section.
+   own, under the same name as the front page's frame for that section. The
+   Steam page is the exception: the front page still shows the plaster
+   (steam.jpg), the page itself stands in a garden (garden.jpg is
+   DSCF2795, the whole frame: trees, a stone pagoda, rocks on raked
+   gravel; garden-sm.jpg is its middle square, for a phone).
    about.jpg is DSCF1665, the concrete lattice, turned upright and cut to
    the lattice alone (rows 37% to 96%, columns from 4%: the studded slope
    at the top left and the trees are out, the ledge and the grass at the
@@ -61,6 +65,7 @@
 [data-theme="wall"] .ground.is-warm .frame[data-frame="steam"] { background-image: url("../background/web/steam.jpg"); }
 [data-theme="wall"] .ground.is-warm .frame[data-frame="italy"] { background-image: url("../background/web/italy.jpg"); }
 [data-theme="wall"] .ground.is-warm .frame[data-frame="about"] { background-image: url("../background/web/about.jpg"); }
+[data-theme="wall"] .ground.is-warm .frame[data-frame="garden"] { background-image: url("../background/web/garden.jpg"); }
 
 @media (max-width: 700px) {
   [data-theme="wall"] .frame[data-frame="rest"] { background-image: url("../background/web/rest-sm.jpg"); }
@@ -69,6 +74,7 @@
   [data-theme="wall"] .ground.is-warm .frame[data-frame="steam"] { background-image: url("../background/web/steam-sm.jpg"); }
   [data-theme="wall"] .ground.is-warm .frame[data-frame="italy"] { background-image: url("../background/web/italy-sm.jpg"); }
   [data-theme="wall"] .ground.is-warm .frame[data-frame="about"] { background-image: url("../background/web/about-sm.jpg"); }
+  [data-theme="wall"] .ground.is-warm .frame[data-frame="garden"] { background-image: url("../background/web/garden-sm.jpg"); }
 }
 
 /* The edge does the lifting now; the photograph is left completely alone. */
@@ -117,7 +123,7 @@
 [data-theme="wall"] .works  { --bar-top: #b6aaa9; --bar-bottom: #baafae; }
 [data-theme="wall"] .photos { --bar-top: #a49a97; --bar-bottom: #a29897; }
 [data-theme="wall"] .about  { --bar-top: #929192; --bar-bottom: #606461; }
-[data-theme="wall"] .steam  { --bar-top: #a79c9b; --bar-bottom: #a49b98; }
+[data-theme="wall"] .steam  { --bar-top: #455e42; --bar-bottom: #f2f2f2; }
 
 [data-theme="wall"] .title {
   font-weight: 600;

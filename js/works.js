@@ -38,7 +38,9 @@
       if (!ticking) { ticking = true; requestAnimationFrame(place); }
     }, { passive: true });
     window.addEventListener('resize', measure);
-    if (window.ResizeObserver) new ResizeObserver(measure).observe(document.body);
+    /* The body is held to the window's height (base.css), so it is the
+       sheet that grows with the content, and the sheet that is watched. */
+    if (window.ResizeObserver) new ResizeObserver(measure).observe(document.querySelector('.sheet') || document.body);
     measure();
   })();
 

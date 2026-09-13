@@ -23,6 +23,12 @@
 /* a box or a button that is hidden stays hidden, whatever display it is given */
 .steam [hidden] { display: none !important; }
 
+/* The wall drifts as on Works (works.css --drift, works.js), but only a
+   little: the garden is a photograph with a top and a bottom, not a
+   plaster texture, and sixty vh of slide would put the gravel where the
+   trees were by the foot of the page. */
+.steam { --drift: 10vh; }
+
 /* --- the notice ------------------------------------------------------------- */
 /* The Works box grid, folded into one column: the avatar and the name side
    by side, a rule, the tools. */
@@ -235,9 +241,13 @@
   text-decoration: none;
   scroll-margin-top: 1em;
 }
-/* a favourite hangs in a heavier frame, with the fine inner rule of a
-   double mat just inside it */
-.print.is-fav { border-width: calc(var(--line) * 2.5); outline: var(--hair) solid var(--panel-edge); outline-offset: calc(-1 * (var(--line) * 2.5 + 3px)); }
+/* a favourite hangs in the same frame as the rest, with a heavy second
+   rule drawn on the mat just inside it: a double mat, the inner one bold */
+.print.is-fav {
+  --inner: calc(var(--line) * 1.5);
+  outline: var(--inner) solid var(--panel-edge);
+  outline-offset: calc(-1 * (var(--line) + 2px + var(--inner)));
+}
 .print:focus { outline-color: var(--panel-ink); }
 .print:focus-visible { outline: var(--line) solid var(--panel-ink); outline-offset: 2px; }
 .pic {
@@ -425,7 +435,9 @@
     grid-template-columns: 1fr 1fr;
     gap: 0.35em 1em;
   }
-  .stats div { padding: 0; border-left: 0; justify-content: space-between; }
+  .stats div { padding: 0; border-left: 0; justify-content: space-between; min-width: 0; }
+  .xp { flex-wrap: wrap; }
+  .xp .meter { flex: 1 1 6em; width: auto; min-width: 4em; }
   .avatar { width: 3.6em; }
   .notice .box-head { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
   .showing { flex-basis: 100%; margin-left: 0; text-align: right; }
@@ -437,6 +449,7 @@
 
 @media (max-width: 560px) {
   .shelf { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
