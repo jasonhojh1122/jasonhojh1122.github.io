@@ -1,11 +1,11 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-13T19:00:25.633Z",
+    "generatedAt": "2026-09-14T19:00:26.923Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
-      "avatarUrl": "https://avatars.steamstatic.com/c26286f1a292309692f9a3a04eed8e0b8c15c66b_full.jpg",
+      "avatarUrl": "https://avatars.steamstatic.com/af6a683a6b239c01e7d3c9ce9b67814286e42a81_full.jpg",
       "level": 43,
       "xp": 11519,
       "xpNeededToLevelUp": 481
@@ -17039,9 +17039,9 @@
     {
       "appid": 38400,
       "name": "Fallout",
-      "playtimeForever": 11,
-      "playtime2Weeks": 11,
-      "lastPlayed": 1789185448,
+      "playtimeForever": 14,
+      "playtime2Weeks": 14,
+      "lastPlayed": 1789395453,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/38400/df0001a1aa011e6c7a8f38a65908070eba3d2f61.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/38400/header.jpg",
       "shortDescription": "You've just unearthed the classic post-apocalyptic role-playing game that revitalized the entire CRPG genre. The Fallout® SPECIAL system allows drastically different types of characters, meaningful decisions and development that puts you in complete control. Explore the devastated ruins of a golden age civilization.",
@@ -17123,7 +17123,7 @@
       "appid": 1086940,
       "name": "Baldur's Gate 3",
       "playtimeForever": 10499,
-      "playtime2Weeks": 299,
+      "playtime2Weeks": 153,
       "lastPlayed": 1788794692,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
