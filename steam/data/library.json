@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-14T19:00:26.923Z",
+    "generatedAt": "2026-09-15T19:00:24.836Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -17037,6 +17037,51 @@
       "achievements": null
     },
     {
+      "appid": 1086940,
+      "name": "Baldur's Gate 3",
+      "playtimeForever": 10650,
+      "playtime2Weeks": 303,
+      "lastPlayed": 1789486110,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
+      "shortDescription": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons &amp; Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
+      "genres": [
+        "RPG Games",
+        "Adventure",
+        "RPG",
+        "Strategy"
+      ],
+      "tags": [
+        "RPG",
+        "Character Customization",
+        "Choices Matter",
+        "Turn-Based Combat",
+        "Story Rich",
+        "Sexual Content",
+        "CRPG",
+        "Fantasy",
+        "Adventure",
+        "Romance",
+        "Online Co-Op",
+        "Multiplayer",
+        "Nudity",
+        "Strategy",
+        "Singleplayer",
+        "Co-op Campaign",
+        "Class-Based",
+        "Dark Fantasy",
+        "Combat",
+        "LGBTQ+"
+      ],
+      "releaseDate": "3 Aug, 2023",
+      "developer": "Larian Studios",
+      "achievements": {
+        "total": 54,
+        "unlocked": 31
+      },
+      "favorite": true
+    },
+    {
       "appid": 38400,
       "name": "Fallout",
       "playtimeForever": 14,
@@ -17118,51 +17163,6 @@
         "total": 34,
         "unlocked": 27
       }
-    },
-    {
-      "appid": 1086940,
-      "name": "Baldur's Gate 3",
-      "playtimeForever": 10499,
-      "playtime2Weeks": 153,
-      "lastPlayed": 1788794692,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
-      "shortDescription": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons &amp; Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
-      "genres": [
-        "RPG Games",
-        "Adventure",
-        "RPG",
-        "Strategy"
-      ],
-      "tags": [
-        "RPG",
-        "Character Customization",
-        "Choices Matter",
-        "Turn-Based Combat",
-        "Story Rich",
-        "Sexual Content",
-        "CRPG",
-        "Fantasy",
-        "Adventure",
-        "Romance",
-        "Online Co-Op",
-        "Multiplayer",
-        "Nudity",
-        "Strategy",
-        "Singleplayer",
-        "Co-op Campaign",
-        "Class-Based",
-        "Dark Fantasy",
-        "Combat",
-        "LGBTQ+"
-      ],
-      "releaseDate": "3 Aug, 2023",
-      "developer": "Larian Studios",
-      "achievements": {
-        "total": 54,
-        "unlocked": 31
-      },
-      "favorite": true
     },
     {
       "appid": 4018950,
