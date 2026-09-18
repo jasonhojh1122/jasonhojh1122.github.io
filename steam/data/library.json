@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-16T19:00:26.977Z",
+    "generatedAt": "2026-09-18T19:00:26.387Z",
     "gameCount": 413,
     "profile": {
       "personaName": "DeithZireael",
@@ -17039,9 +17039,9 @@
     {
       "appid": 1086940,
       "name": "Baldur's Gate 3",
-      "playtimeForever": 10650,
-      "playtime2Weeks": 303,
-      "lastPlayed": 1789486110,
+      "playtimeForever": 10785,
+      "playtime2Weeks": 439,
+      "lastPlayed": 1789658080,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
       "shortDescription": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons &amp; Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
@@ -17077,7 +17077,7 @@
       "developer": "Larian Studios",
       "achievements": {
         "total": 54,
-        "unlocked": 31
+        "unlocked": 32
       },
       "favorite": true
     },
@@ -17124,7 +17124,7 @@
       "appid": 2106840,
       "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
       "playtimeForever": 674,
-      "playtime2Weeks": 258,
+      "playtime2Weeks": 119,
       "lastPlayed": 1789184587,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
@@ -17278,8 +17278,8 @@
         "Immersive Sim",
         "Atmospheric",
         "Nonlinear",
-        "Dialogue Heavy",
         "Nature",
+        "Dialogue Heavy",
         "Investigation",
         "Colorful",
         "Mystery",
