@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-19T19:00:26.971Z",
-    "gameCount": 413,
+    "generatedAt": "2026-09-20T19:00:25.065Z",
+    "gameCount": 415,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/f3f21ec42942f057fffc7c5a391d0fb982baa769_full.jpg",
       "level": 43,
-      "xp": 11519,
-      "xpNeededToLevelUp": 481
+      "xp": 11522,
+      "xpNeededToLevelUp": 478
     }
   },
   "games": [
@@ -4573,6 +4573,49 @@
       }
     },
     {
+      "appid": 460950,
+      "name": "Katana ZERO",
+      "playtimeForever": 333,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1786206831,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/460950/874ee87e03abd66ff158727c051ceb173e3cba3c.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/header.jpg",
+      "shortDescription": "Katana ZERO is a stylish neo-noir, action-platformer featuring breakneck action and instant-death combat. Slash, dash, and manipulate time to unravel your past in a beautifully brutal acrobatic display.",
+      "genres": [
+        "Indie Games",
+        "Action",
+        "Indie"
+      ],
+      "tags": [
+        "Pixel Graphics",
+        "Action",
+        "Great Soundtrack",
+        "Story Rich",
+        "Platformer",
+        "Cyberpunk",
+        "2D Platformer",
+        "Indie",
+        "Hack and Slash",
+        "2D",
+        "Fast-Paced",
+        "Violent",
+        "Difficult",
+        "Singleplayer",
+        "Time Manipulation",
+        "Gore",
+        "Ninja",
+        "Retro",
+        "Noir",
+        "Sci-fi"
+      ],
+      "releaseDate": "18 Apr, 2019",
+      "developer": "Askiisoft",
+      "achievements": {
+        "total": 22,
+        "unlocked": 4
+      }
+    },
+    {
       "appid": 461560,
       "name": "Mandagon",
       "playtimeForever": 14,
@@ -6847,6 +6890,50 @@
       "achievements": {
         "total": 35,
         "unlocked": 23
+      }
+    },
+    {
+      "appid": 757310,
+      "name": "Sable",
+      "playtimeForever": 738,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1785890574,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/757310/99b24f25b351f471e84ac9f3a25498505b679695.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/header.jpg",
+      "shortDescription": "Embark on an unique and unforgettable journey and guide Sable through her Gliding; a rite of passage that will take her across vast deserts and mesmerizing landscapes, capped by the remains of spaceships and ancient wonders.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Indie",
+        "RPG"
+      ],
+      "tags": [
+        "Atmospheric",
+        "Exploration",
+        "Story Rich",
+        "Adventure",
+        "Open World",
+        "Female Protagonist",
+        "Choose Your Own Adventure",
+        "Singleplayer",
+        "Multiple Endings",
+        "Choices Matter",
+        "Stylized",
+        "Puzzle",
+        "Relaxing",
+        "3D Platformer",
+        "Sci-fi",
+        "Platformer",
+        "Puzzle Platformer",
+        "Comic Book",
+        "Hand-drawn",
+        "RPG"
+      ],
+      "releaseDate": "23 Sep, 2021",
+      "developer": "Shedworks",
+      "achievements": {
+        "total": 56,
+        "unlocked": 25
       }
     },
     {
@@ -17037,6 +17124,131 @@
       "achievements": null
     },
     {
+      "appid": 21690,
+      "name": "Resident Evil 5",
+      "playtimeForever": 127,
+      "playtime2Weeks": 127,
+      "lastPlayed": 1789915453,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/21690/26108f5caff3638c9f522dd79ee84a12761f373a.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21690/header.jpg",
+      "shortDescription": "This game is a port of the Games for Windows - Live version that was released in 2009. If you buy the Untold Stories Bundle here on Steam, it will be the same as upgrading to Resident Evil 5 Gold Edition.",
+      "genres": [
+        "Action Games",
+        "Action",
+        "Adventure"
+      ],
+      "tags": [
+        "Co-op",
+        "Action",
+        "Zombies",
+        "Co-op Campaign",
+        "Online Co-Op",
+        "Horror",
+        "Third-Person Shooter",
+        "Multiplayer",
+        "Adventure",
+        "Local Co-Op",
+        "Third Person",
+        "Survival Horror",
+        "Shooter",
+        "Singleplayer",
+        "Female Protagonist",
+        "Split Screen",
+        "Quick-Time Events",
+        "Gore",
+        "Survival",
+        "Atmospheric"
+      ],
+      "releaseDate": "15 Sep, 2009",
+      "developer": "Capcom",
+      "achievements": {
+        "total": 70,
+        "unlocked": 4
+      }
+    },
+    {
+      "appid": 38400,
+      "name": "Fallout",
+      "playtimeForever": 59,
+      "playtime2Weeks": 59,
+      "lastPlayed": 1789879587,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/38400/df0001a1aa011e6c7a8f38a65908070eba3d2f61.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/38400/header.jpg",
+      "shortDescription": "You've just unearthed the classic post-apocalyptic role-playing game that revitalized the entire CRPG genre. The Fallout® SPECIAL system allows drastically different types of characters, meaningful decisions and development that puts you in complete control. Explore the devastated ruins of a golden age civilization.",
+      "genres": [
+        "RPG Games",
+        "RPG"
+      ],
+      "tags": [
+        "RPG",
+        "Post-apocalyptic",
+        "Classic",
+        "Open World",
+        "Isometric",
+        "Turn-Based",
+        "Turn-Based Combat",
+        "Singleplayer",
+        "Sci-fi",
+        "Atmospheric",
+        "Multiple Endings",
+        "CRPG",
+        "1990's",
+        "Retro",
+        "Adventure",
+        "Exploration",
+        "2D",
+        "Difficult",
+        "Tactical",
+        "Sandbox"
+      ],
+      "releaseDate": "30 Sep, 1997",
+      "developer": "Interplay Inc.",
+      "achievements": null
+    },
+    {
+      "appid": 3013400,
+      "name": "Legends of the Round Table Demo",
+      "playtimeForever": 17,
+      "playtime2Weeks": 17,
+      "lastPlayed": 1789874665,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3013400/cba5fb06bd63acd5fd74daed87f9788c0e00f284.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3013400/23e27ec16c03d93a54ad482886fde8d65f5befee/header.jpg",
+      "shortDescription": "Experience one of the adventures in this demo of Legends of the Round Table. Lead the Knights of the Round Table through King Arthur's legend in a unique RPG, full of honor, magic and romance. Plunge into a colorful world inspired by medieval art, tales and music.",
+      "genres": [
+        "RPG Games",
+        "Adventure",
+        "Indie",
+        "RPG",
+        "Simulation",
+        "Strategy"
+      ],
+      "tags": [
+        "RPG",
+        "Strategy",
+        "Historical",
+        "Medieval",
+        "Turn-Based Tactics",
+        "Choices Matter",
+        "CRPG",
+        "Choose Your Own Adventure",
+        "Tactical RPG",
+        "Sandbox",
+        "Party-Based RPG",
+        "Strategy RPG",
+        "Romance",
+        "2.5D",
+        "Lore-Rich",
+        "Nonlinear",
+        "Multiple Endings",
+        "Management",
+        "War",
+        "Adventure"
+      ],
+      "releaseDate": "13 May, 2025",
+      "developer": "Artifice Studio",
+      "achievements": null
+    },
+    {
       "appid": 1086940,
       "name": "Baldur's Gate 3",
       "playtimeForever": 10785,
@@ -17080,45 +17292,6 @@
         "unlocked": 32
       },
       "favorite": true
-    },
-    {
-      "appid": 38400,
-      "name": "Fallout",
-      "playtimeForever": 14,
-      "playtime2Weeks": 14,
-      "lastPlayed": 1789395453,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/38400/df0001a1aa011e6c7a8f38a65908070eba3d2f61.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/38400/header.jpg",
-      "shortDescription": "You've just unearthed the classic post-apocalyptic role-playing game that revitalized the entire CRPG genre. The Fallout® SPECIAL system allows drastically different types of characters, meaningful decisions and development that puts you in complete control. Explore the devastated ruins of a golden age civilization.",
-      "genres": [
-        "RPG Games",
-        "RPG"
-      ],
-      "tags": [
-        "RPG",
-        "Post-apocalyptic",
-        "Classic",
-        "Open World",
-        "Isometric",
-        "Turn-Based",
-        "Turn-Based Combat",
-        "Singleplayer",
-        "Sci-fi",
-        "Atmospheric",
-        "Multiple Endings",
-        "CRPG",
-        "1990's",
-        "Retro",
-        "Adventure",
-        "Exploration",
-        "2D",
-        "Difficult",
-        "Tactical",
-        "Sandbox"
-      ],
-      "releaseDate": "30 Sep, 1997",
-      "developer": "Interplay Inc.",
-      "achievements": null
     },
     {
       "appid": 2106840,
@@ -17372,93 +17545,6 @@
       "achievements": {
         "total": 33,
         "unlocked": 6
-      }
-    },
-    {
-      "appid": 460950,
-      "name": "Katana ZERO",
-      "playtimeForever": 333,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1786206831,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/460950/874ee87e03abd66ff158727c051ceb173e3cba3c.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/header.jpg",
-      "shortDescription": "Katana ZERO is a stylish neo-noir, action-platformer featuring breakneck action and instant-death combat. Slash, dash, and manipulate time to unravel your past in a beautifully brutal acrobatic display.",
-      "genres": [
-        "Indie Games",
-        "Action",
-        "Indie"
-      ],
-      "tags": [
-        "Pixel Graphics",
-        "Action",
-        "Great Soundtrack",
-        "Story Rich",
-        "Platformer",
-        "Cyberpunk",
-        "2D Platformer",
-        "Indie",
-        "Hack and Slash",
-        "2D",
-        "Fast-Paced",
-        "Violent",
-        "Difficult",
-        "Singleplayer",
-        "Time Manipulation",
-        "Gore",
-        "Ninja",
-        "Retro",
-        "Noir",
-        "Sci-fi"
-      ],
-      "releaseDate": "18 Apr, 2019",
-      "developer": "Askiisoft",
-      "achievements": {
-        "total": 22,
-        "unlocked": 4
-      }
-    },
-    {
-      "appid": 757310,
-      "name": "Sable",
-      "playtimeForever": 738,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1785890574,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/757310/99b24f25b351f471e84ac9f3a25498505b679695.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/757310/header.jpg",
-      "shortDescription": "Embark on an unique and unforgettable journey and guide Sable through her Gliding; a rite of passage that will take her across vast deserts and mesmerizing landscapes, capped by the remains of spaceships and ancient wonders.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "Indie",
-        "RPG"
-      ],
-      "tags": [
-        "Atmospheric",
-        "Exploration",
-        "Story Rich",
-        "Adventure",
-        "Open World",
-        "Female Protagonist",
-        "Choose Your Own Adventure",
-        "Singleplayer",
-        "Multiple Endings",
-        "Choices Matter",
-        "Stylized",
-        "Puzzle",
-        "Relaxing",
-        "3D Platformer",
-        "Sci-fi",
-        "Platformer",
-        "Puzzle Platformer",
-        "Comic Book",
-        "Hand-drawn",
-        "RPG"
-      ],
-      "releaseDate": "23 Sep, 2021",
-      "developer": "Shedworks",
-      "achievements": {
-        "total": 56,
-        "unlocked": 25
       }
     }
   ]
