@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-22T19:00:25.819Z",
+    "generatedAt": "2026-09-23T19:00:23.818Z",
     "gameCount": 415,
     "profile": {
       "personaName": "DeithZireael",
@@ -17126,9 +17126,9 @@
     {
       "appid": 21690,
       "name": "Resident Evil 5",
-      "playtimeForever": 240,
-      "playtime2Weeks": 240,
-      "lastPlayed": 1790089578,
+      "playtimeForever": 383,
+      "playtime2Weeks": 383,
+      "lastPlayed": 1790177673,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/21690/26108f5caff3638c9f522dd79ee84a12761f373a.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21690/header.jpg",
       "shortDescription": "This game is a port of the Games for Windows - Live version that was released in 2009. If you buy the Untold Stories Bundle here on Steam, it will be the same as upgrading to Resident Evil 5 Gold Edition.",
@@ -17163,7 +17163,7 @@
       "developer": "Capcom",
       "achievements": {
         "total": 70,
-        "unlocked": 8
+        "unlocked": 14
       }
     },
     {
@@ -17297,7 +17297,7 @@
       "appid": 2106840,
       "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
       "playtimeForever": 674,
-      "playtime2Weeks": 73,
+      "playtime2Weeks": 19,
       "lastPlayed": 1789184587,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
@@ -17450,8 +17450,8 @@
         "Casual",
         "Immersive Sim",
         "Atmospheric",
-        "Nonlinear",
         "Nature",
+        "Nonlinear",
         "Dialogue Heavy",
         "Investigation",
         "Colorful",
