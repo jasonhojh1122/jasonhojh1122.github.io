@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-25T19:00:28.395Z",
+    "generatedAt": "2026-09-26T19:00:24.013Z",
     "gameCount": 415,
     "profile": {
       "personaName": "DeithZireael",
@@ -15863,48 +15863,6 @@
       "achievements": null
     },
     {
-      "appid": 2754380,
-      "name": "The Roottrees are Dead",
-      "playtimeForever": 0,
-      "playtime2Weeks": 0,
-      "lastPlayed": 0,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2754380/ff95a36ab76f41edffed9c006a7e56c91d3fa68f.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2754380/6c1be65b8ae88dead50e0fa854790245a2ac072a/header.jpg",
-      "shortDescription": "A genealogical mystery straight out of 1998. Scour the early Internet for clues, uncover hidden connections, and piece together the family tree behind the secretive Roottree Corporation.",
-      "genres": [
-        "Adventure Games",
-        "Adventure"
-      ],
-      "tags": [
-        "Detective",
-        "Mystery",
-        "Puzzle",
-        "Point & Click",
-        "Investigation",
-        "Atmospheric",
-        "Story Rich",
-        "Singleplayer",
-        "1990's",
-        "Logic",
-        "Adventure",
-        "Interactive Fiction",
-        "Indie",
-        "Retro",
-        "Casual",
-        "2D",
-        "Stylized",
-        "LGBTQ+",
-        "Noir",
-        "Immersive"
-      ],
-      "releaseDate": "15 Jan, 2025",
-      "developer": "Evil Trout Inc.",
-      "achievements": {
-        "total": 22,
-        "unlocked": 0
-      }
-    },
-    {
       "appid": 2763670,
       "name": "Arctic Eggs",
       "playtimeForever": 0,
@@ -16158,6 +16116,50 @@
       "achievements": {
         "total": 15,
         "unlocked": 5
+      }
+    },
+    {
+      "appid": 2950790,
+      "name": "IRON NEST: Heavy Turret Simulator",
+      "playtimeForever": 172,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1786805930,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2950790/9e5fd22a0678b6d1b82850f2f95a83f82f2a1c96.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/e6c9e990560078611472e5dab98e79a405ed33f4/header.jpg",
+      "shortDescription": "IRON NEST is a brutal dieselpunk heavy-artillery game where you dominate the battlefield through a colossal war machine. Take map measurements based on the received coordinates, strain the hydraulics, and gunlay the cannons to unleash devastating blows ⟹ Will you obey High Command, Operator?",
+      "genres": [
+        "Simulation Games",
+        "Action",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Military",
+        "Simulation",
+        "Realistic",
+        "3D",
+        "War",
+        "Alternate History",
+        "Indie",
+        "Immersive Sim",
+        "Action",
+        "First-Person",
+        "Tactical",
+        "Steampunk",
+        "Atmospheric",
+        "World War I",
+        "Historical",
+        "Wargame",
+        "World War II",
+        "Replay Value",
+        "Logic",
+        "Physics"
+      ],
+      "releaseDate": "6 Aug, 2026",
+      "developer": "Nick Nieuwoudt",
+      "achievements": {
+        "total": 33,
+        "unlocked": 6
       }
     },
     {
@@ -17124,6 +17126,48 @@
       "achievements": null
     },
     {
+      "appid": 2754380,
+      "name": "The Roottrees are Dead",
+      "playtimeForever": 42,
+      "playtime2Weeks": 42,
+      "lastPlayed": 1790410675,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2754380/ff95a36ab76f41edffed9c006a7e56c91d3fa68f.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2754380/6c1be65b8ae88dead50e0fa854790245a2ac072a/header.jpg",
+      "shortDescription": "A genealogical mystery straight out of 1998. Scour the early Internet for clues, uncover hidden connections, and piece together the family tree behind the secretive Roottree Corporation.",
+      "genres": [
+        "Adventure Games",
+        "Adventure"
+      ],
+      "tags": [
+        "Detective",
+        "Puzzle",
+        "Mystery",
+        "Point & Click",
+        "Investigation",
+        "Story Rich",
+        "Atmospheric",
+        "Singleplayer",
+        "1990's",
+        "Logic",
+        "Adventure",
+        "Interactive Fiction",
+        "Indie",
+        "Retro",
+        "LGBTQ+",
+        "Casual",
+        "2D",
+        "Stylized",
+        "Noir",
+        "Immersive"
+      ],
+      "releaseDate": "15 Jan, 2025",
+      "developer": "Evil Trout Inc.",
+      "achievements": {
+        "total": 22,
+        "unlocked": 0
+      }
+    },
+    {
       "appid": 21690,
       "name": "Resident Evil 5",
       "playtimeForever": 383,
@@ -17170,7 +17214,7 @@
       "appid": 38400,
       "name": "Fallout",
       "playtimeForever": 59,
-      "playtime2Weeks": 59,
+      "playtime2Weeks": 47,
       "lastPlayed": 1789879587,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/38400/df0001a1aa011e6c7a8f38a65908070eba3d2f61.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/38400/header.jpg",
@@ -17297,7 +17341,7 @@
       "appid": 2106840,
       "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
       "playtimeForever": 674,
-      "playtime2Weeks": 19,
+      "playtime2Weeks": 0,
       "lastPlayed": 1789184587,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
@@ -17501,50 +17545,6 @@
       "achievements": {
         "total": 74,
         "unlocked": 3
-      }
-    },
-    {
-      "appid": 2950790,
-      "name": "IRON NEST: Heavy Turret Simulator",
-      "playtimeForever": 172,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1786805930,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2950790/9e5fd22a0678b6d1b82850f2f95a83f82f2a1c96.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/e6c9e990560078611472e5dab98e79a405ed33f4/header.jpg",
-      "shortDescription": "IRON NEST is a brutal dieselpunk heavy-artillery game where you dominate the battlefield through a colossal war machine. Take map measurements based on the received coordinates, strain the hydraulics, and gunlay the cannons to unleash devastating blows ⟹ Will you obey High Command, Operator?",
-      "genres": [
-        "Simulation Games",
-        "Action",
-        "Indie",
-        "Simulation"
-      ],
-      "tags": [
-        "Military",
-        "Simulation",
-        "Realistic",
-        "3D",
-        "War",
-        "Alternate History",
-        "Indie",
-        "Immersive Sim",
-        "Action",
-        "First-Person",
-        "Tactical",
-        "Steampunk",
-        "Atmospheric",
-        "World War I",
-        "Historical",
-        "Wargame",
-        "World War II",
-        "Replay Value",
-        "Logic",
-        "Physics"
-      ],
-      "releaseDate": "6 Aug, 2026",
-      "developer": "Nick Nieuwoudt",
-      "achievements": {
-        "total": 33,
-        "unlocked": 6
       }
     }
   ]
