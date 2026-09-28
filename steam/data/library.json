@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-27T19:00:27.446Z",
+    "generatedAt": "2026-09-28T19:00:24.391Z",
     "gameCount": 415,
     "profile": {
       "personaName": "DeithZireael",
@@ -17126,6 +17126,49 @@
       "achievements": null
     },
     {
+      "appid": 21690,
+      "name": "Resident Evil 5",
+      "playtimeForever": 600,
+      "playtime2Weeks": 600,
+      "lastPlayed": 1790608932,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/21690/26108f5caff3638c9f522dd79ee84a12761f373a.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21690/header.jpg",
+      "shortDescription": "This game is a port of the Games for Windows - Live version that was released in 2009. If you buy the Untold Stories Bundle here on Steam, it will be the same as upgrading to Resident Evil 5 Gold Edition.",
+      "genres": [
+        "Action Games",
+        "Action",
+        "Adventure"
+      ],
+      "tags": [
+        "Co-op",
+        "Action",
+        "Zombies",
+        "Co-op Campaign",
+        "Online Co-Op",
+        "Horror",
+        "Third-Person Shooter",
+        "Multiplayer",
+        "Adventure",
+        "Local Co-Op",
+        "Third Person",
+        "Survival Horror",
+        "Shooter",
+        "Singleplayer",
+        "Female Protagonist",
+        "Split Screen",
+        "Quick-Time Events",
+        "Gore",
+        "Survival",
+        "Atmospheric"
+      ],
+      "releaseDate": "15 Sep, 2009",
+      "developer": "Capcom",
+      "achievements": {
+        "total": 70,
+        "unlocked": 24
+      }
+    },
+    {
       "appid": 2754380,
       "name": "The Roottrees are Dead",
       "playtimeForever": 42,
@@ -17168,53 +17211,10 @@
       }
     },
     {
-      "appid": 21690,
-      "name": "Resident Evil 5",
-      "playtimeForever": 383,
-      "playtime2Weeks": 383,
-      "lastPlayed": 1790177673,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/21690/26108f5caff3638c9f522dd79ee84a12761f373a.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21690/header.jpg",
-      "shortDescription": "This game is a port of the Games for Windows - Live version that was released in 2009. If you buy the Untold Stories Bundle here on Steam, it will be the same as upgrading to Resident Evil 5 Gold Edition.",
-      "genres": [
-        "Action Games",
-        "Action",
-        "Adventure"
-      ],
-      "tags": [
-        "Co-op",
-        "Action",
-        "Zombies",
-        "Co-op Campaign",
-        "Online Co-Op",
-        "Horror",
-        "Third-Person Shooter",
-        "Multiplayer",
-        "Adventure",
-        "Local Co-Op",
-        "Third Person",
-        "Survival Horror",
-        "Shooter",
-        "Singleplayer",
-        "Female Protagonist",
-        "Split Screen",
-        "Quick-Time Events",
-        "Gore",
-        "Survival",
-        "Atmospheric"
-      ],
-      "releaseDate": "15 Sep, 2009",
-      "developer": "Capcom",
-      "achievements": {
-        "total": 70,
-        "unlocked": 14
-      }
-    },
-    {
       "appid": 38400,
       "name": "Fallout",
       "playtimeForever": 59,
-      "playtime2Weeks": 47,
+      "playtime2Weeks": 45,
       "lastPlayed": 1789879587,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/38400/df0001a1aa011e6c7a8f38a65908070eba3d2f61.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/38400/header.jpg",
@@ -17486,8 +17486,8 @@
         "Puzzle",
         "Exploration",
         "Adventure",
-        "Multiplayer",
         "Relaxing",
+        "Multiplayer",
         "Funny",
         "First-Person",
         "Sandbox",
