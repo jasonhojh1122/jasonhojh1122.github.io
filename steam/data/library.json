@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-28T19:00:24.391Z",
-    "gameCount": 415,
+    "generatedAt": "2026-09-29T19:00:24.511Z",
+    "gameCount": 417,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/f3f21ec42942f057fffc7c5a391d0fb982baa769_full.jpg",
       "level": 43,
-      "xp": 11522,
-      "xpNeededToLevelUp": 478
+      "xp": 11525,
+      "xpNeededToLevelUp": 475
     }
   },
   "games": [
@@ -1956,6 +1956,44 @@
       "achievements": {
         "total": 35,
         "unlocked": 30
+      }
+    },
+    {
+      "appid": 251110,
+      "name": "INFRA",
+      "playtimeForever": 246,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1787323821,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/251110/6a5ef28948896b98ae149ba18de7e6e11dcea310.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251110/header.jpg",
+      "shortDescription": "INFRA puts you into the boots of a structural analyst on a routine mission. Quickly though, your task turns into a fight for survival, all caused by deep-rooted schemes of the past. Your tools are simple: your camera and the wits to navigate a labyrinth of debris.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "Indie"
+      ],
+      "tags": [
+        "Exploration",
+        "Puzzle",
+        "Atmospheric",
+        "First-Person",
+        "Walking Simulator",
+        "Adventure",
+        "Mystery",
+        "Story Rich",
+        "Indie",
+        "Singleplayer",
+        "Horror",
+        "Great Soundtrack",
+        "Psychological Horror",
+        "Open World",
+        "Immersive Sim"
+      ],
+      "releaseDate": "15 Jan, 2016",
+      "developer": "Loiste Interactive",
+      "achievements": {
+        "total": 74,
+        "unlocked": 3
       }
     },
     {
@@ -11536,6 +11574,48 @@
       "achievements": null
     },
     {
+      "appid": 1478500,
+      "name": "Big Walk",
+      "playtimeForever": 1144,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1787760015,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1478500/aba91d96c91f87c1aa3d87eedae20fbbf01f2d54.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/62eeee1507dbac905e128a62f2ce690550238db0/header.jpg",
+      "shortDescription": "Hang out and get lost with close friends in a big world. A cooperative online walker-talker from the creators of Untitled Goose Game.",
+      "genres": [
+        "Adventure Games",
+        "Adventure"
+      ],
+      "tags": [
+        "Co-op Campaign",
+        "Open World",
+        "Puzzle",
+        "Exploration",
+        "Adventure",
+        "Relaxing",
+        "Multiplayer",
+        "Funny",
+        "First-Person",
+        "Sandbox",
+        "Casual",
+        "Immersive Sim",
+        "Atmospheric",
+        "Nature",
+        "Nonlinear",
+        "Dialogue Heavy",
+        "Investigation",
+        "Colorful",
+        "Mystery",
+        "Physics"
+      ],
+      "releaseDate": "4 Aug, 2026",
+      "developer": "House House",
+      "achievements": {
+        "total": 12,
+        "unlocked": 12
+      }
+    },
+    {
       "appid": 1478540,
       "name": "Bless Unleashed - Beta Test",
       "playtimeForever": 0,
@@ -17126,6 +17206,95 @@
       "achievements": null
     },
     {
+      "appid": 4001890,
+      "name": "How to Fish",
+      "playtimeForever": 51,
+      "playtime2Weeks": 51,
+      "lastPlayed": 1790695859,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4001890/5c598fcb05447d87a6c67b5b9224103d7d93c16d.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/45c4ddff4901e32c4b8b643e1b97d0d01898d299/header.jpg",
+      "shortDescription": "A 1-4 player physics based fishing simulator. While drinking and boating you suddenly crash into a small island. To work your way back home you have to learn How to Fish.",
+      "genres": [
+        "Action Games",
+        "Action",
+        "Casual",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Multiplayer",
+        "Online Co-Op",
+        "Co-op",
+        "Fishing",
+        "Indie",
+        "Shooter",
+        "First-Person",
+        "Physics",
+        "Adventure",
+        "FPS",
+        "Nature",
+        "Action",
+        "PvE",
+        "3D",
+        "Psychological Horror",
+        "Cartoony",
+        "Combat",
+        "Singleplayer",
+        "Colorful",
+        "Stylized"
+      ],
+      "releaseDate": "20 Aug, 2026",
+      "developer": "Dazed Games",
+      "achievements": {
+        "total": 31,
+        "unlocked": 6
+      }
+    },
+    {
+      "appid": 3527290,
+      "name": "PEAK",
+      "playtimeForever": 92,
+      "playtime2Weeks": 92,
+      "lastPlayed": 1790692781,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3527290/b3a992fd5991bd2f4c956d58e062b0ce2988d6cd.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/31bac6b2eccf09b368f5e95ce510bae2baf3cfcd/header.jpg",
+      "shortDescription": "PEAK is a co-op climbing game where the slightest mistake can spell your doom. Either solo or as a group of lost nature scouts, your only hope of rescue from a mysterious island is to scale the mountain at its center. Do you have what it takes to reach the PEAK?",
+      "genres": [
+        "Indie Games",
+        "Action",
+        "Adventure",
+        "Indie"
+      ],
+      "tags": [
+        "Multiplayer",
+        "Online Co-Op",
+        "Co-op",
+        "Adventure",
+        "Physics",
+        "Exploration",
+        "First-Person",
+        "Comedy",
+        "3D",
+        "Procedural Generation",
+        "Atmospheric",
+        "Action Roguelike",
+        "Character Customization",
+        "Action",
+        "Time Management",
+        "Platformer",
+        "Horror",
+        "Mystery",
+        "Survival Horror",
+        "Investigation"
+      ],
+      "releaseDate": "16 Jun, 2025",
+      "developer": "Team PEAK",
+      "achievements": {
+        "total": 64,
+        "unlocked": 1
+      }
+    },
+    {
       "appid": 21690,
       "name": "Resident Evil 5",
       "playtimeForever": 600,
@@ -17296,7 +17465,7 @@
       "appid": 1086940,
       "name": "Baldur's Gate 3",
       "playtimeForever": 10785,
-      "playtime2Weeks": 285,
+      "playtime2Weeks": 135,
       "lastPlayed": 1789658080,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
@@ -17465,86 +17634,6 @@
       "achievements": {
         "total": 97,
         "unlocked": 14
-      }
-    },
-    {
-      "appid": 1478500,
-      "name": "Big Walk",
-      "playtimeForever": 1144,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1787760015,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1478500/aba91d96c91f87c1aa3d87eedae20fbbf01f2d54.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/62eeee1507dbac905e128a62f2ce690550238db0/header.jpg",
-      "shortDescription": "Hang out and get lost with close friends in a big world. A cooperative online walker-talker from the creators of Untitled Goose Game.",
-      "genres": [
-        "Adventure Games",
-        "Adventure"
-      ],
-      "tags": [
-        "Co-op Campaign",
-        "Open World",
-        "Puzzle",
-        "Exploration",
-        "Adventure",
-        "Relaxing",
-        "Multiplayer",
-        "Funny",
-        "First-Person",
-        "Sandbox",
-        "Casual",
-        "Immersive Sim",
-        "Atmospheric",
-        "Nature",
-        "Nonlinear",
-        "Dialogue Heavy",
-        "Investigation",
-        "Colorful",
-        "Mystery",
-        "Physics"
-      ],
-      "releaseDate": "4 Aug, 2026",
-      "developer": "House House",
-      "achievements": {
-        "total": 12,
-        "unlocked": 12
-      }
-    },
-    {
-      "appid": 251110,
-      "name": "INFRA",
-      "playtimeForever": 246,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1787323821,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/251110/6a5ef28948896b98ae149ba18de7e6e11dcea310.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251110/header.jpg",
-      "shortDescription": "INFRA puts you into the boots of a structural analyst on a routine mission. Quickly though, your task turns into a fight for survival, all caused by deep-rooted schemes of the past. Your tools are simple: your camera and the wits to navigate a labyrinth of debris.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "Indie"
-      ],
-      "tags": [
-        "Exploration",
-        "Puzzle",
-        "Atmospheric",
-        "First-Person",
-        "Walking Simulator",
-        "Adventure",
-        "Mystery",
-        "Story Rich",
-        "Indie",
-        "Singleplayer",
-        "Horror",
-        "Great Soundtrack",
-        "Psychological Horror",
-        "Open World",
-        "Immersive Sim"
-      ],
-      "releaseDate": "15 Jan, 2016",
-      "developer": "Loiste Interactive",
-      "achievements": {
-        "total": 74,
-        "unlocked": 3
       }
     }
   ]
