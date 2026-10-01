@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-09-30T19:00:26.621Z",
+    "generatedAt": "2026-10-01T19:00:27.737Z",
     "gameCount": 417,
     "profile": {
       "personaName": "DeithZireael",
@@ -17238,8 +17238,8 @@
         "3D",
         "Psychological Horror",
         "Cartoony",
-        "Combat",
         "Singleplayer",
+        "Combat",
         "Colorful",
         "Stylized"
       ],
@@ -17465,7 +17465,7 @@
       "appid": 1086940,
       "name": "Baldur's Gate 3",
       "playtimeForever": 10785,
-      "playtime2Weeks": 135,
+      "playtime2Weeks": 0,
       "lastPlayed": 1789658080,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
