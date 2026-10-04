@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-10-03T19:00:24.574Z",
+    "generatedAt": "2026-10-04T19:00:24.812Z",
     "gameCount": 417,
     "profile": {
       "personaName": "DeithZireael",
@@ -17208,9 +17208,9 @@
     {
       "appid": 4001890,
       "name": "How to Fish",
-      "playtimeForever": 51,
-      "playtime2Weeks": 51,
-      "lastPlayed": 1790695859,
+      "playtimeForever": 205,
+      "playtime2Weeks": 205,
+      "lastPlayed": 1791126521,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4001890/5c598fcb05447d87a6c67b5b9224103d7d93c16d.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/45c4ddff4901e32c4b8b643e1b97d0d01898d299/header.jpg",
       "shortDescription": "A 1-4 player physics based fishing simulator. While drinking and boating you suddenly crash into a small island. To work your way back home you have to learn How to Fish.",
@@ -17247,7 +17247,7 @@
       "developer": "Dazed Games",
       "achievements": {
         "total": 31,
-        "unlocked": 6
+        "unlocked": 15
       }
     },
     {
@@ -17298,7 +17298,7 @@
       "appid": 21690,
       "name": "Resident Evil 5",
       "playtimeForever": 600,
-      "playtime2Weeks": 600,
+      "playtime2Weeks": 473,
       "lastPlayed": 1790608932,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/21690/26108f5caff3638c9f522dd79ee84a12761f373a.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21690/header.jpg",
@@ -17383,7 +17383,7 @@
       "appid": 38400,
       "name": "Fallout",
       "playtimeForever": 59,
-      "playtime2Weeks": 45,
+      "playtime2Weeks": 0,
       "lastPlayed": 1789879587,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/38400/df0001a1aa011e6c7a8f38a65908070eba3d2f61.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/38400/header.jpg",
@@ -17422,7 +17422,7 @@
       "appid": 3013400,
       "name": "Legends of the Round Table Demo",
       "playtimeForever": 17,
-      "playtime2Weeks": 17,
+      "playtime2Weeks": 0,
       "lastPlayed": 1789874665,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3013400/cba5fb06bd63acd5fd74daed87f9788c0e00f284.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3013400/23e27ec16c03d93a54ad482886fde8d65f5befee/header.jpg",
