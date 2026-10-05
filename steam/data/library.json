@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-10-04T19:00:24.812Z",
+    "generatedAt": "2026-10-05T19:00:24.533Z",
     "gameCount": 417,
     "profile": {
       "personaName": "DeithZireael",
@@ -17208,9 +17208,9 @@
     {
       "appid": 4001890,
       "name": "How to Fish",
-      "playtimeForever": 205,
-      "playtime2Weeks": 205,
-      "lastPlayed": 1791126521,
+      "playtimeForever": 364,
+      "playtime2Weeks": 364,
+      "lastPlayed": 1791214194,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4001890/5c598fcb05447d87a6c67b5b9224103d7d93c16d.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/45c4ddff4901e32c4b8b643e1b97d0d01898d299/header.jpg",
       "shortDescription": "A 1-4 player physics based fishing simulator. While drinking and boating you suddenly crash into a small island. To work your way back home you have to learn How to Fish.",
@@ -17247,7 +17247,7 @@
       "developer": "Dazed Games",
       "achievements": {
         "total": 31,
-        "unlocked": 15
+        "unlocked": 20
       }
     },
     {
