@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-10-06T19:00:24.471Z",
+    "generatedAt": "2026-10-07T19:00:23.913Z",
     "gameCount": 417,
     "profile": {
       "personaName": "DeithZireael",
@@ -2769,48 +2769,6 @@
       }
     },
     {
-      "appid": 292030,
-      "name": "The Witcher 3: Wild Hunt",
-      "playtimeForever": 9977,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1616158673,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/292030/78d0ff98b67851f24539cdf2402cf147679134f4.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/ad9240e088f953a84aee814034c50a6a92bf4516/header.jpg",
-      "shortDescription": "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri — the Child of Prophecy, a living weapon that can alter the shape of the world.",
-      "genres": [
-        "RPG Games",
-        "RPG"
-      ],
-      "tags": [
-        "Open World",
-        "RPG",
-        "Story Rich",
-        "Atmospheric",
-        "Mature",
-        "Fantasy",
-        "Adventure",
-        "Singleplayer",
-        "Nudity",
-        "Choices Matter",
-        "Great Soundtrack",
-        "Third Person",
-        "Medieval",
-        "Action",
-        "Multiple Endings",
-        "Action RPG",
-        "Dark Fantasy",
-        "Magic",
-        "Dark",
-        "Sandbox"
-      ],
-      "releaseDate": "18 May, 2015",
-      "developer": "CD PROJEKT RED",
-      "achievements": {
-        "total": 78,
-        "unlocked": 47
-      }
-    },
-    {
       "appid": 294100,
       "name": "RimWorld",
       "playtimeForever": 2700,
@@ -4434,6 +4392,50 @@
       "achievements": {
         "total": 17,
         "unlocked": 10
+      }
+    },
+    {
+      "appid": 435150,
+      "name": "Divinity: Original Sin 2",
+      "playtimeForever": 1991,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1787931314,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/435150/519a99caef7c5e2b4625c8c2fa0620fb66a752f3.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/3f6ee788cb01bd65097c52399d536eb424b4876f/header.jpg",
+      "shortDescription": "The critically acclaimed RPG that raised the bar, from the creators of Baldur's Gate 3. Gather your party. Master deep, tactical combat. Venture as a party of up to four - but know that only one of you will have the chance to become a God.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "RPG",
+        "Strategy"
+      ],
+      "tags": [
+        "RPG",
+        "Tactical RPG",
+        "Turn-Based Strategy",
+        "Story Rich",
+        "Fantasy",
+        "Character Customization",
+        "CRPG",
+        "Exploration",
+        "Party-Based RPG",
+        "Strategy RPG",
+        "PvP",
+        "Female Protagonist",
+        "Co-op Campaign",
+        "Local Co-Op",
+        "Choices Matter",
+        "Romance",
+        "Isometric",
+        "Strategy",
+        "Moddable",
+        "Funny"
+      ],
+      "releaseDate": "14 Sep, 2017",
+      "developer": "Larian Studios",
+      "achievements": {
+        "total": 97,
+        "unlocked": 14
       }
     },
     {
@@ -16826,50 +16828,6 @@
       }
     },
     {
-      "appid": 3539440,
-      "name": "Metal Garden",
-      "playtimeForever": 0,
-      "playtime2Weeks": 0,
-      "lastPlayed": 0,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3539440/1094db2e7b262a91d253f97ca971a6912b976972.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3539440/b6b52855135acced1935c231bc5a2961e35b1a5b/header.jpg",
-      "shortDescription": "Travel through an overgrown megastructure, and discover what lies beyond it. Metal Garden is a short, atmospheric singleplayer FPS game.",
-      "genres": [
-        "Indie Games",
-        "Action",
-        "Adventure",
-        "Indie"
-      ],
-      "tags": [
-        "Atmospheric",
-        "FPS",
-        "Sci-fi",
-        "Singleplayer",
-        "Mystery",
-        "Exploration",
-        "Immersive",
-        "Action",
-        "Adventure",
-        "Narrative",
-        "Shooter",
-        "First-Person",
-        "Indie",
-        "Combat",
-        "Futuristic",
-        "Dystopian ",
-        "Dark",
-        "3D",
-        "Dark Fantasy",
-        "Puzzle"
-      ],
-      "releaseDate": "21 Mar, 2025",
-      "developer": "Tinerasoft",
-      "achievements": {
-        "total": 9,
-        "unlocked": 0
-      }
-    },
-    {
       "appid": 3564740,
       "name": "Where Winds Meet",
       "playtimeForever": 93,
@@ -17040,6 +16998,48 @@
       "achievements": null
     },
     {
+      "appid": 4018950,
+      "name": "Lost Wiki: Kozlovka",
+      "playtimeForever": 96,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1788577788,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4018950/d16e35372902538446b8b6fd20003b39a653d868.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4018950/62daa88bc13e7ca41c88c65260cf04cd8747ad2a/header.jpg",
+      "shortDescription": "Explore a wikipedia-like database and solve a small town mystery in Eastern Europe. Step into the shoes of a journalist in the 90s as you sprawl through articles and uncover the secrets that have been laid in front of you.",
+      "genres": [
+        "Indie Games",
+        "Indie"
+      ],
+      "tags": [
+        "Mystery",
+        "Detective",
+        "Investigation",
+        "Conspiracy",
+        "Story Rich",
+        "Puzzle",
+        "Interactive Fiction",
+        "Thriller",
+        "Text-Based",
+        "Simulation",
+        "Pixel Graphics",
+        "1990's",
+        "Atmospheric",
+        "Indie",
+        "RPG",
+        "Dark",
+        "Lore-Rich",
+        "Old School",
+        "Linear",
+        "Singleplayer"
+      ],
+      "releaseDate": "20 Mar, 2026",
+      "developer": "yattytheman",
+      "achievements": {
+        "total": 6,
+        "unlocked": 3
+      }
+    },
+    {
       "appid": 4197610,
       "name": "Librarian: Tidy Up the Arcane Library!",
       "playtimeForever": 261,
@@ -17206,6 +17206,92 @@
       "achievements": null
     },
     {
+      "appid": 292030,
+      "name": "The Witcher 3: Wild Hunt — Remastered",
+      "playtimeForever": 10021,
+      "playtime2Weeks": 43,
+      "lastPlayed": 1791381566,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/292030/7b52d11edee478d652ef4e7103e00644bed2c74c.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/e8afc4252e3fee8ed2525ab2fd7675cca39aa38d/header_alt_assets_1.jpg",
+      "shortDescription": "The Witcher 3: Wild Hunt — Remastered modernizes the acclaimed role-playing game with a range of upgrades and enhancements. Become monster slayer for hire Geralt of Rivia and journey across a dark fantasy open world in an epic quest to find your adopted daughter Ciri.",
+      "genres": [
+        "RPG Games",
+        "RPG"
+      ],
+      "tags": [
+        "Open World",
+        "RPG",
+        "Story Rich",
+        "Atmospheric",
+        "Fantasy",
+        "Adventure",
+        "Singleplayer",
+        "Nudity",
+        "Choices Matter",
+        "Third Person",
+        "Great Soundtrack",
+        "Medieval",
+        "Action",
+        "Multiple Endings",
+        "Action RPG",
+        "Dark Fantasy",
+        "Magic",
+        "Dark",
+        "Sandbox",
+        "Sexual Content"
+      ],
+      "releaseDate": "18 May, 2015",
+      "developer": "CD PROJEKT RED",
+      "achievements": {
+        "total": 78,
+        "unlocked": 47
+      }
+    },
+    {
+      "appid": 3539440,
+      "name": "Metal Garden",
+      "playtimeForever": 15,
+      "playtime2Weeks": 15,
+      "lastPlayed": 1791378839,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3539440/1094db2e7b262a91d253f97ca971a6912b976972.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3539440/b6b52855135acced1935c231bc5a2961e35b1a5b/header.jpg",
+      "shortDescription": "Travel through an overgrown megastructure, and discover what lies beyond it. Metal Garden is a short, atmospheric singleplayer FPS game.",
+      "genres": [
+        "Indie Games",
+        "Action",
+        "Adventure",
+        "Indie"
+      ],
+      "tags": [
+        "Atmospheric",
+        "FPS",
+        "Sci-fi",
+        "Singleplayer",
+        "Mystery",
+        "Exploration",
+        "Immersive",
+        "Action",
+        "Adventure",
+        "Shooter",
+        "Narrative",
+        "Indie",
+        "First-Person",
+        "Dystopian ",
+        "Futuristic",
+        "Combat",
+        "Dark",
+        "3D",
+        "Dark Fantasy",
+        "Puzzle"
+      ],
+      "releaseDate": "21 Mar, 2025",
+      "developer": "Tinerasoft",
+      "achievements": {
+        "total": 9,
+        "unlocked": 1
+      }
+    },
+    {
       "appid": 4001890,
       "name": "How to Fish",
       "playtimeForever": 364,
@@ -17298,7 +17384,7 @@
       "appid": 21690,
       "name": "Resident Evil 5",
       "playtimeForever": 600,
-      "playtime2Weeks": 360,
+      "playtime2Weeks": 217,
       "lastPlayed": 1790608932,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/21690/26108f5caff3638c9f522dd79ee84a12761f373a.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21690/header.jpg",
@@ -17548,92 +17634,6 @@
       "achievements": {
         "total": 34,
         "unlocked": 27
-      }
-    },
-    {
-      "appid": 4018950,
-      "name": "Lost Wiki: Kozlovka",
-      "playtimeForever": 96,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1788577788,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4018950/d16e35372902538446b8b6fd20003b39a653d868.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4018950/62daa88bc13e7ca41c88c65260cf04cd8747ad2a/header.jpg",
-      "shortDescription": "Explore a wikipedia-like database and solve a small town mystery in Eastern Europe. Step into the shoes of a journalist in the 90s as you sprawl through articles and uncover the secrets that have been laid in front of you.",
-      "genres": [
-        "Indie Games",
-        "Indie"
-      ],
-      "tags": [
-        "Mystery",
-        "Detective",
-        "Investigation",
-        "Conspiracy",
-        "Story Rich",
-        "Puzzle",
-        "Interactive Fiction",
-        "Thriller",
-        "Text-Based",
-        "Simulation",
-        "Pixel Graphics",
-        "1990's",
-        "Atmospheric",
-        "Indie",
-        "RPG",
-        "Dark",
-        "Lore-Rich",
-        "Old School",
-        "Linear",
-        "Singleplayer"
-      ],
-      "releaseDate": "20 Mar, 2026",
-      "developer": "yattytheman",
-      "achievements": {
-        "total": 6,
-        "unlocked": 3
-      }
-    },
-    {
-      "appid": 435150,
-      "name": "Divinity: Original Sin 2",
-      "playtimeForever": 1991,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1787931314,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/435150/519a99caef7c5e2b4625c8c2fa0620fb66a752f3.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/3f6ee788cb01bd65097c52399d536eb424b4876f/header.jpg",
-      "shortDescription": "The critically acclaimed RPG that raised the bar, from the creators of Baldur's Gate 3. Gather your party. Master deep, tactical combat. Venture as a party of up to four - but know that only one of you will have the chance to become a God.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "RPG",
-        "Strategy"
-      ],
-      "tags": [
-        "RPG",
-        "Tactical RPG",
-        "Turn-Based Strategy",
-        "Story Rich",
-        "Fantasy",
-        "Character Customization",
-        "CRPG",
-        "Exploration",
-        "Party-Based RPG",
-        "Strategy RPG",
-        "PvP",
-        "Female Protagonist",
-        "Co-op Campaign",
-        "Local Co-Op",
-        "Choices Matter",
-        "Romance",
-        "Isometric",
-        "Strategy",
-        "Moddable",
-        "Funny"
-      ],
-      "releaseDate": "14 Sep, 2017",
-      "developer": "Larian Studios",
-      "achievements": {
-        "total": 97,
-        "unlocked": 14
       }
     }
   ]
