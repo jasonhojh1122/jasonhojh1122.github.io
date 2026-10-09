@@ -244,6 +244,7 @@
       var a = el('a', 'print' + (g.favorite ? ' is-fav' : ''));
       a.href = 'https://store.steampowered.com/app/' + g.appid + '/';
       a.dataset.appid = g.appid;
+      a.dataset.track = g.name;   /* what analytics.js calls a click on this cover */
 
       var pic = el('span', 'pic');
       if (g.headerImage) {

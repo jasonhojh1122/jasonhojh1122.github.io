@@ -272,6 +272,7 @@ def foot():
 </dialog>
 
 <script src="../js/works.js"></script>
+<script src="../js/analytics.js"></script>
 </body>
 </html>
 """

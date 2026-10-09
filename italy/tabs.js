@@ -1,3 +1,12 @@
+// Site analytics: every Italian art page loads this file, so the shared
+// tracker (/js/analytics.js) is pulled in from here.
+(() => {
+  const s = document.createElement('script');
+  s.src = '/js/analytics.js';
+  s.defer = true;
+  document.head.appendChild(s);
+})();
+
 /**
  * Tab navigation for index page
  * Supports URL parameter ?tab=<tabname> to remember/share active tab
