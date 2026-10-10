@@ -6,13 +6,25 @@
 (function () {
   'use strict';
 
-  var s = document.createElement('script');
-  s.defer = true;
-  s.src = 'https://cloud.umami.is/script.js';
-  s.setAttribute('data-website-id', '2b3ed455-15e9-42fb-a838-b1b119f4f8d4');
-  /* only the live site counts; a local preview stays out of the numbers */
-  s.setAttribute('data-domains', 'www.deithzireael.net,deithzireael.net');
-  document.head.appendChild(s);
+  /* Umami is asked for through this site's own /dz/ path (a Cloudflare
+     Worker, tools/umami-proxy-worker.js, passes it on). If that path is not
+     answering, the tracker is fetched from Umami directly instead. */
+
+  function load(src, host, fallback) {
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = src;
+    s.setAttribute('data-website-id', '2b3ed455-15e9-42fb-a838-b1b119f4f8d4');
+    /* only the live site counts; a local preview stays out of the numbers */
+    s.setAttribute('data-domains', 'www.deithzireael.net,deithzireael.net');
+    if (host) s.setAttribute('data-host-url', host);
+    if (fallback) s.onerror = fallback;
+    document.head.appendChild(s);
+  }
+
+  load('/dz/script.js', location.origin + '/dz', function () {
+    load('https://cloud.umami.is/script.js');
+  });
 
   /* --- what a click is called ------------------------------------------- */
 
