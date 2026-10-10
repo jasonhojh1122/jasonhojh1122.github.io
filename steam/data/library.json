@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-10-09T19:00:25.471Z",
-    "gameCount": 417,
+    "generatedAt": "2026-10-10T19:00:24.081Z",
+    "gameCount": 418,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/f3f21ec42942f057fffc7c5a391d0fb982baa769_full.jpg",
@@ -14399,6 +14399,50 @@
       }
     },
     {
+      "appid": 2106840,
+      "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
+      "playtimeForever": 674,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1789184587,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
+      "shortDescription": "How far would you go to bring someone back from the dead? Discover the depths that some will go to in this horror-adventure game.",
+      "genres": [
+        "Adventure Games",
+        "Adventure",
+        "RPG",
+        "Simulation"
+      ],
+      "tags": [
+        "Visual Novel",
+        "Adventure",
+        "Horror",
+        "Anime",
+        "Simulation",
+        "Text-Based",
+        "Supernatural",
+        "Hand-drawn",
+        "Mystery",
+        "1980s",
+        "Story Rich",
+        "2D Platformer",
+        "Multiple Endings",
+        "Retro",
+        "Singleplayer",
+        "RPG",
+        "Point & Click",
+        "JRPG",
+        "Choose Your Own Adventure",
+        "Cinematic"
+      ],
+      "releaseDate": "8 Mar, 2023",
+      "developer": "Square Enix",
+      "achievements": {
+        "total": 34,
+        "unlocked": 27
+      }
+    },
+    {
       "appid": 2149010,
       "name": "Little Nightmares Enhanced Edition",
       "playtimeForever": 0,
@@ -17206,6 +17250,50 @@
       "achievements": null
     },
     {
+      "appid": 301280,
+      "name": "Skin Deep",
+      "playtimeForever": 28,
+      "playtime2Weeks": 28,
+      "lastPlayed": 1791614437,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/301280/ba66ef513e3e300a4e50e8eb1d46b7cc449d8887.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/301280/header.jpg",
+      "shortDescription": "Skin Deep is an immersive first-person shooter. We got sneezing. We got things getting stuck in your feet. Stalk through a vast non-linear starship and sneak, subvert, and sabotage to survive in this stellar sandbox. You're outnumbered, outgunned, and have no shoes. Welcome to Skin Deep!",
+      "genres": [
+        "Action Games",
+        "Action",
+        "Indie",
+        "Simulation"
+      ],
+      "tags": [
+        "Immersive Sim",
+        "Stealth",
+        "FPS",
+        "Sci-fi",
+        "Sandbox",
+        "Exploration",
+        "First-Person",
+        "Shooter",
+        "Space",
+        "Action",
+        "Tactical",
+        "Atmospheric",
+        "Singleplayer",
+        "Futuristic",
+        "Immersive",
+        "Indie",
+        "Violent",
+        "Adventure",
+        "Female Protagonist",
+        "Old School"
+      ],
+      "releaseDate": "30 Apr, 2025",
+      "developer": "Blendo Games",
+      "achievements": {
+        "total": 17,
+        "unlocked": 1
+      }
+    },
+    {
       "appid": 292030,
       "name": "The Witcher 3: Wild Hunt — Remastered",
       "playtimeForever": 10021,
@@ -17427,7 +17515,7 @@
       "appid": 2754380,
       "name": "The Roottrees are Dead",
       "playtimeForever": 42,
-      "playtime2Weeks": 42,
+      "playtime2Weeks": 0,
       "lastPlayed": 1790410675,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2754380/ff95a36ab76f41edffed9c006a7e56c91d3fa68f.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2754380/6c1be65b8ae88dead50e0fa854790245a2ac072a/header.jpg",
@@ -17591,50 +17679,6 @@
         "unlocked": 32
       },
       "favorite": true
-    },
-    {
-      "appid": 2106840,
-      "name": "PARANORMASIGHT: The Seven Mysteries of Honjo",
-      "playtimeForever": 674,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1789184587,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2106840/f27d207c7456998c4e0f65320f2bd08fff2d5cd1.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2106840/header.jpg",
-      "shortDescription": "How far would you go to bring someone back from the dead? Discover the depths that some will go to in this horror-adventure game.",
-      "genres": [
-        "Adventure Games",
-        "Adventure",
-        "RPG",
-        "Simulation"
-      ],
-      "tags": [
-        "Visual Novel",
-        "Adventure",
-        "Horror",
-        "Anime",
-        "Simulation",
-        "Text-Based",
-        "Supernatural",
-        "Hand-drawn",
-        "Mystery",
-        "1980s",
-        "Story Rich",
-        "2D Platformer",
-        "Multiple Endings",
-        "Retro",
-        "Singleplayer",
-        "RPG",
-        "Point & Click",
-        "JRPG",
-        "Choose Your Own Adventure",
-        "Cinematic"
-      ],
-      "releaseDate": "8 Mar, 2023",
-      "developer": "Square Enix",
-      "achievements": {
-        "total": 34,
-        "unlocked": 27
-      }
     }
   ]
 }
