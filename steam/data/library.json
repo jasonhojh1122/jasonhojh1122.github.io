@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-10-12T19:00:26.009Z",
-    "gameCount": 418,
+    "generatedAt": "2026-10-13T19:00:25.749Z",
+    "gameCount": 419,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/f3f21ec42942f057fffc7c5a391d0fb982baa769_full.jpg",
@@ -8604,6 +8604,51 @@
       "releaseDate": "5 Aug, 2019",
       "developer": "Jack Tech",
       "achievements": null
+    },
+    {
+      "appid": 1086940,
+      "name": "Baldur's Gate 3",
+      "playtimeForever": 10785,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1789658080,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
+      "shortDescription": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons &amp; Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
+      "genres": [
+        "RPG Games",
+        "Adventure",
+        "RPG",
+        "Strategy"
+      ],
+      "tags": [
+        "RPG",
+        "Character Customization",
+        "Choices Matter",
+        "Turn-Based Combat",
+        "Story Rich",
+        "Sexual Content",
+        "CRPG",
+        "Fantasy",
+        "Adventure",
+        "Romance",
+        "Online Co-Op",
+        "Multiplayer",
+        "Nudity",
+        "Strategy",
+        "Singleplayer",
+        "Co-op Campaign",
+        "Class-Based",
+        "Dark Fantasy",
+        "Combat",
+        "LGBTQ+"
+      ],
+      "releaseDate": "3 Aug, 2023",
+      "developer": "Larian Studios",
+      "achievements": {
+        "total": 54,
+        "unlocked": 32
+      },
+      "favorite": true
     },
     {
       "appid": 1089980,
@@ -17250,6 +17295,45 @@
       "achievements": null
     },
     {
+      "appid": 4210280,
+      "name": "Titanium Court Demo",
+      "playtimeForever": 36,
+      "playtime2Weeks": 36,
+      "lastPlayed": 1791905427,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4210280/145fa46eec2dd390d85309f7fd72cf897dbc17a9.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2364580/e7bc5cb46a5594994b821d92b475ca6327ee11d6/header.jpg",
+      "shortDescription": "A critically-acclaimed surreal masterpiece. This is how AP Thomson would describe Titanium Court if not for the curse he bears as punishment for his hubris. Instead he can only use the crudest of terms and so he describes Titanium Court as &quot;a clever ploy to trick gamers into reading my book.&quot; Yuck!",
+      "genres": [
+        "Strategy Games",
+        "Strategy"
+      ],
+      "tags": [
+        "Surreal",
+        "Funny",
+        "Match 3",
+        "Tower Defense",
+        "Strategy",
+        "Turn-Based Tactics",
+        "Roguelite",
+        "Tactical RPG",
+        "Auto Battler",
+        "Puzzle",
+        "Singleplayer",
+        "Narrative",
+        "Story Rich",
+        "Comedy",
+        "Resource Management",
+        "Philosophical",
+        "Tactical",
+        "Baseball",
+        "Magic",
+        "Combat"
+      ],
+      "releaseDate": "23 Apr, 2026",
+      "developer": "AP Thomson",
+      "achievements": null
+    },
+    {
       "appid": 301280,
       "name": "Skin Deep",
       "playtimeForever": 28,
@@ -17383,7 +17467,7 @@
       "appid": 4001890,
       "name": "How to Fish",
       "playtimeForever": 364,
-      "playtime2Weeks": 364,
+      "playtime2Weeks": 313,
       "lastPlayed": 1791214194,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4001890/5c598fcb05447d87a6c67b5b9224103d7d93c16d.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/45c4ddff4901e32c4b8b643e1b97d0d01898d299/header.jpg",
@@ -17428,7 +17512,7 @@
       "appid": 3527290,
       "name": "PEAK",
       "playtimeForever": 92,
-      "playtime2Weeks": 92,
+      "playtime2Weeks": 0,
       "lastPlayed": 1790692781,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3527290/b3a992fd5991bd2f4c956d58e062b0ce2988d6cd.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/31bac6b2eccf09b368f5e95ce510bae2baf3cfcd/header.jpg",
@@ -17577,8 +17661,8 @@
         "Singleplayer",
         "Sci-fi",
         "Atmospheric",
-        "Multiple Endings",
         "CRPG",
+        "Multiple Endings",
         "1990's",
         "Retro",
         "Adventure",
@@ -17634,51 +17718,6 @@
       "releaseDate": "13 May, 2025",
       "developer": "Artifice Studio",
       "achievements": null
-    },
-    {
-      "appid": 1086940,
-      "name": "Baldur's Gate 3",
-      "playtimeForever": 10785,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1789658080,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
-      "shortDescription": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons &amp; Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
-      "genres": [
-        "RPG Games",
-        "Adventure",
-        "RPG",
-        "Strategy"
-      ],
-      "tags": [
-        "RPG",
-        "Character Customization",
-        "Choices Matter",
-        "Turn-Based Combat",
-        "Story Rich",
-        "Sexual Content",
-        "CRPG",
-        "Fantasy",
-        "Adventure",
-        "Romance",
-        "Online Co-Op",
-        "Multiplayer",
-        "Nudity",
-        "Strategy",
-        "Singleplayer",
-        "Co-op Campaign",
-        "Class-Based",
-        "Dark Fantasy",
-        "Combat",
-        "LGBTQ+"
-      ],
-      "releaseDate": "3 Aug, 2023",
-      "developer": "Larian Studios",
-      "achievements": {
-        "total": 54,
-        "unlocked": 32
-      },
-      "favorite": true
     }
   ]
 }
