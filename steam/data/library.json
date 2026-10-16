@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-10-15T19:00:24.522Z",
+    "generatedAt": "2026-10-16T19:00:24.760Z",
     "gameCount": 420,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/f3f21ec42942f057fffc7c5a391d0fb982baa769_full.jpg",
       "level": 43,
-      "xp": 11530,
-      "xpNeededToLevelUp": 470
+      "xp": 11531,
+      "xpNeededToLevelUp": 469
     }
   },
   "games": [
@@ -17334,51 +17334,11 @@
       "achievements": null
     },
     {
-      "appid": 5184670,
-      "name": "Clive Barker's Hellraiser: Revival Demo",
-      "playtimeForever": 29,
-      "playtime2Weeks": 29,
-      "lastPlayed": 1791939560,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/5184670/ae4e4a9325c296f2981f3bc297ee82f3fc736ba7.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5184670/ce0e52918fca48078fddcb5683877e0da09d7486/header.jpg",
-      "shortDescription": "Experience a new chapter in the legendary horror series like never before. This demo contains a taste of Clive Barker’s Hellraiser: Revival, where you meet the main characters of the story, delve into the Labyrinth and face off against the Scarlet Church for the first time.",
-      "genres": [
-        "Action Games",
-        "Action",
-        "Adventure"
-      ],
-      "tags": [
-        "Gore",
-        "Horror",
-        "Puzzle",
-        "First-Person",
-        "Sexual Content",
-        "Walking Simulator",
-        "Psychological Horror",
-        "Surreal",
-        "Story Rich",
-        "Female Protagonist",
-        "Action",
-        "Demons",
-        "Atmospheric",
-        "Survival",
-        "Nudity",
-        "Adventure",
-        "Dark",
-        "Violent",
-        "Survival Horror",
-        "Singleplayer"
-      ],
-      "releaseDate": "17 Sep, 2026",
-      "developer": "Saber Interactive",
-      "achievements": null
-    },
-    {
       "appid": 301280,
       "name": "Skin Deep",
-      "playtimeForever": 28,
-      "playtime2Weeks": 28,
-      "lastPlayed": 1791614437,
+      "playtimeForever": 92,
+      "playtime2Weeks": 92,
+      "lastPlayed": 1792123294,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/301280/ba66ef513e3e300a4e50e8eb1d46b7cc449d8887.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/301280/header.jpg",
       "shortDescription": "Skin Deep is an immersive first-person shooter. We got sneezing. We got things getting stuck in your feet. Stalk through a vast non-linear starship and sneak, subvert, and sabotage to survive in this stellar sandbox. You're outnumbered, outgunned, and have no shoes. Welcome to Skin Deep!",
@@ -17414,8 +17374,48 @@
       "developer": "Blendo Games",
       "achievements": {
         "total": 17,
-        "unlocked": 1
+        "unlocked": 3
       }
+    },
+    {
+      "appid": 5184670,
+      "name": "Clive Barker's Hellraiser: Revival Demo",
+      "playtimeForever": 29,
+      "playtime2Weeks": 29,
+      "lastPlayed": 1791939560,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/5184670/ae4e4a9325c296f2981f3bc297ee82f3fc736ba7.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5184670/ce0e52918fca48078fddcb5683877e0da09d7486/header.jpg",
+      "shortDescription": "Experience a new chapter in the legendary horror series like never before. This demo contains a taste of Clive Barker’s Hellraiser: Revival, where you meet the main characters of the story, delve into the Labyrinth and face off against the Scarlet Church for the first time.",
+      "genres": [
+        "Action Games",
+        "Action",
+        "Adventure"
+      ],
+      "tags": [
+        "Gore",
+        "Horror",
+        "Puzzle",
+        "First-Person",
+        "Sexual Content",
+        "Walking Simulator",
+        "Psychological Horror",
+        "Surreal",
+        "Female Protagonist",
+        "Story Rich",
+        "Action",
+        "Demons",
+        "Atmospheric",
+        "Survival",
+        "Nudity",
+        "Adventure",
+        "Dark",
+        "Violent",
+        "Survival Horror",
+        "Singleplayer"
+      ],
+      "releaseDate": "17 Sep, 2026",
+      "developer": "Saber Interactive",
+      "achievements": null
     },
     {
       "appid": 292030,
@@ -17532,8 +17532,8 @@
         "FPS",
         "Nature",
         "Action",
-        "3D",
         "PvE",
+        "3D",
         "Cartoony",
         "Psychological Horror",
         "Singleplayer",
