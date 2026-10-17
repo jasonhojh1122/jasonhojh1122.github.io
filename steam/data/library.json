@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-10-16T19:00:24.760Z",
-    "gameCount": 420,
+    "generatedAt": "2026-10-17T19:00:27.265Z",
+    "gameCount": 421,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/f3f21ec42942f057fffc7c5a391d0fb982baa769_full.jpg",
@@ -16376,6 +16376,49 @@
       }
     },
     {
+      "appid": 3013400,
+      "name": "Legends of the Round Table Demo",
+      "playtimeForever": 17,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1789874665,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3013400/cba5fb06bd63acd5fd74daed87f9788c0e00f284.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3013400/23e27ec16c03d93a54ad482886fde8d65f5befee/header.jpg",
+      "shortDescription": "Experience one of the adventures in this demo of Legends of the Round Table. Lead the Knights of the Round Table through King Arthur's legend in a unique RPG, full of honor, magic and romance. Plunge into a colorful world inspired by medieval art, tales and music.",
+      "genres": [
+        "RPG Games",
+        "Adventure",
+        "Indie",
+        "RPG",
+        "Simulation",
+        "Strategy"
+      ],
+      "tags": [
+        "RPG",
+        "Strategy",
+        "Historical",
+        "Medieval",
+        "Turn-Based Tactics",
+        "Choices Matter",
+        "CRPG",
+        "Choose Your Own Adventure",
+        "Tactical RPG",
+        "Sandbox",
+        "Party-Based RPG",
+        "Strategy RPG",
+        "Romance",
+        "2.5D",
+        "Lore-Rich",
+        "Nonlinear",
+        "Multiple Endings",
+        "Management",
+        "War",
+        "Adventure"
+      ],
+      "releaseDate": "13 May, 2025",
+      "developer": "Artifice Studio",
+      "achievements": null
+    },
+    {
       "appid": 3043580,
       "name": "Keeper",
       "playtimeForever": 58,
@@ -17334,6 +17377,50 @@
       "achievements": null
     },
     {
+      "appid": 499170,
+      "name": "Order of the Sinking Star",
+      "playtimeForever": 127,
+      "playtime2Weeks": 127,
+      "lastPlayed": 1792223845,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/499170/a440ee5f9039749226536670915eac6eecbf8121.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/499170/deda420d9e42288f4734a068c707f4c156203969/header.jpg",
+      "shortDescription": "From director Jonathan Blow (Braid, The Witness), Order of the Sinking Star is a massive puzzle adventure set in a realm of magic and enigma. Solve over 1000 interconnected, hand-crafted puzzles, discover unique playable heroes, master evolving gameplay mechanics, and decipher a grand mystery.",
+      "genres": [
+        "Indie Games",
+        "Adventure",
+        "Indie",
+        "Strategy"
+      ],
+      "tags": [
+        "Puzzle",
+        "Adventure",
+        "Sokoban",
+        "Exploration",
+        "3D",
+        "Top-Down",
+        "Fantasy",
+        "Sci-fi",
+        "Controller",
+        "Nonlinear",
+        "Dynamic Narration",
+        "Singleplayer",
+        "Open World",
+        "Indie",
+        "Story Rich",
+        "Time Manipulation",
+        "Grid-Based Movement",
+        "Difficult",
+        "Surreal",
+        "Colorful"
+      ],
+      "releaseDate": "8 Oct, 2026",
+      "developer": "Thekla, Inc.",
+      "achievements": {
+        "total": 32,
+        "unlocked": 0
+      }
+    },
+    {
       "appid": 301280,
       "name": "Skin Deep",
       "playtimeForever": 92,
@@ -17714,49 +17801,6 @@
       ],
       "releaseDate": "30 Sep, 1997",
       "developer": "Interplay Inc.",
-      "achievements": null
-    },
-    {
-      "appid": 3013400,
-      "name": "Legends of the Round Table Demo",
-      "playtimeForever": 17,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1789874665,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3013400/cba5fb06bd63acd5fd74daed87f9788c0e00f284.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3013400/23e27ec16c03d93a54ad482886fde8d65f5befee/header.jpg",
-      "shortDescription": "Experience one of the adventures in this demo of Legends of the Round Table. Lead the Knights of the Round Table through King Arthur's legend in a unique RPG, full of honor, magic and romance. Plunge into a colorful world inspired by medieval art, tales and music.",
-      "genres": [
-        "RPG Games",
-        "Adventure",
-        "Indie",
-        "RPG",
-        "Simulation",
-        "Strategy"
-      ],
-      "tags": [
-        "RPG",
-        "Strategy",
-        "Historical",
-        "Medieval",
-        "Turn-Based Tactics",
-        "Choices Matter",
-        "CRPG",
-        "Choose Your Own Adventure",
-        "Tactical RPG",
-        "Sandbox",
-        "Party-Based RPG",
-        "Strategy RPG",
-        "Romance",
-        "2.5D",
-        "Lore-Rich",
-        "Nonlinear",
-        "Multiple Endings",
-        "Management",
-        "War",
-        "Adventure"
-      ],
-      "releaseDate": "13 May, 2025",
-      "developer": "Artifice Studio",
       "achievements": null
     }
   ]
