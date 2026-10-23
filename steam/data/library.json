@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-10-22T19:00:23.728Z",
+    "generatedAt": "2026-10-23T19:00:23.950Z",
     "gameCount": 421,
     "profile": {
       "personaName": "DeithZireael",
@@ -17371,6 +17371,50 @@
       "achievements": null
     },
     {
+      "appid": 499170,
+      "name": "Order of the Sinking Star",
+      "playtimeForever": 455,
+      "playtime2Weeks": 455,
+      "lastPlayed": 1792746001,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/499170/a440ee5f9039749226536670915eac6eecbf8121.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/499170/deda420d9e42288f4734a068c707f4c156203969/header.jpg",
+      "shortDescription": "From director Jonathan Blow (Braid, The Witness), Order of the Sinking Star is a massive puzzle adventure set in a realm of magic and enigma. Solve over 1000 interconnected, hand-crafted puzzles, discover unique playable heroes, master evolving gameplay mechanics, and decipher a grand mystery.",
+      "genres": [
+        "Indie Games",
+        "Adventure",
+        "Indie",
+        "Strategy"
+      ],
+      "tags": [
+        "Puzzle",
+        "Adventure",
+        "Sokoban",
+        "Exploration",
+        "3D",
+        "Top-Down",
+        "Fantasy",
+        "Sci-fi",
+        "Controller",
+        "Nonlinear",
+        "Dynamic Narration",
+        "Singleplayer",
+        "Indie",
+        "Open World",
+        "Story Rich",
+        "Time Manipulation",
+        "Grid-Based Movement",
+        "Difficult",
+        "Surreal",
+        "Colorful"
+      ],
+      "releaseDate": "8 Oct, 2026",
+      "developer": "Thekla, Inc.",
+      "achievements": {
+        "total": 32,
+        "unlocked": 2
+      }
+    },
+    {
       "appid": 431960,
       "name": "Wallpaper Engine",
       "playtimeForever": 4301,
@@ -17414,50 +17458,6 @@
       "achievements": {
         "total": 17,
         "unlocked": 10
-      }
-    },
-    {
-      "appid": 499170,
-      "name": "Order of the Sinking Star",
-      "playtimeForever": 249,
-      "playtime2Weeks": 249,
-      "lastPlayed": 1792371809,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/499170/a440ee5f9039749226536670915eac6eecbf8121.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/499170/deda420d9e42288f4734a068c707f4c156203969/header.jpg",
-      "shortDescription": "From director Jonathan Blow (Braid, The Witness), Order of the Sinking Star is a massive puzzle adventure set in a realm of magic and enigma. Solve over 1000 interconnected, hand-crafted puzzles, discover unique playable heroes, master evolving gameplay mechanics, and decipher a grand mystery.",
-      "genres": [
-        "Indie Games",
-        "Adventure",
-        "Indie",
-        "Strategy"
-      ],
-      "tags": [
-        "Puzzle",
-        "Adventure",
-        "Sokoban",
-        "Exploration",
-        "3D",
-        "Top-Down",
-        "Fantasy",
-        "Sci-fi",
-        "Controller",
-        "Nonlinear",
-        "Dynamic Narration",
-        "Singleplayer",
-        "Indie",
-        "Open World",
-        "Story Rich",
-        "Time Manipulation",
-        "Grid-Based Movement",
-        "Difficult",
-        "Surreal",
-        "Colorful"
-      ],
-      "releaseDate": "8 Oct, 2026",
-      "developer": "Thekla, Inc.",
-      "achievements": {
-        "total": 32,
-        "unlocked": 1
       }
     },
     {
