@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-10-30T19:00:24.675Z",
-    "gameCount": 421,
+    "generatedAt": "2026-10-31T19:00:24.080Z",
+    "gameCount": 422,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/f3f21ec42942f057fffc7c5a391d0fb982baa769_full.jpg",
@@ -439,6 +439,45 @@
         "total": 25,
         "unlocked": 1
       }
+    },
+    {
+      "appid": 38400,
+      "name": "Fallout",
+      "playtimeForever": 59,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1789879587,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/38400/df0001a1aa011e6c7a8f38a65908070eba3d2f61.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/38400/header.jpg",
+      "shortDescription": "You've just unearthed the classic post-apocalyptic role-playing game that revitalized the entire CRPG genre. The Fallout® SPECIAL system allows drastically different types of characters, meaningful decisions and development that puts you in complete control. Explore the devastated ruins of a golden age civilization.",
+      "genres": [
+        "RPG Games",
+        "RPG"
+      ],
+      "tags": [
+        "RPG",
+        "Post-apocalyptic",
+        "Classic",
+        "Open World",
+        "Isometric",
+        "Turn-Based",
+        "Turn-Based Combat",
+        "Singleplayer",
+        "Sci-fi",
+        "Atmospheric",
+        "CRPG",
+        "Multiple Endings",
+        "1990's",
+        "Retro",
+        "Adventure",
+        "Exploration",
+        "2D",
+        "Difficult",
+        "Tactical",
+        "Sandbox"
+      ],
+      "releaseDate": "30 Sep, 1997",
+      "developer": "Interplay Inc.",
+      "achievements": null
     },
     {
       "appid": 40700,
@@ -17371,11 +17410,55 @@
       "achievements": null
     },
     {
+      "appid": 951240,
+      "name": "Obenseuer",
+      "playtimeForever": 36,
+      "playtime2Weeks": 36,
+      "lastPlayed": 1793415331,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/951240/b43d24f97189eb8492f6062db18477f5379eaf65.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/951240/32698ecaee070f8e606f96241e2dce6d196323c6/header_alt_assets_1.jpg",
+      "shortDescription": "Obenseuer is an urban survival RPG where you become the property manager of a run-down, unfinished tenement building in the isolated quarantine district of Obenseuer. Maintain and upgrade your tenement for rent, uncover the secrets of this infamous district and grow your wealth with your craft.",
+      "genres": [
+        "RPG Games",
+        "Indie",
+        "RPG",
+        "Early Access"
+      ],
+      "tags": [
+        "Indie",
+        "Survival",
+        "Life Sim",
+        "RPG",
+        "Early Access",
+        "Management",
+        "Dystopian ",
+        "Strategy RPG",
+        "Adventure",
+        "Building",
+        "Mystery",
+        "Open World",
+        "Singleplayer",
+        "Investigation",
+        "Resource Management",
+        "Hidden Object",
+        "Horror",
+        "Immersive Sim",
+        "Controller",
+        "3D"
+      ],
+      "releaseDate": "11 Dec, 2018",
+      "developer": "Loiste Interactive",
+      "achievements": {
+        "total": 88,
+        "unlocked": 1
+      }
+    },
+    {
       "appid": 499170,
       "name": "Order of the Sinking Star",
-      "playtimeForever": 771,
-      "playtime2Weeks": 771,
-      "lastPlayed": 1793321065,
+      "playtimeForever": 799,
+      "playtime2Weeks": 672,
+      "lastPlayed": 1793413088,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/499170/a440ee5f9039749226536670915eac6eecbf8121.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/499170/deda420d9e42288f4734a068c707f4c156203969/header.jpg",
       "shortDescription": "From director Jonathan Blow (Braid, The Witness), Order of the Sinking Star is a massive puzzle adventure set in a realm of magic and enigma. Solve over 1000 interconnected, hand-crafted puzzles, discover unique playable heroes, master evolving gameplay mechanics, and decipher a grand mystery.",
@@ -17763,45 +17846,6 @@
         "total": 22,
         "unlocked": 0
       }
-    },
-    {
-      "appid": 38400,
-      "name": "Fallout",
-      "playtimeForever": 59,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1789879587,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/38400/df0001a1aa011e6c7a8f38a65908070eba3d2f61.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/38400/header.jpg",
-      "shortDescription": "You've just unearthed the classic post-apocalyptic role-playing game that revitalized the entire CRPG genre. The Fallout® SPECIAL system allows drastically different types of characters, meaningful decisions and development that puts you in complete control. Explore the devastated ruins of a golden age civilization.",
-      "genres": [
-        "RPG Games",
-        "RPG"
-      ],
-      "tags": [
-        "RPG",
-        "Post-apocalyptic",
-        "Classic",
-        "Open World",
-        "Isometric",
-        "Turn-Based",
-        "Turn-Based Combat",
-        "Singleplayer",
-        "Sci-fi",
-        "Atmospheric",
-        "CRPG",
-        "Multiple Endings",
-        "1990's",
-        "Retro",
-        "Adventure",
-        "Exploration",
-        "2D",
-        "Difficult",
-        "Tactical",
-        "Sandbox"
-      ],
-      "releaseDate": "30 Sep, 1997",
-      "developer": "Interplay Inc.",
-      "achievements": null
     }
   ]
 }
