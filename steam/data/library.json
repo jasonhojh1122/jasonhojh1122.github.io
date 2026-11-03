@@ -1,8 +1,8 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-11-02T19:00:23.826Z",
-    "gameCount": 422,
+    "generatedAt": "2026-11-03T19:00:23.725Z",
+    "gameCount": 423,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/f3f21ec42942f057fffc7c5a391d0fb982baa769_full.jpg",
@@ -16027,6 +16027,48 @@
       "achievements": null
     },
     {
+      "appid": 2754380,
+      "name": "The Roottrees are Dead",
+      "playtimeForever": 42,
+      "playtime2Weeks": 0,
+      "lastPlayed": 1790410675,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2754380/ff95a36ab76f41edffed9c006a7e56c91d3fa68f.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2754380/6c1be65b8ae88dead50e0fa854790245a2ac072a/header.jpg",
+      "shortDescription": "A genealogical mystery straight out of 1998. Scour the early Internet for clues, uncover hidden connections, and piece together the family tree behind the secretive Roottree Corporation.",
+      "genres": [
+        "Adventure Games",
+        "Adventure"
+      ],
+      "tags": [
+        "Detective",
+        "Puzzle",
+        "Mystery",
+        "Point & Click",
+        "Investigation",
+        "Story Rich",
+        "Atmospheric",
+        "Singleplayer",
+        "1990's",
+        "Logic",
+        "Adventure",
+        "Interactive Fiction",
+        "Indie",
+        "Retro",
+        "LGBTQ+",
+        "Casual",
+        "2D",
+        "Stylized",
+        "Noir",
+        "Immersive"
+      ],
+      "releaseDate": "15 Jan, 2025",
+      "developer": "Evil Trout Inc.",
+      "achievements": {
+        "total": 22,
+        "unlocked": 0
+      }
+    },
+    {
       "appid": 2763670,
       "name": "Arctic Eggs",
       "playtimeForever": 0,
@@ -17410,6 +17452,51 @@
       "achievements": null
     },
     {
+      "appid": 3065030,
+      "name": "The Caribou Trail",
+      "playtimeForever": 89,
+      "playtime2Weeks": 89,
+      "lastPlayed": 1793714594,
+      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3065030/dcd0be0b10db4b68e6b8ae413017a2fdf40ce71c.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065030/42250e3fa39c282922ae9452bf751560120bda58/header.jpg",
+      "shortDescription": "The WWI story where your goal isn’t to kill, but to survive. In the still trenches, three soldiers learn the harsh truth of war: reckless missions, digging trenches, collecting dog tags and ghostly whispers in the dark. Home before the leaves fall, they thought.",
+      "genres": [
+        "Adventure Games",
+        "Action",
+        "Adventure",
+        "Casual",
+        "Indie"
+      ],
+      "tags": [
+        "Walking Simulator",
+        "Adventure",
+        "Narrative",
+        "World War I",
+        "Historical",
+        "Singleplayer",
+        "Linear",
+        "Interactive Fiction",
+        "Action-Adventure",
+        "First-Person",
+        "Exploration",
+        "Atmospheric",
+        "Psychological Horror",
+        "Story Rich",
+        "Casual",
+        "War",
+        "Stylized",
+        "Emotional",
+        "Choose Your Own Adventure",
+        "3D"
+      ],
+      "releaseDate": "14 May, 2026",
+      "developer": "Unreliable Narrators",
+      "achievements": {
+        "total": 14,
+        "unlocked": 1
+      }
+    },
+    {
       "appid": 951240,
       "name": "Obenseuer",
       "playtimeForever": 36,
@@ -17803,48 +17890,6 @@
       "achievements": {
         "total": 70,
         "unlocked": 24
-      }
-    },
-    {
-      "appid": 2754380,
-      "name": "The Roottrees are Dead",
-      "playtimeForever": 42,
-      "playtime2Weeks": 0,
-      "lastPlayed": 1790410675,
-      "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2754380/ff95a36ab76f41edffed9c006a7e56c91d3fa68f.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2754380/6c1be65b8ae88dead50e0fa854790245a2ac072a/header.jpg",
-      "shortDescription": "A genealogical mystery straight out of 1998. Scour the early Internet for clues, uncover hidden connections, and piece together the family tree behind the secretive Roottree Corporation.",
-      "genres": [
-        "Adventure Games",
-        "Adventure"
-      ],
-      "tags": [
-        "Detective",
-        "Puzzle",
-        "Mystery",
-        "Point & Click",
-        "Investigation",
-        "Story Rich",
-        "Atmospheric",
-        "Singleplayer",
-        "1990's",
-        "Logic",
-        "Adventure",
-        "Interactive Fiction",
-        "Indie",
-        "Retro",
-        "LGBTQ+",
-        "Casual",
-        "2D",
-        "Stylized",
-        "Noir",
-        "Immersive"
-      ],
-      "releaseDate": "15 Jan, 2025",
-      "developer": "Evil Trout Inc.",
-      "achievements": {
-        "total": 22,
-        "unlocked": 0
       }
     }
   ]
