@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-11-04T19:00:24.631Z",
+    "generatedAt": "2026-11-05T19:00:25.026Z",
     "gameCount": 423,
     "profile": {
       "personaName": "DeithZireael",
@@ -17454,9 +17454,9 @@
     {
       "appid": 3065030,
       "name": "The Caribou Trail",
-      "playtimeForever": 138,
-      "playtime2Weeks": 138,
-      "lastPlayed": 1793753462,
+      "playtimeForever": 201,
+      "playtime2Weeks": 201,
+      "lastPlayed": 1793840449,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3065030/dcd0be0b10db4b68e6b8ae413017a2fdf40ce71c.jpg",
       "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065030/42250e3fa39c282922ae9452bf751560120bda58/header.jpg",
       "shortDescription": "The WWI story where your goal isn’t to kill, but to survive. In the still trenches, three soldiers learn the harsh truth of war: reckless missions, digging trenches, collecting dog tags and ghostly whispers in the dark. Home before the leaves fall, they thought.",
@@ -17493,7 +17493,7 @@
       "developer": "Unreliable Narrators",
       "achievements": {
         "total": 14,
-        "unlocked": 3
+        "unlocked": 7
       }
     },
     {
@@ -17681,7 +17681,7 @@
       "playtime2Weeks": 0,
       "lastPlayed": 1791381566,
       "imgIconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/292030/7b52d11edee478d652ef4e7103e00644bed2c74c.jpg",
-      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/e8afc4252e3fee8ed2525ab2fd7675cca39aa38d/header_alt_assets_1.jpg",
+      "headerImage": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/4b5b1ba5061b8a992cc69ac58b4245434edb4296/header.jpg",
       "shortDescription": "The Witcher 3: Wild Hunt — Remastered modernizes the acclaimed role-playing game with a range of upgrades and enhancements. Become monster slayer for hire Geralt of Rivia and journey across a dark fantasy open world in an epic quest to find your adopted daughter Ciri.",
       "genres": [
         "RPG Games",
