@@ -1,7 +1,7 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-11-19T19:00:24.078Z",
+    "generatedAt": "2026-11-20T19:00:24.809Z",
     "gameCount": 423,
     "profile": {
       "personaName": "DeithZireael",
@@ -17820,28 +17820,7 @@
         "Adventure",
         "Indie"
       ],
-      "tags": [
-        "Multiplayer",
-        "Online Co-Op",
-        "Co-op",
-        "Adventure",
-        "Physics",
-        "Exploration",
-        "First-Person",
-        "Comedy",
-        "3D",
-        "Procedural Generation",
-        "Atmospheric",
-        "Action Roguelike",
-        "Character Customization",
-        "Action",
-        "Time Management",
-        "Platformer",
-        "Horror",
-        "Mystery",
-        "Survival Horror",
-        "Investigation"
-      ],
+      "tags": [],
       "releaseDate": "16 Jun, 2025",
       "developer": "Team PEAK",
       "achievements": {
