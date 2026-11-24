@@ -1,14 +1,14 @@
 {
   "meta": {
     "steamId": "76561198197156026",
-    "generatedAt": "2026-11-23T19:00:25.026Z",
+    "generatedAt": "2026-11-24T19:00:24.549Z",
     "gameCount": 423,
     "profile": {
       "personaName": "DeithZireael",
       "avatarUrl": "https://avatars.steamstatic.com/f3f21ec42942f057fffc7c5a391d0fb982baa769_full.jpg",
       "level": 43,
-      "xp": 11531,
-      "xpNeededToLevelUp": 469
+      "xp": 11581,
+      "xpNeededToLevelUp": 419
     }
   },
   "games": [
@@ -17525,8 +17525,8 @@
         "Mystery",
         "Open World",
         "Singleplayer",
-        "Investigation",
         "Resource Management",
+        "Investigation",
         "Hidden Object",
         "Horror",
         "Immersive Sim",
